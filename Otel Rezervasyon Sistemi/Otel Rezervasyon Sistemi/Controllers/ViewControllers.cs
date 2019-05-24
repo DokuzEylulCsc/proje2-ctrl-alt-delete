@@ -55,5 +55,40 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
              * otelin butun rezervasyonlarini dondurucek olan id 
              */
         }
+        /// <summary>
+        /// Sadece Fiyat Filtresi kullanilir ise cagirilmasi gereken method
+        /// </summary>
+        /// <param name="minFiyat">araligin alt siniri (eger belirlenmemisse defult olarak 0 girin)</param>
+        /// <param name="maxFiyat">araligin ust sinir (eger belirlenmemis ise negatif bir deger giriniz)</param>
+        /// <returns>Oda listesi Dondurur</returns>
+        public static List<Oda> RoomFilter(int minFiyat, int maxFiyat)
+        {
+            /*
+             * fiyat filtresine gore oda Listesi Dondurucek
+             */
+            return new List<Oda>();
+        }
+        /// <summary>
+        /// oda tipi ve fiyat araligi ile filtrelenirse 
+        /// </summary>
+        /// <param name="minFiyat">araligin alt siniri (eger belirlenmemisse defult olarak 0 girin)</param>
+        /// <param name="maxFiyat">araligin ust sinir (eger belirlenmemis ise negatif bir deger giriniz)</param>
+        /// <param name="odaTipi">istenilen oda tipi orn("Standart")</param>
+        /// <returns></returns>
+        public static List<Oda> RoomFilter(int minFiyat , int maxFiyat , string odaTipi)
+        {
+            return new List<Oda>();
+        }
+        /// <summary>
+        /// oda tipi olarak filtrelenirse
+        /// </summary>
+        /// <param name="odaTipi"> istenilen oda tipi orn("Standart")</param>
+        /// <returns></returns>
+        public static List<Oda> RoomFilter(string odaTipi)
+        {
+            return new List<Oda>();
+        }
+
+        /*Viewde ihtiyac oldukca eklemeler yapilacaktir*/
     }
 }

@@ -23,7 +23,7 @@ namespace Otel_Rezervasyon_Sistemi
             //Yoneticiye uygun ımplementasyonlar controller tarafından yapılacak.
         }
 
-        public void YoneticiOdeEkleme()
+        public void YoneticiOdaEkleme()
         {
             //Yoneticiye uygun ımplementasyonlar controller tarafından yapılacak.
         }

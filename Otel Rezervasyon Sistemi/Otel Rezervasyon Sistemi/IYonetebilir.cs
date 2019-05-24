@@ -10,7 +10,7 @@ namespace Otel_Rezervasyon_Sistemi
     {
         void YoneticiOtelEkleme();
         void YoneticiOtelSil();
-        void YoneticiOdeEkleme();
+        void YoneticiOdaEkleme();
         void YoneticiOdaSilme();
     }
 }
