@@ -8,7 +8,7 @@ namespace Otel_Rezervasyon_Sistemi
 {
     class Musteri:Kullanici,IGoruntuleyebilir
     {
-        public Musteri(int ID,string ad,string soyad) : base(ID,ad,soyad)
+        public Musteri(string ID,string ad,string soyad) : base(ID,ad,soyad)
         {
             // Bilgiler base classtan alınacagı ıcın ımplementasyona gerek yok.
         }

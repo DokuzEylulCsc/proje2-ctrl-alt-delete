@@ -18,7 +18,7 @@ namespace Otel_Rezervasyon_Sistemi
             minibarli = minibar;
             televizyonlu = televizyon;
         }
-        struct Rezervasyon
+        protected struct Rezervasyon
         {
             DateTime rezbaslangic;
             DateTime rezbitis;
@@ -34,12 +34,12 @@ namespace Otel_Rezervasyon_Sistemi
             }
         }
         
-        public int odano;
-        public int kisikapasitesi;
-        public int odafiyati;
-        public bool klimali;
-        public bool minibarli;
-        public bool televizyonlu;
-        public bool wifili;
+        protected int odano;
+        protected int kisikapasitesi;
+        protected int odafiyati;
+        protected bool klimali;
+        protected bool minibarli;
+        protected bool televizyonlu;
+        protected bool wifili;
     }
 }

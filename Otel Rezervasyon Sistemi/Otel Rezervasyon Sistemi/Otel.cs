@@ -41,8 +41,7 @@ namespace Otel_Rezervasyon_Sistemi
         }
         public string ID
         {
-            get { return id; }
-            set { id = value; }
+            get { return id; } //Idlerin hicbirisinde set imkani olmicak , sadece constructor ile uretilen degerlen kullanilicak ! 
         }
         public string OtelAdi
         {

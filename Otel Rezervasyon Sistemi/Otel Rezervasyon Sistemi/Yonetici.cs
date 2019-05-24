@@ -8,7 +8,7 @@ namespace Otel_Rezervasyon_Sistemi
 {
     class Yonetici:Kullanici,IGoruntuleyebilir,IYonetebilir
     {
-        public Yonetici(int ID,string isim,string soyisim) : base(ID,isim,soyisim)
+        public Yonetici(string ID,string isim,string soyisim) : base(ID,isim,soyisim)
         {
             // Implementasyona ihtiyac yok ana classtan alınacak veriler.
         }

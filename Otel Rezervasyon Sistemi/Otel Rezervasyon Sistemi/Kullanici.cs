@@ -6,27 +6,26 @@ using System.Threading.Tasks;
 
 namespace Otel_Rezervasyon_Sistemi
 {
-    class Kullanici
+    abstract class Kullanici
     {
-        int id;
-        string ad;
-        string soyad;
-        int ID
+        protected string id;
+        protected string ad;
+        protected string soyad;
+        public string ID
         {
-            get { return id; }
-            set { id = value; }
+            get { return id; }      //Id set imkani yok , constructor da atanan deger kalicak sadece 
         }
-        string Ad
+        public string Ad
         {
             get { return ad; }
             set { ad = value; }
         }
-        string Soyad
+        public string Soyad
         {
             get { return soyad; }
             set { soyad = value; }
         }
-        public Kullanici(int ID, string isim, string soyisim)
+        public Kullanici(string ID, string isim, string soyisim)
         {
             id = ID;
             ad = isim;
