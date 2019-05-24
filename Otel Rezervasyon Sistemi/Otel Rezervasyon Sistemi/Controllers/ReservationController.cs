@@ -16,7 +16,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="odaNo">kontrolun yapilacagi odanin numarasi</param>
         /// <param name="baslangic">kontrolun yapilacagi tarihin baslangici</param>
         /// <param name="bitis">kontrolun yapilacagi tarihin bitisi</param>
-        /// <returns></returns>
+        /// <returns>onay durumun True , onay alamama durumunda false </returns>
         public static bool CheckReservationDateAvailabilty(string otelId,int odaNo ,DateTime baslangic , DateTime bitis)
         {
             /*
