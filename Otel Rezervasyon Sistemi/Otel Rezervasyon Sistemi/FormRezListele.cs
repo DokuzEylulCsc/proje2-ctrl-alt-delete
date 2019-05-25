@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Otel_Rezervasyon_Sistemi
 {
-    public partial class Form1 : Form
+    public partial class FormRezOzet : Form
     {
-        public Form1()
+        public FormRezOzet()
         {
             InitializeComponent();
         }
