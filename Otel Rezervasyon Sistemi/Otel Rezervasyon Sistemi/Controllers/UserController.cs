@@ -8,13 +8,17 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
 {
     class UserController
     {
+        internal UserController()
+        {
+
+        }
         ///<summary>
         ///<para>Giris yapmak isteyen kullanicin id ve sifresini alir</para>
         /// <returns>uygun Musteri ya da Yonetici nesnelerinin kopyasini dondurur , duruma gore hata dondurur</returns>
         /// </summary>
         /// <param name="id">kullanicinin girdigi ID </param>
         /// <param name="password">kullanicinin girdigi sifre </param>
-        public static Musteri AccountVerification(string id, string password)
+        public  Musteri AccountVerification(string id, string password)
         {
             /*giris yapmak istenen kullanicinin var olup olmadigi kontrolu yapilacak oyle bir musteri varsa ;
              * Musteri nesnesi dogrudan yollanicak ,
@@ -27,7 +31,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <returns>Kullanici yaratilirsa dogru yaratilamazsa false dondurulucek</returns>
         /// </summary>
         /// <param name="A" > gecici olarak olusturulmus olan kullanici nesnesi</param>
-        public static bool CreateAccountRequest(Kullanici A)
+        public  bool CreateAccountRequest(Kullanici A)
         {
             /*kayit edilmek istenen kullanici durumlara uygun ise db ye eklenicek (eklenirse true) ,
              uygun degilse false donucek*/
@@ -40,7 +44,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="newPas">Kullanicinin belirledigi yeni sifre</param>
         /// <param name="newPasVerification">Kullanicinin belirledigi yeni sifrenin dogrulamasi</param>
         /// <returns>islem uygun ise True , degil ise hata dondurur</returns>
-        public static bool ChangePasswordRequest(Kullanici B, string newPas, string newPasVerification)
+        public  bool ChangePasswordRequest(Kullanici B, string newPas, string newPasVerification)
         {
             /*
              * sifresini degistirmek isteyen kullanicinin bilgileri ve yeni yapmak istedigi 
@@ -56,7 +60,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="whichInfo">Hangi bilinin guncellenecegi</param>
         /// <param name="newInfo">Guncellenen bilginin yeni hali</param>
         /// <returns>islem uygulanir ise true , hata olusur ise hata dondurucekti</returns>
-        public static bool ChangeInformationRequest(Kullanici B, string whichInfo, string newInfo)
+        public  bool ChangeInformationRequest(Kullanici B, string whichInfo, string newInfo)
         {
             /*
              * kullanicinin yeni infosu uygun ise db degisikligi yapilicak degil ise hata donulucek
