@@ -15,6 +15,7 @@ namespace Otel_Rezervasyon_Sistemi
 
         public void Goruntule()
         {
+            // icerik konusmasi yapilip kesin kararlar verildikten sonra buranin implementasyonu belirlenicektir
             //Yoneticiye uygun ımplementasyonlar controller tarafından yapılacak.
         }
     }
