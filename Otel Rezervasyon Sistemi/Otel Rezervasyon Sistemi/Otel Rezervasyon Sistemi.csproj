@@ -57,6 +57,7 @@
     <Compile Include="IGoruntuleyebilir.cs" />
     <Compile Include="IYonetebilir.cs" />
     <Compile Include="KralDairesi.cs" />
+    <Compile Include="KralDairesiOda.cs" />
     <Compile Include="Kullanici.cs" />
     <Compile Include="ManzaraliOda.cs" />
     <Compile Include="Musteri.cs" />
