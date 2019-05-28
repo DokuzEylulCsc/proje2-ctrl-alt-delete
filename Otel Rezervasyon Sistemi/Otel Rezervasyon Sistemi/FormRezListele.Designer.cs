@@ -33,6 +33,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.listView2 = new System.Windows.Forms.ListView();
             this.BtnListele = new System.Windows.Forms.Button();
+            this.btnGeri = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,11 +85,22 @@
             this.BtnListele.Text = "Listele";
             this.BtnListele.UseVisualStyleBackColor = true;
             // 
+            // btnGeri
+            // 
+            this.btnGeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGeri.Location = new System.Drawing.Point(432, 293);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(90, 32);
+            this.btnGeri.TabIndex = 7;
+            this.btnGeri.Text = "Geri";
+            this.btnGeri.UseVisualStyleBackColor = true;
+            // 
             // FormRezOzet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 337);
+            this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.BtnListele);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
@@ -108,5 +120,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.Button BtnListele;
+        private System.Windows.Forms.Button btnGeri;
     }
 }

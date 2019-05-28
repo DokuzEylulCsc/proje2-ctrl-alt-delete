@@ -50,7 +50,11 @@
             this.btnRezListele = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.bilgileriGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sifreDegisikliğiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -119,11 +123,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.Location = new System.Drawing.Point(33, 30);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 20);
+            this.label4.Size = new System.Drawing.Size(93, 21);
             this.label4.TabIndex = 0;
             this.label4.Text = "Tarih Aralığı:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -131,11 +136,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.Location = new System.Drawing.Point(33, 144);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 20);
+            this.label5.Size = new System.Drawing.Size(92, 21);
             this.label5.TabIndex = 1;
             this.label5.Text = "Fiyat Aralığı:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -143,11 +149,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.Location = new System.Drawing.Point(364, 29);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 20);
+            this.label6.Size = new System.Drawing.Size(70, 21);
             this.label6.TabIndex = 2;
             this.label6.Text = "Oda Tipi:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -155,11 +162,12 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.Location = new System.Drawing.Point(367, 112);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 20);
+            this.label7.Size = new System.Drawing.Size(91, 21);
             this.label7.TabIndex = 3;
             this.label7.Text = "Oda Özelliği";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -255,6 +263,7 @@
             // BtnRezAra
             // 
             this.BtnRezAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnRezAra.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.BtnRezAra.Location = new System.Drawing.Point(628, 78);
             this.BtnRezAra.Name = "BtnRezAra";
             this.BtnRezAra.Size = new System.Drawing.Size(133, 42);
@@ -290,6 +299,30 @@
             this.listBox1.Size = new System.Drawing.Size(354, 108);
             this.listBox1.TabIndex = 5;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bilgileriGüncelleToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // bilgileriGüncelleToolStripMenuItem
+            // 
+            this.bilgileriGüncelleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sifreDegisikliğiToolStripMenuItem});
+            this.bilgileriGüncelleToolStripMenuItem.Name = "bilgileriGüncelleToolStripMenuItem";
+            this.bilgileriGüncelleToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
+            this.bilgileriGüncelleToolStripMenuItem.Text = "Bilgileri Güncelle";
+            // 
+            // sifreDegisikliğiToolStripMenuItem
+            // 
+            this.sifreDegisikliğiToolStripMenuItem.Name = "sifreDegisikliğiToolStripMenuItem";
+            this.sifreDegisikliğiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sifreDegisikliğiToolStripMenuItem.Text = "Sifre Degisikliği";
+            // 
             // FormMusteriRez
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,12 +335,16 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBoxUygunOteller);
+            this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMusteriRez";
             this.Text = "FormMusteriRez";
             this.Load += new System.EventHandler(this.FormMusteriRez_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,5 +374,8 @@
         private System.Windows.Forms.Button BtnRezAra;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem bilgileriGüncelleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sifreDegisikliğiToolStripMenuItem;
     }
 }

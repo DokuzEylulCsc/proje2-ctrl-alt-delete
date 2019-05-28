@@ -17,29 +17,22 @@ namespace Otel_Rezervasyon_Sistemi
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+       
 
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+           
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnOdaEkle_Click(object sender, EventArgs e)
         {
-
+            FormOdaEkle F = new FormOdaEkle();
+            F.Show();
+            this.Close();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
+       
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

@@ -34,7 +34,15 @@ namespace Otel_Rezervasyon_Sistemi
 
         private void btnTemizle_Click(object sender, EventArgs e)
         {
+            txtID.Clear();
+            txtSifree.Clear();
+        }
 
+        private void linklbluyeol_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormUyeOl F = new FormUyeOl();
+            F.Show();
+            this.Close();
         }
     }
 }

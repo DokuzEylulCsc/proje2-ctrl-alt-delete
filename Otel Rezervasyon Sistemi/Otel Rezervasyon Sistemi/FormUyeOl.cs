@@ -16,5 +16,12 @@ namespace Otel_Rezervasyon_Sistemi
         {
             InitializeComponent();
         }
+
+        private void btnGeri_Click(object sender, EventArgs e)
+        {
+            FormLogin Fl = new FormLogin();
+            Fl.Show();
+            this.Close();
+        }
     }
 }
