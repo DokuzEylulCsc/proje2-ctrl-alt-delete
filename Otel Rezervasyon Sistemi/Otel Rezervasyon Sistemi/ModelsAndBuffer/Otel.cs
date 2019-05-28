@@ -8,21 +8,25 @@ namespace Otel_Rezervasyon_Sistemi
 {
     abstract class Otel
     {
-        public Otel(int temizlikpuani, int hizmetpuani, int konumpuani, string otelid,string oteladi)
+        public Otel(int temizlikpuani, int hizmetpuani, int konumpuani,int odasayisi, string otelid,string oteladi)
         {
             temizlik = temizlikpuani;
             hizmet = temizlikpuani;
             konum = konumpuani;
+            this.odasayisi = odasayisi;
             id = otelid;
             this.oteladi = oteladi;
+
         }
 
         List<Oda> Odalar = new List<Oda>();
+
         public int temizlik; // Yoneticinin otel kayıt sırasında oylayacagı ve otelin yıldızını belırleyecek degıskenler
         public int hizmet; // Yoneticinin otel kayıt sırasında oylayacagı ve otelin yıldızını belırleyecek degıskenler
         public int konum; // Yoneticinin otel kayıt sırasında oylayacagı ve otelin yıldızını belırleyecek degıskenler
         public string id;
         public string oteladi;
+        public int odasayisi;
 
         public int Temizlik
         {
@@ -38,6 +42,11 @@ namespace Otel_Rezervasyon_Sistemi
         {
             get { return konum; }
             set { konum = value; }
+        }
+        public int OdaSayisi
+        {
+            get { return odasayisi; }
+            set { odasayisi = value; }
         }
         public string ID
         {
