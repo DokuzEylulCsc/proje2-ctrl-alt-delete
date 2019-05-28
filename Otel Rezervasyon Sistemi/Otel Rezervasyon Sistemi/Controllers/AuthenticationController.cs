@@ -15,11 +15,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// </summary>
         /// <param name="id">kullanicinin girdigi ID </param>
         /// <param name="password">kullanicinin girdigi sifre </param>
-<<<<<<< HEAD:Otel Rezervasyon Sistemi/Otel Rezervasyon Sistemi/Controllers/AuthenticationController.cs
         public static Musteri AccountVerification (string id , string password)
-=======
-        public static Musteri AccountVerification(string id, string password)
->>>>>>> parent of 774e034... Butun Controllerlar , Main Controller uzerinde baglandi:Otel Rezervasyon Sistemi/Otel Rezervasyon Sistemi/Controllers/UserController.cs
         {
             /*giris yapmak istenen kullanicinin var olup olmadigi kontrolu yapilacak oyle bir musteri varsa ;
              * Musteri nesnesi dogrudan yollanicak ,
@@ -33,11 +29,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <returns>Kullanici yaratilirsa dogru yaratilamazsa false dondurulucek</returns>
         /// </summary>
         /// <param name="A" > gecici olarak olusturulmus olan kullanici nesnesi</param>
-<<<<<<< HEAD:Otel Rezervasyon Sistemi/Otel Rezervasyon Sistemi/Controllers/AuthenticationController.cs
         public static bool CreateAccountRequest(Kullanici A )
-=======
-        public static bool CreateAccountRequest(Kullanici A)
->>>>>>> parent of 774e034... Butun Controllerlar , Main Controller uzerinde baglandi:Otel Rezervasyon Sistemi/Otel Rezervasyon Sistemi/Controllers/UserController.cs
         {
             /*kayit edilmek istenen kullanici durumlara uygun ise db ye eklenicek (eklenirse true) ,
              uygun degilse false donucek*/
@@ -67,11 +59,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="newPas">Kullanicinin belirledigi yeni sifre</param>
         /// <param name="newPasVerification">Kullanicinin belirledigi yeni sifrenin dogrulamasi</param>
         /// <returns>islem uygun ise True , degil ise hata dondurur</returns>
-<<<<<<< HEAD:Otel Rezervasyon Sistemi/Otel Rezervasyon Sistemi/Controllers/AuthenticationController.cs
         public static bool ChangePasswordRequest(Kullanici B , string newPas,string newPasVerification)
-=======
-        public static bool ChangePasswordRequest(Kullanici B, string newPas, string newPasVerification)
->>>>>>> parent of 774e034... Butun Controllerlar , Main Controller uzerinde baglandi:Otel Rezervasyon Sistemi/Otel Rezervasyon Sistemi/Controllers/UserController.cs
         {
             /*
              * sifresini degistirmek isteyen kullanicinin bilgileri ve yeni yapmak istedigi 
@@ -87,11 +75,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="whichInfo">Hangi bilinin guncellenecegi</param>
         /// <param name="newInfo">Guncellenen bilginin yeni hali</param>
         /// <returns>islem uygulanir ise true , hata olusur ise hata dondurucekti</returns>
-<<<<<<< HEAD:Otel Rezervasyon Sistemi/Otel Rezervasyon Sistemi/Controllers/AuthenticationController.cs
         public static bool ChangeInformationRequest(Kullanici B , string whichInfo , string newInfo)
-=======
-        public static bool ChangeInformationRequest(Kullanici B, string whichInfo, string newInfo)
->>>>>>> parent of 774e034... Butun Controllerlar , Main Controller uzerinde baglandi:Otel Rezervasyon Sistemi/Otel Rezervasyon Sistemi/Controllers/UserController.cs
         {
             /*
              * kullanicinin yeni infosu uygun ise db degisikligi yapilicak degil ise hata donulucek

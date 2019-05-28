@@ -6,65 +6,40 @@ using System.Threading.Tasks;
 
 namespace Otel_Rezervasyon_Sistemi
 {
-    class Oda
+    abstract class Oda
     {
-        public int odafiyati;
-        public int odanumarasi;
-        public int kisikapasitesi;
-        public bool klimali;
-        public bool wifili;
-        public bool televizyonlu;
-        public bool minibarli;
-
-        public int OdaFiyati
+        public Oda(int fiyat,int kisikapasite,int odanumarasi,bool klima,bool wifi,bool minibar,bool televizyon )
         {
-            get { return odafiyati; }
-            set { odafiyati = value; }
-        }
-        public int OdaNumarasi
-        {
-            get { return odanumarasi; }
-            set { odanumarasi = value; }
-        }
-        public int KisiKapasitesi
-        {
-            get { return kisikapasitesi; }
-            set { kisikapasitesi= value; }
-        }
-        public bool Klimali 
-        {
-            get { return klimali; }
-            set { klimali = value; }
-        }
-        public bool Wifili
-        {
-            get { return wifili; }
-            set { wifili = value; }
-        }
-        public bool Minibarli
-        {
-            get { return minibarli; }
-            set { minibarli = value; }
-        }
-        public bool Televizyonlu
-        {
-            get { return televizyonlu; }
-            set { televizyonlu = value; }
-        }
-
-
-        public Oda(int OdaFiyat,int OdaNo,int Kapasite,bool klima,bool wifi,bool tv,bool minibar)
-        {
-            odafiyati = OdaFiyat;
-            odanumarasi = OdaNo;
-            kisikapasitesi = Kapasite;
+            odafiyati = fiyat;
+            kisikapasitesi = kisikapasite;
+            odano = odanumarasi;
             klimali = klima;
             wifili = wifi;
-            televizyonlu = tv;
             minibarli = minibar;
+            televizyonlu = televizyon;
         }
-
-
-
+        protected struct Rezervasyon
+        {
+            DateTime rezbaslangic;
+            DateTime rezbitis;
+            DateTime RezBaslangic
+            {
+                get { return rezbaslangic; }
+                set { rezbaslangic = value; }
+            }
+            DateTime RezBitis
+            {
+                get { return rezbitis; }
+                set { rezbitis = value; }
+            }
+        }
+        
+        protected int odano;
+        protected int kisikapasitesi;
+        protected int odafiyati;
+        protected bool klimali;
+        protected bool minibarli;
+        protected bool televizyonlu;
+        protected bool wifili;
     }
 }
