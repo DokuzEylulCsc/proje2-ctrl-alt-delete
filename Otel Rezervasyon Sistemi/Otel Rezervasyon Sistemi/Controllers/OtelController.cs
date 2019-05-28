@@ -8,12 +8,16 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
 {
     class OtelController
     {
+        internal OtelController()
+        {
+
+        }
 
         /// <summary>
         /// Otelin butun rezervasyon bilgilerini dondurur
         /// </summary>
         /// <param name="otelid">Rezervasyonu sorgulanmak istenen otelin idsi</param>
-        public static void GetReservations(string otelid)
+        public  void GetReservations(string otelid)
         {
             /*
              * otelin butun rezervasyonlarini dondurucek olan id 
@@ -25,7 +29,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="otelid">eklenecek olan otelin idsi</param>
         /// <param name="otelname">eklenicek olan otelin ismi</param>
         /// <param name="oteltype">eklenicek olan otelin tipi </param>
-        public static void AddHotel(string otelid , string otelname, string oteltype)
+        public  void AddHotel(string otelid , string otelname, string oteltype)
         {
             /*
              * gerekli implementasyon yapilacaka duruma gore parametre eklenip cikartilacak 
@@ -36,7 +40,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// genel listeden otel siler 
         /// </summary>
         /// <param name="hotelId">silinmek istenen otelIdsi </param>
-        public static void DeleteHotel(string hotelId)
+        public  void DeleteHotel(string hotelId)
         {
             /*
              * gerekli implementasyon yapilacaka duruma gore parametre eklenip cikartilacak 

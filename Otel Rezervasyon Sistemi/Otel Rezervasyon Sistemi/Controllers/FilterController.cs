@@ -8,14 +8,17 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
 {
     class FilterController
     {
+        internal FilterController()
+        {
 
+        }
         /// <summary>
         /// Sadece Fiyat Filtresi kullanilir ise cagirilmasi gereken method
         /// </summary>
         /// <param name="minFiyat">araligin alt siniri (eger belirlenmemisse defult olarak 0 girin)</param>
         /// <param name="maxFiyat">araligin ust sinir (eger belirlenmemis ise negatif bir deger giriniz)</param>
         /// <returns>Oda listesi Dondurur</returns>
-        public static List<Oda> RoomFilter(int minFiyat, int maxFiyat)
+        public  List<Oda> RoomFilter(int minFiyat, int maxFiyat)
         {
             /*
              * fiyat filtresine gore oda Listesi Dondurucek
@@ -29,7 +32,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="maxFiyat">araligin ust sinir (eger belirlenmemis ise negatif bir deger giriniz)</param>
         /// <param name="odaTipi">istenilen oda tipi orn("Standart")</param>
         /// <returns></returns>
-        public static List<Oda> RoomFilter(int minFiyat, int maxFiyat, string odaTipi)
+        public  List<Oda> RoomFilter(int minFiyat, int maxFiyat, string odaTipi)
         {
             return new List<Oda>();
         }
@@ -38,7 +41,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// </summary>
         /// <param name="odaTipi"> istenilen oda tipi orn("Standart")</param>
         /// <returns></returns>
-        public static List<Oda> RoomFilter(string odaTipi)
+        public  List<Oda> RoomFilter(string odaTipi)
         {
             return new List<Oda>();
         }
@@ -47,7 +50,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// </summary>
         /// <param name="otelType">istenilen otel tipi</param>
         /// <returns></returns>
-        public static List<Otel> HotelFilter(string otelType)
+        public  List<Otel> HotelFilter(string otelType)
         {
             return new List<Otel>();
         }
@@ -57,7 +60,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="otelType">istenilen otel tipi ( string ) </param>
         /// <param name="star"> isteniler minimum yildiz ( int ) </param>
         /// <returns></returns>
-        public static List<Otel> HotelFilter(string otelType , int star)
+        public  List<Otel> HotelFilter(string otelType , int star)
         {
 
             return new List<Otel>();
@@ -68,7 +71,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// </summary>
         /// <param name="star">Olmasi istenilen minimum yildiz</param>
         /// <returns></returns>
-        public static List<Otel> HotelFilter(int star)
+        public  List<Otel> HotelFilter(int star)
         {
             return new List<Otel>();
         }

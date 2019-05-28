@@ -8,13 +8,17 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
 {
     class RoomController
     {
+        internal RoomController()
+        {
+
+        }
         ///<summary>
         ///herhangi bir otele eklenmek istenen oda bilgileri alinicak
         ///<returns>Oda Eklenirse true , hata olusursa hatayi aciklayan bir mesaj ile hata donucek</returns>
         ///</summary>
         ///<param name="A">gecici olarak olusturulmus oda nesnesi</param>
         ///<param name="B">islemi yapmak isteyen kullanici nesnesini alir</param>
-        public static bool AddRoomRequest(Oda A, Kullanici B)
+        public  bool AddRoomRequest(Oda A, Kullanici B)
         {
             /* eklenmek istenen oda daha once eklendiyse hata dondurucek, 
              * eger ilk kez ekleniyorsa eklenip true dondurucek,
@@ -30,7 +34,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="odano">Silinmek istenen oda numarasi</param>
         /// <param name="otelid">Odanin ait oldugu otel</param>
         /// <returns>Islem gerceklesirse true ; hata olusur ise hata doner</returns>
-        public static bool DeleteRoomRequest(Kullanici B, int odano, int otelid)
+        public  bool DeleteRoomRequest(Kullanici B, int odano, int otelid)
         {
             /*
              * istemi yapan kullanici log icin kullanilicak ,
@@ -46,7 +50,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// </summary>
         /// <param name="otelId">odalari listelenicek otelin idsi</param>
         /// <returns> List<Oda>  dondurur </returns>
-        public static List<Oda> GetRooms(string otelId)
+        public  List<Oda> GetRooms(string otelId)
         {
             /*
              * herhangi bir otelin odalari gosterilmek istendiginde cagirilmasi gereken method 
@@ -58,7 +62,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// </summary>
         /// <param name="odano">bilgileri goruntulenicek oda no</param>
         /// <param name="otelid">bilgileri goruntulenicek odanin ait oldugu otel idsi</param>
-        public static void GetRoomDetails(int odano, string otelid)
+        public  void GetRoomDetails(int odano, string otelid)
         {
             /*
              * Dondurcegi sey oda fieldlari tamamlaninca belirlenicek sadece taslak icin void olarak belirlendi
@@ -71,7 +75,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="odano">rezervasyon bilgileri istenen odanin numarasi</param>
         /// <param name="otelid">rezervasyon bilgileri istenen odanin ait oldugu otel id </param>
         /// <returns></returns>
-        public static void GetReservations(int odano, string otelid)
+        public  void GetReservations(int odano, string otelid)
         {
             /*
              * odanin rezervasyonlari dondurucek method
