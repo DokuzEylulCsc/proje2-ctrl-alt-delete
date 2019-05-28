@@ -52,17 +52,17 @@
     <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="Controllers\UserController.cs" />
-    <Compile Include="Form YoneticiGiris.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form YoneticiGiris.Designer.cs">
-      <DependentUpon>Form YoneticiGiris.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormMusteriRez.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMusteriRez.Designer.cs">
       <DependentUpon>FormMusteriRez.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOdaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOdaEkle.Designer.cs">
+      <DependentUpon>FormOdaEkle.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRezListele.cs">
       <SubType>Form</SubType>
@@ -75,6 +75,12 @@
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUyeOl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUyeOl.Designer.cs">
+      <DependentUpon>FormUyeOl.cs</DependentUpon>
     </Compile>
     <Compile Include="FormYonetici.cs">
       <SubType>Form</SubType>
@@ -94,17 +100,20 @@
     <Compile Include="ModelsAndBuffer\Yonetici.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form YoneticiGiris.resx">
-      <DependentUpon>Form YoneticiGiris.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormMusteriRez.resx">
       <DependentUpon>FormMusteriRez.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOdaEkle.resx">
+      <DependentUpon>FormOdaEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRezListele.resx">
       <DependentUpon>FormRezListele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUyeOl.resx">
+      <DependentUpon>FormUyeOl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormYonetici.resx">
       <DependentUpon>FormYonetici.cs</DependentUpon>

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Otel_Rezervasyon_Sistemi
 {
-    public partial class YoneticiGiris : Form
+    public partial class FormUyeOl : Form
     {
-        public YoneticiGiris()
+        public FormUyeOl()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

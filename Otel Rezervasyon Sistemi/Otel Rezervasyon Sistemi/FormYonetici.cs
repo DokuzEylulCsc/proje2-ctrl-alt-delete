@@ -36,5 +36,10 @@ namespace Otel_Rezervasyon_Sistemi
         {
 
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
