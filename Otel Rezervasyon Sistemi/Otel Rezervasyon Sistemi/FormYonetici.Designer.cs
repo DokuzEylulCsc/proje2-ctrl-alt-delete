@@ -80,6 +80,7 @@
             // 
             this.lblOtelEkle.AutoSize = true;
             this.lblOtelEkle.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblOtelEkle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblOtelEkle.Location = new System.Drawing.Point(21, 110);
             this.lblOtelEkle.Name = "lblOtelEkle";
             this.lblOtelEkle.Size = new System.Drawing.Size(96, 26);
@@ -90,7 +91,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(217, 51);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(265, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(264, 36);
             this.label2.TabIndex = 3;
@@ -251,16 +253,21 @@
             "Akşam Yemeği",
             "Uyandırma Servisi",
             "Oda Servisi",
-            "Vale Servisi"});
-            this.clistbox.Location = new System.Drawing.Point(163, 213);
+            "Vale Servisi",
+            "Disco",
+            "Otopark",
+            "Jakuzi",
+            "Manzara",
+            "Oyun Konsolu"});
+            this.clistbox.Location = new System.Drawing.Point(146, 213);
             this.clistbox.Name = "clistbox";
-            this.clistbox.Size = new System.Drawing.Size(142, 114);
+            this.clistbox.Size = new System.Drawing.Size(142, 180);
             this.clistbox.TabIndex = 8;
             // 
             // btnTemizle
             // 
-            this.btnTemizle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnTemizle.Location = new System.Drawing.Point(451, 390);
+            this.btnTemizle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTemizle.Location = new System.Drawing.Point(451, 399);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(91, 34);
             this.btnTemizle.TabIndex = 11;
@@ -302,7 +309,7 @@
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panel1.Location = new System.Drawing.Point(123, 110);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(586, 438);
+            this.panel1.Size = new System.Drawing.Size(586, 457);
             this.panel1.TabIndex = 0;
             // 
             // label4
@@ -317,7 +324,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.textBox1);
@@ -487,18 +494,20 @@
             // 
             // btnOtelEkle
             // 
-            this.btnOtelEkle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOtelEkle.Location = new System.Drawing.Point(98, 390);
+            this.btnOtelEkle.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnOtelEkle.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnOtelEkle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnOtelEkle.Location = new System.Drawing.Point(86, 399);
             this.btnOtelEkle.Name = "btnOtelEkle";
             this.btnOtelEkle.Size = new System.Drawing.Size(97, 34);
             this.btnOtelEkle.TabIndex = 16;
             this.btnOtelEkle.Text = "Kayıt";
-            this.btnOtelEkle.UseVisualStyleBackColor = true;
+            this.btnOtelEkle.UseVisualStyleBackColor = false;
             // 
             // btnOdaEkle
             // 
-            this.btnOdaEkle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOdaEkle.Location = new System.Drawing.Point(281, 390);
+            this.btnOdaEkle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnOdaEkle.Location = new System.Drawing.Point(285, 399);
             this.btnOdaEkle.Name = "btnOdaEkle";
             this.btnOdaEkle.Size = new System.Drawing.Size(92, 34);
             this.btnOdaEkle.TabIndex = 15;
@@ -534,6 +543,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(802, 579);
             this.Controls.Add(this.BtnCıkıs);
@@ -546,6 +556,7 @@
             this.MainMenuStrip = this.mSOtelEkle;
             this.Name = "FormYonetici";
             this.Text = "Yonetici ";
+            this.Load += new System.EventHandler(this.FormYonetici_Load);
             this.mSOtelEkle.ResumeLayout(false);
             this.mSOtelEkle.PerformLayout();
             this.panel1.ResumeLayout(false);

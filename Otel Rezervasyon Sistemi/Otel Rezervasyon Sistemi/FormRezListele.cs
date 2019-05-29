@@ -16,5 +16,13 @@ namespace Otel_Rezervasyon_Sistemi
         {
             InitializeComponent();
         }
+
+        private void btnGeri_Click(object sender, EventArgs e)
+        {
+            FormYonetici y = new FormYonetici();
+            y.Show();
+            this.Close();
+
+        }
     }
 }

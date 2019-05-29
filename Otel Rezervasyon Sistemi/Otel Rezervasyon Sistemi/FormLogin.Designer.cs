@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Button btnTemizle;
             this.label1 = new System.Windows.Forms.Label();
             this.lblKullaniciID = new System.Windows.Forms.Label();
             this.lblSifre = new System.Windows.Forms.Label();
@@ -42,27 +41,16 @@
             this.iletişimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.şikayetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtSifree = new System.Windows.Forms.TextBox();
-            btnTemizle = new System.Windows.Forms.Button();
+            this.btnTemizle = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnTemizle
-            // 
-            btnTemizle.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            btnTemizle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            btnTemizle.Cursor = System.Windows.Forms.Cursors.No;
-            btnTemizle.Location = new System.Drawing.Point(117, 281);
-            btnTemizle.Name = "btnTemizle";
-            btnTemizle.Size = new System.Drawing.Size(88, 32);
-            btnTemizle.TabIndex = 7;
-            btnTemizle.Text = "Temizle";
-            btnTemizle.UseVisualStyleBackColor = true;
-            btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(126, 331);
+            this.label1.Location = new System.Drawing.Point(218, 553);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 18);
@@ -71,8 +59,9 @@
             // lblKullaniciID
             // 
             this.lblKullaniciID.AutoSize = true;
+            this.lblKullaniciID.BackColor = System.Drawing.Color.LightYellow;
             this.lblKullaniciID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblKullaniciID.Location = new System.Drawing.Point(48, 144);
+            this.lblKullaniciID.Location = new System.Drawing.Point(41, 298);
             this.lblKullaniciID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKullaniciID.Name = "lblKullaniciID";
             this.lblKullaniciID.Size = new System.Drawing.Size(88, 20);
@@ -83,20 +72,23 @@
             // lblSifre
             // 
             this.lblSifre.AutoSize = true;
+            this.lblSifre.BackColor = System.Drawing.Color.LightYellow;
             this.lblSifre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblSifre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblSifre.Location = new System.Drawing.Point(92, 191);
+            this.lblSifre.Location = new System.Drawing.Point(85, 344);
             this.lblSifre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSifre.Name = "lblSifre";
             this.lblSifre.Size = new System.Drawing.Size(44, 20);
             this.lblSifre.TabIndex = 2;
             this.lblSifre.Text = "Sifre:";
-            this.lblSifre.Click += new System.EventHandler(this.lblsifre_Click);
             // 
             // linklbluyeol
             // 
             this.linklbluyeol.AutoSize = true;
-            this.linklbluyeol.Location = new System.Drawing.Point(179, 223);
+            this.linklbluyeol.BackColor = System.Drawing.Color.White;
+            this.linklbluyeol.Cursor = System.Windows.Forms.Cursors.No;
+            this.linklbluyeol.DisabledLinkColor = System.Drawing.Color.White;
+            this.linklbluyeol.Location = new System.Drawing.Point(284, 381);
             this.linklbluyeol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linklbluyeol.Name = "linklbluyeol";
             this.linklbluyeol.Size = new System.Drawing.Size(58, 18);
@@ -107,7 +99,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(162, 137);
+            this.txtID.Location = new System.Drawing.Point(155, 294);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(199, 24);
@@ -115,20 +107,22 @@
             // 
             // btnGiris
             // 
-            this.btnGiris.Location = new System.Drawing.Point(253, 281);
+            this.btnGiris.Location = new System.Drawing.Point(244, 437);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(98, 32);
             this.btnGiris.TabIndex = 6;
             this.btnGiris.Text = "Giris";
             this.btnGiris.UseVisualStyleBackColor = true;
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(156, 65);
+            this.label2.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.label2.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(152, 229);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 31);
+            this.label2.Size = new System.Drawing.Size(190, 42);
             this.label2.TabIndex = 8;
             this.label2.Text = " Giris Paneli";
             // 
@@ -141,7 +135,7 @@
             this.şikayetToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(430, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(482, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -171,21 +165,42 @@
             // 
             // txtSifree
             // 
-            this.txtSifree.Location = new System.Drawing.Point(162, 187);
+            this.txtSifree.Location = new System.Drawing.Point(155, 340);
             this.txtSifree.Name = "txtSifree";
             this.txtSifree.Size = new System.Drawing.Size(199, 24);
             this.txtSifree.TabIndex = 10;
+            // 
+            // btnTemizle
+            // 
+            this.btnTemizle.Location = new System.Drawing.Point(110, 437);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(93, 32);
+            this.btnTemizle.TabIndex = 11;
+            this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.UseVisualStyleBackColor = true;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Otel_Rezervasyon_Sistemi.Properties.Resources.Check_inOnline;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(482, 199);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(430, 390);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(482, 498);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.txtSifree);
             this.Controls.Add(this.label2);
-            this.Controls.Add(btnTemizle);
             this.Controls.Add(this.btnGiris);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.linklbluyeol);
@@ -202,6 +217,7 @@
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,6 +238,8 @@
         private System.Windows.Forms.ToolStripMenuItem iletişimToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem şikayetToolStripMenuItem;
         private System.Windows.Forms.TextBox txtSifree;
+        private System.Windows.Forms.Button btnTemizle;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

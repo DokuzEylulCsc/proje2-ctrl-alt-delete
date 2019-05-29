@@ -57,7 +57,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.tbFiyat = new System.Windows.Forms.TextBox();
             this.CmbKisi = new System.Windows.Forms.ComboBox();
@@ -69,6 +68,7 @@
             this.tbOdaEkleID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnKaydet = new System.Windows.Forms.Button();
             this.panelIslemde.SuspendLayout();
             this.mSOdaEkle.SuspendLayout();
             this.panelKayitli.SuspendLayout();
@@ -328,12 +328,13 @@
             // 
             // panelKayitli
             // 
+            this.panelKayitli.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panelKayitli.Controls.Add(this.btnKaydet);
             this.panelKayitli.Controls.Add(this.cmbOdatipi);
             this.panelKayitli.Controls.Add(this.label4);
             this.panelKayitli.Controls.Add(this.label5);
             this.panelKayitli.Controls.Add(this.button1);
             this.panelKayitli.Controls.Add(this.button2);
-            this.panelKayitli.Controls.Add(this.button3);
             this.panelKayitli.Controls.Add(this.checkedListBox1);
             this.panelKayitli.Controls.Add(this.tbFiyat);
             this.panelKayitli.Controls.Add(this.CmbKisi);
@@ -367,6 +368,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.Location = new System.Drawing.Point(37, 113);
@@ -378,6 +380,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.Location = new System.Drawing.Point(36, 284);
@@ -406,16 +409,6 @@
             this.button2.Text = "Temizle";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.Location = new System.Drawing.Point(66, 427);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 34);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "Kaydet";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // checkedListBox1
             // 
@@ -455,6 +448,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -467,6 +461,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -479,6 +474,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -505,6 +501,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.Control;
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.Location = new System.Drawing.Point(37, 38);
@@ -517,6 +514,7 @@
             // 
             this.label3.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.Location = new System.Drawing.Point(37, 78);
@@ -525,10 +523,21 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Otel Adi:";
             // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKaydet.Location = new System.Drawing.Point(43, 427);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(93, 31);
+            this.btnKaydet.TabIndex = 30;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.UseVisualStyleBackColor = true;
+            // 
             // FormOdaEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(942, 571);
             this.Controls.Add(this.panelKayitli);
             this.Controls.Add(this.checkIslemde);
@@ -581,7 +590,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.TextBox tbFiyat;
         private System.Windows.Forms.ComboBox CmbKisi;
@@ -593,5 +601,6 @@
         private System.Windows.Forms.TextBox tbOdaEkleID;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnKaydet;
     }
 }

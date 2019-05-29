@@ -37,5 +37,10 @@ namespace Otel_Rezervasyon_Sistemi
             r.Show();
             this.Close();
         }
+
+        private void FormYonetici_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

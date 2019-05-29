@@ -23,5 +23,12 @@ namespace Otel_Rezervasyon_Sistemi
             Fl.Show();
             this.Close();
         }
+
+        private void btnKayit_Click(object sender, EventArgs e)
+        {
+            Controllers.UserController u = new Controllers.UserController();
+         
+           
+        }
     }
 }
