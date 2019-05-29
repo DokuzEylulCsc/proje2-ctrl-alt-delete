@@ -31,8 +31,11 @@ namespace Otel_Rezervasyon_Sistemi
             this.Close();
         }
 
-       
-
-       
+        private void rezervasyonListeleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRezOzet r = new FormRezOzet();
+            r.Show();
+            this.Close();
+        }
     }
 }

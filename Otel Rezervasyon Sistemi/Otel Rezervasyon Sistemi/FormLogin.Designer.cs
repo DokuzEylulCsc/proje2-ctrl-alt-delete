@@ -48,6 +48,7 @@
             // 
             // btnTemizle
             // 
+            btnTemizle.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             btnTemizle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             btnTemizle.Cursor = System.Windows.Forms.Cursors.No;
             btnTemizle.Location = new System.Drawing.Point(117, 281);

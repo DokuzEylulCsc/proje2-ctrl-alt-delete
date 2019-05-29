@@ -48,6 +48,20 @@
             this.clistbox = new System.Windows.Forms.CheckedListBox();
             this.btnTemizle = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txtstandart = new System.Windows.Forms.TextBox();
             this.txtmanzarali = new System.Windows.Forms.TextBox();
             this.txtKral = new System.Windows.Forms.TextBox();
@@ -57,20 +71,6 @@
             this.btnOdaEkle = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.mSOtelEkle.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -162,6 +162,7 @@
             this.rezervasyonListeleToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
             this.rezervasyonListeleToolStripMenuItem.Text = "Rezervasyon Listele";
             this.rezervasyonListeleToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.rezervasyonListeleToolStripMenuItem.Click += new System.EventHandler(this.rezervasyonListeleToolStripMenuItem_Click);
             // 
             // cıkısToolStripMenuItem
             // 
@@ -304,6 +305,138 @@
             this.panel1.Size = new System.Drawing.Size(586, 438);
             this.panel1.TabIndex = 0;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(345, 169);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(122, 19);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Anket Sonuclari:";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.label15);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Location = new System.Drawing.Point(341, 191);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 175);
+            this.panel2.TabIndex = 29;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(123, 101);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(38, 22);
+            this.textBox3.TabIndex = 5;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(123, 60);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(38, 22);
+            this.textBox2.TabIndex = 4;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(123, 19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(38, 22);
+            this.textBox1.TabIndex = 3;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(17, 107);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(89, 16);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Hizmet Puani:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(16, 66);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(89, 16);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Konum Puani:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(17, 25);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(98, 16);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Temizlik Puani:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(448, 130);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(27, 16);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "--->";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(448, 103);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(27, 16);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "--->";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(448, 76);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(27, 16);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "--->";
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.checkBox3.Location = new System.Drawing.Point(349, 123);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(82, 23);
+            this.checkBox3.TabIndex = 25;
+            this.checkBox3.Text = "Standart";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.checkBox2.Location = new System.Drawing.Point(349, 97);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(92, 23);
+            this.checkBox2.TabIndex = 24;
+            this.checkBox2.Text = "Manzarali";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.checkBox1.Location = new System.Drawing.Point(349, 73);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(103, 23);
+            this.checkBox1.TabIndex = 23;
+            this.checkBox1.Text = "Kral Dairesi";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // txtstandart
             // 
             this.txtstandart.Enabled = false;
@@ -396,138 +529,6 @@
             this.label1.Size = new System.Drawing.Size(71, 21);
             this.label1.TabIndex = 13;
             this.label1.Text = "Otel Tipi:";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox1.Location = new System.Drawing.Point(349, 73);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(103, 23);
-            this.checkBox1.TabIndex = 23;
-            this.checkBox1.Text = "Kral Dairesi";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox2.Location = new System.Drawing.Point(349, 97);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(92, 23);
-            this.checkBox2.TabIndex = 24;
-            this.checkBox2.Text = "Manzarali";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox3.Location = new System.Drawing.Point(349, 123);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(82, 23);
-            this.checkBox3.TabIndex = 25;
-            this.checkBox3.Text = "Standart";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(448, 76);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(27, 16);
-            this.label10.TabIndex = 26;
-            this.label10.Text = "--->";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(448, 103);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(27, 16);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "--->";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(448, 130);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(27, 16);
-            this.label12.TabIndex = 28;
-            this.label12.Text = "--->";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Location = new System.Drawing.Point(341, 191);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 175);
-            this.panel2.TabIndex = 29;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(345, 169);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 19);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Anket Sonuclari:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(17, 25);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(98, 16);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Temizlik Puani:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(16, 66);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(89, 16);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Konum Puani:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(17, 107);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(89, 16);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "Hizmet Puani:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(123, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(38, 22);
-            this.textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(123, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(38, 22);
-            this.textBox2.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(123, 101);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(38, 22);
-            this.textBox3.TabIndex = 5;
             // 
             // FormYonetici
             // 
