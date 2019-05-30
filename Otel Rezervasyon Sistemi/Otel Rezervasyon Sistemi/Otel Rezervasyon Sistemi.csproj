@@ -52,6 +52,18 @@
     <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="FormSifreDegistir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSifreDegistir.Designer.cs">
+      <DependentUpon>FormSifreDegistir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMusteriRez.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,12 +81,6 @@
     </Compile>
     <Compile Include="FormRezListele.Designer.cs">
       <DependentUpon>FormRezListele.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUyeOl.cs">
       <SubType>Form</SubType>
@@ -100,6 +106,9 @@
     <Compile Include="ModelsAndBuffer\Yonetici.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMusteriRez.resx">
       <DependentUpon>FormMusteriRez.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,8 +118,8 @@
     <EmbeddedResource Include="FormRezListele.resx">
       <DependentUpon>FormRezListele.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <EmbeddedResource Include="FormSifreDegistir.resx">
+      <DependentUpon>FormSifreDegistir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUyeOl.resx">
       <DependentUpon>FormUyeOl.cs</DependentUpon>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Otel_Rezervasyon_Sistemi.Controllers
 {
     class MainController
@@ -34,7 +35,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <returns>
         /// Singleton object
         /// </returns>
-        public MainController GetController()
+        public static MainController GetController()
         {
             if (instance == null)
             {

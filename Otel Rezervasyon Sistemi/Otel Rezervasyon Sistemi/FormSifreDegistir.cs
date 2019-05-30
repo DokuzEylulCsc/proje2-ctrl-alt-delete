@@ -7,20 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Otel_Rezervasyon_Sistemi.Controllers;
 
 namespace Otel_Rezervasyon_Sistemi
 {
-    public partial class FormMusteriRez : Form
+    public partial class FormSifreDegistir : Form
     {
-        public FormMusteriRez()
+        public FormSifreDegistir()
         {
             InitializeComponent();
         }
 
-        private void BtnRezAra_Click(object sender, EventArgs e)
+        private void btnGERİ_Click(object sender, EventArgs e)
         {
-            
+            FormLogin L = new FormLogin();
+            L.Show();
+            this.Close();
+
         }
     }
 }

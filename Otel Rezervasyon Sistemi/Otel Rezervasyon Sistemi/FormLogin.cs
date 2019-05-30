@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Otel_Rezervasyon_Sistemi.Controllers;
 namespace Otel_Rezervasyon_Sistemi
 {
     public partial class FormLogin : Form
@@ -16,41 +16,53 @@ namespace Otel_Rezervasyon_Sistemi
         {
             InitializeComponent();
         }
-         
-        private void lblkullaniciad_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void FormLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-        private void linklbluyeol_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            FormUyeOl F = new FormUyeOl();
-            F.Show();
-            this.Close();
-        }
-
-        private void btnTemizle_Click_1(object sender, EventArgs e)
+        private void btnTemizle_Click(object sender, EventArgs e)
         {
             txtID.Clear();
-            txtSifree.Clear();
+            txtSifre.Clear();
         }
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            Controllers.UserController u = new Controllers.UserController();
-            u.AccountVerification(txtID.Text,txtSifree.Text);
-    }
+           
+            try
+            {
+                MainController controller = MainController.GetController();
+                Kullanici a = controller.user.AccountVerification(txtID.Text, txtSifre.Text);
+                if(a is Musteri)
+                {
+                    FormMusteriRez F = new FormMusteriRez();
+                    F.Show();
+                    this.Close();
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+                }
+                else
+                {
+                    FormYonetici y = new FormYonetici();
+                    y.Show();
+                    this.Close();
+                    
+                }
+               
+
+            }
+            catch
+            {
+                MessageBox.Show("Kullanıcı Bulunamadı!!","UYARI",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            FormUyeOl f = new FormUyeOl();
+            f.Show();
+            this.Close();
+        }
 
+        private void çıkışToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+               
         }
     }
 }
