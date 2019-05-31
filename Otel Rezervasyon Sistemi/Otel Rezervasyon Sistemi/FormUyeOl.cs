@@ -34,14 +34,13 @@ namespace Otel_Rezervasyon_Sistemi
                 string ad = TXTAD.Text;
                 string soyad = TXTSOYAD.Text;
   
-                Kullanici a = controller.user.CreateAccountRequest(gecici,ad,soyad);
-                //gecici değişken ile göndermeme rağmen hata veriyor.
+              //  Kullanici a = controller.user.CreateAccountRequest(gecici,ad,soyad);
                 
                 
             }
             catch
             {
-                MessageBox.Show("Kayıt Edilmek İstenen Kullanicinin Bilgileri Uygun Değildir!!");
+                MessageBox.Show("Kayıt Edilmek İstenen Kullanicinin Bilgileri Uygun Değildir!!", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
