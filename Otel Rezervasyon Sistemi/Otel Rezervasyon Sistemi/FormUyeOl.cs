@@ -35,6 +35,7 @@ namespace Otel_Rezervasyon_Sistemi
                 string soyad = TXTSOYAD.Text;
   
                 Kullanici a = controller.user.CreateAccountRequest(gecici,ad,soyad);
+                //gecici değişken ile göndermeme rağmen hata veriyor.
                 
                 
             }

@@ -24,5 +24,12 @@ namespace Otel_Rezervasyon_Sistemi
             this.Close();
 
         }
+
+        private void btnDegistir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
