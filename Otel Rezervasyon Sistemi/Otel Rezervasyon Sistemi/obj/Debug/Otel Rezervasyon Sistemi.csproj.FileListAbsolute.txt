@@ -27,3 +27,4 @@ C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\
 C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.exe
 C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.pdb
 C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormSifreDegistir.resources
+C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormBilgiGüncelle.resources

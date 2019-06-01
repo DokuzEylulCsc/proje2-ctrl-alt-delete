@@ -32,10 +32,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.BtnCıkıs = new System.Windows.Forms.Button();
             this.mSOtelEkle = new System.Windows.Forms.MenuStrip();
-            this.otelEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.odaEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kayıtlıOteleOdaEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.otelSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rezervasyonListeleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cıkısToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,13 +42,12 @@
             this.tbAd = new System.Windows.Forms.TextBox();
             this.cbkonum = new System.Windows.Forms.ComboBox();
             this.clistbox = new System.Windows.Forms.CheckedListBox();
-            this.btnTemizle = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtHizmet = new System.Windows.Forms.TextBox();
+            this.TxtKonum = new System.Windows.Forms.TextBox();
+            this.txtTemizlik = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -68,12 +63,18 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnOtelEkle = new System.Windows.Forms.Button();
-            this.btnOdaEkle = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbTİP = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtSilID = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.mSOtelEkle.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblOtelEkle
@@ -92,7 +93,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(265, 60);
+            this.label2.Location = new System.Drawing.Point(265, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(264, 36);
             this.label2.TabIndex = 3;
@@ -113,9 +114,6 @@
             this.mSOtelEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.mSOtelEkle.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.mSOtelEkle.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.otelEkleToolStripMenuItem,
-            this.odaEkleToolStripMenuItem,
-            this.otelSilToolStripMenuItem,
             this.rezervasyonListeleToolStripMenuItem,
             this.cıkısToolStripMenuItem});
             this.mSOtelEkle.Location = new System.Drawing.Point(0, 0);
@@ -123,32 +121,6 @@
             this.mSOtelEkle.Size = new System.Drawing.Size(802, 24);
             this.mSOtelEkle.TabIndex = 8;
             this.mSOtelEkle.Text = "menuStrip1";
-            // 
-            // otelEkleToolStripMenuItem
-            // 
-            this.otelEkleToolStripMenuItem.Name = "otelEkleToolStripMenuItem";
-            this.otelEkleToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.otelEkleToolStripMenuItem.Text = "Otel Ekle";
-            // 
-            // odaEkleToolStripMenuItem
-            // 
-            this.odaEkleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kayıtlıOteleOdaEkleToolStripMenuItem});
-            this.odaEkleToolStripMenuItem.Name = "odaEkleToolStripMenuItem";
-            this.odaEkleToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.odaEkleToolStripMenuItem.Text = "Oda Ekle";
-            // 
-            // kayıtlıOteleOdaEkleToolStripMenuItem
-            // 
-            this.kayıtlıOteleOdaEkleToolStripMenuItem.Name = "kayıtlıOteleOdaEkleToolStripMenuItem";
-            this.kayıtlıOteleOdaEkleToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.kayıtlıOteleOdaEkleToolStripMenuItem.Text = "Kayıtlı Otele Oda Ekle";
-            // 
-            // otelSilToolStripMenuItem
-            // 
-            this.otelSilToolStripMenuItem.Name = "otelSilToolStripMenuItem";
-            this.otelSilToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.otelSilToolStripMenuItem.Text = "Otel Sil";
             // 
             // rezervasyonListeleToolStripMenuItem
             // 
@@ -171,6 +143,7 @@
             this.cıkısToolStripMenuItem.Name = "cıkısToolStripMenuItem";
             this.cıkısToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.cıkısToolStripMenuItem.Text = "Cıkıs";
+            this.cıkısToolStripMenuItem.Click += new System.EventHandler(this.cıkısToolStripMenuItem_Click);
             // 
             // label3
             // 
@@ -179,7 +152,7 @@
             this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(53, 122);
+            this.label3.Location = new System.Drawing.Point(49, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 21);
             this.label3.TabIndex = 0;
@@ -191,7 +164,7 @@
             this.label5.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(52, 213);
+            this.label5.Location = new System.Drawing.Point(48, 154);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 21);
             this.label5.TabIndex = 2;
@@ -204,7 +177,7 @@
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(53, 164);
+            this.label6.Location = new System.Drawing.Point(49, 105);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 21);
             this.label6.TabIndex = 3;
@@ -216,7 +189,7 @@
             this.label7.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(53, 82);
+            this.label7.Location = new System.Drawing.Point(49, 23);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 21);
             this.label7.TabIndex = 4;
@@ -224,14 +197,14 @@
             // 
             // tbID
             // 
-            this.tbID.Location = new System.Drawing.Point(163, 79);
+            this.tbID.Location = new System.Drawing.Point(159, 20);
             this.tbID.Name = "tbID";
             this.tbID.Size = new System.Drawing.Size(121, 22);
             this.tbID.TabIndex = 5;
             // 
             // tbAd
             // 
-            this.tbAd.Location = new System.Drawing.Point(164, 122);
+            this.tbAd.Location = new System.Drawing.Point(160, 63);
             this.tbAd.Name = "tbAd";
             this.tbAd.Size = new System.Drawing.Size(120, 22);
             this.tbAd.TabIndex = 6;
@@ -239,7 +212,7 @@
             // cbkonum
             // 
             this.cbkonum.FormattingEnabled = true;
-            this.cbkonum.Location = new System.Drawing.Point(163, 164);
+            this.cbkonum.Location = new System.Drawing.Point(159, 105);
             this.cbkonum.Name = "cbkonum";
             this.cbkonum.Size = new System.Drawing.Size(121, 24);
             this.cbkonum.TabIndex = 7;
@@ -259,26 +232,18 @@
             "Jakuzi",
             "Manzara",
             "Oyun Konsolu"});
-            this.clistbox.Location = new System.Drawing.Point(146, 213);
+            this.clistbox.Location = new System.Drawing.Point(142, 154);
             this.clistbox.Name = "clistbox";
             this.clistbox.Size = new System.Drawing.Size(142, 180);
             this.clistbox.TabIndex = 8;
-            // 
-            // btnTemizle
-            // 
-            this.btnTemizle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnTemizle.Location = new System.Drawing.Point(451, 399);
-            this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(91, 34);
-            this.btnTemizle.TabIndex = 11;
-            this.btnTemizle.Text = "Temizle";
-            this.btnTemizle.UseVisualStyleBackColor = true;
-            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label12);
@@ -293,10 +258,8 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.btnOtelEkle);
-            this.panel1.Controls.Add(this.btnOdaEkle);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cmbTİP);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnTemizle);
             this.panel1.Controls.Add(this.clistbox);
             this.panel1.Controls.Add(this.cbkonum);
             this.panel1.Controls.Add(this.tbAd);
@@ -309,14 +272,14 @@
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panel1.Location = new System.Drawing.Point(123, 110);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(586, 457);
+            this.panel1.Size = new System.Drawing.Size(586, 521);
             this.panel1.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(345, 169);
+            this.label4.Location = new System.Drawing.Point(332, 194);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 19);
             this.label4.TabIndex = 30;
@@ -324,38 +287,38 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.LightGray;
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Controls.Add(this.TxtHizmet);
+            this.panel2.Controls.Add(this.TxtKonum);
+            this.panel2.Controls.Add(this.txtTemizlik);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label13);
-            this.panel2.Location = new System.Drawing.Point(341, 191);
+            this.panel2.Location = new System.Drawing.Point(328, 216);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 175);
             this.panel2.TabIndex = 29;
             // 
-            // textBox3
+            // TxtHizmet
             // 
-            this.textBox3.Location = new System.Drawing.Point(123, 101);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(38, 22);
-            this.textBox3.TabIndex = 5;
+            this.TxtHizmet.Location = new System.Drawing.Point(123, 101);
+            this.TxtHizmet.Name = "TxtHizmet";
+            this.TxtHizmet.Size = new System.Drawing.Size(38, 22);
+            this.TxtHizmet.TabIndex = 5;
             // 
-            // textBox2
+            // TxtKonum
             // 
-            this.textBox2.Location = new System.Drawing.Point(123, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(38, 22);
-            this.textBox2.TabIndex = 4;
+            this.TxtKonum.Location = new System.Drawing.Point(123, 60);
+            this.TxtKonum.Name = "TxtKonum";
+            this.TxtKonum.Size = new System.Drawing.Size(38, 22);
+            this.TxtKonum.TabIndex = 4;
             // 
-            // textBox1
+            // txtTemizlik
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(38, 22);
-            this.textBox1.TabIndex = 3;
+            this.txtTemizlik.Location = new System.Drawing.Point(123, 19);
+            this.txtTemizlik.Name = "txtTemizlik";
+            this.txtTemizlik.Size = new System.Drawing.Size(38, 22);
+            this.txtTemizlik.TabIndex = 3;
             // 
             // label15
             // 
@@ -387,7 +350,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(448, 130);
+            this.label12.Location = new System.Drawing.Point(422, 161);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(27, 16);
             this.label12.TabIndex = 28;
@@ -396,7 +359,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(448, 103);
+            this.label11.Location = new System.Drawing.Point(422, 134);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(27, 16);
             this.label11.TabIndex = 27;
@@ -405,7 +368,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(448, 76);
+            this.label10.Location = new System.Drawing.Point(422, 107);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(27, 16);
             this.label10.TabIndex = 26;
@@ -415,7 +378,7 @@
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox3.Location = new System.Drawing.Point(349, 123);
+            this.checkBox3.Location = new System.Drawing.Point(323, 154);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(82, 23);
             this.checkBox3.TabIndex = 25;
@@ -426,7 +389,7 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox2.Location = new System.Drawing.Point(349, 97);
+            this.checkBox2.Location = new System.Drawing.Point(323, 128);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(92, 23);
             this.checkBox2.TabIndex = 24;
@@ -437,7 +400,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox1.Location = new System.Drawing.Point(349, 73);
+            this.checkBox1.Location = new System.Drawing.Point(323, 104);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(103, 23);
             this.checkBox1.TabIndex = 23;
@@ -447,7 +410,7 @@
             // txtstandart
             // 
             this.txtstandart.Enabled = false;
-            this.txtstandart.Location = new System.Drawing.Point(481, 130);
+            this.txtstandart.Location = new System.Drawing.Point(455, 161);
             this.txtstandart.Name = "txtstandart";
             this.txtstandart.Size = new System.Drawing.Size(58, 22);
             this.txtstandart.TabIndex = 22;
@@ -455,7 +418,7 @@
             // txtmanzarali
             // 
             this.txtmanzarali.Enabled = false;
-            this.txtmanzarali.Location = new System.Drawing.Point(481, 102);
+            this.txtmanzarali.Location = new System.Drawing.Point(455, 133);
             this.txtmanzarali.Name = "txtmanzarali";
             this.txtmanzarali.Size = new System.Drawing.Size(58, 22);
             this.txtmanzarali.TabIndex = 21;
@@ -463,7 +426,7 @@
             // txtKral
             // 
             this.txtKral.Enabled = false;
-            this.txtKral.Location = new System.Drawing.Point(481, 74);
+            this.txtKral.Location = new System.Drawing.Point(455, 105);
             this.txtKral.Name = "txtKral";
             this.txtKral.Size = new System.Drawing.Size(58, 22);
             this.txtKral.TabIndex = 20;
@@ -474,7 +437,7 @@
             this.label9.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(481, 38);
+            this.label9.Location = new System.Drawing.Point(455, 63);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(79, 21);
             this.label9.TabIndex = 19;
@@ -486,7 +449,7 @@
             this.label8.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(316, 38);
+            this.label8.Location = new System.Drawing.Point(303, 63);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(139, 21);
             this.label8.TabIndex = 17;
@@ -497,35 +460,25 @@
             this.btnOtelEkle.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnOtelEkle.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnOtelEkle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOtelEkle.Location = new System.Drawing.Point(86, 399);
+            this.btnOtelEkle.Location = new System.Drawing.Point(308, 416);
             this.btnOtelEkle.Name = "btnOtelEkle";
             this.btnOtelEkle.Size = new System.Drawing.Size(97, 34);
             this.btnOtelEkle.TabIndex = 16;
-            this.btnOtelEkle.Text = "Kayıt";
+            this.btnOtelEkle.Text = "Ekle";
             this.btnOtelEkle.UseVisualStyleBackColor = false;
+            this.btnOtelEkle.Click += new System.EventHandler(this.btnOtelEkle_Click);
             // 
-            // btnOdaEkle
+            // cmbTİP
             // 
-            this.btnOdaEkle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOdaEkle.Location = new System.Drawing.Point(285, 399);
-            this.btnOdaEkle.Name = "btnOdaEkle";
-            this.btnOdaEkle.Size = new System.Drawing.Size(92, 34);
-            this.btnOdaEkle.TabIndex = 15;
-            this.btnOdaEkle.Text = "Oda Ekle";
-            this.btnOdaEkle.UseVisualStyleBackColor = true;
-            this.btnOdaEkle.Click += new System.EventHandler(this.btnOdaEkle_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbTİP.FormattingEnabled = true;
+            this.cmbTİP.Items.AddRange(new object[] {
             "Tatil Köyü",
             "Pansiyon",
             "Butik Otel"});
-            this.comboBox1.Location = new System.Drawing.Point(163, 35);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 14;
+            this.cmbTİP.Location = new System.Drawing.Point(413, 18);
+            this.cmbTİP.Name = "cmbTİP";
+            this.cmbTİP.Size = new System.Drawing.Size(121, 24);
+            this.cmbTİP.TabIndex = 14;
             // 
             // label1
             // 
@@ -533,11 +486,71 @@
             this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(53, 41);
+            this.label1.Location = new System.Drawing.Point(303, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 21);
             this.label1.TabIndex = 13;
             this.label1.Text = "Otel Tipi:";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(52, 64);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 34);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "Otel Sil";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label16.Location = new System.Drawing.Point(8, 18);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(65, 18);
+            this.label16.TabIndex = 32;
+            this.label16.Text = "Otel İD:";
+            // 
+            // txtSilID
+            // 
+            this.txtSilID.Location = new System.Drawing.Point(89, 18);
+            this.txtSilID.Name = "txtSilID";
+            this.txtSilID.Size = new System.Drawing.Size(100, 22);
+            this.txtSilID.TabIndex = 33;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.txtSilID);
+            this.panel3.Location = new System.Drawing.Point(48, 367);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 125);
+            this.panel3.TabIndex = 34;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label17.Location = new System.Drawing.Point(44, 345);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(62, 19);
+            this.label17.TabIndex = 35;
+            this.label17.Text = "Otel Sil:";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.Location = new System.Drawing.Point(438, 416);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(96, 34);
+            this.button2.TabIndex = 36;
+            this.button2.Text = "Oda Ekle";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormYonetici
             // 
@@ -545,7 +558,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(802, 579);
+            this.ClientSize = new System.Drawing.Size(802, 696);
             this.Controls.Add(this.BtnCıkıs);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblOtelEkle);
@@ -556,13 +569,14 @@
             this.MainMenuStrip = this.mSOtelEkle;
             this.Name = "FormYonetici";
             this.Text = "Yonetici ";
-            this.Load += new System.EventHandler(this.FormYonetici_Load);
             this.mSOtelEkle.ResumeLayout(false);
             this.mSOtelEkle.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -575,8 +589,6 @@
         private System.Windows.Forms.MenuStrip mSOtelEkle;
         private System.Windows.Forms.ToolStripMenuItem rezervasyonListeleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cıkısToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem otelEkleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem odaEkleToolStripMenuItem;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -585,15 +597,11 @@
         private System.Windows.Forms.TextBox tbAd;
         private System.Windows.Forms.ComboBox cbkonum;
         private System.Windows.Forms.CheckedListBox clistbox;
-        private System.Windows.Forms.Button btnTemizle;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbTİP;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnOdaEkle;
         private System.Windows.Forms.Button btnOtelEkle;
-        private System.Windows.Forms.ToolStripMenuItem kayıtlıOteleOdaEkleToolStripMenuItem;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ToolStripMenuItem otelSilToolStripMenuItem;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtstandart;
         private System.Windows.Forms.TextBox txtmanzarali;
@@ -606,11 +614,17 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtHizmet;
+        private System.Windows.Forms.TextBox TxtKonum;
+        private System.Windows.Forms.TextBox txtTemizlik;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtSilID;
     }
 }

@@ -40,5 +40,10 @@ namespace Otel_Rezervasyon_Sistemi
             this.Close();
 
         }
+
+        private void btnDeğiştir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

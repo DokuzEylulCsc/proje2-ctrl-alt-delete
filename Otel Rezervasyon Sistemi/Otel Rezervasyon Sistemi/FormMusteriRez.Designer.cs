@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.checkTv = new System.Windows.Forms.CheckBox();
             this.BtnRezAra = new System.Windows.Forms.Button();
@@ -49,41 +53,36 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.bilgileriGüncelleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.sifreDeğiştirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bilgileriGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sifreDegisikliğiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label9 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnrez = new System.Windows.Forms.Button();
-            this.bilgileriGüncelleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sifreDeğiştirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.gbOzellik = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.gbOzellik.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel1.Controls.Add(this.gbOzellik);
             this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.monthCalendar1);
-            this.panel1.Controls.Add(this.checkTv);
             this.panel1.Controls.Add(this.BtnRezAra);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.checkMinibar);
-            this.panel1.Controls.Add(this.checkWifi);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.checkKlima);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -91,6 +90,55 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(730, 287);
             this.panel1.TabIndex = 0;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "3",
+            "4",
+            "5"});
+            this.comboBox3.Location = new System.Drawing.Point(114, 161);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 28);
+            this.comboBox3.TabIndex = 17;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.Location = new System.Drawing.Point(12, 168);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(81, 20);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Yıldiz Sayısı:";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Tatil Köyü",
+            "Butik Otel",
+            "Pansiyon"});
+            this.comboBox2.Location = new System.Drawing.Point(116, 19);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 28);
+            this.comboBox2.TabIndex = 15;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(13, 19);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(68, 20);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Otel Tipi:";
             // 
             // monthCalendar1
             // 
@@ -102,7 +150,7 @@
             // 
             this.checkTv.AutoSize = true;
             this.checkTv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkTv.Location = new System.Drawing.Point(476, 249);
+            this.checkTv.Location = new System.Drawing.Point(89, 53);
             this.checkTv.Name = "checkTv";
             this.checkTv.Size = new System.Drawing.Size(38, 19);
             this.checkTv.TabIndex = 12;
@@ -142,7 +190,7 @@
             // 
             this.checkMinibar.AutoSize = true;
             this.checkMinibar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkMinibar.Location = new System.Drawing.Point(393, 249);
+            this.checkMinibar.Location = new System.Drawing.Point(6, 53);
             this.checkMinibar.Name = "checkMinibar";
             this.checkMinibar.Size = new System.Drawing.Size(68, 19);
             this.checkMinibar.TabIndex = 11;
@@ -153,7 +201,7 @@
             // 
             this.checkWifi.AutoSize = true;
             this.checkWifi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkWifi.Location = new System.Drawing.Point(476, 209);
+            this.checkWifi.Location = new System.Drawing.Point(89, 13);
             this.checkWifi.Name = "checkWifi";
             this.checkWifi.Size = new System.Drawing.Size(46, 19);
             this.checkWifi.TabIndex = 10;
@@ -198,7 +246,7 @@
             "Kral Dairesi",
             "Manzaralı",
             "Standart"});
-            this.comboBox1.Location = new System.Drawing.Point(114, 86);
+            this.comboBox1.Location = new System.Drawing.Point(114, 85);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 8;
@@ -207,7 +255,7 @@
             // 
             this.checkKlima.AutoSize = true;
             this.checkKlima.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkKlima.Location = new System.Drawing.Point(393, 209);
+            this.checkKlima.Location = new System.Drawing.Point(6, 13);
             this.checkKlima.Name = "checkKlima";
             this.checkKlima.Size = new System.Drawing.Size(58, 19);
             this.checkKlima.TabIndex = 9;
@@ -220,7 +268,7 @@
             this.label6.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(11, 93);
+            this.label6.Location = new System.Drawing.Point(11, 92);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 21);
             this.label6.TabIndex = 2;
@@ -232,7 +280,7 @@
             this.label7.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(290, 209);
+            this.label7.Location = new System.Drawing.Point(290, 204);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 21);
             this.label7.TabIndex = 3;
@@ -298,6 +346,27 @@
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // bilgileriGüncelleToolStripMenuItem1
+            // 
+            this.bilgileriGüncelleToolStripMenuItem1.Name = "bilgileriGüncelleToolStripMenuItem1";
+            this.bilgileriGüncelleToolStripMenuItem1.Size = new System.Drawing.Size(107, 20);
+            this.bilgileriGüncelleToolStripMenuItem1.Text = "Bilgileri Güncelle";
+            this.bilgileriGüncelleToolStripMenuItem1.Click += new System.EventHandler(this.bilgileriGüncelleToolStripMenuItem1_Click);
+            // 
+            // sifreDeğiştirToolStripMenuItem
+            // 
+            this.sifreDeğiştirToolStripMenuItem.Name = "sifreDeğiştirToolStripMenuItem";
+            this.sifreDeğiştirToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.sifreDeğiştirToolStripMenuItem.Text = "Sifre Değiştir";
+            this.sifreDeğiştirToolStripMenuItem.Click += new System.EventHandler(this.sifreDeğiştirToolStripMenuItem_Click);
+            // 
+            // çıkışToolStripMenuItem
+            // 
+            this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.çıkışToolStripMenuItem.Text = "Çıkış";
+            this.çıkışToolStripMenuItem.Click += new System.EventHandler(this.çıkışToolStripMenuItem_Click);
+            // 
             // bilgileriGüncelleToolStripMenuItem
             // 
             this.bilgileriGüncelleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -340,75 +409,17 @@
             this.btnrez.Text = "Rezervasyon Yap";
             this.btnrez.UseVisualStyleBackColor = true;
             // 
-            // bilgileriGüncelleToolStripMenuItem1
+            // gbOzellik
             // 
-            this.bilgileriGüncelleToolStripMenuItem1.Name = "bilgileriGüncelleToolStripMenuItem1";
-            this.bilgileriGüncelleToolStripMenuItem1.Size = new System.Drawing.Size(107, 20);
-            this.bilgileriGüncelleToolStripMenuItem1.Text = "Bilgileri Güncelle";
-            this.bilgileriGüncelleToolStripMenuItem1.Click += new System.EventHandler(this.bilgileriGüncelleToolStripMenuItem1_Click);
-            // 
-            // sifreDeğiştirToolStripMenuItem
-            // 
-            this.sifreDeğiştirToolStripMenuItem.Name = "sifreDeğiştirToolStripMenuItem";
-            this.sifreDeğiştirToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
-            this.sifreDeğiştirToolStripMenuItem.Text = "Sifre Değiştir";
-            this.sifreDeğiştirToolStripMenuItem.Click += new System.EventHandler(this.sifreDeğiştirToolStripMenuItem_Click);
-            // 
-            // çıkışToolStripMenuItem
-            // 
-            this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.çıkışToolStripMenuItem.Text = "Çıkış";
-            this.çıkışToolStripMenuItem.Click += new System.EventHandler(this.çıkışToolStripMenuItem_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(13, 19);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 20);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Otel Tipi:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Tatil Köyü",
-            "Butik Otel",
-            "Pansiyon"});
-            this.comboBox2.Location = new System.Drawing.Point(116, 19);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
-            this.comboBox2.TabIndex = 15;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(12, 168);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(81, 20);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Yıldiz Sayısı:";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "3",
-            "4",
-            "5"});
-            this.comboBox3.Location = new System.Drawing.Point(114, 161);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 28);
-            this.comboBox3.TabIndex = 17;
+            this.gbOzellik.Controls.Add(this.checkTv);
+            this.gbOzellik.Controls.Add(this.checkMinibar);
+            this.gbOzellik.Controls.Add(this.checkWifi);
+            this.gbOzellik.Controls.Add(this.checkKlima);
+            this.gbOzellik.Location = new System.Drawing.Point(388, 193);
+            this.gbOzellik.Name = "gbOzellik";
+            this.gbOzellik.Size = new System.Drawing.Size(158, 90);
+            this.gbOzellik.TabIndex = 18;
+            this.gbOzellik.TabStop = false;
             // 
             // FormMusteriRez
             // 
@@ -434,6 +445,8 @@
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.gbOzellik.ResumeLayout(false);
+            this.gbOzellik.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,5 +487,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.GroupBox gbOzellik;
     }
 }

@@ -44,18 +44,14 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.mSOdaEkle = new System.Windows.Forms.MenuStrip();
-            this.otelEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.odaEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rezervasyonListeleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cıkısToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkKayitli = new System.Windows.Forms.CheckBox();
             this.checkIslemde = new System.Windows.Forms.CheckBox();
             this.panelKayitli = new System.Windows.Forms.Panel();
+            this.btnCıkıs = new System.Windows.Forms.Button();
+            this.btnKaydet = new System.Windows.Forms.Button();
             this.cmbOdatipi = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.tbFiyat = new System.Windows.Forms.TextBox();
@@ -68,9 +64,7 @@
             this.tbOdaEkleID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnKaydet = new System.Windows.Forms.Button();
             this.panelIslemde.SuspendLayout();
-            this.mSOdaEkle.SuspendLayout();
             this.panelKayitli.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,7 +94,7 @@
             this.panelIslemde.Controls.Add(this.label11);
             this.panelIslemde.Controls.Add(this.label10);
             this.panelIslemde.Controls.Add(this.label8);
-            this.panelIslemde.Location = new System.Drawing.Point(242, 51);
+            this.panelIslemde.Location = new System.Drawing.Point(232, 51);
             this.panelIslemde.Name = "panelIslemde";
             this.panelIslemde.Size = new System.Drawing.Size(447, 480);
             this.panelIslemde.TabIndex = 8;
@@ -168,6 +162,7 @@
             this.BtnKayit.TabIndex = 11;
             this.BtnKayit.Text = "Kaydet";
             this.BtnKayit.UseVisualStyleBackColor = true;
+            this.BtnKayit.Click += new System.EventHandler(this.BtnKayit_Click);
             // 
             // checkedListBox2
             // 
@@ -251,57 +246,6 @@
             this.label1.Text = "Oda Ekle:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // mSOdaEkle
-            // 
-            this.mSOdaEkle.BackColor = System.Drawing.SystemColors.Control;
-            this.mSOdaEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.mSOdaEkle.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
-            this.mSOdaEkle.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.otelEkleToolStripMenuItem,
-            this.odaEkleToolStripMenuItem,
-            this.rezervasyonListeleToolStripMenuItem,
-            this.cıkısToolStripMenuItem});
-            this.mSOdaEkle.Location = new System.Drawing.Point(0, 0);
-            this.mSOdaEkle.Name = "mSOdaEkle";
-            this.mSOdaEkle.Size = new System.Drawing.Size(942, 24);
-            this.mSOdaEkle.TabIndex = 11;
-            this.mSOdaEkle.Text = "menuStrip1";
-            // 
-            // otelEkleToolStripMenuItem
-            // 
-            this.otelEkleToolStripMenuItem.Name = "otelEkleToolStripMenuItem";
-            this.otelEkleToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.otelEkleToolStripMenuItem.Text = "Otel Ekle";
-            this.otelEkleToolStripMenuItem.Click += new System.EventHandler(this.otelEkleToolStripMenuItem_Click);
-            // 
-            // odaEkleToolStripMenuItem
-            // 
-            this.odaEkleToolStripMenuItem.Name = "odaEkleToolStripMenuItem";
-            this.odaEkleToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.odaEkleToolStripMenuItem.Text = "Oda Ekle";
-            // 
-            // rezervasyonListeleToolStripMenuItem
-            // 
-            this.rezervasyonListeleToolStripMenuItem.AutoToolTip = true;
-            this.rezervasyonListeleToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.rezervasyonListeleToolStripMenuItem.Checked = true;
-            this.rezervasyonListeleToolStripMenuItem.CheckOnClick = true;
-            this.rezervasyonListeleToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.rezervasyonListeleToolStripMenuItem.DoubleClickEnabled = true;
-            this.rezervasyonListeleToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.rezervasyonListeleToolStripMenuItem.Name = "rezervasyonListeleToolStripMenuItem";
-            this.rezervasyonListeleToolStripMenuItem.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
-            this.rezervasyonListeleToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
-            this.rezervasyonListeleToolStripMenuItem.Text = "Rezervasyon Listele";
-            this.rezervasyonListeleToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.rezervasyonListeleToolStripMenuItem.Click += new System.EventHandler(this.rezervasyonListeleToolStripMenuItem_Click);
-            // 
-            // cıkısToolStripMenuItem
-            // 
-            this.cıkısToolStripMenuItem.Name = "cıkısToolStripMenuItem";
-            this.cıkısToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.cıkısToolStripMenuItem.Text = "Cıkıs";
-            // 
             // checkKayitli
             // 
             this.checkKayitli.AutoSize = true;
@@ -329,11 +273,11 @@
             // panelKayitli
             // 
             this.panelKayitli.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panelKayitli.Controls.Add(this.btnCıkıs);
             this.panelKayitli.Controls.Add(this.btnKaydet);
             this.panelKayitli.Controls.Add(this.cmbOdatipi);
             this.panelKayitli.Controls.Add(this.label4);
             this.panelKayitli.Controls.Add(this.label5);
-            this.panelKayitli.Controls.Add(this.button1);
             this.panelKayitli.Controls.Add(this.button2);
             this.panelKayitli.Controls.Add(this.checkedListBox1);
             this.panelKayitli.Controls.Add(this.tbFiyat);
@@ -346,12 +290,33 @@
             this.panelKayitli.Controls.Add(this.tbOdaEkleID);
             this.panelKayitli.Controls.Add(this.label7);
             this.panelKayitli.Controls.Add(this.label3);
-            this.panelKayitli.Location = new System.Drawing.Point(239, 51);
+            this.panelKayitli.Location = new System.Drawing.Point(649, 51);
             this.panelKayitli.Name = "panelKayitli";
             this.panelKayitli.Size = new System.Drawing.Size(447, 474);
             this.panelKayitli.TabIndex = 17;
             this.panelKayitli.Visible = false;
             this.panelKayitli.VisibleChanged += new System.EventHandler(this.panelKayitli_VisibleChanged);
+            // 
+            // btnCıkıs
+            // 
+            this.btnCıkıs.Location = new System.Drawing.Point(330, 428);
+            this.btnCıkıs.Name = "btnCıkıs";
+            this.btnCıkıs.Size = new System.Drawing.Size(76, 31);
+            this.btnCıkıs.TabIndex = 31;
+            this.btnCıkıs.Text = "Cıkıs";
+            this.btnCıkıs.UseVisualStyleBackColor = true;
+            this.btnCıkıs.Click += new System.EventHandler(this.btnCıkıs_Click);
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKaydet.Location = new System.Drawing.Point(43, 427);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(93, 31);
+            this.btnKaydet.TabIndex = 30;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // cmbOdatipi
             // 
@@ -389,20 +354,10 @@
             this.label5.TabIndex = 27;
             this.label5.Text = "Özellikler:";
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(276, 427);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 31);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Cıkıs";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(164, 427);
+            this.button2.Location = new System.Drawing.Point(172, 427);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(91, 31);
             this.button2.TabIndex = 25;
@@ -523,26 +478,15 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Otel Adi:";
             // 
-            // btnKaydet
-            // 
-            this.btnKaydet.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKaydet.Location = new System.Drawing.Point(43, 427);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(93, 31);
-            this.btnKaydet.TabIndex = 30;
-            this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.UseVisualStyleBackColor = true;
-            // 
             // FormOdaEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(942, 571);
+            this.ClientSize = new System.Drawing.Size(1058, 595);
             this.Controls.Add(this.panelKayitli);
             this.Controls.Add(this.checkIslemde);
             this.Controls.Add(this.checkKayitli);
-            this.Controls.Add(this.mSOdaEkle);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblodaozellik);
             this.Controls.Add(this.panelIslemde);
@@ -550,8 +494,6 @@
             this.Text = "FormOdaEkle";
             this.panelIslemde.ResumeLayout(false);
             this.panelIslemde.PerformLayout();
-            this.mSOdaEkle.ResumeLayout(false);
-            this.mSOdaEkle.PerformLayout();
             this.panelKayitli.ResumeLayout(false);
             this.panelKayitli.PerformLayout();
             this.ResumeLayout(false);
@@ -577,18 +519,12 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MenuStrip mSOdaEkle;
-        private System.Windows.Forms.ToolStripMenuItem otelEkleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem odaEkleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rezervasyonListeleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cıkısToolStripMenuItem;
         private System.Windows.Forms.CheckBox checkKayitli;
         private System.Windows.Forms.CheckBox checkIslemde;
         private System.Windows.Forms.Panel panelKayitli;
         private System.Windows.Forms.ComboBox cmbOdatipi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.TextBox tbFiyat;
@@ -602,5 +538,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.Button btnCıkıs;
     }
 }

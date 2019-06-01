@@ -163,6 +163,7 @@
             this.btnDeğiştir.TabIndex = 13;
             this.btnDeğiştir.Text = "Güncelle";
             this.btnDeğiştir.UseVisualStyleBackColor = true;
+            this.btnDeğiştir.Click += new System.EventHandler(this.btnDeğiştir_Click);
             // 
             // panel1
             // 
@@ -193,7 +194,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnGeri);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormBilgiGüncelle";
             this.Text = "FormBilgiGüncelle";
             this.Load += new System.EventHandler(this.FormBilgiGüncelle_Load);
