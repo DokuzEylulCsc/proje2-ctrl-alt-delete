@@ -12,37 +12,79 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         {
 
         }
-        ///<summary>
-        ///herhangi bir otele eklenmek istenen oda bilgileri alinicak
-        ///<returns>Oda Eklenirse true , hata olusursa hatayi aciklayan bir mesaj ile hata donucek</returns>
-        ///</summary>
-        ///<param name="A">gecici olarak olusturulmus oda nesnesi</param>
-        ///<param name="B">islemi yapmak isteyen kullanici nesnesini alir</param>
-        public  bool AddRoomRequest(Oda A, Kullanici B)
-        {
-            /* eklenmek istenen oda daha once eklendiyse hata dondurucek, 
-             * eger ilk kez ekleniyorsa eklenip true dondurucek,
-             * hangi kullanicinin ekledigi log bilgileri icin alinmalidir .
-             * durum basarili ya da basarisiz diye loglara yazilacaktir 
-             */
-            return false;
-        }
         /// <summary>
-        /// Otele Ait bir odayi silme islemi
+        /// Oda ekleme requesti icin bu method kullanilacak
         /// </summary>
-        /// <param name="B">Silmek isteyen kullanici nesesi</param>
-        /// <param name="odano">Silinmek istenen oda numarasi</param>
-        /// <param name="otelid">Odanin ait oldugu otel</param>
-        /// <returns>Islem gerceklesirse true ; hata olusur ise hata doner</returns>
-        public  bool DeleteRoomRequest(Kullanici B, int odano, int otelid)
+        /// <param name="roomType">Manzarali/Kral/Standart</param>
+        /// <param name="yoneticiID">Eklemek isteyen yonetici Idsi</param>
+        /// <param name="otelID">Eklenilecek olan Otel ID </param>
+        /// <param name="odaNo">Eklenecek olan odanin numarasi </param>
+        /// <returns></returns>
+        public  bool AddRoomRequest(string roomType , string yoneticiID , string otelID , int odaNo )
         {
-            /*
-             * istemi yapan kullanici log icin kullanilicak ,
-             * eger oda silinmeye musait ise true dondurulucek 
-             * eger degil ise hata dondurulucek orn("boyle bir oda yok , veya suan bu oda da rezervasyon bulunmaktadir ")
-             * view kisminda hata yonetimi buna uuygun yapilmalidir.
-             */
-            return false;
+            List<string> managerIDs = new List<string>(); //coredan alinacak 
+            List<string> hotelIDS = new List<string>(); // coredan alinacak
+            List<int> roomNOs = new List<int>(); // coredan alinacak 
+            if (managerIDs.Contains(yoneticiID))
+            {
+                if (hotelIDS.Contains(otelID))
+                {
+                    if (!roomNOs.Contains(odaNo))
+                    {
+                        //core a uygun oldugu gonderilicek 
+                        return true;
+                    }
+                    else
+                    {
+                        throw new Exception("Bu oda numarasina ait baska bir oda bulunmakta");
+                    }
+                }
+                else
+                {
+                    throw new Exception("Boyle bir otel IDsi bulunamadi ");
+                }
+            }
+            else
+            {
+                throw new Exception("Boyle Bir Yonetici bulunmamaktadir");
+            }
+        }
+       /// <summary>
+       /// Oda silinmek istediginde cagirilmasi gereken method
+       /// </summary>
+       /// <param name="yoneticiID">Silmek isteyen yoneticinin IDsi</param>
+       /// <param name="otelID">silinmek istenen odanin otel IDsi </param>
+       /// <param name="odaNo">silinmek istenen odanin numarasi </param>
+       /// <returns></returns>
+        public  bool DeleteRoomRequest(string yoneticiID, string otelID, int odaNo)
+        {
+            List<string> managerIDs = new List<string>(); //coredan alinacak 
+            List<string> hotelIDS = new List<string>(); // coredan alinacak
+            List<int> roomNOs = new List<int>(); // coredan alinacak 
+            if (managerIDs.Contains(yoneticiID))
+            {
+                if (hotelIDS.Contains(otelID))
+                {
+                    if (roomNOs.Contains(odaNo))
+                    {
+                        //core a uygun oldugu gonderilicek 
+                        return true;
+                    }
+                    else
+                    {
+                        throw new Exception("Bu oda numarasina ait baska bir oda bulunmakta");
+                    }
+                }
+                else
+                {
+                    throw new Exception("Boyle bir otel IDsi bulunamadi ");
+                }
+            }
+            else
+            {
+                throw new Exception("Boyle Bir Yonetici bulunmamaktadir");
+            }
+
         }
 
         /// <summary>
