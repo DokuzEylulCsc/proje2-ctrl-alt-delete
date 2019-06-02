@@ -27,15 +27,30 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
             return new Musteri("", "", "");
         }
         /// <summary>
-        /// <para>uretilmek istenen hesap biliglerini alicak</para>
-        /// <returns>Kullanici yaratilirsa dogru yaratilamazsa false dondurulucek</returns>
+        /// Yeni Kullanici Olusturulmak istendiginde cagirilmasi gereken metod
         /// </summary>
-        /// <param name="A" > gecici olarak olusturulmus olan kullanici nesnesi</param>
-        public  bool CreateAccountRequest(Kullanici A)
+        /// <param name="id">kullanilmak istenen id</param>
+        /// <param name="password">kullanilmak istenen sifre</param>
+        /// <param name="passwordverif">sifre dogrulamasi</param>
+        /// <param name="ad">kullanicinin adi</param>
+        /// <param name="soyad">kullanicinin soyadi</param>
+        /// <returns></returns>
+        public  bool CreateAccountRequest(string id , string password, string passwordverif, string ad , string soyad)
         {
-            /*kayit edilmek istenen kullanici durumlara uygun ise db ye eklenicek (eklenirse true) ,
-             uygun degilse false donucek*/
-            return false;
+            if(password == passwordverif)
+            {
+                List<string> IDs = new List<string>();//=getIds from core
+                if (IDs.Contains(id))
+                {
+                    throw new Exception("Boyle Bir ID zaten bulunmaktadi");
+                }
+                
+                return true;/*create new entity with these parameters (id , password, ad,soyad)*/
+            }
+            else
+            {
+                throw new Exception("Sifreler Uyusmuyor!");
+            }
         }
         /// <summary>
         /// Kullanicinin sifre degistirme istegi
@@ -60,13 +75,35 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="whichInfo">Hangi bilinin guncellenecegi</param>
         /// <param name="newInfo">Guncellenen bilginin yeni hali</param>
         /// <returns>islem uygulanir ise true , hata olusur ise hata dondurucekti</returns>
-        public  bool ChangeInformationRequest(Kullanici B, string whichInfo, string newInfo)
+        public  bool ChangeInformationRequest(string ID , string Password, string whichInfo, string newInfo)
         {
-            /*
-             * kullanicinin yeni infosu uygun ise db degisikligi yapilicak degil ise hata donulucek
-             */
+            List<string> IDs = new List<string>();
+            if (IDs.Contains(ID))
+            {
+                string pass = ""; /*get password of ID*/
+                if (pass == Password)
+                {
+                    if(whichInfo == "Ad")
+                    {
+                        //Idye sahip adi new info ile degistir
+                        return true;
+                    }
+                    else
+                    {
+                        //Idye sahip soyadi new info ile degistir
+                        return true;
+                    }
+                }
+                else
+                {
+                    throw new Exception("ID ile sifreniz uyusmamaktadir");
+                }
+            }
+            else
+            {
+                throw new Exception("Boyle bir ID yoktur");
+            }
 
-            return false;
         }
     }
 }

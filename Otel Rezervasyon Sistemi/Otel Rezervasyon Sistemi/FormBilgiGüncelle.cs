@@ -30,7 +30,7 @@ namespace Otel_Rezervasyon_Sistemi
             string soyad = txts.Text;
             MainController c = MainController.GetController();
           //  Kullanici k = new Kullanici(ID, ad, soyad);
-          ,//  c.user.ChangeInformationRequest(k,Convert.ToString( listBox1.SelectedItem), txtgüncel.Text);
+          //  c.user.ChangeInformationRequest(k,Convert.ToString( listBox1.SelectedItem), txtgüncel.Text);
         }
 
         private void btnGeri_Click(object sender, EventArgs e)
