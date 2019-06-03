@@ -38,9 +38,9 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnTemizle = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.iletişimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.iletişimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -138,6 +138,12 @@
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // iletişimToolStripMenuItem
+            // 
+            this.iletişimToolStripMenuItem.Name = "iletişimToolStripMenuItem";
+            this.iletişimToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.iletişimToolStripMenuItem.Text = "İletişim";
+            // 
             // çıkışToolStripMenuItem
             // 
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
@@ -154,12 +160,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(405, 201);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // iletişimToolStripMenuItem
-            // 
-            this.iletişimToolStripMenuItem.Name = "iletişimToolStripMenuItem";
-            this.iletişimToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.iletişimToolStripMenuItem.Text = "İletişim";
             // 
             // FormLogin
             // 
@@ -180,6 +180,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormLogin";
             this.Text = "FormLogin";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

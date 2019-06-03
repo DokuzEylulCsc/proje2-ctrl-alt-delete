@@ -102,13 +102,17 @@
     </Compile>
     <Compile Include="Interfaces\IGoruntuleyebilir.cs" />
     <Compile Include="Interfaces\IYonetebilir.cs" />
+    <Compile Include="ModelsAndBuffer\Buffer.cs" />
+    <Compile Include="ModelsAndBuffer\ButikOtel.cs" />
     <Compile Include="ModelsAndBuffer\KralDairesi.cs" />
     <Compile Include="ModelsAndBuffer\Kullanici.cs" />
     <Compile Include="ModelsAndBuffer\ManzaraliOda.cs" />
     <Compile Include="ModelsAndBuffer\Musteri.cs" />
     <Compile Include="ModelsAndBuffer\Oda.cs" />
     <Compile Include="ModelsAndBuffer\Otel.cs" />
+    <Compile Include="ModelsAndBuffer\Pansiyon.cs" />
     <Compile Include="ModelsAndBuffer\StandartOda.cs" />
+    <Compile Include="ModelsAndBuffer\TatilKoyu.cs" />
     <Compile Include="ModelsAndBuffer\Yonetici.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
