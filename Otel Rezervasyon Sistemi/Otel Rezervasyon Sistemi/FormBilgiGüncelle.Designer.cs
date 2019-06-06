@@ -38,10 +38,13 @@
             this.txta = new System.Windows.Forms.TextBox();
             this.txts = new System.Windows.Forms.TextBox();
             this.txtgüncel = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnGeri = new System.Windows.Forms.Button();
             this.btnDeğiştir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chckad = new System.Windows.Forms.CheckBox();
+            this.chcksoyad = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtSifre = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +70,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 147);
+            this.label3.Location = new System.Drawing.Point(19, 133);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 19);
@@ -77,7 +80,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 393);
+            this.label4.Location = new System.Drawing.Point(19, 336);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 19);
@@ -87,7 +90,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 202);
+            this.label5.Location = new System.Drawing.Point(19, 229);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(259, 19);
@@ -119,34 +122,21 @@
             // 
             // txts
             // 
-            this.txts.Location = new System.Drawing.Point(123, 139);
+            this.txts.Location = new System.Drawing.Point(123, 125);
             this.txts.Name = "txts";
             this.txts.Size = new System.Drawing.Size(187, 27);
             this.txts.TabIndex = 8;
             // 
             // txtgüncel
             // 
-            this.txtgüncel.Location = new System.Drawing.Point(123, 390);
+            this.txtgüncel.Location = new System.Drawing.Point(123, 333);
             this.txtgüncel.Name = "txtgüncel";
             this.txtgüncel.Size = new System.Drawing.Size(187, 27);
             this.txtgüncel.TabIndex = 10;
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 19;
-            this.listBox1.Items.AddRange(new object[] {
-            "AD",
-            "SOYAD"});
-            this.listBox1.Location = new System.Drawing.Point(23, 237);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(210, 118);
-            this.listBox1.TabIndex = 11;
-//            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
             // btnGeri
             // 
-            this.btnGeri.Location = new System.Drawing.Point(48, 491);
+            this.btnGeri.Location = new System.Drawing.Point(48, 442);
             this.btnGeri.Name = "btnGeri";
             this.btnGeri.Size = new System.Drawing.Size(114, 28);
             this.btnGeri.TabIndex = 12;
@@ -156,7 +146,7 @@
             // 
             // btnDeğiştir
             // 
-            this.btnDeğiştir.Location = new System.Drawing.Point(223, 491);
+            this.btnDeğiştir.Location = new System.Drawing.Point(223, 442);
             this.btnDeğiştir.Name = "btnDeğiştir";
             this.btnDeğiştir.Size = new System.Drawing.Size(112, 28);
             this.btnDeğiştir.TabIndex = 13;
@@ -167,10 +157,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.txtSifre);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.chcksoyad);
+            this.panel1.Controls.Add(this.chckad);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.listBox1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtgüncel);
             this.panel1.Controls.Add(this.label5);
@@ -180,15 +173,51 @@
             this.panel1.Controls.Add(this.txtid);
             this.panel1.Location = new System.Drawing.Point(25, 20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(344, 448);
+            this.panel1.Size = new System.Drawing.Size(344, 396);
             this.panel1.TabIndex = 15;
+            // 
+            // chckad
+            // 
+            this.chckad.AutoSize = true;
+            this.chckad.Location = new System.Drawing.Point(47, 285);
+            this.chckad.Name = "chckad";
+            this.chckad.Size = new System.Drawing.Size(47, 23);
+            this.chckad.TabIndex = 11;
+            this.chckad.Text = "AD";
+            this.chckad.UseVisualStyleBackColor = true;
+            // 
+            // chcksoyad
+            // 
+            this.chcksoyad.AutoSize = true;
+            this.chcksoyad.Location = new System.Drawing.Point(181, 285);
+            this.chcksoyad.Name = "chcksoyad";
+            this.chcksoyad.Size = new System.Drawing.Size(72, 23);
+            this.chcksoyad.TabIndex = 12;
+            this.chcksoyad.Text = "SOYAD";
+            this.chcksoyad.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(25, 175);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 19);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "SİFRE:";
+            // 
+            // txtSifre
+            // 
+            this.txtSifre.Location = new System.Drawing.Point(123, 167);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(187, 27);
+            this.txtSifre.TabIndex = 14;
             // 
             // FormBilgiGüncelle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(407, 543);
+            this.ClientSize = new System.Drawing.Size(407, 483);
             this.Controls.Add(this.btnDeğiştir);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnGeri);
@@ -196,7 +225,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormBilgiGüncelle";
             this.Text = "FormBilgiGüncelle";
-//            this.Load += new System.EventHandler(this.FormBilgiGüncelle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -215,9 +243,12 @@
         private System.Windows.Forms.TextBox txta;
         private System.Windows.Forms.TextBox txts;
         private System.Windows.Forms.TextBox txtgüncel;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button btnGeri;
         private System.Windows.Forms.Button btnDeğiştir;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox chcksoyad;
+        private System.Windows.Forms.CheckBox chckad;
+        private System.Windows.Forms.TextBox txtSifre;
+        private System.Windows.Forms.Label label7;
     }
 }

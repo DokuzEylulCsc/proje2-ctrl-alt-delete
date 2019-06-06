@@ -40,7 +40,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             Oteller.Add(o);
 
             using (FileStream fs = new FileStream(@"../Otel.xml",FileMode.OpenOrCreate))
-            {
+             {
                 xs.Serialize(fs, Oteller);
             }
            
