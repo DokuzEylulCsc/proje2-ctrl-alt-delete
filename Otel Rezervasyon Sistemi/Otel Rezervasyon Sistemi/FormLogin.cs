@@ -57,7 +57,7 @@ namespace Otel_Rezervasyon_Sistemi
         {
             FormUyeOl f = new FormUyeOl();
             f.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void çıkışToolStripMenuItem_Click(object sender, EventArgs e)

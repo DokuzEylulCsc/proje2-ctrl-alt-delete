@@ -43,12 +43,6 @@
             this.cbkonum = new System.Windows.Forms.ComboBox();
             this.clistbox = new System.Windows.Forms.CheckedListBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtSilID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TxtHizmet = new System.Windows.Forms.TextBox();
@@ -71,11 +65,16 @@
             this.btnOtelEkle = new System.Windows.Forms.Button();
             this.cmbTİP = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblyonid = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtSilID = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.mSOtelEkle.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblOtelEkle
@@ -275,66 +274,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(586, 521);
             this.panel1.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(438, 416);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 34);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "Oda Ekle";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label17.Location = new System.Drawing.Point(44, 345);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(62, 19);
-            this.label17.TabIndex = 35;
-            this.label17.Text = "Otel Sil:";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Silver;
-            this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.txtSilID);
-            this.panel3.Location = new System.Drawing.Point(48, 367);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 125);
-            this.panel3.TabIndex = 34;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label16.Location = new System.Drawing.Point(8, 18);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(65, 18);
-            this.label16.TabIndex = 32;
-            this.label16.Text = "Otel İD:";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(52, 64);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 34);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "Otel Sil";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txtSilID
-            // 
-            this.txtSilID.Location = new System.Drawing.Point(89, 18);
-            this.txtSilID.Name = "txtSilID";
-            this.txtSilID.Size = new System.Drawing.Size(100, 22);
-            this.txtSilID.TabIndex = 33;
             // 
             // label4
             // 
@@ -553,15 +492,65 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Otel Tipi:";
             // 
-            // lblyonid
+            // button1
             // 
-            this.lblyonid.AutoSize = true;
-            this.lblyonid.Location = new System.Drawing.Point(21, 45);
-            this.lblyonid.Name = "lblyonid";
-            this.lblyonid.Size = new System.Drawing.Size(43, 13);
-            this.lblyonid.TabIndex = 9;
-            this.lblyonid.Text = "label18";
-            this.lblyonid.Visible = false;
+            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(52, 64);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 34);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "Otel Sil";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label16.Location = new System.Drawing.Point(8, 18);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(65, 18);
+            this.label16.TabIndex = 32;
+            this.label16.Text = "Otel İD:";
+            // 
+            // txtSilID
+            // 
+            this.txtSilID.Location = new System.Drawing.Point(89, 18);
+            this.txtSilID.Name = "txtSilID";
+            this.txtSilID.Size = new System.Drawing.Size(100, 22);
+            this.txtSilID.TabIndex = 33;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.txtSilID);
+            this.panel3.Location = new System.Drawing.Point(48, 367);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 125);
+            this.panel3.TabIndex = 34;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label17.Location = new System.Drawing.Point(44, 345);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(62, 19);
+            this.label17.TabIndex = 35;
+            this.label17.Text = "Otel Sil:";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.Location = new System.Drawing.Point(438, 416);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(96, 34);
+            this.button2.TabIndex = 36;
+            this.button2.Text = "Oda Ekle";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormYonetici
             // 
@@ -570,7 +559,6 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(802, 696);
-            this.Controls.Add(this.lblyonid);
             this.Controls.Add(this.BtnCıkıs);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblOtelEkle);
@@ -585,10 +573,10 @@
             this.mSOtelEkle.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -605,6 +593,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tbID;
         private System.Windows.Forms.TextBox tbAd;
         private System.Windows.Forms.ComboBox cbkonum;
         private System.Windows.Forms.CheckedListBox clistbox;
@@ -637,7 +626,5 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtSilID;
-        public System.Windows.Forms.Label lblyonid;
-        public System.Windows.Forms.TextBox tbID;
     }
 }

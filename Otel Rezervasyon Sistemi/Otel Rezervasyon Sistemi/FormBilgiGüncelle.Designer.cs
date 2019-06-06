@@ -136,13 +136,14 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 19;
             this.listBox1.Items.AddRange(new object[] {
-            "AD",
-            "SOYAD"});
+            "ID",
+            "Ad",
+            "Soyad"});
             this.listBox1.Location = new System.Drawing.Point(23, 237);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(210, 118);
             this.listBox1.TabIndex = 11;
-//            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // btnGeri
             // 
@@ -196,7 +197,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormBilgiGüncelle";
             this.Text = "FormBilgiGüncelle";
-//            this.Load += new System.EventHandler(this.FormBilgiGüncelle_Load);
+            this.Load += new System.EventHandler(this.FormBilgiGüncelle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
