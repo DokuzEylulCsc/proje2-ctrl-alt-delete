@@ -44,11 +44,17 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
             }
             return instance;
         }
+        /// <summary>
+        /// Serialize islemini yapar nesne yapisindan xml yapisina donusturur Program kapanirken cagirilmasi on gorulur
+        /// </summary>
         public void SerializeAtEnd()
         {
             ModelsAndBuffer.Buffer b = ModelsAndBuffer.Buffer.BUF;
             b.Serialization();
         }
+        /// <summary>
+        /// Deserialize islemini yapar xml yapisindan nesne yapisina donusturur program boot edilirken cagirilmasi on gorulur
+        /// </summary>
         public void DeserializeAtStart()
         {
             ModelsAndBuffer.Buffer b = ModelsAndBuffer.Buffer.BUF;
