@@ -57,7 +57,7 @@ namespace Otel_Rezervasyon_Sistemi
         {
             FormUyeOl f = new FormUyeOl();
             f.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void çıkışToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,9 +77,12 @@ namespace Otel_Rezervasyon_Sistemi
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer b = Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer.BUF;
-            b.Serialization();
-            b.Deserialization();
+
+            /*
+             * buffer ile viewin arasina Controller koyuldu
+             */
+            MainController.GetController().SerializeAtEnd();
+            MainController.GetController().DeserializeAtStart();
         }
     }
 }

@@ -18,20 +18,9 @@ namespace Otel_Rezervasyon_Sistemi
             InitializeComponent();
         }
 
-        private void FormBilgiGüncelle_Load(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string ID = txtid.Text;
-            string ad = txta.Text;
-            string soyad = txts.Text;
-            MainController c = MainController.GetController();
-          //  Kullanici k = new Kullanici(ID, ad, soyad);
-          //  c.user.ChangeInformationRequest(k,Convert.ToString( listBox1.SelectedItem), txtgüncel.Text);
-        }
+      
 
         private void btnGeri_Click(object sender, EventArgs e)
         {
@@ -43,7 +32,12 @@ namespace Otel_Rezervasyon_Sistemi
 
         private void btnDeğiştir_Click(object sender, EventArgs e)
         {
-
+            string ID = txtid.Text;
+            string ad = txta.Text;
+            string soyad = txts.Text;
+            MainController c = MainController.GetController();
+            //  Kullanici k = new Kullanici(ID, ad, soyad);
+            //  c.user.ChangeInformationRequest(k,Convert.ToString( listBox1.SelectedItem), txtgüncel.Text);
         }
     }
 }
