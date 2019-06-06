@@ -35,20 +35,9 @@ namespace Otel_Rezervasyon_Sistemi
             string ID = txtid.Text;
             string ad = txta.Text;
             string soyad = txts.Text;
-          
             MainController c = MainController.GetController();
-            if (chckad.Checked==true)
-            {
-                  c.user.ChangeInformationRequest(ID,txtSifre.Text,chckad.Text, txtgüncel.Text);
-            }
-            if(chcksoyad .Checked==true)
-            {
-                c.user.ChangeInformationRequest(ID, txtSifre.Text, chcksoyad.Text, txtgüncel.Text);
-               
-            }
-
-
-
+            //  Kullanici k = new Kullanici(ID, ad, soyad);
+            //  c.user.ChangeInformationRequest(k,Convert.ToString( listBox1.SelectedItem), txtgüncel.Text);
         }
     }
 }
