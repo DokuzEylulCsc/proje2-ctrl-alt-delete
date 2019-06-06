@@ -77,12 +77,9 @@ namespace Otel_Rezervasyon_Sistemi
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-
-            /*
-             * buffer ile viewin arasina Controller koyuldu
-             */
-            MainController.GetController().SerializeAtEnd();
-            MainController.GetController().DeserializeAtStart();
+            Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer b = Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer.BUF;
+            b.Serialization();
+            b.Deserialization();
         }
     }
 }

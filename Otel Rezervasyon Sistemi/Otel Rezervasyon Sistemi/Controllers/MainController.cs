@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Otel_Rezervasyon_Sistemi.ModelsAndBuffer;
 
 
 namespace Otel_Rezervasyon_Sistemi.Controllers
@@ -43,22 +42,6 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
                 instance = new MainController();
             }
             return instance;
-        }
-        /// <summary>
-        /// Serialize islemini yapar nesne yapisindan xml yapisina donusturur Program kapanirken cagirilmasi on gorulur
-        /// </summary>
-        public void SerializeAtEnd()
-        {
-            ModelsAndBuffer.Buffer b = ModelsAndBuffer.Buffer.BUF;
-            b.Serialization();
-        }
-        /// <summary>
-        /// Deserialize islemini yapar xml yapisindan nesne yapisina donusturur program boot edilirken cagirilmasi on gorulur
-        /// </summary>
-        public void DeserializeAtStart()
-        {
-            ModelsAndBuffer.Buffer b = ModelsAndBuffer.Buffer.BUF;
-            b.Deserialization();
         }
     }
 }
