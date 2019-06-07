@@ -79,7 +79,7 @@ namespace Otel_Rezervasyon_Sistemi
         {
             Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer b = Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer.BUF;
             b.Serialization();
-            b.Deserialization();
+         //   b.Deserialization();
         }
     }
 }

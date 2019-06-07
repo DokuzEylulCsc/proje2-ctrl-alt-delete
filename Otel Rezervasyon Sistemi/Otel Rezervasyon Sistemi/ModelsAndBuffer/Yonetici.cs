@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace Otel_Rezervasyon_Sistemi
 {
-    class Yonetici:Kullanici,IGoruntuleyebilir,IYonetebilir
+    [Serializable]
+    public class Yonetici:Kullanici,IGoruntuleyebilir,IYonetebilir
     {
-        public Yonetici(string ID,string isim,string soyisim) : base(ID,isim,soyisim)
+        private Yonetici()
+        {
+            // Serilestirme islemleri icin gerekli bos yapıcı metot.
+        }
+
+        public Yonetici(string ID,string isim,string soyisim,string sifre) : base(ID,isim,soyisim,sifre)
         {
             // Implementasyona ihtiyac yok ana classtan alınacak veriler.
         }

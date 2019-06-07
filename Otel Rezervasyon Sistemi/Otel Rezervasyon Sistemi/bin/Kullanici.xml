@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfKullanici xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Kullanici xsi:type="Musteri">
+    <ID>13579</ID>
+    <Ad>Emir</Ad>
+    <Soyad>Bulut</Soyad>
+    <Sifre>sananee1</Sifre>
+  </Kullanici>
+  <Kullanici xsi:type="Yonetici">
+    <ID>Em456Bu</ID>
+    <Ad>Simge</Ad>
+    <Soyad>Yavas</Soyad>
+    <Sifre>sananee2</Sifre>
+  </Kullanici>
+</ArrayOfKullanici>
