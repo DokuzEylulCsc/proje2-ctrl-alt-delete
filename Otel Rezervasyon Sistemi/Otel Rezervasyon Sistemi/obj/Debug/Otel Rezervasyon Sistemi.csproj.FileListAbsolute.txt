@@ -1,0 +1,51 @@
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\bin\Debug\Otel Rezervasyon Sistemi.exe.config
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\bin\Debug\Otel Rezervasyon Sistemi.exe
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\bin\Debug\Otel Rezervasyon Sistemi.pdb
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.Properties.Resources.resources
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.csproj.GenerateResource.cache
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.csproj.CoreCompileInputs.cache
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.exe
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.pdb
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormMusteriRez.resources
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormRezOzet.resources
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormLogin.resources
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormYonetici.resources
+C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\bin\Debug\Otel Rezervasyon Sistemi.exe.config
+C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\bin\Debug\Otel Rezervasyon Sistemi.exe
+C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\bin\Debug\Otel Rezervasyon Sistemi.pdb
+C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.csprojAssemblyReference.cache
+C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormMusteriRez.resources
+C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormOdaEkle.resources
+C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormRezOzet.resources
+C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormLogin.resources
+C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormUyeOl.resources
+C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormYonetici.resources
+C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.Properties.Resources.resources
+C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.csproj.GenerateResource.cache
+C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.csproj.CoreCompileInputs.cache
+C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.exe
+C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.pdb
+C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormSifreDegistir.resources
+C:\Users\simge\Documents\GitHub\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormBilgiGüncelle.resources
+C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.csprojAssemblyReference.cache
+C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormBilgiGüncelle.resources
+C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormLogin.resources
+C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormMusteriRez.resources
+C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormOdaEkle.resources
+C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormRezOzet.resources
+C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormSifreDegistir.resources
+C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormUyeOl.resources
+C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormYonetici.resources
+C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.Properties.Resources.resources
+C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.csproj.GenerateResource.cache
+C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.csproj.CoreCompileInputs.cache
+C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.exe
+C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.pdb
+C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\bin\Debug\Otel Rezervasyon Sistemi.exe.config
+C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\bin\Debug\Otel Rezervasyon Sistemi.exe
+C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\bin\Debug\Otel Rezervasyon Sistemi.pdb
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.csprojAssemblyReference.cache
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormBilgiGüncelle.resources
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormOdaEkle.resources
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormSifreDegistir.resources
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormUyeOl.resources
