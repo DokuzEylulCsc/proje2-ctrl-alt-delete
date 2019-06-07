@@ -15,7 +15,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
         {
             // Serialize islemi icin bos bir yapıcı metoda ihtiyac var bu nedenle kullanıldı.
         }
-        public TatilKoyu(int temizlik, int konum, int hizmet, int odasayisi, string otelid, string otelad) : base(temizlik, hizmet, konum, odasayisi, otelid, otelad)
+        public TatilKoyu(int temizlik, int konum, int hizmet, string otelid, string otelad) : base(temizlik, hizmet, konum, otelid, otelad)
         {
             // Bu ozellikler her otel tipinde var ve otel yaratılırken baseden alınacagı icin bir implementasyon yapılmadı.
         }

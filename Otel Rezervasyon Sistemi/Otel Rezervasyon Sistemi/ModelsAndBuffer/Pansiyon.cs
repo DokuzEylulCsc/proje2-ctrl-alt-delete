@@ -15,7 +15,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
         {
 
         }
-        public Pansiyon(int temizlik,int konum,int hizmet,int odasayisi,string otelid,string otelad):base(temizlik,hizmet,konum,odasayisi,otelid,otelad)
+        public Pansiyon(int temizlik,int konum,int hizmet,string otelid,string otelad):base(temizlik,hizmet,konum,otelid,otelad)
         {
 
         }

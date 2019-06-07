@@ -24,7 +24,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
              * Musteri nesnesi dogrudan yollanicak ,
              * yoksa hata dondurulucek
              */
-            return new Musteri("", "", "");
+            return new Musteri("", "", "", "");
         }
         /// <summary>
         /// Yeni Kullanici Olusturulmak istendiginde cagirilmasi gereken metod
