@@ -94,22 +94,42 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <returns> List<Oda>  dondurur </returns>
         public  List<Oda> GetRooms(string otelId)
         {
-            /*
-             * herhangi bir otelin odalari gosterilmek istendiginde cagirilmasi gereken method 
-             */
-            return new List<Oda>();
+            List<string> IDs = new List<string>(); //get ids from core
+            if (IDs.Contains(otelId))
+            {
+                List<Oda> odas = new List<Oda>(); //get rooms of hotel
+                return odas;
+            }
+            else
+            {
+                throw new Exception("Boyle bir otel bulunamadi");
+            }
         }
         /// <summary>
         /// Oda bilgilerini goruntulemek icin cagirilir
         /// </summary>
         /// <param name="odano">bilgileri goruntulenicek oda no</param>
         /// <param name="otelid">bilgileri goruntulenicek odanin ait oldugu otel idsi</param>
-        public  void GetRoomDetails(int odano, string otelid)
+        public  string[] GetRoomDetails(int odano, string otelid)
         {
-            /*
-             * Dondurcegi sey oda fieldlari tamamlaninca belirlenicek sadece taslak icin void olarak belirlendi
-             * 
-             */
+            List<string> hotelIDs = new List<string>(); //get ids from core
+            if (hotelIDs.Contains(otelid))
+            {
+                List<int> odaIDs = new List<int>(); // get ids from core 
+                if (odaIDs.Contains(odano))
+                {
+                    //get details from core ;
+                    return new string[3];
+                }
+                else
+                {
+                    throw new Exception("Bu otele ait boyle bir oda bulunamadi");
+                }
+            }
+            else
+            {
+                throw new Exception("Bu IDye sahip otel bulunamadi");
+            }
         }
         /// <summary>
         /// Odanin rezervasyon bilgileri istendiginde dondurur
@@ -117,11 +137,26 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="odano">rezervasyon bilgileri istenen odanin numarasi</param>
         /// <param name="otelid">rezervasyon bilgileri istenen odanin ait oldugu otel id </param>
         /// <returns></returns>
-        public  void GetReservations(int odano, string otelid)
+        public  List<string> GetReservations(int odano, string otelid)
         {
-            /*
-             * odanin rezervasyonlari dondurucek method
-             */
+            List<string> IDs = new List<string>();
+            if (IDs.Contains(otelid))
+            {
+                List<int> roomNo = new List<int>();
+                if (roomNo.Contains(odano))
+                {
+                    //get reservatation from core
+                    return new List<string>();
+                }
+                else
+                {
+                    throw new Exception("Bu otele ait boyle bir oda bulunamadi");
+                }
+            }
+            else
+            {
+                throw new Exception("Bu IDye sahip bir otel bulunamadi");
+            }
         }
     }
 }
