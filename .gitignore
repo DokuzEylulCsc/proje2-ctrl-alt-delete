@@ -11,12 +11,24 @@
 *.cache
 /.vs/OtelRezervi/v16
 >>>>>>> d586e0b4bd375c9e39f3b958617e5e736250e06d
+<<<<<<< HEAD
+*.lock
+Otel Rezervasyon Sistemi/.vs/Otel Rezervasyon Sistemi/v15/Server/sqlite3/storage.ide
+Otel Rezervasyon Sistemi/Otel Rezervasyon Sistemi/obj/Debug/Otel Rezervasyon Sistemi.csproj.CoreCompileInputs.cache
+*.ide-shm
+*.cache
+=======
 *.cache
 Otel Rezervasyon Sistemi/.vs/Otel Rezervasyon Sistemi/v16/Server/sqlite3/storage.ide
 Otel Rezervasyon Sistemi/Otel Rezervasyon Sistemi/obj/Debug/Otel Rezervasyon Sistemi.csproj.CoreCompileInputs.cache
 Otel Rezervasyon Sistemi/.vs/Otel Rezervasyon Sistemi/v16/Server/sqlite3/db.lock
 Otel Rezervasyon Sistemi/.vs/Otel Rezervasyon Sistemi/v16/.suo
 Otel Rezervasyon Sistemi/Otel Rezervasyon Sistemi/obj/Debug/Otel Rezervasyon Sistemi.csproj.CoreCompileInputs.cache
+<<<<<<< HEAD
 Otel Rezervasyon Sistemi/.vs/Otel Rezervasyon Sistemi/v15/Server/sqlite3/db.lock
 Otel Rezervasyon Sistemi/.vs/Otel Rezervasyon Sistemi/v15/Server/sqlite3/storage.ide
 Otel Rezervasyon Sistemi/.vs/Otel Rezervasyon Sistemi/v15/Server/sqlite3/storage.ide-shm
+=======
+>>>>>>> 2fd6f1e1348e03dbcf51704c55e90a331b3fbd42
+Otel Rezervasyon Sistemi/.vs/Otel Rezervasyon Sistemi/v15/.suo
+>>>>>>> 2bb1f42eb132d84c9af7d772de60d8c7cc8b8ad2

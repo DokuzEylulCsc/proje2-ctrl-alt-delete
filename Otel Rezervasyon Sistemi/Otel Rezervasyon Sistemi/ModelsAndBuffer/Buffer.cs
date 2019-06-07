@@ -11,7 +11,7 @@ using System.Diagnostics;
 namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
 {
     class Buffer
-    {
+    {/*
         List<Otel> Oteller = new List<Otel>();
         XmlSerializer xs = new XmlSerializer(typeof(List<Otel>));
 
@@ -54,7 +54,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             }
         }
 
-
+        */
 
     }
 }
