@@ -20,8 +20,8 @@ namespace Otel_Rezervasyon_Sistemi
 
         private void btnTemizle_Click(object sender, EventArgs e)
         {
-            txtID.Clear();
-            txtSifre.Clear();
+            mskID.Clear();
+            MSKSİFRE.Clear();
         }
 
         private void btnGiris_Click(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace Otel_Rezervasyon_Sistemi
             try
             {
                 MainController controller = MainController.GetController();
-                Kullanici a = controller.user.AccountVerification(txtID.Text, txtSifre.Text);
+                Kullanici a = controller.user.AccountVerification(mskID.Text,MSKSİFRE.Text);
                 if(a is Musteri)
                 {
                     FormMusteriRez F = new FormMusteriRez();
