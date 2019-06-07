@@ -117,5 +117,12 @@ namespace Otel_Rezervasyon_Sistemi
             }
            
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormYonetici f = new FormYonetici();
+            f.Show();
+            this.Close();
+        }
     }
 }
