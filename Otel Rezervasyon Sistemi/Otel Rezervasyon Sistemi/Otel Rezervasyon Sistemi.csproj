@@ -104,6 +104,7 @@
     <Compile Include="Interfaces\IYonetebilir.cs" />
     <Compile Include="ModelsAndBuffer\Buffer.cs" />
     <Compile Include="ModelsAndBuffer\ButikOtel.cs" />
+    <Compile Include="ModelsAndBuffer\Core.cs" />
     <Compile Include="ModelsAndBuffer\KralDairesi.cs" />
     <Compile Include="ModelsAndBuffer\Kullanici.cs" />
     <Compile Include="ModelsAndBuffer\ManzaraliOda.cs" />
