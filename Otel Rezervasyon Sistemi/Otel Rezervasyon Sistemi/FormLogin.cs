@@ -19,8 +19,8 @@ namespace Otel_Rezervasyon_Sistemi
 
         private void btnTemizle_Click(object sender, EventArgs e)
         {
-            txtID.Clear();
-            txtSifre.Clear();
+            mskID.Clear();
+            msksifre.Clear();
         }
 
         private void btnGiris_Click(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace Otel_Rezervasyon_Sistemi
             try
             {
                 MainController controller = MainController.GetController();
-                Kullanici a = controller.user.AccountVerification(txtID.Text, txtSifre.Text);
+                Kullanici a = controller.user.AccountVerification(mskID.Text,msksifre.Text);
                 if(a is Musteri)
                 {
                     FormMusteriRez F = new FormMusteriRez();
@@ -57,7 +57,7 @@ namespace Otel_Rezervasyon_Sistemi
         {
             FormUyeOl f = new FormUyeOl();
             f.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void çıkışToolStripMenuItem_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace Otel_Rezervasyon_Sistemi
         {
             Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer b = Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer.BUF;
             b.Serialization();
-            b.Deserialization();
+         //   b.Deserialization();
         }
     }
 }

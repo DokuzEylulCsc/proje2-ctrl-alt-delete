@@ -40,11 +40,16 @@ namespace Otel_Rezervasyon_Sistemi
         private void btnOtelEkle_Click(object sender, EventArgs e)
         {
             MainController m = MainController.GetController();
-            //Oteli ekle methoduna parametre  konum ,seçili hizmetler ve odalardan kaçar tane oldugu eklenmeli
-            //Mevcut odaları ve kaçar tane oldugunu otel ekle ye nasıl göndereceğimi bilemedim o yüzden 
-            //Odalarda hepsini mevcut olarak kabul ettim mesela kral dairesinden hiç yoksa oda sayısına 0 girilsin.
-            // m.otel.AddHotel(Convert.ToString(cmbTİP.SelectedIndex), tbID.Text, tbAd.Text, Convert.ToString(cbkonum.Text), clistbox.CheckedIndices,txtKral.Text,txtstandart.Text,txtmanzarali.Text);
-            //otel ekle buttonuna bastığımda verdiğim temizlik puanı vs ayrı bir methoda gönderilsin orada otelin yıldızı hesaplansın .
+            try
+            {
+                m.otel.AddHotel(tbID.Text, tbAd.Text, cmbTİP.SelectedItem.ToString());
+            }
+            catch
+            {
+                 MessageBox.Show("Otel Zaten Kayıtlı Veya Bilgilerde Yanlışlık Var!", "UYARI", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
+         
+            
             
         }
 
@@ -92,6 +97,20 @@ namespace Otel_Rezervasyon_Sistemi
             {
                 MessageBox.Show("ID Gecersiz!!", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void bilgileriGüncelleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBilgiGüncelle b = new FormBilgiGüncelle();
+            b.Show();
+            this.Close();
+        }
+
+        private void sifreDeğiştirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSifreDegistir s = new FormSifreDegistir();
+            s.Show();
+            this.Close();
         }
     }
 }

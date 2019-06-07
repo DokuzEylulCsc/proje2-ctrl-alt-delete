@@ -18,13 +18,38 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// </summary>
         /// <param name="id">kullanicinin girdigi ID </param>
         /// <param name="password">kullanicinin girdigi sifre </param>
-        public  Musteri AccountVerification(string id, string password)
+        public Kullanici AccountVerification(string id, string password)
         {
-            /*giris yapmak istenen kullanicinin var olup olmadigi kontrolu yapilacak oyle bir musteri varsa ;
-             * Musteri nesnesi dogrudan yollanicak ,
-             * yoksa hata dondurulucek
-             */
-            return new Musteri("", "", "");
+            List<string> managerIDs = new List<string>();
+            List<string> customerIDs = new List<string>();
+            if (managerIDs.Contains(id))
+            {
+                if (true /* Core Password Verification */)
+                {
+                    string[] managerDetails = new string[3]; // get manager details from core
+                    return new Yonetici(id, managerDetails[1], managerDetails[2],"***");
+                }
+                else
+                {
+                    throw new Exception("Sifreniz Hatali");
+                }
+            }
+            else if (customerIDs.Contains(id))
+            {
+                if (true /* Core Password Verification */)
+                {
+                    string[] customerDetails = new string[3]; //get customer details from core
+                    return new Musteri(id, customerDetails[1], customerDetails[2],"***");
+                }
+                else
+                {
+                    throw new Exception("Sifreniz Hatali");
+                }
+            }
+            else
+            {
+                throw new Exception("Boyle bir ID sistemimizde bulunmamaktadir");
+            }
         }
         /// <summary>
         /// Yeni Kullanici Olusturulmak istendiginde cagirilmasi gereken metod
@@ -35,16 +60,16 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="ad">kullanicinin adi</param>
         /// <param name="soyad">kullanicinin soyadi</param>
         /// <returns></returns>
-        public  bool CreateAccountRequest(string id , string password, string passwordverif, string ad , string soyad)
+        public bool CreateAccountRequest(string id, string password, string passwordverif, string ad, string soyad)
         {
-            if(password == passwordverif)
+            if (password == passwordverif)
             {
                 List<string> IDs = new List<string>();//=getIds from core
                 if (IDs.Contains(id))
                 {
                     throw new Exception("Boyle Bir ID zaten bulunmaktadi");
                 }
-                
+
                 return true;/*create new entity with these parameters (id , password, ad,soyad)*/
             }
             else
@@ -53,20 +78,33 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
             }
         }
         /// <summary>
-        /// Kullanicinin sifre degistirme istegi
+        /// Sifre Degistirme istegi 
         /// </summary>
-        /// <param name="B">Sifreyi degistirmek isteyen kullanici nesnesi</param>
-        /// <param name="newPas">Kullanicinin belirledigi yeni sifre</param>
-        /// <param name="newPasVerification">Kullanicinin belirledigi yeni sifrenin dogrulamasi</param>
-        /// <returns>islem uygun ise True , degil ise hata dondurur</returns>
-        public  bool ChangePasswordRequest(Kullanici B, string newPas, string newPasVerification)
+        /// <param name="ID">Degistirmek isteyen kullanicinin idsi</param>
+        /// <param name="oldPass">Kullanicinin mevcut sifresi</param>
+        /// <param name="newPas">Kullanicinin yeni sifresi</param>
+        /// <param name="newPasVerification">Kullanicinin yeni sifre dogrulamasi</param>
+        /// <returns></returns>
+        public bool ChangePasswordRequest(string ID, string oldPass, string newPas, string newPasVerification)
         {
-            /*
-             * sifresini degistirmek isteyen kullanicinin bilgileri ve yeni yapmak istedigi 
-             * sifre alinicak eger kosullar saglaniyor ise true ,
-             * saglanmiyor ise hata dondurulucek ! 
-             */
-            return false;
+
+
+            if (true /*core pass verification*/)
+            {
+                if (newPas == newPasVerification)
+                {
+                    return true;
+                }
+                else
+                {
+                    throw new Exception("Girilen sifre ile dogrulama sifresi uyusmuyor");
+                }
+            }
+            else
+            {
+                throw new Exception("Sifrenizi hatali girdiniz");
+            }
+
         }
         /// <summary>
         /// kullanicinin bilgi guncelleme istegi 
@@ -75,34 +113,28 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="whichInfo">Hangi bilinin guncellenecegi</param>
         /// <param name="newInfo">Guncellenen bilginin yeni hali</param>
         /// <returns>islem uygulanir ise true , hata olusur ise hata dondurucekti</returns>
-        public  bool ChangeInformationRequest(string ID , string Password, string whichInfo, string newInfo)
+        public bool ChangeInformationRequest(string ID, string Password, string whichInfo, string newInfo)
         {
-            List<string> IDs = new List<string>();
-            if (IDs.Contains(ID))
+
+            if (true /*Get pass verification from core*/)
             {
-                string pass = ""; /*get password of ID*/
-                if (pass == Password)
+                if (whichInfo == "Ad")
                 {
-                    if(whichInfo == "Ad")
-                    {
-                        //Idye sahip adi new info ile degistir
-                        return true;
-                    }
-                    else
-                    {
-                        //Idye sahip soyadi new info ile degistir
-                        return true;
-                    }
+                    //Idye sahip adi new info ile degistir
+                    return true;
                 }
                 else
                 {
-                    throw new Exception("ID ile sifreniz uyusmamaktadir");
+                    //Idye sahip soyadi new info ile degistir
+                    return true;
                 }
             }
             else
             {
-                throw new Exception("Boyle bir ID yoktur");
+                throw new Exception("Sifre hatali lutfen sifrenizi kontrol ediniz");
             }
+
+
 
         }
     }

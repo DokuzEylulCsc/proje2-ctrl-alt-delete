@@ -18,9 +18,20 @@ namespace Otel_Rezervasyon_Sistemi
             InitializeComponent();
         }
 
-        
+        private void FormBilgiGüncelle_Load(object sender, EventArgs e)
+        {
 
-      
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string ID = txtid.Text;
+            string ad = txta.Text;
+            string soyad = txts.Text;
+            MainController c = MainController.GetController();
+          //  Kullanici k = new Kullanici(ID, ad, soyad);
+          //  c.user.ChangeInformationRequest(k,Convert.ToString( listBox1.SelectedItem), txtgüncel.Text);
+        }
 
         private void btnGeri_Click(object sender, EventArgs e)
         {
@@ -32,12 +43,32 @@ namespace Otel_Rezervasyon_Sistemi
 
         private void btnDeğiştir_Click(object sender, EventArgs e)
         {
-            string ID = txtid.Text;
-            string ad = txta.Text;
-            string soyad = txts.Text;
+<<<<<<< HEAD
+            string ID =  MSKıd.Text;
+            string Sifre = mskSifre.Text;
+            string Güncel = txtgüncel.Text;
+
             MainController c = MainController.GetController();
-            //  Kullanici k = new Kullanici(ID, ad, soyad);
-            //  c.user.ChangeInformationRequest(k,Convert.ToString( listBox1.SelectedItem), txtgüncel.Text);
+            try
+            {
+                if (chcAd.Checked == true)
+                {
+                    c.user.ChangeInformationRequest(ID, Sifre, chcAd.Text, Güncel);
+                }
+                if (chcSoyad.Checked == true)
+                {
+                    c.user.ChangeInformationRequest(ID, Sifre, chcSoyad.Text, Güncel);
+                }
+            }
+            catch
+            {
+
+                MessageBox.Show("Bilgilerde Hata Var", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+           
+=======
+
+>>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
         }
     }
 }
