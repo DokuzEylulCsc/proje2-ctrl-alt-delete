@@ -19,6 +19,7 @@ namespace Otel_Rezervasyon_Sistemi
         }
 
         
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -41,6 +42,10 @@ namespace Otel_Rezervasyon_Sistemi
 =======
       
 >>>>>>> parent of ab87a31... Formlarda Değişiklikler Yapıldı
+=======
+
+      
+>>>>>>> parent of ab87a31... Formlarda Değişiklikler Yapıldı
 
         private void btnGeri_Click(object sender, EventArgs e)
         {
@@ -52,6 +57,7 @@ namespace Otel_Rezervasyon_Sistemi
 
         private void btnDeğiştir_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -83,6 +89,14 @@ namespace Otel_Rezervasyon_Sistemi
 
 
 
+=======
+            string ID = txtid.Text;
+            string ad = txta.Text;
+            string soyad = txts.Text;
+            MainController c = MainController.GetController();
+            //  Kullanici k = new Kullanici(ID, ad, soyad);
+            //  c.user.ChangeInformationRequest(k,Convert.ToString( listBox1.SelectedItem), txtgüncel.Text);
+>>>>>>> parent of ab87a31... Formlarda Değişiklikler Yapıldı
 =======
             string ID = txtid.Text;
             string ad = txta.Text;
