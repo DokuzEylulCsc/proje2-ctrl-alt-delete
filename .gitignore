@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 
 .vs/OtelRezervi/v15/Server/sqlite3/db.lock
 .vs/OtelRezervi/v15/Server/sqlite3/storage.ide
 .vs/OtelRezervi/v15/Server/sqlite3/storage.ide-shm
 *.ide-wal
+=======
+/.vs
+.vs/slnx.sqlite
+.vs/proje2-ctrl-alt-delete/v15/.suo
+*.cache
+/.vs/OtelRezervi/v16
+>>>>>>> d586e0b4bd375c9e39f3b958617e5e736250e06d
