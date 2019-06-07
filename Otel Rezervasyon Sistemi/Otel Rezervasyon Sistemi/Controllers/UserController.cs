@@ -27,7 +27,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
                 if (true /* Core Password Verification */)
                 {
                     string[] managerDetails = new string[3]; // get manager details from core
-                    return new Yonetici(id, managerDetails[1], managerDetails[2]);
+                    return new Yonetici(id, managerDetails[1], managerDetails[2],"***");
                 }
                 else
                 {
@@ -39,7 +39,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
                 if (true /* Core Password Verification */)
                 {
                     string[] customerDetails = new string[3]; //get customer details from core
-                    return new Musteri(id, customerDetails[1], customerDetails[2]);
+                    return new Musteri(id, customerDetails[1], customerDetails[2],"***");
                 }
                 else
                 {
