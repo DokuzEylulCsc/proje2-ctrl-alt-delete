@@ -6,7 +6,6 @@ C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\O
 C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.csproj.CoreCompileInputs.cache
 C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.exe
 C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.pdb
-C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.YoneticiGiris.resources
 C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormMusteriRez.resources
 C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormRezOzet.resources
 C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormLogin.resources
@@ -45,3 +44,8 @@ C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezer
 C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\bin\Debug\Otel Rezervasyon Sistemi.exe.config
 C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\bin\Debug\Otel Rezervasyon Sistemi.exe
 C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\bin\Debug\Otel Rezervasyon Sistemi.pdb
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.csprojAssemblyReference.cache
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormBilgiGüncelle.resources
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormOdaEkle.resources
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormSifreDegistir.resources
+C:\Users\Tayfun YALTUR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormUyeOl.resources

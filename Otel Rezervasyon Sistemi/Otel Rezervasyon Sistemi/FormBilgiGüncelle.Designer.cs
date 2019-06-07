@@ -196,22 +196,16 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormBilgiGüncelle";
             this.Text = "FormBilgiGüncelle";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            this.Load += new System.EventHandler(this.FormBilgiGüncelle_Load);
->>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
-=======
-            this.Load += new System.EventHandler(this.FormBilgiGüncelle_Load);
->>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
-=======
+            
+
+
+
+
 //            this.Load += new System.EventHandler(this.FormBilgiGüncelle_Load);
->>>>>>> parent of ab87a31... Formlarda Değişiklikler Yapıldı
-=======
+
+
 //            this.Load += new System.EventHandler(this.FormBilgiGüncelle_Load);
->>>>>>> parent of ab87a31... Formlarda Değişiklikler Yapıldı
+
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
