@@ -10,7 +10,6 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
     class MainController
     {
 
-        //bok yıyen git hub 
         private static MainController instance = null;
         private FilterController filterController = null;
         public FilterController filter { get { return filterController;  } }
@@ -44,6 +43,22 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
                 instance = new MainController();
             }
             return instance;
+        }
+        /// <summary>
+        /// Objeleri XMLe Cekmek icin bitiste cagirilir
+        /// </summary>
+        public void SerializeAtEnd()
+        {
+            Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer b = Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer.BUF;
+            b.Serialization();
+        }
+        /// <summary>
+        /// XML elementleri objelestirmek icin baslangicta calisir
+        /// </summary>
+        public void DeserializeAtStart()
+        {
+            Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer b = Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer.BUF;
+            b.Deserialization();
         }
     }
 }
