@@ -32,8 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.txtSifre = new System.Windows.Forms.TextBox();
             this.btnGiris = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnTemizle = new System.Windows.Forms.Button();
@@ -41,6 +39,8 @@
             this.iletişimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.mskID = new System.Windows.Forms.MaskedTextBox();
+            this.msksifre = new System.Windows.Forms.MaskedTextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,20 +75,6 @@
             this.label3.Size = new System.Drawing.Size(44, 19);
             this.label3.TabIndex = 3;
             this.label3.Text = "Sifre:";
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(186, 281);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(118, 20);
-            this.txtID.TabIndex = 4;
-            // 
-            // txtSifre
-            // 
-            this.txtSifre.Location = new System.Drawing.Point(186, 329);
-            this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(118, 20);
-            this.txtSifre.TabIndex = 5;
             // 
             // btnGiris
             // 
@@ -161,17 +147,35 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // mskID
+            // 
+            this.mskID.Location = new System.Drawing.Point(186, 281);
+            this.mskID.Mask = "00000";
+            this.mskID.Name = "mskID";
+            this.mskID.Size = new System.Drawing.Size(118, 20);
+            this.mskID.TabIndex = 10;
+            this.mskID.ValidatingType = typeof(int);
+            // 
+            // msksifre
+            // 
+            this.msksifre.Location = new System.Drawing.Point(186, 329);
+            this.msksifre.Mask = "00000";
+            this.msksifre.Name = "msksifre";
+            this.msksifre.Size = new System.Drawing.Size(118, 20);
+            this.msksifre.TabIndex = 11;
+            this.msksifre.ValidatingType = typeof(int);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(398, 488);
+            this.Controls.Add(this.msksifre);
+            this.Controls.Add(this.mskID);
             this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnGiris);
-            this.Controls.Add(this.txtSifre);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -195,13 +199,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.Button btnGiris;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button btnTemizle;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem iletişimToolStripMenuItem;
+        private System.Windows.Forms.MaskedTextBox mskID;
+        private System.Windows.Forms.MaskedTextBox msksifre;
     }
 }

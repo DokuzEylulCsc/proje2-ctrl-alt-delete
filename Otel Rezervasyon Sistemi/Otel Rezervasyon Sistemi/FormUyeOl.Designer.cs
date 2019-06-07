@@ -29,46 +29,39 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TXTSİFRE = new System.Windows.Forms.TextBox();
             this.TXTSOYAD = new System.Windows.Forms.TextBox();
             this.TXTAD = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.TXTSIFRETEKRAR = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.TXTID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGeri = new System.Windows.Forms.Button();
             this.btnKayit = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.mskıd = new System.Windows.Forms.MaskedTextBox();
+            this.msksifre = new System.Windows.Forms.MaskedTextBox();
+            this.msksifre2 = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Controls.Add(this.TXTSİFRE);
+            this.panel1.Controls.Add(this.msksifre2);
+            this.panel1.Controls.Add(this.msksifre);
+            this.panel1.Controls.Add(this.mskıd);
             this.panel1.Controls.Add(this.TXTSOYAD);
             this.panel1.Controls.Add(this.TXTAD);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.TXTSIFRETEKRAR);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.TXTID);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 63);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(252, 279);
             this.panel1.TabIndex = 0;
-            // 
-            // TXTSİFRE
-            // 
-            this.TXTSİFRE.Location = new System.Drawing.Point(120, 178);
-            this.TXTSİFRE.Name = "TXTSİFRE";
-            this.TXTSİFRE.Size = new System.Drawing.Size(100, 20);
-            this.TXTSİFRE.TabIndex = 14;
             // 
             // TXTSOYAD
             // 
@@ -106,30 +99,16 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "AD:";
             // 
-            // TXTSIFRETEKRAR
-            // 
-            this.TXTSIFRETEKRAR.Location = new System.Drawing.Point(120, 229);
-            this.TXTSIFRETEKRAR.Name = "TXTSIFRETEKRAR";
-            this.TXTSIFRETEKRAR.Size = new System.Drawing.Size(100, 20);
-            this.TXTSIFRETEKRAR.TabIndex = 9;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(20, 229);
+            this.label4.Location = new System.Drawing.Point(22, 220);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 21);
             this.label4.TabIndex = 8;
             this.label4.Text = "Sifre Tekrarı:";
-            // 
-            // TXTID
-            // 
-            this.TXTID.Location = new System.Drawing.Point(120, 39);
-            this.TXTID.Name = "TXTID";
-            this.TXTID.Size = new System.Drawing.Size(100, 20);
-            this.TXTID.TabIndex = 3;
             // 
             // label2
             // 
@@ -185,6 +164,33 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Uye OL";
             // 
+            // mskıd
+            // 
+            this.mskıd.Location = new System.Drawing.Point(120, 39);
+            this.mskıd.Mask = "00000";
+            this.mskıd.Name = "mskıd";
+            this.mskıd.Size = new System.Drawing.Size(100, 20);
+            this.mskıd.TabIndex = 14;
+            this.mskıd.ValidatingType = typeof(int);
+            // 
+            // msksifre
+            // 
+            this.msksifre.Location = new System.Drawing.Point(120, 178);
+            this.msksifre.Mask = "00000";
+            this.msksifre.Name = "msksifre";
+            this.msksifre.Size = new System.Drawing.Size(100, 20);
+            this.msksifre.TabIndex = 15;
+            this.msksifre.ValidatingType = typeof(int);
+            // 
+            // msksifre2
+            // 
+            this.msksifre2.Location = new System.Drawing.Point(120, 220);
+            this.msksifre2.Mask = "00000";
+            this.msksifre2.Name = "msksifre2";
+            this.msksifre2.Size = new System.Drawing.Size(100, 20);
+            this.msksifre2.TabIndex = 16;
+            this.msksifre2.ValidatingType = typeof(int);
+            // 
             // FormUyeOl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,18 +213,18 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox TXTID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGeri;
         private System.Windows.Forms.Button btnKayit;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TXTSIFRETEKRAR;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TXTSOYAD;
         private System.Windows.Forms.TextBox TXTAD;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TXTSİFRE;
+        private System.Windows.Forms.MaskedTextBox msksifre2;
+        private System.Windows.Forms.MaskedTextBox msksifre;
+        private System.Windows.Forms.MaskedTextBox mskıd;
     }
 }

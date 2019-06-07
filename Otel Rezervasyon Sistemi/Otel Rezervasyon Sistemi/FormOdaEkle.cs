@@ -90,6 +90,16 @@ namespace Otel_Rezervasyon_Sistemi
         private void BtnKayit_Click(object sender, EventArgs e)//İslemdeki otele ode kaydet
         {
             
+<<<<<<< HEAD
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormYonetici y = new FormYonetici();
+            y.Show();
+            this.Close();
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
         }
     }
 }

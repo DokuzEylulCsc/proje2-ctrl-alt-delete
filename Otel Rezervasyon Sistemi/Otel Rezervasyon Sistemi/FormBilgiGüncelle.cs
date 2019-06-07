@@ -20,9 +20,15 @@ namespace Otel_Rezervasyon_Sistemi
 
         private void FormBilgiGüncelle_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
         }
 
+=======
+
+        }
+
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string ID = txtid.Text;
@@ -43,7 +49,36 @@ namespace Otel_Rezervasyon_Sistemi
 
         private void btnDeğiştir_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+<<<<<<< HEAD
+            string ID =  MSKıd.Text;
+            string Sifre = mskSifre.Text;
+            string Güncel = txtgüncel.Text;
 
+            MainController c = MainController.GetController();
+            try
+            {
+                if (chcAd.Checked == true)
+                {
+                    c.user.ChangeInformationRequest(ID, Sifre, chcAd.Text, Güncel);
+                }
+                if (chcSoyad.Checked == true)
+                {
+                    c.user.ChangeInformationRequest(ID, Sifre, chcSoyad.Text, Güncel);
+                }
+            }
+            catch
+            {
+
+                MessageBox.Show("Bilgilerde Hata Var", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+           
+=======
+
+>>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
+=======
+
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
         }
     }
 }
