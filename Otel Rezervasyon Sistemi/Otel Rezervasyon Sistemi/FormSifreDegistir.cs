@@ -30,13 +30,13 @@ namespace Otel_Rezervasyon_Sistemi
             MainController controller = MainController.GetController();
             string ad = txtsdAd.Text;
             string soyad = txtsdSoyad.Text;
-            string ID = txtsdID.Text;
-            string sifre = txtsdS.Text;
-            string sifretekrari = txtsdST.Text;
+            string ID = mskID.Text;
+            string sifre = mskSifre.Text;
+            string sifretekrari = mskSifreTekrari.Text;
             try
             {
-                //  Kullanici k = new Kullanici(ID, ad, soyad);
-                //   controller.user.ChangePasswordRequest(k, sifre, sifretekrari);
+                //Kullanici k = new Kullanici(ID,ad,soyad);
+                //controller.user.ChangePasswordRequest(k, sifre, sifretekrari);
             }
             catch
             {
