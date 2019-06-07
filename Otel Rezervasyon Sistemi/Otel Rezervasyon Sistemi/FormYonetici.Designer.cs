@@ -44,6 +44,7 @@
             this.clistbox = new System.Windows.Forms.CheckedListBox();
             this.panel1 = new System.Windows.Forms.Panel();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.btnOdaEkle = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -52,6 +53,8 @@
             this.txtSilID = new System.Windows.Forms.TextBox();
 =======
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TxtHizmet = new System.Windows.Forms.TextBox();
@@ -64,17 +67,23 @@
             this.cmbTİP = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.lblyonid = new System.Windows.Forms.Label();
             this.bilgileriGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sifreDeğiştirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 =======
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             this.button1 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.txtSilID = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+<<<<<<< HEAD
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             this.mSOtelEkle.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -271,6 +280,7 @@
             this.panel1.TabIndex = 0;
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // btnOdaEkle
             // 
             this.btnOdaEkle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -333,6 +343,8 @@
             // 
 =======
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             // label4
             // 
             this.label4.AutoSize = true;
@@ -490,6 +502,7 @@
             this.label17.Size = new System.Drawing.Size(62, 19);
             this.label17.TabIndex = 35;
             this.label17.Text = "Otel Sil:";
+<<<<<<< HEAD
             // 
             // button2
             // 
@@ -515,6 +528,19 @@
             this.sifreDeğiştirToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.sifreDeğiştirToolStripMenuItem.Text = "Sifre Değiştir";
             this.sifreDeğiştirToolStripMenuItem.Click += new System.EventHandler(this.sifreDeğiştirToolStripMenuItem_Click);
+=======
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.Location = new System.Drawing.Point(438, 416);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(96, 34);
+            this.button2.TabIndex = 36;
+            this.button2.Text = "Oda Ekle";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             // 
             // FormYonetici
             // 
@@ -580,11 +606,14 @@
         private System.Windows.Forms.Button BTNSİL;
         private System.Windows.Forms.TextBox txtSilID;
 <<<<<<< HEAD
+<<<<<<< HEAD
         public System.Windows.Forms.Label lblyonid;
         public System.Windows.Forms.TextBox tbID;
         private System.Windows.Forms.ToolStripMenuItem bilgileriGüncelleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sifreDeğiştirToolStripMenuItem;
 =======
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
     }
 }

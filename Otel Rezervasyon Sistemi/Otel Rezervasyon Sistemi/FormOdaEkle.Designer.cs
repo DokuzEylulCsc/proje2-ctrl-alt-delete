@@ -65,6 +65,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.lblyon = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -74,6 +75,8 @@
             this.txtkacadetkayitli = new System.Windows.Forms.TextBox();
 =======
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             this.panelIslemde.SuspendLayout();
             this.panelKayitli.SuspendLayout();
             this.SuspendLayout();
@@ -91,6 +94,7 @@
             // panelIslemde
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.panelIslemde.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panelIslemde.Controls.Add(this.txtkacadetkayitli);
             this.panelIslemde.Controls.Add(this.label15);
@@ -101,6 +105,10 @@
             this.panelIslemde.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panelIslemde.Controls.Add(this.comboBox1);
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
+=======
+            this.panelIslemde.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelIslemde.Controls.Add(this.comboBox1);
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             this.panelIslemde.Controls.Add(this.label2);
             this.panelIslemde.Controls.Add(this.label9);
             this.panelIslemde.Controls.Add(this.BtnCıkıs2);
@@ -127,16 +135,22 @@
             "Manzarali",
             "Standart"});
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.cmbislemdekit.Location = new System.Drawing.Point(159, 50);
             this.cmbislemdekit.Name = "cmbislemdekit";
             this.cmbislemdekit.Size = new System.Drawing.Size(121, 21);
             this.cmbislemdekit.TabIndex = 16;
 =======
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             this.comboBox1.Location = new System.Drawing.Point(189, 54);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 16;
+<<<<<<< HEAD
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             // 
             // label2
             // 
@@ -170,7 +184,10 @@
 =======
             this.BtnCıkıs2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnCıkıs2.Location = new System.Drawing.Point(263, 371);
+<<<<<<< HEAD
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             this.BtnCıkıs2.Name = "BtnCıkıs2";
             this.BtnCıkıs2.Size = new System.Drawing.Size(100, 34);
             this.BtnCıkıs2.TabIndex = 13;
@@ -178,6 +195,7 @@
             this.BtnCıkıs2.UseVisualStyleBackColor = true;
             // 
             // Btntmzle
+<<<<<<< HEAD
             // 
             this.Btntmzle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Btntmzle.Location = new System.Drawing.Point(151, 371);
@@ -199,6 +217,19 @@
             this.BtnİslemdekiKaydet.UseVisualStyleBackColor = true;
             this.BtnİslemdekiKaydet.Click += new System.EventHandler(this.BtnİslemdekiKaydet_Click);
 =======
+=======
+            // 
+            this.Btntmzle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Btntmzle.Location = new System.Drawing.Point(151, 371);
+            this.Btntmzle.Name = "Btntmzle";
+            this.Btntmzle.Size = new System.Drawing.Size(91, 31);
+            this.Btntmzle.TabIndex = 12;
+            this.Btntmzle.Text = "Temizle";
+            this.Btntmzle.UseVisualStyleBackColor = true;
+            // 
+            // BtnKayit
+            // 
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             this.BtnKayit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnKayit.Location = new System.Drawing.Point(53, 371);
             this.BtnKayit.Name = "BtnKayit";
@@ -207,7 +238,10 @@
             this.BtnKayit.Text = "Kaydet";
             this.BtnKayit.UseVisualStyleBackColor = true;
             this.BtnKayit.Click += new System.EventHandler(this.BtnKayit_Click);
+<<<<<<< HEAD
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             // 
             // checkedListBox2
             // 
@@ -218,15 +252,19 @@
             "Minibar",
             "Televizyon"});
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.chcislemdeki.Location = new System.Drawing.Point(159, 273);
             this.chcislemdeki.Name = "chcislemdeki";
             this.chcislemdeki.Size = new System.Drawing.Size(137, 109);
             this.chcislemdeki.TabIndex = 10;
 =======
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             this.checkedListBox2.Location = new System.Drawing.Point(189, 225);
             this.checkedListBox2.Name = "checkedListBox2";
             this.checkedListBox2.Size = new System.Drawing.Size(137, 109);
             this.checkedListBox2.TabIndex = 10;
+<<<<<<< HEAD
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
             // 
             // textBox5
@@ -237,10 +275,16 @@
             this.txtislemdekifiyat.Size = new System.Drawing.Size(121, 20);
             this.txtislemdekifiyat.TabIndex = 9;
 =======
+=======
+            // 
+            // textBox5
+            // 
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             this.textBox5.Location = new System.Drawing.Point(189, 178);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(121, 20);
             this.textBox5.TabIndex = 9;
+<<<<<<< HEAD
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
             // 
             // comboBox2
@@ -252,11 +296,17 @@
             this.cmbkisikapaislemdeki.Size = new System.Drawing.Size(121, 21);
             this.cmbkisikapaislemdeki.TabIndex = 8;
 =======
+=======
+            // 
+            // comboBox2
+            // 
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(189, 134);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 8;
+<<<<<<< HEAD
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
             // 
             // textBox4
@@ -267,11 +317,19 @@
             this.txtislemdekino.Size = new System.Drawing.Size(121, 20);
             this.txtislemdekino.TabIndex = 7;
 =======
+=======
+            // 
+            // textBox4
+            // 
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             this.textBox4.Location = new System.Drawing.Point(189, 93);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(121, 20);
             this.textBox4.TabIndex = 7;
+<<<<<<< HEAD
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             // 
             // label11
             // 
@@ -371,10 +429,14 @@
             this.panelKayitli.Controls.Add(this.label7);
             this.panelKayitli.Controls.Add(this.label3);
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.panelKayitli.Location = new System.Drawing.Point(232, 51);
 =======
             this.panelKayitli.Location = new System.Drawing.Point(649, 51);
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
+=======
+            this.panelKayitli.Location = new System.Drawing.Point(649, 51);
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             this.panelKayitli.Name = "panelKayitli";
             this.panelKayitli.Size = new System.Drawing.Size(415, 443);
             this.panelKayitli.TabIndex = 17;
@@ -384,11 +446,15 @@
             // btnCıkıs
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.btnCıkıs.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnCıkıs.Location = new System.Drawing.Point(284, 148);
 =======
             this.btnCıkıs.Location = new System.Drawing.Point(330, 428);
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
+=======
+            this.btnCıkıs.Location = new System.Drawing.Point(330, 428);
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             this.btnCıkıs.Name = "btnCıkıs";
             this.btnCıkıs.Size = new System.Drawing.Size(106, 31);
             this.btnCıkıs.TabIndex = 31;
@@ -398,6 +464,7 @@
             // 
             // btnKaydet
             // 
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.btnKayitliKaydet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnKayitliKaydet.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -410,6 +477,8 @@
             this.btnKayitliKaydet.UseVisualStyleBackColor = false;
             this.btnKayitliKaydet.Click += new System.EventHandler(this.btnKayitliKaydet_Click);
 =======
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             this.btnKaydet.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.Location = new System.Drawing.Point(43, 427);
             this.btnKaydet.Name = "btnKaydet";
@@ -418,7 +487,10 @@
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+<<<<<<< HEAD
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             // 
             // cmbOdatipi
             // 
@@ -498,16 +570,22 @@
             // cmbOdano
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.txtOdano.Location = new System.Drawing.Point(143, 186);
             this.txtOdano.Name = "txtOdano";
             this.txtOdano.Size = new System.Drawing.Size(121, 20);
             this.txtOdano.TabIndex = 20;
 =======
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             this.cmbOdano.Location = new System.Drawing.Point(152, 152);
             this.cmbOdano.Name = "cmbOdano";
             this.cmbOdano.Size = new System.Drawing.Size(121, 20);
             this.cmbOdano.TabIndex = 20;
+<<<<<<< HEAD
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             // 
             // label6
             // 
@@ -588,6 +666,7 @@
             this.label3.Text = "Otel Adi:";
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // lblyon
             // 
             this.lblyon.AutoSize = true;
@@ -659,15 +738,20 @@
             // 
 =======
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             // FormOdaEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(670, 550);
             this.Controls.Add(this.lblyon);
 =======
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
             this.ClientSize = new System.Drawing.Size(1058, 595);
             this.Controls.Add(this.panelKayitli);
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
@@ -727,6 +811,7 @@
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Button btnCıkıs;
 <<<<<<< HEAD
+<<<<<<< HEAD
         private System.Windows.Forms.Label lblotelid;
         private System.Windows.Forms.Label lblyon;
         private System.Windows.Forms.Button button1;
@@ -737,5 +822,7 @@
         private System.Windows.Forms.Label label14;
 =======
 >>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
+=======
+>>>>>>> 237c2c1270c4e89cfb45d95acf77ef90ccf49d18
     }
 }
