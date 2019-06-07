@@ -35,6 +35,8 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             }
         } // Singleton tamamlandi.
 
+
+        // Nesneleri serilestirip xml dosyasina yazan metot.
         public void Serialization()
         {
             Otel o = new TatilKoyu(1, 1, 1, "123456789", "BulutlardaTatil");
@@ -56,7 +58,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             }
         }
 
-
+        // Xml verilerini nesnelestiren metot.
         public void Deserialization()
         {
             using (StreamReader sr = new StreamReader(@"../Otel.xml"))
