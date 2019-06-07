@@ -29,12 +29,29 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="otelid">eklenecek olan otelin idsi</param>
         /// <param name="otelname">eklenicek olan otelin ismi</param>
         /// <param name="oteltype">eklenicek olan otelin tipi </param>
-        public  void AddHotel(string otelid , string otelname, string oteltype)
+        public  void AddHotel(int temizlik , int konum , int hizmet ,string otelid , string otelname, string oteltype)
         {
-            /*
-             * gerekli implementasyon yapilacaka duruma gore parametre eklenip cikartilacak 
-             * sadece bir templatedir
-             */
+            List<string> IDs= new List<string>(); // get IDs from core
+            if (IDs.Contains(otelid))
+            {
+                if (oteltype == "TatilKoyu")
+                {
+
+                }
+                else if (oteltype == "Pansiyon")
+                {
+
+                }
+                else if (oteltype == "Butik")
+                {
+
+                }
+            }
+            else
+            {
+                throw new Exception("Bu IDye sahip otel bulunamadi");
+            }
+            
         }
         /// <summary>
         /// genel listeden otel siler 
