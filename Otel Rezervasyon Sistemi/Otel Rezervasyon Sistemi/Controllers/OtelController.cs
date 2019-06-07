@@ -13,38 +13,57 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
 
         }
 
+
         /// <summary>
         /// Otelin butun rezervasyon bilgilerini dondurur
         /// </summary>
         /// <param name="otelid">Rezervasyonu sorgulanmak istenen otelin idsi</param>
-        public  void GetReservations(string otelid)
+        public  List<string> GetReservations(string otelid)
         {
-            /*
-             * otelin butun rezervasyonlarini dondurucek olan id 
-             */
+            List<string> IDs = new List<string>(); // get ids from core
+            if (IDs.Contains(otelid))
+            {
+                List<string> reservations = new List<string>(); // get Reservations from core
+                return reservations;
+            }
+            else
+            {
+                throw new Exception("Boyle bir IDye ait otel bulunamadi");
+            }
         }
         /// <summary>
-        /// genel listeye otel ekler 
+        /// Otel Eklenmek istediginde
         /// </summary>
-        /// <param name="otelid">eklenecek olan otelin idsi</param>
-        /// <param name="otelname">eklenicek olan otelin ismi</param>
-        /// <param name="oteltype">eklenicek olan otelin tipi </param>
-        public  void AddHotel(int temizlik , int konum , int hizmet ,string otelid , string otelname, string oteltype)
+        /// <param name="temizlik">int temizlik puani [1,10]</param>
+        /// <param name="konum">int komun puani [1,10]</param>
+        /// <param name="hizmet">int hizmet puani [1,10]</param>
+        /// <param name="otelid">yaratilacak otelin IDsi</param>
+        /// <param name="otelname">yaratilicak otelin ismi</param>
+        /// <param name="oteltype">yaratilacak otelin tipi string  ["TatilKoyu","Pansiyon","Butik"]</param>
+        /// <returns>islem basarili olursa true</returns>
+        public bool AddHotel(int temizlik , int konum , int hizmet ,string otelid , string otelname, string oteltype)
         {
             List<string> IDs= new List<string>(); // get IDs from core
             if (IDs.Contains(otelid))
             {
                 if (oteltype == "TatilKoyu")
                 {
-
+                    // core add tatilkoyu
+                    return true;
                 }
                 else if (oteltype == "Pansiyon")
                 {
-
+                    //core add pansiyon
+                    return true;
                 }
                 else if (oteltype == "Butik")
                 {
-
+                    //core add butik
+                    return true;
+                }
+                else
+                {
+                    throw new Exception("Something gone wrong ! CODE : HTFE1");//Hotel Type Not Found
                 }
             }
             else
@@ -57,12 +76,18 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// genel listeden otel siler 
         /// </summary>
         /// <param name="hotelId">silinmek istenen otelIdsi </param>
-        public  void DeleteHotel(string hotelId)
+        public bool DeleteHotel(string hotelId)
         {
-            /*
-             * gerekli implementasyon yapilacaka duruma gore parametre eklenip cikartilacak 
-             * sadece bir templatedir
-             */
+            List<string> IDs = new List<string>(); // Get Otel IDs from Core
+            if (IDs.Contains(hotelId))
+            {
+                //delete request to core 
+                return true;
+            }
+            else
+            {
+                throw new Exception("Boyle bir ID ye ait otel bulunamadi");
+            }
         }
 
         /*
