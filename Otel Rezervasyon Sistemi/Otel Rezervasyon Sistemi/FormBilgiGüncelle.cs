@@ -21,7 +21,13 @@ namespace Otel_Rezervasyon_Sistemi
         private void FormBilgiGüncelle_Load(object sender, EventArgs e)
         {
 
+
         }
+
+
+
+        }
+
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -43,7 +49,8 @@ namespace Otel_Rezervasyon_Sistemi
 
         private void btnDeğiştir_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
+
             string ID =  MSKıd.Text;
             string Sifre = mskSifre.Text;
             string Güncel = txtgüncel.Text;
@@ -66,9 +73,12 @@ namespace Otel_Rezervasyon_Sistemi
                 MessageBox.Show("Bilgilerde Hata Var", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
            
-=======
 
->>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
+
+
+
+
+
         }
     }
 }
