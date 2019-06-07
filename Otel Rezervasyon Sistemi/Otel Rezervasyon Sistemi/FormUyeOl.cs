@@ -26,17 +26,12 @@ namespace Otel_Rezervasyon_Sistemi
 
         private void btnKayit_Click(object sender, EventArgs e)
         {
-            
+            MainController controller = MainController.GetController();
             try
             {
-                MainController controller = MainController.GetController();
-                string gecici = TXTID.Text;
-                string ad = TXTAD.Text;
-                string soyad = TXTSOYAD.Text;
-  
-              //  Kullanici a = controller.user.CreateAccountRequest(gecici,ad,soyad);
-                
-                
+
+                controller.user.CreateAccountRequest(mID.Text, mSIFRE.Text, mSIFRET.Text,TXTAD.Text,TXTSOYAD.Text);
+               
             }
             catch
             {
