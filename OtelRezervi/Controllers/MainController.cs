@@ -9,6 +9,8 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
 {
     class MainController
     {
+
+        //bok yıyen git hub 
         private static MainController instance = null;
         private FilterController filterController = null;
         public FilterController filter { get { return filterController;  } }
