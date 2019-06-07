@@ -11,3 +11,8 @@
 *.cache
 /.vs/OtelRezervi/v16
 >>>>>>> d586e0b4bd375c9e39f3b958617e5e736250e06d
+*.lock
+Otel Rezervasyon Sistemi/.vs/Otel Rezervasyon Sistemi/v15/Server/sqlite3/storage.ide
+Otel Rezervasyon Sistemi/Otel Rezervasyon Sistemi/obj/Debug/Otel Rezervasyon Sistemi.csproj.CoreCompileInputs.cache
+*.ide-shm
+*.cache
