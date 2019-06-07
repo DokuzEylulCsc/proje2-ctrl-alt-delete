@@ -43,21 +43,5 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
             }
             return instance;
         }
-        /// <summary>
-        /// Programdan cikis yapilmadan once mutlaka calismasi gereken method
-        /// </summary>
-        public void SerializationAtEnd()
-        {
-            Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer b = Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer.BUF;
-            b.Serialization();
-        }
-        /// <summary>
-        /// program baslangicinda mutlaka cagirilmasi gereken method 
-        /// </summary>
-        public void DeserializationAtBooting()
-        {
-            Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer b = Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer.BUF;
-            b.Deserialization();
-        }
     }
 }

@@ -29,23 +29,22 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.gbOzellik = new System.Windows.Forms.GroupBox();
-            this.checkTv = new System.Windows.Forms.CheckBox();
-            this.checkMinibar = new System.Windows.Forms.CheckBox();
-            this.checkWifi = new System.Windows.Forms.CheckBox();
-            this.checkKlima = new System.Windows.Forms.CheckBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.checkTv = new System.Windows.Forms.CheckBox();
             this.BtnRezAra = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.checkMinibar = new System.Windows.Forms.CheckBox();
+            this.checkWifi = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.checkKlima = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnRezListele = new System.Windows.Forms.Button();
@@ -62,9 +61,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnrez = new System.Windows.Forms.Button();
+            this.gbOzellik = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
-            this.gbOzellik.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.gbOzellik.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,31 +88,103 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.panel1.Location = new System.Drawing.Point(12, 68);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(809, 297);
+            this.panel1.Size = new System.Drawing.Size(730, 287);
             this.panel1.TabIndex = 0;
             // 
-            // gbOzellik
+            // comboBox3
             // 
-            this.gbOzellik.Controls.Add(this.checkTv);
-            this.gbOzellik.Controls.Add(this.checkMinibar);
-            this.gbOzellik.Controls.Add(this.checkWifi);
-            this.gbOzellik.Controls.Add(this.checkKlima);
-            this.gbOzellik.Location = new System.Drawing.Point(119, 197);
-            this.gbOzellik.Name = "gbOzellik";
-            this.gbOzellik.Size = new System.Drawing.Size(170, 90);
-            this.gbOzellik.TabIndex = 18;
-            this.gbOzellik.TabStop = false;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "3",
+            "4",
+            "5"});
+            this.comboBox3.Location = new System.Drawing.Point(114, 161);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 28);
+            this.comboBox3.TabIndex = 17;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.Location = new System.Drawing.Point(12, 168);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(81, 20);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Yıldiz Sayısı:";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Tatil Köyü",
+            "Butik Otel",
+            "Pansiyon"});
+            this.comboBox2.Location = new System.Drawing.Point(116, 19);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 28);
+            this.comboBox2.TabIndex = 15;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(13, 19);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(68, 20);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Otel Tipi:";
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(393, 19);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 13;
             // 
             // checkTv
             // 
             this.checkTv.AutoSize = true;
             this.checkTv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkTv.Location = new System.Drawing.Point(89, 57);
+            this.checkTv.Location = new System.Drawing.Point(89, 53);
             this.checkTv.Name = "checkTv";
             this.checkTv.Size = new System.Drawing.Size(38, 19);
             this.checkTv.TabIndex = 12;
             this.checkTv.Text = "Tv";
             this.checkTv.UseVisualStyleBackColor = true;
+            // 
+            // BtnRezAra
+            // 
+            this.BtnRezAra.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnRezAra.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.BtnRezAra.Location = new System.Drawing.Point(567, 209);
+            this.BtnRezAra.Name = "BtnRezAra";
+            this.BtnRezAra.Size = new System.Drawing.Size(133, 42);
+            this.BtnRezAra.TabIndex = 4;
+            this.BtnRezAra.Text = "Rezervasyon Ara";
+            this.BtnRezAra.UseVisualStyleBackColor = true;
+            this.BtnRezAra.Click += new System.EventHandler(this.BtnRezAra_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(223, 246);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(47, 26);
+            this.textBox2.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(193, 249);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(24, 20);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "---";
             // 
             // checkMinibar
             // 
@@ -136,105 +208,9 @@
             this.checkWifi.Text = "Wifi";
             this.checkWifi.UseVisualStyleBackColor = true;
             // 
-            // checkKlima
-            // 
-            this.checkKlima.AutoSize = true;
-            this.checkKlima.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkKlima.Location = new System.Drawing.Point(6, 13);
-            this.checkKlima.Name = "checkKlima";
-            this.checkKlima.Size = new System.Drawing.Size(58, 19);
-            this.checkKlima.TabIndex = 9;
-            this.checkKlima.Text = "Klima";
-            this.checkKlima.UseVisualStyleBackColor = true;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "3",
-            "4",
-            "5"});
-            this.comboBox3.Location = new System.Drawing.Point(137, 109);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 28);
-            this.comboBox3.TabIndex = 17;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(27, 117);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(81, 20);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Yıldiz Sayısı:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Tatil Köyü",
-            "Butik Otel",
-            "Pansiyon"});
-            this.comboBox2.Location = new System.Drawing.Point(137, 23);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
-            this.comboBox2.TabIndex = 15;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(27, 24);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 20);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Otel Tipi:";
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.monthCalendar1.Location = new System.Drawing.Point(312, 64);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 13;
-            // 
-            // BtnRezAra
-            // 
-            this.BtnRezAra.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnRezAra.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.BtnRezAra.Location = new System.Drawing.Point(656, 227);
-            this.BtnRezAra.Name = "BtnRezAra";
-            this.BtnRezAra.Size = new System.Drawing.Size(133, 42);
-            this.BtnRezAra.TabIndex = 4;
-            this.BtnRezAra.Text = "Rezervasyon Ara";
-            this.BtnRezAra.UseVisualStyleBackColor = true;
-            this.BtnRezAra.Click += new System.EventHandler(this.BtnRezAra_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(221, 159);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(47, 26);
-            this.textBox2.TabIndex = 6;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(191, 162);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(24, 20);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "---";
-            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(137, 159);
+            this.textBox1.Location = new System.Drawing.Point(139, 246);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(48, 26);
             this.textBox1.TabIndex = 4;
@@ -245,7 +221,7 @@
             this.label5.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(27, 159);
+            this.label5.Location = new System.Drawing.Point(11, 249);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 21);
             this.label5.TabIndex = 1;
@@ -257,7 +233,7 @@
             this.label4.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(312, 23);
+            this.label4.Location = new System.Drawing.Point(288, 18);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 21);
             this.label4.TabIndex = 0;
@@ -270,10 +246,21 @@
             "Kral Dairesi",
             "Manzaralı",
             "Standart"});
-            this.comboBox1.Location = new System.Drawing.Point(137, 64);
+            this.comboBox1.Location = new System.Drawing.Point(114, 85);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 8;
+            // 
+            // checkKlima
+            // 
+            this.checkKlima.AutoSize = true;
+            this.checkKlima.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.checkKlima.Location = new System.Drawing.Point(6, 13);
+            this.checkKlima.Name = "checkKlima";
+            this.checkKlima.Size = new System.Drawing.Size(58, 19);
+            this.checkKlima.TabIndex = 9;
+            this.checkKlima.Text = "Klima";
+            this.checkKlima.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -281,7 +268,7 @@
             this.label6.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(27, 68);
+            this.label6.Location = new System.Drawing.Point(11, 92);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 21);
             this.label6.TabIndex = 2;
@@ -293,7 +280,7 @@
             this.label7.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(21, 208);
+            this.label7.Location = new System.Drawing.Point(290, 204);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 21);
             this.label7.TabIndex = 3;
@@ -355,7 +342,7 @@
             this.çıkışToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(838, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(759, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -422,12 +409,24 @@
             this.btnrez.Text = "Rezervasyon Yap";
             this.btnrez.UseVisualStyleBackColor = true;
             // 
+            // gbOzellik
+            // 
+            this.gbOzellik.Controls.Add(this.checkTv);
+            this.gbOzellik.Controls.Add(this.checkMinibar);
+            this.gbOzellik.Controls.Add(this.checkWifi);
+            this.gbOzellik.Controls.Add(this.checkKlima);
+            this.gbOzellik.Location = new System.Drawing.Point(388, 193);
+            this.gbOzellik.Name = "gbOzellik";
+            this.gbOzellik.Size = new System.Drawing.Size(158, 90);
+            this.gbOzellik.TabIndex = 18;
+            this.gbOzellik.TabStop = false;
+            // 
             // FormMusteriRez
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(838, 568);
+            this.ClientSize = new System.Drawing.Size(759, 568);
             this.Controls.Add(this.btnrez);
             this.Controls.Add(this.btnRezListele);
             this.Controls.Add(this.listBox1);
@@ -444,10 +443,10 @@
             this.Text = "FormMusteriRez";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.gbOzellik.ResumeLayout(false);
-            this.gbOzellik.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.gbOzellik.ResumeLayout(false);
+            this.gbOzellik.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

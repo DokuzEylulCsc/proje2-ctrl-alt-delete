@@ -30,14 +30,11 @@ namespace Otel_Rezervasyon_Sistemi
             try
             {
                 MainController controller = MainController.GetController();
-                string gecici = mskıd.Text;
+                string gecici = TXTID.Text;
                 string ad = TXTAD.Text;
                 string soyad = TXTSOYAD.Text;
-                string sifre = msksifre.Text;
-                string sifre2 = msksifre2.Text;
-
-
-                controller.user.CreateAccountRequest(gecici, sifre, sifre2, ad, soyad);
+  
+              //  Kullanici a = controller.user.CreateAccountRequest(gecici,ad,soyad);
                 
                 
             }

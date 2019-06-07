@@ -43,15 +43,12 @@
             this.cbkonum = new System.Windows.Forms.ComboBox();
             this.clistbox = new System.Windows.Forms.CheckedListBox();
             this.panel1 = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
-            this.btnOdaEkle = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.BTNSİL = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtSilID = new System.Windows.Forms.TextBox();
-=======
->>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TxtHizmet = new System.Windows.Forms.TextBox();
@@ -60,25 +57,25 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txtstandart = new System.Windows.Forms.TextBox();
+            this.txtmanzarali = new System.Windows.Forms.TextBox();
+            this.txtKral = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.btnOtelEkle = new System.Windows.Forms.Button();
             this.cmbTİP = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
             this.lblyonid = new System.Windows.Forms.Label();
-            this.bilgileriGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sifreDeğiştirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-=======
-            this.button1 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtSilID = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
->>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
             this.mSOtelEkle.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblOtelEkle
@@ -118,8 +115,6 @@
             this.mSOtelEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.mSOtelEkle.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.mSOtelEkle.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bilgileriGüncelleToolStripMenuItem,
-            this.sifreDeğiştirToolStripMenuItem,
             this.rezervasyonListeleToolStripMenuItem,
             this.cıkısToolStripMenuItem});
             this.mSOtelEkle.Location = new System.Drawing.Point(0, 0);
@@ -247,11 +242,22 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.btnOdaEkle);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.checkBox3);
+            this.panel1.Controls.Add(this.checkBox2);
+            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.txtstandart);
+            this.panel1.Controls.Add(this.txtmanzarali);
+            this.panel1.Controls.Add(this.txtKral);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.btnOtelEkle);
             this.panel1.Controls.Add(this.cmbTİP);
             this.panel1.Controls.Add(this.label1);
@@ -265,22 +271,21 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panel1.Location = new System.Drawing.Point(139, 110);
+            this.panel1.Location = new System.Drawing.Point(123, 110);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(586, 521);
             this.panel1.TabIndex = 0;
             // 
-<<<<<<< HEAD
-            // btnOdaEkle
+            // button2
             // 
-            this.btnOdaEkle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOdaEkle.Location = new System.Drawing.Point(438, 416);
-            this.btnOdaEkle.Name = "btnOdaEkle";
-            this.btnOdaEkle.Size = new System.Drawing.Size(96, 34);
-            this.btnOdaEkle.TabIndex = 36;
-            this.btnOdaEkle.Text = "Oda Ekle";
-            this.btnOdaEkle.UseVisualStyleBackColor = true;
-            this.btnOdaEkle.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.Location = new System.Drawing.Point(438, 416);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(96, 34);
+            this.button2.TabIndex = 36;
+            this.button2.Text = "Oda Ekle";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label17
             // 
@@ -296,7 +301,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Silver;
             this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.BTNSİL);
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.txtSilID);
             this.panel3.Location = new System.Drawing.Point(48, 367);
             this.panel3.Name = "panel3";
@@ -313,16 +318,16 @@
             this.label16.TabIndex = 32;
             this.label16.Text = "Otel İD:";
             // 
-            // BTNSİL
+            // button1
             // 
-            this.BTNSİL.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BTNSİL.Location = new System.Drawing.Point(52, 64);
-            this.BTNSİL.Name = "BTNSİL";
-            this.BTNSİL.Size = new System.Drawing.Size(85, 34);
-            this.BTNSİL.TabIndex = 31;
-            this.BTNSİL.Text = "Otel Sil";
-            this.BTNSİL.UseVisualStyleBackColor = true;
-            this.BTNSİL.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(52, 64);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 34);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "Otel Sil";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtSilID
             // 
@@ -331,8 +336,6 @@
             this.txtSilID.Size = new System.Drawing.Size(100, 22);
             this.txtSilID.TabIndex = 33;
             // 
-=======
->>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
             // label4
             // 
             this.label4.AutoSize = true;
@@ -405,6 +408,114 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Temizlik Puani:";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(422, 161);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(27, 16);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "--->";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(422, 134);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(27, 16);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "--->";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(422, 107);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(27, 16);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "--->";
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.checkBox3.Location = new System.Drawing.Point(323, 154);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(82, 23);
+            this.checkBox3.TabIndex = 25;
+            this.checkBox3.Text = "Standart";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.checkBox2.Location = new System.Drawing.Point(323, 128);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(92, 23);
+            this.checkBox2.TabIndex = 24;
+            this.checkBox2.Text = "Manzarali";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.checkBox1.Location = new System.Drawing.Point(323, 104);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(103, 23);
+            this.checkBox1.TabIndex = 23;
+            this.checkBox1.Text = "Kral Dairesi";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // txtstandart
+            // 
+            this.txtstandart.Enabled = false;
+            this.txtstandart.Location = new System.Drawing.Point(455, 161);
+            this.txtstandart.Name = "txtstandart";
+            this.txtstandart.Size = new System.Drawing.Size(58, 22);
+            this.txtstandart.TabIndex = 22;
+            // 
+            // txtmanzarali
+            // 
+            this.txtmanzarali.Enabled = false;
+            this.txtmanzarali.Location = new System.Drawing.Point(455, 133);
+            this.txtmanzarali.Name = "txtmanzarali";
+            this.txtmanzarali.Size = new System.Drawing.Size(58, 22);
+            this.txtmanzarali.TabIndex = 21;
+            // 
+            // txtKral
+            // 
+            this.txtKral.Enabled = false;
+            this.txtKral.Location = new System.Drawing.Point(455, 105);
+            this.txtKral.Name = "txtKral";
+            this.txtKral.Size = new System.Drawing.Size(58, 22);
+            this.txtKral.TabIndex = 20;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(455, 63);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(79, 21);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Oda Sayısı";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(303, 63);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(139, 21);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Mevcut Oda Tipleri:";
+            // 
             // btnOtelEkle
             // 
             this.btnOtelEkle.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -442,79 +553,15 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Otel Tipi:";
             // 
-            // button1
+            // lblyonid
             // 
-            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(52, 64);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 34);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "Otel Sil";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label16.Location = new System.Drawing.Point(8, 18);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(65, 18);
-            this.label16.TabIndex = 32;
-            this.label16.Text = "Otel İD:";
-            // 
-            // txtSilID
-            // 
-            this.txtSilID.Location = new System.Drawing.Point(89, 18);
-            this.txtSilID.Name = "txtSilID";
-            this.txtSilID.Size = new System.Drawing.Size(100, 22);
-            this.txtSilID.TabIndex = 33;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Silver;
-            this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.txtSilID);
-            this.panel3.Location = new System.Drawing.Point(48, 367);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 125);
-            this.panel3.TabIndex = 34;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label17.Location = new System.Drawing.Point(44, 345);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(62, 19);
-            this.label17.TabIndex = 35;
-            this.label17.Text = "Otel Sil:";
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(438, 416);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 34);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "Oda Ekle";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // bilgileriGüncelleToolStripMenuItem
-            // 
-            this.bilgileriGüncelleToolStripMenuItem.Name = "bilgileriGüncelleToolStripMenuItem";
-            this.bilgileriGüncelleToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
-            this.bilgileriGüncelleToolStripMenuItem.Text = "Bilgileri Güncelle";
-            this.bilgileriGüncelleToolStripMenuItem.Click += new System.EventHandler(this.bilgileriGüncelleToolStripMenuItem_Click);
-            // 
-            // sifreDeğiştirToolStripMenuItem
-            // 
-            this.sifreDeğiştirToolStripMenuItem.Name = "sifreDeğiştirToolStripMenuItem";
-            this.sifreDeğiştirToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
-            this.sifreDeğiştirToolStripMenuItem.Text = "Sifre Değiştir";
-            this.sifreDeğiştirToolStripMenuItem.Click += new System.EventHandler(this.sifreDeğiştirToolStripMenuItem_Click);
+            this.lblyonid.AutoSize = true;
+            this.lblyonid.Location = new System.Drawing.Point(21, 45);
+            this.lblyonid.Name = "lblyonid";
+            this.lblyonid.Size = new System.Drawing.Size(43, 13);
+            this.lblyonid.TabIndex = 9;
+            this.lblyonid.Text = "label18";
+            this.lblyonid.Visible = false;
             // 
             // FormYonetici
             // 
@@ -523,6 +570,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(802, 696);
+            this.Controls.Add(this.lblyonid);
             this.Controls.Add(this.BtnCıkıs);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblOtelEkle);
@@ -537,10 +585,10 @@
             this.mSOtelEkle.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -557,7 +605,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tbID;
         private System.Windows.Forms.TextBox tbAd;
         private System.Windows.Forms.ComboBox cbkonum;
         private System.Windows.Forms.CheckedListBox clistbox;
@@ -565,6 +612,17 @@
         private System.Windows.Forms.ComboBox cmbTİP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnOtelEkle;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtstandart;
+        private System.Windows.Forms.TextBox txtmanzarali;
+        private System.Windows.Forms.TextBox txtKral;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox TxtHizmet;
@@ -573,18 +631,13 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button btnOdaEkle;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button BTNSİL;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtSilID;
-<<<<<<< HEAD
         public System.Windows.Forms.Label lblyonid;
         public System.Windows.Forms.TextBox tbID;
-        private System.Windows.Forms.ToolStripMenuItem bilgileriGüncelleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sifreDeğiştirToolStripMenuItem;
-=======
->>>>>>> 62041cc12400159f2f4af174155cf0259beb138d
     }
 }

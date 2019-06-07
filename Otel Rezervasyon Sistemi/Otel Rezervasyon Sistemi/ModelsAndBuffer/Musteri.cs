@@ -6,15 +6,9 @@ using System.Threading.Tasks;
 
 namespace Otel_Rezervasyon_Sistemi
 {
-    [Serializable]
-    public class Musteri:Kullanici,IGoruntuleyebilir
+    class Musteri:Kullanici,IGoruntuleyebilir
     {
-        private Musteri()
-        {
-            // Serilestirme icin gerekli bos yapıcı metot.
-        }
-
-        public Musteri(string ID,string ad,string soyad,string sifre) : base(ID,ad,soyad,sifre)
+        public Musteri(string ID,string ad,string soyad) : base(ID,ad,soyad)
         {
             // Bilgiler base classtan alınacagı ıcın ımplementasyona gerek yok.
         }

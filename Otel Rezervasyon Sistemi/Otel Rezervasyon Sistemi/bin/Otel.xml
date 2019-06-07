@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <ArrayOfOtel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Otel xsi:type="TatilKoyu">
     <Odalar xsi:type="ManzaraliOda">
@@ -13,50 +13,17 @@
       <OdaServisi>true</OdaServisi>
       <Kuvet>true</Kuvet>
     </Odalar>
-    <Odalar xsi:type="KralDairesi">
-      <OdaNo>3214</OdaNo>
-      <KisiKapasitesi>2</KisiKapasitesi>
-      <OdaFiyati>1000</OdaFiyati>
-      <Klimali>true</Klimali>
-      <Minibarli>true</Minibarli>
-      <Televizyonlu>true</Televizyonlu>
-      <Wifili>true</Wifili>
-      <Manzara>true</Manzara>
-      <OdaServisi>true</OdaServisi>
-      <OyunKonsolu>true</OyunKonsolu>
-      <Jakuzi>true</Jakuzi>
-    </Odalar>
     <Temizlik>1</Temizlik>
     <Hizmet>1</Hizmet>
     <Konum>1</Konum>
     <ID>123456789</ID>
-    <OtelAdi>SimTatilKoyu</OtelAdi>
+    <OtelAdi>BulutPansiyon</OtelAdi>
+    <OdaSayisi>125</OdaSayisi>
     <Disco>true</Disco>
     <OtoPark>true</OtoPark>
     <Vale>true</Vale>
     <Kahvalti>true</Kahvalti>
     <OglenYemegi>true</OglenYemegi>
-    <AksamYemegi>true</AksamYemegi>
-  </Otel>
-  <Otel xsi:type="Pansiyon">
-    <Odalar xsi:type="ManzaraliOda">
-      <OdaNo>9789</OdaNo>
-      <KisiKapasitesi>2</KisiKapasitesi>
-      <OdaFiyati>400</OdaFiyati>
-      <Klimali>true</Klimali>
-      <Minibarli>true</Minibarli>
-      <Televizyonlu>false</Televizyonlu>
-      <Wifili>false</Wifili>
-      <Manzara>true</Manzara>
-      <OdaServisi>true</OdaServisi>
-      <Kuvet>true</Kuvet>
-    </Odalar>
-    <Temizlik>2</Temizlik>
-    <Hizmet>2</Hizmet>
-    <Konum>2</Konum>
-    <ID>9789</ID>
-    <OtelAdi>BulutPansiyon</OtelAdi>
-    <Kahvalti>true</Kahvalti>
     <AksamYemegi>true</AksamYemegi>
   </Otel>
 </ArrayOfOtel>

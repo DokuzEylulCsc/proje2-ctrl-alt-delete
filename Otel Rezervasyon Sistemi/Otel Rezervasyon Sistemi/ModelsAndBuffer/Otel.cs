@@ -19,11 +19,12 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             // Parametresiz otel yaratılmasını istemiyoruz ancak serilestirme islemi icin gerekli bu nedenle de parametresiz yaratmanin onune gecmek icin
             // protected tanımlı bir bos yapıcı metodu var.
         }
-        public Otel(int temizlikpuani, int hizmetpuani, int konumpuani, string otelid,string oteladi)
+        public Otel(int temizlikpuani, int hizmetpuani, int konumpuani,int odasayisi, string otelid,string oteladi)
         {
             temizlik = temizlikpuani;
             hizmet = temizlikpuani;
             konum = konumpuani;
+            this.odasayisi = odasayisi;
             id = otelid;
             this.oteladi = oteladi;
 
@@ -71,6 +72,19 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             get { return oteladi; }
             set { oteladi = value; }
         }
+
+        [XmlElement("OdaSayisi")]
+        private int odasayisi;
+        public int OdaSayisi
+        {
+            get { return odasayisi; }
+            set { odasayisi = value; }
+        }
+
+
+
+
+
 
     }
 }
