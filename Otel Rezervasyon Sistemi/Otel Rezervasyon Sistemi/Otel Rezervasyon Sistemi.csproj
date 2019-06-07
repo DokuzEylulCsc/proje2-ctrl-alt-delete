@@ -111,6 +111,7 @@
     <Compile Include="ModelsAndBuffer\Oda.cs" />
     <Compile Include="ModelsAndBuffer\Otel.cs" />
     <Compile Include="ModelsAndBuffer\Pansiyon.cs" />
+    <Compile Include="ModelsAndBuffer\Rezervasyon.cs" />
     <Compile Include="ModelsAndBuffer\StandartOda.cs" />
     <Compile Include="ModelsAndBuffer\TatilKoyu.cs" />
     <Compile Include="ModelsAndBuffer\Yonetici.cs" />

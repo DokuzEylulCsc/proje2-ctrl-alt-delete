@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace Otel_Rezervasyon_Sistemi
+namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
 {
     [Serializable]
     public class ManzaraliOda:Oda

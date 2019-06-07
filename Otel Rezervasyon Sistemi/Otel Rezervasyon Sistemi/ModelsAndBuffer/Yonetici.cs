@@ -4,11 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Otel_Rezervasyon_Sistemi
+namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
 {
-    class Yonetici:Kullanici,IGoruntuleyebilir,IYonetebilir
+    [Serializable]
+    public class Yonetici:Kullanici,IGoruntuleyebilir,IYonetebilir
     {
-        public Yonetici(string ID,string isim,string soyisim) : base(ID,isim,soyisim)
+        private Yonetici()
+        {
+            // Xml islemleri icin gerekli bos yapıcı metot.
+        }
+
+        public Yonetici(string ID,string isim,string soyisim,string sifre) : base(ID,isim,soyisim,sifre)
         {
             // Implementasyona ihtiyac yok ana classtan alınacak veriler.
         }

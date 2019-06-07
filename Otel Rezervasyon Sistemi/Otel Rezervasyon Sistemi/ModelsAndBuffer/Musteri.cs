@@ -4,11 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Otel_Rezervasyon_Sistemi
+namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
 {
-    class Musteri:Kullanici,IGoruntuleyebilir
+    [Serializable]
+    public class Musteri:Kullanici,IGoruntuleyebilir
     {
-        public Musteri(string ID,string ad,string soyad) : base(ID,ad,soyad)
+        private Musteri()
+        {
+            // Xml islemleri icin gereken bos yapıcı metot.
+        }
+
+        public Musteri(string ID,string ad,string soyad,string sifre) : base(ID,ad,soyad,sifre)
         {
             // Bilgiler base classtan alınacagı ıcın ımplementasyona gerek yok.
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Otel_Rezervasyon_Sistemi.ModelsAndBuffer;
 
 namespace Otel_Rezervasyon_Sistemi.Controllers
 {
@@ -24,7 +25,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
              * Musteri nesnesi dogrudan yollanicak ,
              * yoksa hata dondurulucek
              */
-            return new Musteri("", "", "");
+            return new Musteri("", "", "","");
         }
         /// <summary>
         /// Yeni Kullanici Olusturulmak istendiginde cagirilmasi gereken metod

@@ -3,33 +3,60 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
 
-namespace Otel_Rezervasyon_Sistemi
+namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
 {
-    abstract class Kullanici
+    [XmlInclude(typeof(Yonetici))]
+    [XmlInclude(typeof(Musteri))]
+    [Serializable]
+    abstract public class Kullanici
     {
+        protected Kullanici()
+        {
+            // Xml islemleri icin gereken bos yapıcı metot.
+        }
+
+        public Kullanici(string ID, string isim, string soyisim,string sifre)
+        {
+            id = ID;
+            ad = isim;
+            soyad = soyisim;
+            this.sifre = sifre;          
+        }
+
+        [XmlElement("KullaniciID")]
         protected string id;
-        protected string ad;
-        protected string soyad;
         public string ID
         {
-            get { return id; }      //Id set imkani yok , constructor da atanan deger kalicak sadece 
+            get { return id; }
+            set { id = value; }
         }
+
+        [XmlElement("KullaniciAd")]
+        protected string ad;
         public string Ad
         {
             get { return ad; }
             set { ad = value; }
         }
+
+        [XmlElement("KullaniciSoyad")]
+        protected string soyad;
         public string Soyad
         {
             get { return soyad; }
             set { soyad = value; }
         }
-        public Kullanici(string ID, string isim, string soyisim)
+
+        [XmlElement("KullaniciSifre")]
+        protected string sifre;
+        public string Sifre
         {
-            id = ID;
-            ad = isim;
-            soyad = soyisim;
+            get { return sifre; }
+            set { sifre = value; }
         }
+       
     }
 }

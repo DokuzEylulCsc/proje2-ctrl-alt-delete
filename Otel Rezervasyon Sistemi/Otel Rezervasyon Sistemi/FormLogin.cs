@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Otel_Rezervasyon_Sistemi.Controllers;
+using Otel_Rezervasyon_Sistemi.ModelsAndBuffer;
 namespace Otel_Rezervasyon_Sistemi
 {
     public partial class FormLogin : Form

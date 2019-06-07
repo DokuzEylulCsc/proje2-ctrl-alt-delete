@@ -15,7 +15,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
         {
             // Serilestirme islemi icin bos bir yapıcı metot bulunması gerekiyor.
         }
-        public ButikOtel(int temizlik, int konum, int hizmet, int odasayisi, string otelid, string otelad) : base(temizlik, hizmet, konum, odasayisi, otelid, otelad)
+        public ButikOtel(int temizlik, int konum, int hizmet, string otelid, string otelad) : base(temizlik, hizmet, konum, otelid, otelad)
         {
             // Her otelde olacak olan ortak ozellıkler oldugu ıcın base classtan alınacak. Herhangi bir implementasyona ihtiyac yok.
         }

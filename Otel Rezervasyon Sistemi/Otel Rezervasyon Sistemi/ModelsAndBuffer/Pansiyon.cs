@@ -13,11 +13,11 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
     {
         private Pansiyon()
         {
-
+            // Xml islemleri icin gerekli bos yapıcı metot.
         }
-        public Pansiyon(int temizlik,int konum,int hizmet,int odasayisi,string otelid,string otelad):base(temizlik,hizmet,konum,odasayisi,otelid,otelad)
+        public Pansiyon(int temizlik,int konum,int hizmet,string otelid,string otelad):base(temizlik,hizmet,konum,otelid,otelad)
         {
-
+            // Gerekli tum bilgiler ana classtan alınacagi icin implementasyona gerek yok.
         }
 
         [XmlElement("Kahvalti")]

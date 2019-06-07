@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace Otel_Rezervasyon_Sistemi
+namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
 {
     [XmlInclude(typeof(StandartOda))]
     [XmlInclude(typeof(ManzaraliOda))]
@@ -16,7 +16,8 @@ namespace Otel_Rezervasyon_Sistemi
     {
         protected Oda()
         {
-
+            // Xml islemleri icin bir bos yapıcı metoda ihtiyac duyuluyor bu yuzden tanımlandı. Ancak kullanıcının parametresiz oda yaratmasını engelleyebilmek
+            // icin protected olarak tanımladık.
         }
 
         public Oda(int fiyat,int kisikapasite,int odanumarasi,bool klima,bool wifi,bool minibar,bool televizyon )
@@ -30,22 +31,14 @@ namespace Otel_Rezervasyon_Sistemi
             televizyonlu = televizyon;
         }
 
-        protected struct Rezervasyon
+        [XmlElement("Rezervasyon")]
+        private List<Rezervasyon> rezervasyonlar = new List<Rezervasyon>();      
+        public List<Rezervasyon> Rezervasyonlar
         {
-            DateTime rezbaslangic;
-            DateTime rezbitis;
-            DateTime RezBaslangic
-            {
-                get { return rezbaslangic; }
-                set { rezbaslangic = value; }
-            }
-            DateTime RezBitis
-            {
-                get { return rezbitis; }
-                set { rezbitis = value; }
-            }
+            get { return rezervasyonlar; }
+            set { rezervasyonlar = value; }
         }
-        
+
         [XmlElement("OdaNumarasi")]
         protected int odano;
         public int OdaNo
