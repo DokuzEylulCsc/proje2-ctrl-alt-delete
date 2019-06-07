@@ -36,12 +36,27 @@ namespace Otel_Rezervasyon_Sistemi
         private void btnDeğiştir_Click(object sender, EventArgs e)
         {
             
-            string ID = txtid.Text;
-            string ad = txta.Text;
-            string soyad = txts.Text;
+            string ID = mskID .Text;
+            string SIFRE = mskSIFRE.Text;
+            string GUNCEL = txtgüncel.Text;
             MainController c = MainController.GetController();
-            //  Kullanici k = new Kullanici(ID, ad, soyad);
-            //  c.user.ChangeInformationRequest(k,Convert.ToString( listBox1.SelectedItem), txtgüncel.Text);
+            try
+            {
+                if (checkAd.Checked == true)
+                {
+                    c.user.ChangeInformationRequest(ID, SIFRE, checkAd.Text, GUNCEL);
+                }
+                if (checkSoyad.Checked == true)
+                {
+                    c.user.ChangeInformationRequest(ID, SIFRE, checkSoyad.Text, GUNCEL);
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Girilen Bilgiler Uygun Değil TEKRAR DENEYİNİZ!", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+               
 
         }
     }
