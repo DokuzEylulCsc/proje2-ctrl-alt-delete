@@ -119,7 +119,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
                 }
                 else
                 {
-                    throw new Exception("Boyle bir otel yok")
+                    throw new Exception("Boyle bir otel yok");
                 }
 
             }
