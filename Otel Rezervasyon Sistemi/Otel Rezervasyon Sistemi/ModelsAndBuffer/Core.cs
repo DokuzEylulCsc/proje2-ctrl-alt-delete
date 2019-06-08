@@ -197,23 +197,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             return Rezervasyonlar;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /*//RoomController islemlerinin metotlari
+        //RoomController islemlerinin metotlari
 
         // Oda Idlerini dondurecek metot.
         public List<int> ReturnRoomIds(string whichotelıd)
@@ -221,30 +205,63 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             List<int> RoomID = new List<int>();
             foreach (Otel item in buf.Oteller)
             {
-                foreach (Oda item2 in item.Odalar)
+                if (whichotelıd == item.ID)
                 {
-                    RoomID.Add(item2.OdaNo);
-                }
+                    foreach (Oda item2 in item.Odalar)
+                    {
+                        RoomID.Add(item2.OdaNo);
+                    }
+                }     
             }
             return RoomID;
         }
         
         // Oda Ekleme Metodu
-        public bool AddRoom(string otelid,)
+        public bool AddRoom(string otelid,string type, int fiyat, int kisikapasite, int odanumarasi, bool klima, bool wifi, bool minibar, bool televizyon)
         {
             foreach (Otel item in buf.Oteller)
             {
                 if (otelid == item.ID)
                 {
-                    if (true)
+                    if (type == "Standart")
                     {
-
+                        item.Odalar.Add(new StandartOda(fiyat, kisikapasite, odanumarasi, klima, wifi, minibar, televizyon));
+                        return true;
+                    }
+                    else if (type == "Manzarali")
+                    {
+                        item.Odalar.Add(new ManzaraliOda(fiyat, kisikapasite, odanumarasi, klima, wifi, minibar, televizyon));
+                        return true;
+                    }
+                    else if (type == "Kral")
+                    {
+                        item.Odalar.Add(new KralDairesi(fiyat, kisikapasite, odanumarasi, klima, wifi, minibar, televizyon));
+                        return true; 
                     }
                 }
             }
-            return true;
-        }*/
+            throw new Exception("Otele oda eklenirken bir hata olustu. Yeniden deneyin");
+        }
 
+        // Oda silme metodu.
+        public bool DeleteRoom(string whichotel,int whichroom)
+        {
+            for (int i = 0; i < buf.Oteller.Count; i++)
+            {
+                if (whichotel == buf.Oteller[i].ID)
+                {
+                    for (int j = 0; j < buf.Oteller[i].Odalar.Count; j++)
+                    {
+                        if (whichroom == buf.Oteller[i].Odalar[j].OdaNo)
+                        {
+                            buf.Oteller[i].Odalar.Remove(buf.Oteller[i].Odalar[j]);
+                            return true;
+                        }
+                    }
+                }
+            }
+            throw new Exception("Oda Silinirken Bir Hata Olustu. Tekrar Deneyin !!");           
+        }
        
 
 
