@@ -38,9 +38,9 @@ namespace Otel_Rezervasyon_Sistemi
                 //Kullanici k = new Kullanici(ID,ad,soyad);
                 //controller.user.ChangePasswordRequest(k, sifre, sifretekrari);
             }
-            catch
+            catch(Exception a) 
             {
-                MessageBox.Show("Sifre Değiştirilemedi,Tekrar Deneyiniz", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(a.Message, "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         
         }

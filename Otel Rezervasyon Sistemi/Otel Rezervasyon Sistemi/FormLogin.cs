@@ -48,9 +48,9 @@ namespace Otel_Rezervasyon_Sistemi
                
 
             }
-            catch
+            catch(Exception a)
             {
-                MessageBox.Show("Kullanıcı Bulunamadı!!","UYARI",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show(a.Message,"UYARI",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
 
