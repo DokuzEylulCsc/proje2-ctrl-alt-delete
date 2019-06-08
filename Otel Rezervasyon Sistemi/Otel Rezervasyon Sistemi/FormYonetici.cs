@@ -79,5 +79,12 @@ namespace Otel_Rezervasyon_Sistemi
             MainController m = MainController.GetController();
             m.otel.AddHotel(tbID.Text, tbAd.Text, cmbTİP.SelectedItem.ToString());
         }
+
+        private void yoneticiEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormYonEkle f = new FormYonEkle();
+            f.Show();
+            this.Close();
+        }
     }
 }

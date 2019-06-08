@@ -42,6 +42,7 @@
             this.cbkonum = new System.Windows.Forms.ComboBox();
             this.clistbox = new System.Windows.Forms.CheckedListBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEkle = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -59,7 +60,7 @@
             this.cmbTİP = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblyonid = new System.Windows.Forms.Label();
-            this.btnEkle = new System.Windows.Forms.Button();
+            this.yoneticiEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mSOtelEkle.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -94,6 +95,7 @@
             this.mSOtelEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.mSOtelEkle.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.mSOtelEkle.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.yoneticiEkleToolStripMenuItem,
             this.rezervasyonListeleToolStripMenuItem,
             this.cıkısToolStripMenuItem});
             this.mSOtelEkle.Location = new System.Drawing.Point(0, 0);
@@ -243,6 +245,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(586, 499);
             this.panel1.TabIndex = 0;
+            // 
+            // btnEkle
+            // 
+            this.btnEkle.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEkle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEkle.ForeColor = System.Drawing.Color.White;
+            this.btnEkle.Location = new System.Drawing.Point(340, 262);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(97, 34);
+            this.btnEkle.TabIndex = 37;
+            this.btnEkle.Text = "Ekle";
+            this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // button2
             // 
@@ -414,18 +429,12 @@
             this.lblyonid.Text = "label18";
             this.lblyonid.Visible = false;
             // 
-            // btnEkle
+            // yoneticiEkleToolStripMenuItem
             // 
-            this.btnEkle.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEkle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnEkle.ForeColor = System.Drawing.Color.White;
-            this.btnEkle.Location = new System.Drawing.Point(340, 262);
-            this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(97, 34);
-            this.btnEkle.TabIndex = 37;
-            this.btnEkle.Text = "Ekle";
-            this.btnEkle.UseVisualStyleBackColor = false;
-            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
+            this.yoneticiEkleToolStripMenuItem.Name = "yoneticiEkleToolStripMenuItem";
+            this.yoneticiEkleToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.yoneticiEkleToolStripMenuItem.Text = "Yonetici Ekle";
+            this.yoneticiEkleToolStripMenuItem.Click += new System.EventHandler(this.yoneticiEkleToolStripMenuItem_Click);
             // 
             // FormYonetici
             // 
@@ -490,5 +499,6 @@
         public System.Windows.Forms.Label lblyonid;
         public System.Windows.Forms.TextBox tbID;
         private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.ToolStripMenuItem yoneticiEkleToolStripMenuItem;
     }
 }
