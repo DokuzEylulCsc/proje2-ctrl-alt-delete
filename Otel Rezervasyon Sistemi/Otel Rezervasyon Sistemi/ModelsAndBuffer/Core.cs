@@ -296,8 +296,8 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
                             {
                                 if (costumerid == item3.ID)
                                 {
-                                    item2.Rezervasyonlar.Add(new Rezervasyon(baslangic, bitis));
-                                    item3.ReservationofCostumer.Add(new Rezervasyon(baslangic, bitis));
+                                    item2.Rezervasyonlar.Add(new Rezervasyon(baslangic, bitis,otelid,roomnumber));
+                                    item3.ReservationofCostumer.Add(new Rezervasyon(baslangic, bitis, otelid, roomnumber));
                                     return true;
                                 }
                             }
@@ -309,6 +309,56 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             throw new Exception("Rezervasyon eklenirken bir hata olustu");
             
         }
+        
+        // Rezervasyon Silme Metodu.
+        public bool DeleteReservation(string otelid,int roomnumber,string customerid,int rezid)
+        {
+            try
+            {
+                for (int i = 0; i < buf.Oteller.Count; i++)
+                {
+                    if (otelid == buf.Oteller[i].ID)
+                    {
+                        for (int j = 0; j < buf.Oteller[i].Odalar.Count; j++)
+                        {
+                            if (roomnumber == buf.Oteller[i].Odalar[j].OdaNo)
+                            {
+                                for (int t = 0; t < buf.Oteller[i].Odalar[j].Rezervasyonlar.Count; t++)
+                                {
+                                    if (rezid == buf.Oteller[i].Odalar[j].Rezervasyonlar[t].RezID)
+                                    {
+                                        buf.Oteller[i].Odalar[j].Rezervasyonlar.Remove(buf.Oteller[i].Odalar[j].Rezervasyonlar[t]);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                for (int i = 0; i < buf.Kullanicilar.Count; i++)
+                {
+                    if (customerid == buf.Kullanicilar[i].ID)
+                    {
+                        for (int j = 0; j < ((Musteri)buf.Kullanicilar[i]).ReservationofCostumer.Count; j++)
+                        {
+                            if (rezid == ((Musteri)buf.Kullanicilar[i]).ReservationofCostumer[j].RezID)
+                            {
+                                ((Musteri)buf.Kullanicilar[i]).ReservationofCostumer.Remove(((Musteri)buf.Kullanicilar[i]).ReservationofCostumer[j]);
+
+                            }
+                        }
+                    }
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("Rezervasyon silinirken bir hata olustu !! Yeniden Deneyin");
+            }
+
+           
+        }
+
 
 
 
