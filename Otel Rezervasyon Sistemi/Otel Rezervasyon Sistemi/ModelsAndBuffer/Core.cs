@@ -10,9 +10,10 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
     {
         Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer buf = Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer.BUF;
 
-        // User Id listi dondurecek metot.(yonetici - musteri idler ayrı listelerde donecek)
+        // User controller islemlerinin metotlari.
 
-        public List<string> ReturnMusteriId() // Gerekli kontroller icin controller classına musterilerin ıdlerini dondurecek olan metot.
+        // User Id listi dondurecek metot.(yonetici - musteri idler ayrı listelerde donecek)
+        public List<string> ReturnCustomerId() // Gerekli kontroller icin controller classına musterilerin ıdlerini dondurecek olan metot.
         {
             List<string> MusteriID = new List<string>();
             foreach (Kullanici item in buf.Kullanicilar)
@@ -20,11 +21,11 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
                 if (item is Musteri)
                 {
                     MusteriID.Add(item.ID);
-                }    
+                }
             }
             return MusteriID;
         }
-        public List<string> ReturnYoneticiId() // Gerekli kontroller icin controller classına yoneticilerin ıdlerini dondurecek olan metot.
+        public List<string> ReturnAdminId() // Gerekli kontroller icin controller classına yoneticilerin ıdlerini dondurecek olan metot.
         {
             List<string> YoneticiID = new List<string>();
             foreach (Kullanici item in buf.Kullanicilar)
@@ -39,7 +40,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
 
         // Parametre olarak ıd ve sıfre alacak geriye true false seklinde dogru sıfre kontrolu ıcın gereken metot. Veritabanında kayıtlı olan sifreyle 
         //parametre olarak geleni karsılastıracak.
-        public bool PasswordCheck(string id,string sifre)
+        public bool PasswordCheck(string id, string sifre)
         {
             foreach (Kullanici item in buf.Kullanicilar)
             {
@@ -52,7 +53,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
         }
 
         // Kullanıcı Ekleme metodu. Parametre olarak kullanıcı nesnesinin gereklerini alacak.
-        public bool AddCostumer(string id,string name,string surname,string password)
+        public bool AddCostumer(string id, string name, string surname, string password)
         {
             try
             {
@@ -80,7 +81,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
         }
 
         // Id ve sifre alacak sifreyi o ıdnın yeni sifresi yapacak.
-        public bool PasswordChange(string id,string password)
+        public bool PasswordChange(string id, string password)
         {
             try
             {
@@ -98,14 +99,67 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
 
                 throw new Exception("Sifre degistirmek istendi ancak bir hata sebebiyle degistirilemedi !!");
             }
-
         }
 
-
         // Ad veya soyad gelecek hangisi geldiyse onu degistiricem ??????
+        public void InformationChange(string something, string id)
+        {
+            foreach (Kullanici item in buf.Kullanicilar)
+            {
+                if (id == item.ID)
+                {
+                    if (something == "Ad")
+                    {
+                        item.Ad = something;
+                    }
+                    else if (something == "Soyad")
+                    {
+                        item.Soyad = something;
+                    }
+                }
+            }
+        }
+
+        // ID si verilen kullanicinin diger tum bilgilerini donduren metot ( password *** seklinde)
+        public Kullanici ReturnInformations(string id)
+        {
+            foreach (Kullanici item in buf.Kullanicilar)
+            {
+                if (id == item.ID)
+                {
+                    return item;
+                }
+            }
+            throw new Exception("Bir hata olustu !!");
+        }
+
+        //RoomController islemlerinin metotlari
+
+       /* // Oda Idlerini dondurecek metot.
+        public List<int> ReturnRoomIds(string whichotelıd)
+        {
+            // Yaptıgın degisikligi cocuklara soylemeyi unutma !!!!!! (Otel classındaki oda listesini static yaptın ki foreachin icinde erisebilesin!!)
+            List<int> RoomID = new List<int>();
+
+            // Spesifik olarak x idli otelin odalarının idlerini dondurmen gerek ama nasıl yapacagın konusunda takıldın sor ????
+
+            return RoomID;
+        }
+
+        //Otel Idleri dondurecek metot.
+        public List<string> ReturnHotelID()
+        {
+            List<string> HotelID = new List<string>();
+            foreach (Otel item in buf.Oteller)
+            {
+                HotelID.Add(item.ID);
+            }
+            return HotelID;
+        }*/
 
 
 
-       
+
+
     }
 }
