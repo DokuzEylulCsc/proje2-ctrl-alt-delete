@@ -28,7 +28,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
                 List<int> roomIDs = core.ReturnRoomIds(otelId);
                 if (roomIDs.Contains(odaNo))
                 {
-                    List<ModelsAndBuffer.Rezervasyon> reservations = new List<Rezervasyon>();
+                    List<ModelsAndBuffer.Rezervasyon> reservations = core.ReservationofRoom(otelId, odaNo);
                     foreach (Rezervasyon r in reservations)
                     {
                         if ((r.RezBaslangic < baslangic && r.RezBitis > baslangic) || (r.RezBaslangic < bitis && r.RezBitis > bitis))
