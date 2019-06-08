@@ -9,6 +9,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
 {
     class UserController
     {
+        private ModelsAndBuffer.Core core = new ModelsAndBuffer.Core();
         internal UserController()
         {
 
@@ -19,13 +20,38 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// </summary>
         /// <param name="id">kullanicinin girdigi ID </param>
         /// <param name="password">kullanicinin girdigi sifre </param>
-        public  Musteri AccountVerification(string id, string password)
+        public  Kullanici AccountVerification(string id, string password)
         {
-            /*giris yapmak istenen kullanicinin var olup olmadigi kontrolu yapilacak oyle bir musteri varsa ;
-             * Musteri nesnesi dogrudan yollanicak ,
-             * yoksa hata dondurulucek
-             */
-            return new Musteri("", "", "","");
+            List<string> customerIDs = core.ReturnMusteriId();
+            List<string> managerIDs = core.ReturnYoneticiId();
+            if (customerIDs.Contains(id))
+            {
+                if(core.PasswordCheck(id,password))
+                {
+                    /*get details of id*/
+                    return new Musteri("","","","");
+                }
+                else
+                {
+                    throw new Exception("Sifreniz hatali");
+                }
+            }
+            else if (managerIDs.Contains(id))
+            {
+                if(core.PasswordCheck(id,password))
+                {
+                    /*get details of id*/
+                    return new Yonetici("","","","");
+                }
+                else
+                {
+                    throw new Exception("Sifreniz hatali");
+                }
+            }
+            else
+            {
+                throw new Exception("Boyle bir ID bulunmamaktadir");
+            }
         }
         /// <summary>
         /// Yeni Kullanici Olusturulmak istendiginde cagirilmasi gereken metod
@@ -40,13 +66,23 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         {
             if(password == passwordverif)
             {
-                List<string> IDs = new List<string>();//=getIds from core
+                List<string> IDs = core.ReturnMusteriId();
+                IDs.AddRange(core.ReturnYoneticiId());
                 if (IDs.Contains(id))
                 {
-                    throw new Exception("Boyle Bir ID zaten bulunmaktadi");
+                    throw new Exception("Boyle Bir ID zaten bulunmaktadir");
+                }
+                try
+                {
+                    core.AddCostumer(id,ad,soyad,password);
+                    return true;
+                }
+                catch(Exception e)
+                {
+                    throw e;
                 }
                 
-                return true;/*create new entity with these parameters (id , password, ad,soyad)*/
+
             }
             else
             {
@@ -60,14 +96,43 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="newPas">Kullanicinin belirledigi yeni sifre</param>
         /// <param name="newPasVerification">Kullanicinin belirledigi yeni sifrenin dogrulamasi</param>
         /// <returns>islem uygun ise True , degil ise hata dondurur</returns>
-        public  bool ChangePasswordRequest(Kullanici B, string newPas, string newPasVerification)
+        public  bool ChangePasswordRequest(string Id,string oldPas, string newPas, string newPasVerification)
         {
-            /*
-             * sifresini degistirmek isteyen kullanicinin bilgileri ve yeni yapmak istedigi 
-             * sifre alinicak eger kosullar saglaniyor ise true ,
-             * saglanmiyor ise hata dondurulucek ! 
-             */
-            return false;
+            List<string> IDs = core.ReturnMusteriId();
+            IDs.AddRange(core.ReturnYoneticiId());
+            if (IDs.Contains(Id))
+            {
+                if(core.PasswordCheck(Id,oldPas))
+                {
+                    if (newPas == newPasVerification)
+                    {
+                        try
+                        {
+                            core.PasswordChange(Id, newPas);
+                            return true;
+                        }
+                        catch (Exception e)
+                        {
+
+                            throw e;
+                        }
+                        
+                    }
+                    else
+                    {
+                        throw new Exception("Sifre ile Dogrulama uyusmuyor ");
+                    }
+                }
+                else
+                {
+                    throw new Exception("Sifrenizi Yanlis girdiniz");
+                }
+                
+            }
+            else
+            {
+                throw new Exception("Boyle bir IDye ulasilamiyor");
+            }
         }
         /// <summary>
         /// kullanicinin bilgi guncelleme istegi 
