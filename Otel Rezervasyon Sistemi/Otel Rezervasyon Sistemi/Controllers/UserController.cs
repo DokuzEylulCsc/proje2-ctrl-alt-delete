@@ -172,5 +172,9 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
             }
 
         }
+        //rezervasyonu kullaniciya yaz
+        //guncel rezervasyon kontrol
+        //guncel rezervasyon iptal
+        //eski rezervasyon kullan
     }
 }

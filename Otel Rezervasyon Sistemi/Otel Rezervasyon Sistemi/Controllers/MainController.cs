@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Otel_Rezervasyon_Sistemi.Controllers
 {
+    /* Controller classi Buffer ve modeller ile Formlar arasinda ADAPTOR DESIGN PATTERN Sistemi ile Tanimlanip
+     * bir ADAPTOR olarak kullanilmaktadir
+     */
     class MainController
     {
 

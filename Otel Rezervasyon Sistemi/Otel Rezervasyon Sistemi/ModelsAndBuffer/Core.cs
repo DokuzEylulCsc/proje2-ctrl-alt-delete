@@ -102,7 +102,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
         }
 
         // Ad veya soyad gelecek hangisi geldiyse onu degistiricem ??????
-        public void InformationChange(string something, string id,string newInfo)
+        public void InformationChange(string something, string id, string newInfo)
         {
             foreach (Kullanici item in buf.Kullanicilar)
             {
@@ -133,26 +133,9 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             throw new Exception("Bir hata olustu !!");
         }
 
-      /*  //RoomController islemlerinin metotlari
+        // Otel Controller islemleri icin gerekli metotlar
 
-        // Oda Idlerini dondurecek metot.
-        public List<int> ReturnRoomIds(string whichotelıd)
-        {
-            // Yaptıgın degisikligi cocuklara soylemeyi unutma !!!!!! (Otel classındaki oda listesini static yaptın ki foreachin icinde erisebilesin!!)
-            List<int> RoomID = new List<int>();
-            foreach (Otel item in buf.Oteller)
-            {
-                foreach (Oda item2 in item.Odalar)
-                {
-
-                }
-            }
-            // Spesifik olarak x idli otelin odalarının idlerini dondurmen gerek ama nasıl yapacagın konusunda takıldın sor ????
-
-            return RoomID;
-        }
-
-        //Otel Idleri dondurecek metot.
+        // Otel Id leri controllera dondurecek metot
         public List<string> ReturnHotelID()
         {
             List<string> HotelID = new List<string>();
@@ -161,7 +144,126 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
                 HotelID.Add(item.ID);
             }
             return HotelID;
-        }*/
+        }
+
+        //Otel Ekleme Metodu
+        public bool AddOtel(int temizlik, int konum, int hizmet, string otelid, string oteladi, string type)
+        {
+            if (type == "Pansiyon")
+            {
+                buf.Oteller.Add(new Pansiyon(temizlik, konum, hizmet, otelid, oteladi));
+                return true;
+            }
+            else if (type == "Butik")
+            {
+                buf.Oteller.Add(new ButikOtel(temizlik, konum, hizmet, otelid, oteladi));
+                return true;
+            }
+            else if (type == "Tatil")
+            {
+                buf.Oteller.Add(new TatilKoyu(temizlik, konum, hizmet, otelid, oteladi));
+                return true;
+            }
+
+            throw new Exception("Otel eklenirken bir hata olustu");
+        }
+
+        //  Otel Silme Metodu
+        public bool DeleteOtel(string otelid)
+        {
+            for (int i = 0; i < buf.Oteller.Count; i++)
+            {
+                if (otelid == buf.Oteller[i].ID)
+                {
+                    buf.Oteller.Remove(buf.Oteller[i]);
+                    return true;
+                }
+            }
+            throw new Exception("Otel silerken bir hata olustu. Tekrar Deneyin !!");
+            
+        }
+
+        // Rezervasyon Listesi Dondurecek metot
+        public List<Oda> ReturnRoomObjects(string otelid)
+        {
+            List<Oda> Odalar = new List<Oda>();
+            foreach (Otel item in buf.Oteller)
+            {
+                Odalar.AddRange(item.Odalar);
+            }
+            return Odalar;
+        }
+
+        //RoomController islemlerinin metotlari
+
+        // Oda Idlerini dondurecek metot.
+        public List<int> ReturnRoomIds(string whichotelıd)
+        {
+            List<int> RoomID = new List<int>();
+            foreach (Otel item in buf.Oteller)
+            {
+                if (whichotelıd == item.ID)
+                {
+                    foreach (Oda item2 in item.Odalar)
+                    {
+                        RoomID.Add(item2.OdaNo);
+                    }
+                }     
+            }
+            return RoomID;
+        }
+
+        
+        // Oda Ekleme Metodu
+        public bool AddRoom(string otelid,string type, int fiyat, int kisikapasite, int odanumarasi, bool klima, bool wifi, bool minibar, bool televizyon)
+        {
+            foreach (Otel item in buf.Oteller)
+            {
+                if (otelid == item.ID)
+                {
+                    if (type == "Standart")
+                    {
+                        item.Odalar.Add(new StandartOda(fiyat, kisikapasite, odanumarasi, klima, wifi, minibar, televizyon));
+                        return true;
+                    }
+                    else if (type == "Manzarali")
+                    {
+                        item.Odalar.Add(new ManzaraliOda(fiyat, kisikapasite, odanumarasi, klima, wifi, minibar, televizyon));
+                        return true;
+                    }
+                    else if (type == "Kral")
+                    {
+                        item.Odalar.Add(new KralDairesi(fiyat, kisikapasite, odanumarasi, klima, wifi, minibar, televizyon));
+                        return true; 
+                    }
+                }
+            }
+            throw new Exception("Otele oda eklenirken bir hata olustu. Yeniden deneyin");
+        }
+
+        // Oda silme metodu.
+        public bool DeleteRoom(string whichotel,int whichroom)
+        {
+            for (int i = 0; i < buf.Oteller.Count; i++)
+            {
+                if (whichotel == buf.Oteller[i].ID)
+                {
+                    for (int j = 0; j < buf.Oteller[i].Odalar.Count; j++)
+                    {
+                        if (whichroom == buf.Oteller[i].Odalar[j].OdaNo)
+                        {
+                            buf.Oteller[i].Odalar.Remove(buf.Oteller[i].Odalar[j]);
+                            return true;
+                        }
+                    }
+                }
+            }
+            throw new Exception("Oda Silinirken Bir Hata Olustu. Tekrar Deneyin !!");           
+        }
+       
+
+
+
 
 
 
