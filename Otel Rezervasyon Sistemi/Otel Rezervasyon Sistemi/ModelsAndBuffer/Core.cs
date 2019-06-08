@@ -228,9 +228,24 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             }
             return RoomID;
         }
+        
+        // Oda Ekleme Metodu
+        public bool AddRoom(string otelid,)
+        {
+            foreach (Otel item in buf.Oteller)
+            {
+                if (otelid == item.ID)
+                {
+                    if (true)
+                    {
 
-        //Otel Idleri dondurecek metot.
-       */
+                    }
+                }
+            }
+            return true;
+        }*/
+
+       
 
 
 
