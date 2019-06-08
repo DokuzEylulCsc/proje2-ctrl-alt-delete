@@ -358,43 +358,34 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
         }
 
         // Filter Controller icin gerekli Otel Informations metodu
-        public List<string> ReturnOtelInformations(Otel o)
+        public List<string> ReturnOtelInformations(string type)
         {
             string temp;
             List<string> ReturnsItems = new List<string>();
-            if (o is Pansiyon)
+            if (type == "Pansiyon")
             {
                 foreach (Pansiyon item in buf.Oteller)
                 {
-                    if (o.ID == item.ID)
-                    {
-                        temp = item.ID + " - " + item.OtelAdi;
-                        ReturnsItems.Add(temp);
-                    }
+                    temp = item.ID + "-" + item.OtelAdi + "-" + item.OtelYildiz;
+                    ReturnsItems.Add(temp);
                 }
                 return ReturnsItems;
             }
-            else if (o is ButikOtel)
+            else if (type == "Butik Otel")
             {
                 foreach (ButikOtel item in buf.Oteller)
                 {
-                    if (o.ID == item.ID)
-                    {
-                        temp = item.ID + " - " + item.OtelAdi;
-                        ReturnsItems.Add(temp);
-                    }
+                    temp = item.ID + " - " + item.OtelAdi + "-" + item.OtelYildiz;
+                    ReturnsItems.Add(temp);
                 }
                 return ReturnsItems;
             }
-            else if (o is TatilKoyu)
+            else if (type == "Tatil Köyü")
             {
                 foreach (TatilKoyu item in buf.Oteller)
                 {
-                    if (o.ID == item.ID)
-                    {
-                        temp = item.ID + " - " + item.OtelAdi;
-                        ReturnsItems.Add(temp);
-                    }
+                    temp = item.ID + " - " + item.OtelAdi + "-" + item.OtelYildiz;
+                    ReturnsItems.Add(temp);
                 }
                 return ReturnsItems;
             }

@@ -72,6 +72,11 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             set { oteladi = value; }
         }
 
+        public string OtelYildiz
+        {
+            get { return Convert.ToString((temizlik + konum + hizmet ) / 3); }
+        }
+
        
 
 
