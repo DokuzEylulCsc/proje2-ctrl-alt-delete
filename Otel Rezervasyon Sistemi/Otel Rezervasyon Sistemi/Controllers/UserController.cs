@@ -9,6 +9,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
 {
     class UserController
     {
+        private ModelsAndBuffer.Core core = new ModelsAndBuffer.Core();
         internal UserController()
         {
 
@@ -21,22 +22,30 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="password">kullanicinin girdigi sifre </param>
         public  Kullanici AccountVerification(string id, string password)
         {
-            List<string> customerIDs = new List<string>();
-            List<string> managerIDs = new List<string>();
+            List<string> customerIDs = core.ReturnMusteriId();
+            List<string> managerIDs = core.ReturnYoneticiId();
             if (customerIDs.Contains(id))
             {
-                if(true /*get core verification*/)
+                if(core.PasswordCheck(id,password))
                 {
                     /*get details of id*/
                     return new Musteri("","","","");
                 }
+                else
+                {
+                    throw new Exception("Sifreniz hatali");
+                }
             }
             else if (managerIDs.Contains(id))
             {
-                if(true /*get core verification*/)
+                if(core.PasswordCheck(id,password))
                 {
                     /*get details of id*/
                     return new Yonetici("","","","");
+                }
+                else
+                {
+                    throw new Exception("Sifreniz hatali");
                 }
             }
             else
@@ -57,13 +66,23 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         {
             if(password == passwordverif)
             {
-                List<string> IDs = new List<string>();//=getIds from core
+                List<string> IDs = core.ReturnMusteriId();
+                IDs.AddRange(core.ReturnYoneticiId());
                 if (IDs.Contains(id))
                 {
-                    throw new Exception("Boyle Bir ID zaten bulunmaktadi");
+                    throw new Exception("Boyle Bir ID zaten bulunmaktadir");
+                }
+                try
+                {
+                    core.AddCostumer(id,ad,soyad,password);
+                    return true;
+                }
+                catch(Exception e)
+                {
+                    throw e;
                 }
                 
-                return true;/*create new entity with these parameters (id , password, ad,soyad)*/
+
             }
             else
             {
@@ -79,15 +98,25 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <returns>islem uygun ise True , degil ise hata dondurur</returns>
         public  bool ChangePasswordRequest(string Id,string oldPas, string newPas, string newPasVerification)
         {
-            List<string> IDs = new List<string>();
+            List<string> IDs = core.ReturnMusteriId();
+            IDs.AddRange(core.ReturnYoneticiId());
             if (IDs.Contains(Id))
             {
-                if(true /*pass id verification*/ )
+                if(core.PasswordCheck(Id,oldPas))
                 {
                     if (newPas == newPasVerification)
                     {
-                        /*core degisiklik*/
-                        return true;
+                        try
+                        {
+                            core.PasswordChange(Id, newPas);
+                            return true;
+                        }
+                        catch (Exception e)
+                        {
+
+                            throw e;
+                        }
+                        
                     }
                     else
                     {
