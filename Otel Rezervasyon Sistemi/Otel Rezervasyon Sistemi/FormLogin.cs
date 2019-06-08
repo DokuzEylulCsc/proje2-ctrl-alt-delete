@@ -34,15 +34,17 @@ namespace Otel_Rezervasyon_Sistemi
                 if(a is Musteri)
                 {
                     FormMusteriRez F = new FormMusteriRez();
+                    this.Hide();
                     F.Show();
-                    this.Close();
+                   
 
                 }
                 else
                 {
                     FormYonetici y = new FormYonetici();
+                    this.Hide();
                     y.Show();
-                    this.Close();
+                    
                     
                 }
                
@@ -71,7 +73,8 @@ namespace Otel_Rezervasyon_Sistemi
             }
             if (sonuc == DialogResult.Yes)
             {
-                this.Close();
+                MainController.GetController().SerializeAtEnd();
+               
                 Application.Exit();
             }
         }
@@ -80,6 +83,15 @@ namespace Otel_Rezervasyon_Sistemi
         {
             MainController.GetController().SerializeAtEnd();
             MainController.GetController().DeserializeAtStart();
+            
+        }
+
+      
+
+        private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MainController.GetController().SerializeAtEnd();
+            Application.Exit();
         }
     }
 }

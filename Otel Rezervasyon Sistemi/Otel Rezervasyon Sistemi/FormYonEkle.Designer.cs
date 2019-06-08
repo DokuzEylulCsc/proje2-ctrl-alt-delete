@@ -51,6 +51,7 @@
             this.mSIFRET.Name = "mSIFRET";
             this.mSIFRET.Size = new System.Drawing.Size(103, 20);
             this.mSIFRET.TabIndex = 28;
+            this.mSIFRET.UseSystemPasswordChar = true;
             this.mSIFRET.ValidatingType = typeof(int);
             // 
             // mSIFRE
@@ -60,6 +61,7 @@
             this.mSIFRE.Name = "mSIFRE";
             this.mSIFRE.Size = new System.Drawing.Size(103, 20);
             this.mSIFRE.TabIndex = 27;
+            this.mSIFRE.UseSystemPasswordChar = true;
             this.mSIFRE.ValidatingType = typeof(int);
             // 
             // mID
@@ -102,6 +104,7 @@
             this.btnKayit.TabIndex = 19;
             this.btnKayit.Text = "Kayit";
             this.btnKayit.UseVisualStyleBackColor = false;
+            this.btnKayit.Click += new System.EventHandler(this.btnKayit_Click);
             // 
             // TXTAD
             // 
@@ -196,8 +199,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 450);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormYonEkle";
             this.Text = "Yonetici Ekle";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormYonEkle_FormClosing);
             this.Load += new System.EventHandler(this.FormYonEkle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

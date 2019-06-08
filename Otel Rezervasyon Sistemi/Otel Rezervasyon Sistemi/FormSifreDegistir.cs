@@ -19,24 +19,23 @@ namespace Otel_Rezervasyon_Sistemi
 
         private void btnGERİ_Click(object sender, EventArgs e)
         {
-            FormLogin L = new FormLogin();
+           FormMusteriRez L = new FormMusteriRez();
+            this.Hide();
             L.Show();
-            this.Close();
+           
 
         }
 
         private void btnDegistir_Click(object sender, EventArgs e)
         {
             MainController controller = MainController.GetController();
-            string ad = txtsdAd.Text;
-            string soyad = txtsdSoyad.Text;
-            string ID = mskID.Text;
-            string sifre = mskSifre.Text;
-            string sifretekrari = mskSifreTekrari.Text;
+           
             try
             {
-                //Kullanici k = new Kullanici(ID,ad,soyad);
-                //controller.user.ChangePasswordRequest(k, sifre, sifretekrari);
+                if( controller.user.ChangePasswordRequest(mskID.Text,mskEskiSifre.Text,mskYeniSifre.Text,mskSifreTekrari.Text))
+                {
+                    MessageBox.Show("Sifreniz Güncellendi", "TEBRİKLER", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch(Exception a) 
             {
@@ -45,6 +44,18 @@ namespace Otel_Rezervasyon_Sistemi
         
         }
 
-        
+      
+
+        private void FormSifreDegistir_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
+
+        private void FormSifreDegistir_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MainController.GetController().SerializeAtEnd();
+
+            Application.Exit();
+        }
     }
 }

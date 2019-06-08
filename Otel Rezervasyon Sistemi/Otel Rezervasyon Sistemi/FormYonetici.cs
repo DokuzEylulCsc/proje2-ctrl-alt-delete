@@ -18,21 +18,12 @@ namespace Otel_Rezervasyon_Sistemi
             InitializeComponent();
         }
 
-       
-
-      
-        private void btnOdaEkle_Click(object sender, EventArgs e)
-        {
-            FormOdaEkle F = new FormOdaEkle();
-            F.Show();
-            this.Close();
-        }
-
         private void rezervasyonListeleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormRezOzet r = new FormRezOzet();
+            this.Hide();
             r.Show();
-            this.Close();
+           
         }
 
      
@@ -46,6 +37,7 @@ namespace Otel_Rezervasyon_Sistemi
             }
             if (sonuc == DialogResult.Yes)
             {
+                MainController.GetController().SerializeAtEnd();
                 this.Close();
                 Application.Exit();
             }
@@ -56,8 +48,9 @@ namespace Otel_Rezervasyon_Sistemi
         private void button2_Click(object sender, EventArgs e)
         {
             FormOdaEkle f = new FormOdaEkle();
+            this.Hide();
             f.Show();
-            this.Close();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -83,8 +76,25 @@ namespace Otel_Rezervasyon_Sistemi
         private void yoneticiEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormYonEkle f = new FormYonEkle();
+            this.Hide();
             f.Show();
-            this.Close();
+           
         }
+
+        private void FormYonetici_Load(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+
+        }
+
+        private void FormYonetici_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MainController.GetController().SerializeAtEnd();
+            this.Close();
+            Application.Exit();
+        }
+
+       
     }
 }

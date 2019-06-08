@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.mcbitis = new System.Windows.Forms.MonthCalendar();
+            this.label12 = new System.Windows.Forms.Label();
             this.gbOzellik = new System.Windows.Forms.GroupBox();
             this.checkTv = new System.Windows.Forms.CheckBox();
             this.checkMinibar = new System.Windows.Forms.CheckBox();
@@ -62,8 +64,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnRezYap = new System.Windows.Forms.Button();
             this.btnRezListele = new System.Windows.Forms.Button();
-            this.mcbitis = new System.Windows.Forms.MonthCalendar();
-            this.label12 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.gbOzellik.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -94,6 +95,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(831, 317);
             this.panel1.TabIndex = 0;
+            // 
+            // mcbitis
+            // 
+            this.mcbitis.Location = new System.Drawing.Point(579, 48);
+            this.mcbitis.Name = "mcbitis";
+            this.mcbitis.TabIndex = 20;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.Location = new System.Drawing.Point(579, 18);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(85, 21);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "Bitiş Tarihi:";
             // 
             // gbOzellik
             // 
@@ -216,7 +235,7 @@
             this.BtnRezAra.Name = "BtnRezAra";
             this.BtnRezAra.Size = new System.Drawing.Size(133, 42);
             this.BtnRezAra.TabIndex = 4;
-            this.BtnRezAra.Text = "Rezervasyon Ara";
+            this.BtnRezAra.Text = "Otel Ara";
             this.BtnRezAra.UseVisualStyleBackColor = false;
             this.BtnRezAra.Click += new System.EventHandler(this.BtnRezAra_Click);
             // 
@@ -393,11 +412,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(457, 388);
+            this.label9.Location = new System.Drawing.Point(442, 388);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(173, 16);
+            this.label9.Size = new System.Drawing.Size(138, 16);
             this.label9.TabIndex = 4;
-            this.label9.Text = "Önceki Rezervasyonlar:";
+            this.label9.Text = "Rezervasyon Özet:";
             // 
             // listBox1
             // 
@@ -422,32 +441,26 @@
             // btnRezListele
             // 
             this.btnRezListele.BackColor = System.Drawing.Color.Black;
-            this.btnRezListele.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnRezListele.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnRezListele.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRezListele.Location = new System.Drawing.Point(479, 532);
+            this.btnRezListele.Location = new System.Drawing.Point(445, 525);
             this.btnRezListele.Name = "btnRezListele";
-            this.btnRezListele.Size = new System.Drawing.Size(98, 31);
+            this.btnRezListele.Size = new System.Drawing.Size(118, 31);
             this.btnRezListele.TabIndex = 8;
-            this.btnRezListele.Text = "Rez Listele";
+            this.btnRezListele.Text = "Güncel Rez Listele";
             this.btnRezListele.UseVisualStyleBackColor = false;
             // 
-            // mcbitis
+            // button1
             // 
-            this.mcbitis.Location = new System.Drawing.Point(579, 48);
-            this.mcbitis.Name = "mcbitis";
-            this.mcbitis.TabIndex = 20;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(579, 18);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(85, 21);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "Bitiş Tarihi:";
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(578, 525);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 31);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Önceki Rez. Listele";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // FormMusteriRez
             // 
@@ -455,6 +468,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(857, 568);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRezListele);
             this.Controls.Add(this.btnRezYap);
             this.Controls.Add(this.listBox1);
@@ -466,9 +480,11 @@
             this.Controls.Add(this.listBoxUygunOteller);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMusteriRez";
             this.Text = "FormMusteriRez";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMusteriRez_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.gbOzellik.ResumeLayout(false);
@@ -518,5 +534,6 @@
         private System.Windows.Forms.Button btnRezListele;
         private System.Windows.Forms.MonthCalendar mcbitis;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button1;
     }
 }

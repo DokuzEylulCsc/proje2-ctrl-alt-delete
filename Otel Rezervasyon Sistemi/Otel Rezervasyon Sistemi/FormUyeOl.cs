@@ -20,8 +20,9 @@ namespace Otel_Rezervasyon_Sistemi
         private void btnGeri_Click(object sender, EventArgs e)
         {
             FormLogin Fl = new FormLogin();
+            this.Hide();
             Fl.Show();
-            this.Close();
+            ;
         }
 
         private void btnKayit_Click(object sender, EventArgs e)
@@ -30,13 +31,24 @@ namespace Otel_Rezervasyon_Sistemi
             try
             {
 
-                controller.user.CreateAccountRequest(mID.Text, mSIFRE.Text, mSIFRET.Text,TXTAD.Text,TXTSOYAD.Text);
-               
+                
+               if(controller.user.CreateAccountRequest(mID.Text, mSIFRE.Text, mSIFRET.Text, TXTAD.Text, TXTSOYAD.Text))
+                {
+                    MessageBox.Show("Kayit Tamamlandi", "Tebrikler", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
             }
             catch(Exception a)
             {
                 MessageBox.Show(a.Message, "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void FormUyeOl_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MainController.GetController().SerializeAtEnd();
+            this.Close();
+            Application.Exit();
         }
     }
 }

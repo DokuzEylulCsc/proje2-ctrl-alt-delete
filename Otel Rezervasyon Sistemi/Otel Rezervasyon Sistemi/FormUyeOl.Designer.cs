@@ -72,15 +72,17 @@
             this.mSIFRET.Name = "mSIFRET";
             this.mSIFRET.Size = new System.Drawing.Size(103, 20);
             this.mSIFRET.TabIndex = 16;
+            this.mSIFRET.UseSystemPasswordChar = true;
             this.mSIFRET.ValidatingType = typeof(int);
             // 
             // mSIFRE
             // 
-            this.mSIFRE.Location = new System.Drawing.Point(117, 182);
+            this.mSIFRE.Location = new System.Drawing.Point(117, 181);
             this.mSIFRE.Mask = "00000";
             this.mSIFRE.Name = "mSIFRE";
             this.mSIFRE.Size = new System.Drawing.Size(103, 20);
             this.mSIFRE.TabIndex = 15;
+            this.mSIFRE.UseSystemPasswordChar = true;
             this.mSIFRE.ValidatingType = typeof(int);
             // 
             // mID
@@ -205,8 +207,11 @@
             this.ClientSize = new System.Drawing.Size(316, 455);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "FormUyeOl";
             this.Text = "Uye OL";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormUyeOl_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

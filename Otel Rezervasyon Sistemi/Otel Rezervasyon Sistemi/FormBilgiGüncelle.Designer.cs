@@ -168,6 +168,7 @@
             this.mskSIFRE.Name = "mskSIFRE";
             this.mskSIFRE.Size = new System.Drawing.Size(120, 26);
             this.mskSIFRE.TabIndex = 15;
+            this.mskSIFRE.UseSystemPasswordChar = true;
             this.mskSIFRE.ValidatingType = typeof(int);
             // 
             // mskID
@@ -210,9 +211,11 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormBilgiGüncelle";
             this.Text = "Bilgileri Güncelle";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormBilgiGüncelle_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
