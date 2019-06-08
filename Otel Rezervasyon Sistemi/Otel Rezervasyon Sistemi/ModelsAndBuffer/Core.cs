@@ -354,9 +354,53 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             {
 
                 throw new Exception("Rezervasyon silinirken bir hata olustu !! Yeniden Deneyin");
+            }          
+        }
+
+        // Filter Controller icin gerekli Otel Informations metodu
+        public List<string> ReturnOtelInformations(Otel o)
+        {
+            string temp;
+            List<string> ReturnsItems = new List<string>();
+            if (o is Pansiyon)
+            {
+                foreach (Pansiyon item in buf.Oteller)
+                {
+                    if (o.ID == item.ID)
+                    {
+                        temp = item.ID + " - " + item.OtelAdi;
+                        ReturnsItems.Add(temp);
+                    }
+                }
+                return ReturnsItems;
+            }
+            else if (o is ButikOtel)
+            {
+                foreach (ButikOtel item in buf.Oteller)
+                {
+                    if (o.ID == item.ID)
+                    {
+                        temp = item.ID + " - " + item.OtelAdi;
+                        ReturnsItems.Add(temp);
+                    }
+                }
+                return ReturnsItems;
+            }
+            else if (o is TatilKoyu)
+            {
+                foreach (TatilKoyu item in buf.Oteller)
+                {
+                    if (o.ID == item.ID)
+                    {
+                        temp = item.ID + " - " + item.OtelAdi;
+                        ReturnsItems.Add(temp);
+                    }
+                }
+                return ReturnsItems;
             }
 
-           
+            throw new Exception("Bir hata olustu. Yeniden Deneyin !!");
+          
         }
 
 
