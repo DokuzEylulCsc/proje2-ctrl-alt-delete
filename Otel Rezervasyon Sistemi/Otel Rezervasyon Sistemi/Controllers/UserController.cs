@@ -19,13 +19,30 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// </summary>
         /// <param name="id">kullanicinin girdigi ID </param>
         /// <param name="password">kullanicinin girdigi sifre </param>
-        public  Musteri AccountVerification(string id, string password)
+        public  Kullanici AccountVerification(string id, string password)
         {
-            /*giris yapmak istenen kullanicinin var olup olmadigi kontrolu yapilacak oyle bir musteri varsa ;
-             * Musteri nesnesi dogrudan yollanicak ,
-             * yoksa hata dondurulucek
-             */
-            return new Musteri("", "", "","");
+            List<string> customerIDs = new List<string>();
+            List<string> managerIDs = new List<string>();
+            if (customerIDs.Contains(id))
+            {
+                if(true /*get core verification*/)
+                {
+                    /*get details of id*/
+                    return new Musteri("","","","");
+                }
+            }
+            else if (managerIDs.Contains(id))
+            {
+                if(true /*get core verification*/)
+                {
+                    /*get details of id*/
+                    return new Yonetici("","","","");
+                }
+            }
+            else
+            {
+                throw new Exception("Boyle bir ID bulunmamaktadir");
+            }
         }
         /// <summary>
         /// Yeni Kullanici Olusturulmak istendiginde cagirilmasi gereken metod
@@ -60,14 +77,33 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="newPas">Kullanicinin belirledigi yeni sifre</param>
         /// <param name="newPasVerification">Kullanicinin belirledigi yeni sifrenin dogrulamasi</param>
         /// <returns>islem uygun ise True , degil ise hata dondurur</returns>
-        public  bool ChangePasswordRequest(Kullanici B, string newPas, string newPasVerification)
+        public  bool ChangePasswordRequest(string Id,string oldPas, string newPas, string newPasVerification)
         {
-            /*
-             * sifresini degistirmek isteyen kullanicinin bilgileri ve yeni yapmak istedigi 
-             * sifre alinicak eger kosullar saglaniyor ise true ,
-             * saglanmiyor ise hata dondurulucek ! 
-             */
-            return false;
+            List<string> IDs = new List<string>();
+            if (IDs.Contains(Id))
+            {
+                if(true /*pass id verification*/ )
+                {
+                    if (newPas == newPasVerification)
+                    {
+                        /*core degisiklik*/
+                        return true;
+                    }
+                    else
+                    {
+                        throw new Exception("Sifre ile Dogrulama uyusmuyor ");
+                    }
+                }
+                else
+                {
+                    throw new Exception("Sifrenizi Yanlis girdiniz");
+                }
+                
+            }
+            else
+            {
+                throw new Exception("Boyle bir IDye ulasilamiyor");
+            }
         }
         /// <summary>
         /// kullanicinin bilgi guncelleme istegi 
