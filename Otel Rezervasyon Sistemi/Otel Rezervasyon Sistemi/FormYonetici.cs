@@ -70,7 +70,7 @@ namespace Otel_Rezervasyon_Sistemi
         private void btnEkle_Click(object sender, EventArgs e)
         {
             MainController m = MainController.GetController();
-            m.otel.AddHotel(tbID.Text, tbAd.Text, cmbTİP.SelectedItem.ToString());
+            m.otel.AddHotel(tbID.Text, tbAd.Text, cmbTİP.SelectedItem.ToString(),Convert.ToInt32( txtTemizlik.Text),Convert.ToInt32( TxtKonum.Text),Convert.ToInt32( TxtHizmet.Text));
         }
 
         private void yoneticiEkleToolStripMenuItem_Click(object sender, EventArgs e)
