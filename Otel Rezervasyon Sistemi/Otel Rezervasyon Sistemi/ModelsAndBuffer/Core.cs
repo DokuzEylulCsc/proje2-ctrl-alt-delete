@@ -260,6 +260,27 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             }
             throw new Exception("Oda Silinirken Bir Hata Olustu. Tekrar Deneyin !!");           
         }
+
+
+        // Spesifik olarak bir odaya ait olan rezervasyonları donduren metot.
+        public List<Rezervasyon> ReservationofRoom(string whichotel,int roomnumber)
+        {         
+            foreach (Otel item in buf.Oteller)
+            {
+                if (whichotel == item.ID)
+                {
+                    foreach (Oda item2 in item.Odalar)
+                    {
+                        if (roomnumber == item2.OdaNo)
+                        {
+                            return item2.Rezervasyonlar;
+                        }
+                    }
+
+                }
+            }
+            throw new Exception("Bir hata olustu");
+        }
        
 
 
