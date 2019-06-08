@@ -59,19 +59,65 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="baslangic">rezervasyonun baslicagi tarih</param>
         /// <param name="bitis">rezervasyonun bitecegi tarih</param>
         /// <returns></returns>
-        public bool ReserveRoom(string otelId, int odaNo, DateTime baslangic, DateTime bitis)
+        public bool ReserveRoom(string userID, string otelId, int odaNo, DateTime baslangic, DateTime bitis)
         {
-            /*
-             * rezervasyon onayi aldigi zaman rezervasyonunu odaya islenmesi icin
-             */
-            return false;
+            try
+            {
+                if (CheckReservationDateAvailabilty(otelId, odaNo, baslangic, bitis))
+                {
+                    /*add reservation core*/
+                    return true;
+                }
+                else
+                {
+                    throw new Exception("Bu tarihler arasinda bu oda uygun degil");
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+
+
         }
-        public bool DeleteReservation(string otelID, int odaNo, DateTime baslangic, DateTime bitis)
+        public bool DeleteReservation(string userID, string otelID, int odaNo, DateTime baslangic, DateTime bitis)
         {
-            /*
-             * rezervasyon onayi aldigi zaman rezervasyonunu odaya islenmesi icin
-             */
-            return false;
+            List<string> userIDs = core.ReturnCustomerId();
+            if (userIDs.Contains(userID))
+            {
+                List<string> hotelIDs = core.ReturnHotelID();
+                if (hotelIDs.Contains(otelID))
+                {
+                    List<int> roomIDs = core.ReturnRoomIds(otelID);
+                    if (roomIDs.Contains(odaNo))
+                    {
+                        List<ModelsAndBuffer.Rezervasyon> reservationsOfRoom = core.ReservationofRoom(otelID,odaNo);
+                        foreach(ModelsAndBuffer.Rezervasyon reservation in reservationsOfRoom)
+                        {
+                            if (reservation.RezBaslangic == baslangic && reservation.RezBitis == bitis)
+                            {
+                                /*core delete reservation*/
+                                return true;
+                            }
+                        }
+                        throw new Exception("Boyle bir rezervasyon yok");
+                    }
+                    else
+                    {
+                        throw new Exception("Boyle bir oda yok");
+                    }
+                }
+                else
+                {
+                    throw new Exception("Boyle bir otel yok")
+                }
+
+            }
+            else
+            {
+                throw new Exception("Boyle bir kullanici yok");
+            }
+            
         }
 
 
