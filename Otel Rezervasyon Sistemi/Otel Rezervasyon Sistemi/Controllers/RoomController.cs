@@ -91,65 +91,37 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         }
 
         /// <summary>
-        /// Otel Odalari listelenmek istediginde cagirilmali
+        /// Butun otellerin o tarihler arasindaki odalarini dondurur
         /// </summary>
-        /// <param name="otelId">odalari listelenicek otelin idsi</param>
-        /// <returns> List<Oda>  dondurur </returns>
-        /*public List<Oda> GetRooms(string otelId)
+        /// <param name="start">belirlenen tarihin baslangici</param>
+        /// <param name="end">belirlenen tarihin bitisi</param>
+        /// <returns>"idsi ** olan otelin ** nolu odasi ** kisi tarafindan ** TL ye tutulmustur"</returns>
+        public List<string> GetReservations(DateTime start, DateTime end)
         {
-            List<string> IDs = new List<string>(); //get ids from core
-            if (IDs.Contains(otelId))
+            List<string> reservedRoomHotel = new List<string>();
+            List<string> hotelIDs = core.ReturnHotelID();
+            foreach (string ID in hotelIDs)
             {
-                List<Oda> odas = new List<Oda>(); //get rooms of hotel
-                return odas;
-            }
-            else
-            {
-                throw new Exception("Boyle bir otel bulunamadi");
-            }
-        }*/
-        /// <summary>
-        /// Oda bilgilerini goruntulemek icin cagirilir
-        /// </summary>
-        /// <param name="odano">bilgileri goruntulenicek oda no</param>
-        /// <param name="otelid">bilgileri goruntulenicek odanin ait oldugu otel idsi</param>
-        /*public string[] GetRoomDetails(int odano, string otelid)
-        {
-            List<string> hotelIDs = new List<string>(); //get ids from core
-            if (hotelIDs.Contains(otelid))
-            {
-                List<int> odaIDs = new List<int>(); // get ids from core 
-                if (odaIDs.Contains(odano))
+                List<Oda> rooms = core.ReturnRoomObjects(ID);
+                foreach (Oda room in rooms)
                 {
-                    //get details from core ;
-                    return new string[3];
-                }
-                else
-                {
-                    throw new Exception("Bu otele ait boyle bir oda bulunamadi");
+                    foreach (ModelsAndBuffer.Rezervasyon rez in room.Rezervasyonlar)
+                    {
+                        if ((rez.RezBaslangic < start && rez.RezBitis > start) || (rez.RezBaslangic < end && rez.RezBitis > end))
+                        {
+                            reservedRoomHotel.Add(
+                                "Girilen tarihler arasinda ID si " +
+                                ID + " olan otelin " +
+                                room.OdaNo + " nolu odasi " +
+                                room.KisiKapasitesi.ToString() + " kisi icin " +
+                                room.OdaFiyati.ToString() + "TL ye tutulmustur"
+                                );
+                            break;
+                        }
+                    }
                 }
             }
-            else
-            {
-                throw new Exception("Bu IDye sahip otel bulunamadi");
-            }
-        }*/
-
-            /*
-        /// <summary>
-        /// Odanin rezervasyon bilgileri istendiginde dondurur
-        /// </summary>
-        /// <param name="odano">rezervasyon bilgileri istenen odanin numarasi</param>
-        /// <param name="otelid">rezervasyon bilgileri istenen odanin ait oldugu otel id </param>
-        /// <returns></returns>
-        public List<string> GetReservations(DateTime start , DateTime end)
-        {
-            List<string> IDs = new List<string>();
-            foreach(string ID in IDs)
-            {
-                
-            }
-               
-        }*/
+            return reservedRoomHotel;
+        }
     }
 }
