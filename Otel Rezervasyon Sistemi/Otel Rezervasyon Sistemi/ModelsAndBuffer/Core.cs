@@ -282,7 +282,33 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             throw new Exception("Bir hata olustu");
         }
        
-
+        public bool AddReservation(string otelid,string costumerid, int roomnumber,DateTime baslangic,DateTime bitis)
+        {
+            foreach (Otel item in buf.Oteller)
+            {
+                if (otelid == item.ID)
+                {
+                    foreach (Oda item2 in item.Odalar)
+                    {
+                        if (roomnumber == item2.OdaNo)
+                        {
+                            foreach (Musteri item3 in buf.Kullanicilar)
+                            {
+                                if (costumerid == item3.ID)
+                                {
+                                    item2.Rezervasyonlar.Add(new Rezervasyon(baslangic, bitis));
+                                    item3.ReservationofCostumer.Add(new Rezervasyon(baslangic, bitis));
+                                    return true;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            throw new Exception("Rezervasyon eklenirken bir hata olustu");
+            
+        }
 
 
 
