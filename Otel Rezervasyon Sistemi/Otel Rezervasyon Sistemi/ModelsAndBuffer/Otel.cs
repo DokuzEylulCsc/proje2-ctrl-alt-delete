@@ -30,7 +30,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
         }
 
         [XmlElement("Odalar")]
-        public static List<Oda> Odalar = new List<Oda>();
+        public List<Oda> Odalar = new List<Oda>();
 
         [XmlElement("TemizlikPuani")]
         private int temizlik; // Yoneticinin otel kayıt sırasında oylayacagı ve otelin yıldızını belırleyecek degıskenler
