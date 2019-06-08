@@ -65,7 +65,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             {
                 Oteller = (List<Otel>)xs.Deserialize(sr);
             }
-            using (StreamReader sr2 = new StreamReader(@"Kullanici.xml"))
+            using (StreamReader sr2 = new StreamReader(@"../Kullanici.xml"))
             {
                 Kullanicilar = (List<Kullanici>)xs2.Deserialize(sr2);
             }

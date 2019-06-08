@@ -64,3 +64,4 @@ C:\Users\simge\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Reze
 C:\Users\simge\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.csproj.CoreCompileInputs.cache
 C:\Users\simge\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.exe
 C:\Users\simge\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.pdb
+C:\Users\EMIR\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel_Rezervasyon_Sistemi.FormYonEkle.resources
