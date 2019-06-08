@@ -23,7 +23,14 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
             List<string> IDs = core.ReturnHotelID();
             if (IDs.Contains(otelid))
             {
-                return (core.ReturnRezervasyon(otelid));
+                List<ModelsAndBuffer.Oda> rooms = core.ReturnRoomObjects(otelid);
+                List<ModelsAndBuffer.Rezervasyon> rezervasyons = new List<ModelsAndBuffer.Rezervasyon>();
+                foreach(ModelsAndBuffer.Oda room in rooms)
+                {
+                    rezervasyons.AddRange(room.Rezervasyonlar);
+                }
+                return rezervasyons;
+               
             }
             else
             {

@@ -260,7 +260,104 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             }
             throw new Exception("Oda Silinirken Bir Hata Olustu. Tekrar Deneyin !!");           
         }
+
+
+        // Spesifik olarak bir odaya ait olan rezervasyonları donduren metot.
+        public List<Rezervasyon> ReservationofRoom(string whichotel,int roomnumber)
+        {         
+            foreach (Otel item in buf.Oteller)
+            {
+                if (whichotel == item.ID)
+                {
+                    foreach (Oda item2 in item.Odalar)
+                    {
+                        if (roomnumber == item2.OdaNo)
+                        {
+                            return item2.Rezervasyonlar;
+                        }
+                    }
+
+                }
+            }
+            throw new Exception("Bir hata olustu");
+        }
        
+        public bool AddReservation(string otelid,string costumerid, int roomnumber,DateTime baslangic,DateTime bitis)
+        {
+            foreach (Otel item in buf.Oteller)
+            {
+                if (otelid == item.ID)
+                {
+                    foreach (Oda item2 in item.Odalar)
+                    {
+                        if (roomnumber == item2.OdaNo)
+                        {
+                            foreach (Musteri item3 in buf.Kullanicilar)
+                            {
+                                if (costumerid == item3.ID)
+                                {
+                                    item2.Rezervasyonlar.Add(new Rezervasyon(baslangic, bitis,otelid,roomnumber));
+                                    item3.ReservationofCostumer.Add(new Rezervasyon(baslangic, bitis, otelid, roomnumber));
+                                    return true;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            throw new Exception("Rezervasyon eklenirken bir hata olustu");
+            
+        }
+        
+        // Rezervasyon Silme Metodu.
+        public bool DeleteReservation(string otelid,int roomnumber,string customerid,int rezid)
+        {
+            try
+            {
+                for (int i = 0; i < buf.Oteller.Count; i++)
+                {
+                    if (otelid == buf.Oteller[i].ID)
+                    {
+                        for (int j = 0; j < buf.Oteller[i].Odalar.Count; j++)
+                        {
+                            if (roomnumber == buf.Oteller[i].Odalar[j].OdaNo)
+                            {
+                                for (int t = 0; t < buf.Oteller[i].Odalar[j].Rezervasyonlar.Count; t++)
+                                {
+                                    if (rezid == buf.Oteller[i].Odalar[j].Rezervasyonlar[t].RezID)
+                                    {
+                                        buf.Oteller[i].Odalar[j].Rezervasyonlar.Remove(buf.Oteller[i].Odalar[j].Rezervasyonlar[t]);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                for (int i = 0; i < buf.Kullanicilar.Count; i++)
+                {
+                    if (customerid == buf.Kullanicilar[i].ID)
+                    {
+                        for (int j = 0; j < ((Musteri)buf.Kullanicilar[i]).ReservationofCostumer.Count; j++)
+                        {
+                            if (rezid == ((Musteri)buf.Kullanicilar[i]).ReservationofCostumer[j].RezID)
+                            {
+                                ((Musteri)buf.Kullanicilar[i]).ReservationofCostumer.Remove(((Musteri)buf.Kullanicilar[i]).ReservationofCostumer[j]);
+
+                            }
+                        }
+                    }
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("Rezervasyon silinirken bir hata olustu !! Yeniden Deneyin");
+            }
+
+           
+        }
 
 
 
