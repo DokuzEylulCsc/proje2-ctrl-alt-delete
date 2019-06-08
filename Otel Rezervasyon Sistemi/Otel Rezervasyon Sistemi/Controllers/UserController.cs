@@ -22,14 +22,14 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="password">kullanicinin girdigi sifre </param>
         public  Kullanici AccountVerification(string id, string password)
         {
-            List<string> customerIDs = core.ReturnMusteriId();
-            List<string> managerIDs = core.ReturnYoneticiId();
+            List<string> customerIDs = core.ReturnCustomerId();
+            List<string> managerIDs = core.ReturnAdminId();
             if (customerIDs.Contains(id))
             {
                 if(core.PasswordCheck(id,password))
                 {
-                    /*get details of id*/
-                    return new Musteri("","","","");
+                    Kullanici k = core.ReturnInformations(id);
+                    return new Musteri(k.ID, k.Ad, k.Soyad, "**");
                 }
                 else
                 {
@@ -40,8 +40,8 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
             {
                 if(core.PasswordCheck(id,password))
                 {
-                    /*get details of id*/
-                    return new Yonetici("","","","");
+                    Kullanici k = core.ReturnInformations(id);
+                    return new Yonetici(k.ID, k.Ad, k.Soyad, "**");
                 }
                 else
                 {
@@ -66,8 +66,8 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         {
             if(password == passwordverif)
             {
-                List<string> IDs = core.ReturnMusteriId();
-                IDs.AddRange(core.ReturnYoneticiId());
+                List<string> IDs = core.ReturnAdminId();
+                IDs.AddRange(core.ReturnCustomerId());
                 if (IDs.Contains(id))
                 {
                     throw new Exception("Boyle Bir ID zaten bulunmaktadir");
@@ -98,8 +98,8 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <returns>islem uygun ise True , degil ise hata dondurur</returns>
         public  bool ChangePasswordRequest(string Id,string oldPas, string newPas, string newPasVerification)
         {
-            List<string> IDs = core.ReturnMusteriId();
-            IDs.AddRange(core.ReturnYoneticiId());
+            List<string> IDs = core.ReturnAdminId();
+            IDs.AddRange(core.ReturnCustomerId());
             if (IDs.Contains(Id))
             {
                 if(core.PasswordCheck(Id,oldPas))
@@ -143,20 +143,21 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <returns>islem uygulanir ise true , hata olusur ise hata dondurucekti</returns>
         public  bool ChangeInformationRequest(string ID , string Password, string whichInfo, string newInfo)
         {
-            List<string> IDs = new List<string>();
+            List<string> IDs = core.ReturnAdminId();
+            IDs.AddRange(core.ReturnCustomerId());
             if (IDs.Contains(ID))
             {
-                string pass = ""; /*get password of ID*/
-                if (pass == Password)
+                
+                if (core.PasswordCheck(ID,Password))
                 {
                     if(whichInfo == "Ad")
                     {
-                        //Idye sahip adi new info ile degistir
+                        core.InformationChange(whichInfo, ID,newInfo);
                         return true;
                     }
                     else
                     {
-                        //Idye sahip soyadi new info ile degistir
+                        core.InformationChange(whichInfo, ID, newInfo);
                         return true;
                     }
                 }

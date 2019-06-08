@@ -102,7 +102,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
         }
 
         // Ad veya soyad gelecek hangisi geldiyse onu degistiricem ??????
-        public void InformationChange(string something, string id)
+        public void InformationChange(string something, string id,string newInfo)
         {
             foreach (Kullanici item in buf.Kullanicilar)
             {
@@ -110,11 +110,11 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
                 {
                     if (something == "Ad")
                     {
-                        item.Ad = something;
+                        item.Ad = newInfo;
                     }
                     else if (something == "Soyad")
                     {
-                        item.Soyad = something;
+                        item.Soyad = newInfo;
                     }
                 }
             }
