@@ -33,9 +33,9 @@ namespace Otel_Rezervasyon_Sistemi
                 controller.user.CreateAccountRequest(mID.Text, mSIFRE.Text, mSIFRET.Text,TXTAD.Text,TXTSOYAD.Text);
                
             }
-            catch
+            catch(Exception a)
             {
-                MessageBox.Show("Kayıt Edilmek İstenen Kullanicinin Bilgileri Uygun Değildir!!", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(a.Message, "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

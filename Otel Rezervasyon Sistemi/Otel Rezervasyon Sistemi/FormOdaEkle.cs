@@ -79,9 +79,9 @@ namespace Otel_Rezervasyon_Sistemi
                 MainController m = MainController.GetController();
                 m.room.AddRoomRequest(Convert.ToString(cmbislemdekit.SelectedIndex), lblyon.Text, lblotelid.Text, Convert.ToInt32(txtislemdekino.Text));
             }
-            catch
+            catch(Exception a)
             {
-                MessageBox.Show("Bilgiler Doğru Değil!!", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(a.Message, "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
 
@@ -111,9 +111,9 @@ namespace Otel_Rezervasyon_Sistemi
                 MainController m = MainController.GetController();
                 m.room.AddRoomRequest(Convert.ToString(cmbOdatipi.SelectedIndex), lblyon.Text, tbOdaEkleID.Text, Convert.ToInt32(txtOdano.Text));
             }
-            catch
+            catch(Exception a)
             {
-                MessageBox.Show("Bilgiler Doğru Değil!!", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(a.Message, "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
            
         }
