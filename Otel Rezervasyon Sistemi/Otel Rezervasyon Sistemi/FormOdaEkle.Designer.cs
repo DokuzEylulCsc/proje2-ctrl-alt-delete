@@ -46,7 +46,6 @@
             this.checkKayitli = new System.Windows.Forms.CheckBox();
             this.checkIslemde = new System.Windows.Forms.CheckBox();
             this.panelKayitli = new System.Windows.Forms.Panel();
-            this.btnCıkıs = new System.Windows.Forms.Button();
             this.btnKayitliKaydet = new System.Windows.Forms.Button();
             this.cmbOdatipi = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -62,6 +61,7 @@
             this.tbOdaEkleID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnCıkıs = new System.Windows.Forms.Button();
             this.lblyon = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panelIslemde.SuspendLayout();
@@ -282,22 +282,11 @@
             this.panelKayitli.Controls.Add(this.label7);
             this.panelKayitli.Controls.Add(this.label3);
             this.panelKayitli.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panelKayitli.Location = new System.Drawing.Point(264, 51);
+            this.panelKayitli.Location = new System.Drawing.Point(264, 48);
             this.panelKayitli.Name = "panelKayitli";
             this.panelKayitli.Size = new System.Drawing.Size(355, 480);
             this.panelKayitli.TabIndex = 17;
             this.panelKayitli.Visible = false;
-            // 
-            // btnCıkıs
-            // 
-            this.btnCıkıs.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnCıkıs.Location = new System.Drawing.Point(12, 164);
-            this.btnCıkıs.Name = "btnCıkıs";
-            this.btnCıkıs.Size = new System.Drawing.Size(91, 31);
-            this.btnCıkıs.TabIndex = 31;
-            this.btnCıkıs.Text = "Cıkıs";
-            this.btnCıkıs.UseVisualStyleBackColor = true;
-            this.btnCıkıs.Click += new System.EventHandler(this.btnCıkıs_Click);
             // 
             // btnKayitliKaydet
             // 
@@ -459,6 +448,17 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Otel Adi:";
             // 
+            // btnCıkıs
+            // 
+            this.btnCıkıs.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnCıkıs.Location = new System.Drawing.Point(12, 164);
+            this.btnCıkıs.Name = "btnCıkıs";
+            this.btnCıkıs.Size = new System.Drawing.Size(91, 31);
+            this.btnCıkıs.TabIndex = 31;
+            this.btnCıkıs.Text = "Cıkıs";
+            this.btnCıkıs.UseVisualStyleBackColor = true;
+            this.btnCıkıs.Click += new System.EventHandler(this.btnCıkıs_Click);
+            // 
             // lblyon
             // 
             this.lblyon.AutoSize = true;
@@ -495,7 +495,7 @@
             this.Controls.Add(this.lblodaozellik);
             this.Controls.Add(this.panelIslemde);
             this.Name = "FormOdaEkle";
-            this.Text = "FormOdaEkle";
+            this.Text = "Oda Ekle";
             this.Load += new System.EventHandler(this.FormOdaEkle_Load);
             this.panelIslemde.ResumeLayout(false);
             this.panelIslemde.PerformLayout();

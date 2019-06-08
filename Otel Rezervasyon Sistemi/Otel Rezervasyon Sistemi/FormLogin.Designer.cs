@@ -36,7 +36,6 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnTemizle = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.iletişimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mskID = new System.Windows.Forms.MaskedTextBox();
@@ -119,19 +118,12 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.iletişimToolStripMenuItem,
             this.çıkışToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(398, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(403, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // iletişimToolStripMenuItem
-            // 
-            this.iletişimToolStripMenuItem.Name = "iletişimToolStripMenuItem";
-            this.iletişimToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.iletişimToolStripMenuItem.Text = "İletişim";
             // 
             // çıkışToolStripMenuItem
             // 
@@ -172,8 +164,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(398, 488);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(403, 488);
             this.Controls.Add(this.MSKSİFRE);
             this.Controls.Add(this.mskID);
             this.Controls.Add(this.btnTemizle);
@@ -186,7 +178,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormLogin";
-            this.Text = "FormLogin";
+            this.Text = "Login Page";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -207,7 +199,6 @@
         private System.Windows.Forms.Button btnTemizle;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem iletişimToolStripMenuItem;
         private System.Windows.Forms.MaskedTextBox mskID;
         private System.Windows.Forms.MaskedTextBox MSKSİFRE;
     }
