@@ -35,7 +35,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.BtnİslemdekiKaydet = new System.Windows.Forms.Button();
-            this.chcislemdeki = new System.Windows.Forms.CheckedListBox();
             this.txtislemdekifiyat = new System.Windows.Forms.TextBox();
             this.cmbkisikapaislemdeki = new System.Windows.Forms.ComboBox();
             this.txtislemdekino = new System.Windows.Forms.TextBox();
@@ -50,7 +49,6 @@
             this.cmbOdatipi = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.tbFiyat = new System.Windows.Forms.TextBox();
             this.CmbKisi = new System.Windows.Forms.ComboBox();
             this.txtOdano = new System.Windows.Forms.TextBox();
@@ -64,6 +62,14 @@
             this.btnCıkıs = new System.Windows.Forms.Button();
             this.lblyon = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.chcklima = new System.Windows.Forms.CheckBox();
+            this.chcwifi = new System.Windows.Forms.CheckBox();
+            this.chcminibar = new System.Windows.Forms.CheckBox();
+            this.chcTv = new System.Windows.Forms.CheckBox();
+            this.chcİtv = new System.Windows.Forms.CheckBox();
+            this.chcİminibar = new System.Windows.Forms.CheckBox();
+            this.chcİwifi = new System.Windows.Forms.CheckBox();
+            this.chcİklima = new System.Windows.Forms.CheckBox();
             this.panelIslemde.SuspendLayout();
             this.panelKayitli.SuspendLayout();
             this.SuspendLayout();
@@ -81,12 +87,15 @@
             // panelIslemde
             // 
             this.panelIslemde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panelIslemde.Controls.Add(this.chcİtv);
+            this.panelIslemde.Controls.Add(this.chcİminibar);
+            this.panelIslemde.Controls.Add(this.chcİwifi);
+            this.panelIslemde.Controls.Add(this.chcİklima);
             this.panelIslemde.Controls.Add(this.lblotelid);
             this.panelIslemde.Controls.Add(this.cmbislemdekit);
             this.panelIslemde.Controls.Add(this.label2);
             this.panelIslemde.Controls.Add(this.label9);
             this.panelIslemde.Controls.Add(this.BtnİslemdekiKaydet);
-            this.panelIslemde.Controls.Add(this.chcislemdeki);
             this.panelIslemde.Controls.Add(this.txtislemdekifiyat);
             this.panelIslemde.Controls.Add(this.cmbkisikapaislemdeki);
             this.panelIslemde.Controls.Add(this.txtislemdekino);
@@ -154,19 +163,6 @@
             this.BtnİslemdekiKaydet.Text = "Kaydet";
             this.BtnİslemdekiKaydet.UseVisualStyleBackColor = true;
             this.BtnİslemdekiKaydet.Click += new System.EventHandler(this.BtnİslemdekiKaydet_Click);
-            // 
-            // chcislemdeki
-            // 
-            this.chcislemdeki.FormattingEnabled = true;
-            this.chcislemdeki.Items.AddRange(new object[] {
-            "Klima",
-            "Wifi",
-            "Minibar",
-            "Televizyon"});
-            this.chcislemdeki.Location = new System.Drawing.Point(163, 251);
-            this.chcislemdeki.Name = "chcislemdeki";
-            this.chcislemdeki.Size = new System.Drawing.Size(137, 109);
-            this.chcislemdeki.TabIndex = 10;
             // 
             // txtislemdekifiyat
             // 
@@ -266,11 +262,14 @@
             // panelKayitli
             // 
             this.panelKayitli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panelKayitli.Controls.Add(this.chcTv);
+            this.panelKayitli.Controls.Add(this.chcminibar);
+            this.panelKayitli.Controls.Add(this.chcwifi);
+            this.panelKayitli.Controls.Add(this.chcklima);
             this.panelKayitli.Controls.Add(this.btnKayitliKaydet);
             this.panelKayitli.Controls.Add(this.cmbOdatipi);
             this.panelKayitli.Controls.Add(this.label4);
             this.panelKayitli.Controls.Add(this.label5);
-            this.panelKayitli.Controls.Add(this.checkedListBox1);
             this.panelKayitli.Controls.Add(this.tbFiyat);
             this.panelKayitli.Controls.Add(this.CmbKisi);
             this.panelKayitli.Controls.Add(this.txtOdano);
@@ -281,6 +280,7 @@
             this.panelKayitli.Controls.Add(this.tbOdaEkleID);
             this.panelKayitli.Controls.Add(this.label7);
             this.panelKayitli.Controls.Add(this.label3);
+            this.panelKayitli.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.panelKayitli.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelKayitli.Location = new System.Drawing.Point(267, 51);
             this.panelKayitli.Name = "panelKayitli";
@@ -306,9 +306,9 @@
             "Kral Dairesi ",
             "Manzarali",
             "Standart"});
-            this.cmbOdatipi.Location = new System.Drawing.Point(152, 113);
+            this.cmbOdatipi.Location = new System.Drawing.Point(166, 130);
             this.cmbOdatipi.Name = "cmbOdatipi";
-            this.cmbOdatipi.Size = new System.Drawing.Size(121, 21);
+            this.cmbOdatipi.Size = new System.Drawing.Size(121, 23);
             this.cmbOdatipi.TabIndex = 29;
             // 
             // label4
@@ -317,7 +317,7 @@
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(37, 113);
+            this.label4.Location = new System.Drawing.Point(51, 130);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 21);
             this.label4.TabIndex = 28;
@@ -329,45 +329,32 @@
             this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(36, 284);
+            this.label5.Location = new System.Drawing.Point(50, 301);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 21);
             this.label5.TabIndex = 27;
             this.label5.Text = "Özellikler:";
             // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Klima",
-            "Wifi",
-            "Minibar",
-            "Televizyon"});
-            this.checkedListBox1.Location = new System.Drawing.Point(152, 284);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(137, 109);
-            this.checkedListBox1.TabIndex = 23;
-            // 
             // tbFiyat
             // 
-            this.tbFiyat.Location = new System.Drawing.Point(152, 237);
+            this.tbFiyat.Location = new System.Drawing.Point(166, 254);
             this.tbFiyat.Name = "tbFiyat";
-            this.tbFiyat.Size = new System.Drawing.Size(121, 20);
+            this.tbFiyat.Size = new System.Drawing.Size(121, 23);
             this.tbFiyat.TabIndex = 22;
             // 
             // CmbKisi
             // 
             this.CmbKisi.FormattingEnabled = true;
-            this.CmbKisi.Location = new System.Drawing.Point(152, 193);
+            this.CmbKisi.Location = new System.Drawing.Point(166, 210);
             this.CmbKisi.Name = "CmbKisi";
-            this.CmbKisi.Size = new System.Drawing.Size(121, 21);
+            this.CmbKisi.Size = new System.Drawing.Size(121, 23);
             this.CmbKisi.TabIndex = 21;
             // 
             // txtOdano
             // 
-            this.txtOdano.Location = new System.Drawing.Point(152, 152);
+            this.txtOdano.Location = new System.Drawing.Point(166, 169);
             this.txtOdano.Name = "txtOdano";
-            this.txtOdano.Size = new System.Drawing.Size(121, 20);
+            this.txtOdano.Size = new System.Drawing.Size(121, 23);
             this.txtOdano.TabIndex = 20;
             // 
             // label6
@@ -377,7 +364,7 @@
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(36, 241);
+            this.label6.Location = new System.Drawing.Point(50, 258);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 21);
             this.label6.TabIndex = 19;
@@ -390,7 +377,7 @@
             this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(36, 196);
+            this.label12.Location = new System.Drawing.Point(50, 213);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(109, 21);
             this.label12.TabIndex = 18;
@@ -403,7 +390,7 @@
             this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.Location = new System.Drawing.Point(36, 154);
+            this.label13.Location = new System.Drawing.Point(50, 171);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(64, 21);
             this.label13.TabIndex = 17;
@@ -411,16 +398,16 @@
             // 
             // tbOdaEkleAd
             // 
-            this.tbOdaEkleAd.Location = new System.Drawing.Point(152, 78);
+            this.tbOdaEkleAd.Location = new System.Drawing.Point(166, 95);
             this.tbOdaEkleAd.Name = "tbOdaEkleAd";
-            this.tbOdaEkleAd.Size = new System.Drawing.Size(125, 20);
+            this.tbOdaEkleAd.Size = new System.Drawing.Size(125, 23);
             this.tbOdaEkleAd.TabIndex = 10;
             // 
             // tbOdaEkleID
             // 
-            this.tbOdaEkleID.Location = new System.Drawing.Point(152, 36);
+            this.tbOdaEkleID.Location = new System.Drawing.Point(166, 53);
             this.tbOdaEkleID.Name = "tbOdaEkleID";
-            this.tbOdaEkleID.Size = new System.Drawing.Size(126, 20);
+            this.tbOdaEkleID.Size = new System.Drawing.Size(126, 23);
             this.tbOdaEkleID.TabIndex = 9;
             // 
             // label7
@@ -429,7 +416,7 @@
             this.label7.BackColor = System.Drawing.SystemColors.Control;
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(37, 38);
+            this.label7.Location = new System.Drawing.Point(51, 55);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 21);
             this.label7.TabIndex = 8;
@@ -442,7 +429,7 @@
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(37, 78);
+            this.label3.Location = new System.Drawing.Point(51, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 21);
             this.label3.TabIndex = 7;
@@ -480,6 +467,94 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // chcklima
+            // 
+            this.chcklima.AutoSize = true;
+            this.chcklima.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chcklima.Location = new System.Drawing.Point(168, 305);
+            this.chcklima.Name = "chcklima";
+            this.chcklima.Size = new System.Drawing.Size(62, 22);
+            this.chcklima.TabIndex = 31;
+            this.chcklima.Text = "Klima";
+            this.chcklima.UseVisualStyleBackColor = true;
+            // 
+            // chcwifi
+            // 
+            this.chcwifi.AutoSize = true;
+            this.chcwifi.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chcwifi.Location = new System.Drawing.Point(251, 305);
+            this.chcwifi.Name = "chcwifi";
+            this.chcwifi.Size = new System.Drawing.Size(53, 22);
+            this.chcwifi.TabIndex = 32;
+            this.chcwifi.Text = "Wifi";
+            this.chcwifi.UseVisualStyleBackColor = true;
+            // 
+            // chcminibar
+            // 
+            this.chcminibar.AutoSize = true;
+            this.chcminibar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chcminibar.Location = new System.Drawing.Point(168, 342);
+            this.chcminibar.Name = "chcminibar";
+            this.chcminibar.Size = new System.Drawing.Size(76, 22);
+            this.chcminibar.TabIndex = 33;
+            this.chcminibar.Text = "Minibar";
+            this.chcminibar.UseVisualStyleBackColor = true;
+            // 
+            // chcTv
+            // 
+            this.chcTv.AutoSize = true;
+            this.chcTv.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chcTv.Location = new System.Drawing.Point(252, 342);
+            this.chcTv.Name = "chcTv";
+            this.chcTv.Size = new System.Drawing.Size(43, 22);
+            this.chcTv.TabIndex = 34;
+            this.chcTv.Text = "TV";
+            this.chcTv.UseVisualStyleBackColor = true;
+            // 
+            // chcİtv
+            // 
+            this.chcİtv.AutoSize = true;
+            this.chcİtv.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chcİtv.Location = new System.Drawing.Point(247, 286);
+            this.chcİtv.Name = "chcİtv";
+            this.chcİtv.Size = new System.Drawing.Size(43, 22);
+            this.chcİtv.TabIndex = 38;
+            this.chcİtv.Text = "TV";
+            this.chcİtv.UseVisualStyleBackColor = true;
+            // 
+            // chcİminibar
+            // 
+            this.chcİminibar.AutoSize = true;
+            this.chcİminibar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chcİminibar.Location = new System.Drawing.Point(163, 286);
+            this.chcİminibar.Name = "chcİminibar";
+            this.chcİminibar.Size = new System.Drawing.Size(76, 22);
+            this.chcİminibar.TabIndex = 37;
+            this.chcİminibar.Text = "Minibar";
+            this.chcİminibar.UseVisualStyleBackColor = true;
+            // 
+            // chcİwifi
+            // 
+            this.chcİwifi.AutoSize = true;
+            this.chcİwifi.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chcİwifi.Location = new System.Drawing.Point(246, 249);
+            this.chcİwifi.Name = "chcİwifi";
+            this.chcİwifi.Size = new System.Drawing.Size(53, 22);
+            this.chcİwifi.TabIndex = 36;
+            this.chcİwifi.Text = "Wifi";
+            this.chcİwifi.UseVisualStyleBackColor = true;
+            // 
+            // chcİklima
+            // 
+            this.chcİklima.AutoSize = true;
+            this.chcİklima.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chcİklima.Location = new System.Drawing.Point(163, 249);
+            this.chcİklima.Name = "chcİklima";
+            this.chcİklima.Size = new System.Drawing.Size(62, 22);
+            this.chcİklima.TabIndex = 35;
+            this.chcİklima.Text = "Klima";
+            this.chcİklima.UseVisualStyleBackColor = true;
+            // 
             // FormOdaEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -515,7 +590,6 @@
         private System.Windows.Forms.Panel panelIslemde;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button BtnİslemdekiKaydet;
-        private System.Windows.Forms.CheckedListBox chcislemdeki;
         private System.Windows.Forms.TextBox txtislemdekifiyat;
         private System.Windows.Forms.ComboBox cmbkisikapaislemdeki;
         private System.Windows.Forms.TextBox txtislemdekino;
@@ -531,7 +605,6 @@
         private System.Windows.Forms.ComboBox cmbOdatipi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.TextBox tbFiyat;
         private System.Windows.Forms.ComboBox CmbKisi;
         private System.Windows.Forms.TextBox txtOdano;
@@ -547,5 +620,13 @@
         private System.Windows.Forms.Label lblotelid;
         private System.Windows.Forms.Label lblyon;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox chcİtv;
+        private System.Windows.Forms.CheckBox chcİminibar;
+        private System.Windows.Forms.CheckBox chcTv;
+        private System.Windows.Forms.CheckBox chcminibar;
+        private System.Windows.Forms.CheckBox chcwifi;
+        private System.Windows.Forms.CheckBox chcklima;
+        private System.Windows.Forms.CheckBox chcİwifi;
+        private System.Windows.Forms.CheckBox chcİklima;
     }
 }

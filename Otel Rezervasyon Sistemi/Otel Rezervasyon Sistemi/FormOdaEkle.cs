@@ -71,7 +71,8 @@ namespace Otel_Rezervasyon_Sistemi
             try
             {
                 MainController m = MainController.GetController();
-              if(  m.room.AddRoomRequest(Convert.ToString(cmbislemdekit.SelectedIndex), lblyon.Text, lblotelid.Text, Convert.ToInt32(txtislemdekino.Text)))
+              if(  m.room.AddRoomRequest(Convert.ToString(cmbislemdekit.SelectedIndex),Convert.ToInt32( txtislemdekifiyat.Text) ,lblyon.Text, lblotelid.Text, Convert.ToInt32(txtislemdekino.Text),
+                Convert.ToInt32(cmbkisikapaislemdeki.SelectedItem),chcİklima.Checked,chcİtv.Checked,chcİminibar.Checked,chcİwifi.Checked))
                 {
                     MessageBox.Show("Oda Kaydedildi", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -94,7 +95,8 @@ namespace Otel_Rezervasyon_Sistemi
             try
             {
                 MainController m = MainController.GetController();
-               if( m.room.AddRoomRequest(Convert.ToString(cmbOdatipi.SelectedIndex), lblyon.Text, tbOdaEkleID.Text, Convert.ToInt32(txtOdano.Text)))
+                if (m.room.AddRoomRequest(Convert.ToString(cmbOdatipi.SelectedItem), Convert.ToInt32(tbFiyat.Text),
+                    lblyon.Text, tbOdaEkleID.Text, Convert.ToInt32(txtOdano.Text), Convert.ToInt32(CmbKisi.SelectedItem),chcklima.Checked,chcTv.Checked,chcminibar.Checked,chcwifi.Checked)) 
                 {
                     MessageBox.Show("Oda Kaydedildi", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

@@ -221,7 +221,7 @@
             "Jakuzi",
             "Manzara",
             "Oyun Konsolu"});
-            this.clistbox.Location = new System.Drawing.Point(134, 275);
+            this.clistbox.Location = new System.Drawing.Point(131, 275);
             this.clistbox.Name = "clistbox";
             this.clistbox.Size = new System.Drawing.Size(142, 180);
             this.clistbox.TabIndex = 8;
