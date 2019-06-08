@@ -133,14 +133,20 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             throw new Exception("Bir hata olustu !!");
         }
 
-        //RoomController islemlerinin metotlari
+      /*  //RoomController islemlerinin metotlari
 
-       /* // Oda Idlerini dondurecek metot.
+        // Oda Idlerini dondurecek metot.
         public List<int> ReturnRoomIds(string whichotelıd)
         {
             // Yaptıgın degisikligi cocuklara soylemeyi unutma !!!!!! (Otel classındaki oda listesini static yaptın ki foreachin icinde erisebilesin!!)
             List<int> RoomID = new List<int>();
+            foreach (Otel item in buf.Oteller)
+            {
+                foreach (Oda item2 in item.Odalar)
+                {
 
+                }
+            }
             // Spesifik olarak x idli otelin odalarının idlerini dondurmen gerek ama nasıl yapacagın konusunda takıldın sor ????
 
             return RoomID;
