@@ -184,17 +184,14 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
         }
 
         // Rezervasyon Listesi Dondurecek metot
-        public List<Rezervasyon> ReturnRezervasyon(string otelid)
+        public List<Oda> ReturnRoomObjects(string otelid)
         {
-            List<Rezervasyon> Rezervasyonlar = new List<Rezervasyon>();
+            List<Oda> Odalar = new List<Oda>();
             foreach (Otel item in buf.Oteller)
             {
-                foreach (Oda item2 in item.Odalar)
-                {
-                    Rezervasyonlar.AddRange(item2.Rezervasyonlar);
-                }
+                Odalar.AddRange(item.Odalar);
             }
-            return Rezervasyonlar;
+            return Odalar;
         }
 
         //RoomController islemlerinin metotlari
@@ -215,6 +212,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             }
             return RoomID;
         }
+
         
         // Oda Ekleme Metodu
         public bool AddRoom(string otelid,string type, int fiyat, int kisikapasite, int odanumarasi, bool klima, bool wifi, bool minibar, bool televizyon)
