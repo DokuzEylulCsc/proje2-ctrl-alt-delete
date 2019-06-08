@@ -32,8 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.txtSifre = new System.Windows.Forms.TextBox();
             this.btnGiris = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnTemizle = new System.Windows.Forms.Button();
@@ -41,6 +39,8 @@
             this.iletişimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.mskID = new System.Windows.Forms.MaskedTextBox();
+            this.MSKSİFRE = new System.Windows.Forms.MaskedTextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,9 +48,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(103, 218);
+            this.label1.Location = new System.Drawing.Point(119, 217);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(175, 33);
             this.label1.TabIndex = 1;
@@ -59,6 +60,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(76, 282);
             this.label2.Name = "label2";
@@ -69,26 +71,13 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.Location = new System.Drawing.Point(95, 330);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 19);
             this.label3.TabIndex = 3;
             this.label3.Text = "Sifre:";
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(186, 281);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(118, 20);
-            this.txtID.TabIndex = 4;
-            // 
-            // txtSifre
-            // 
-            this.txtSifre.Location = new System.Drawing.Point(186, 329);
-            this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(118, 20);
-            this.txtSifre.TabIndex = 5;
             // 
             // btnGiris
             // 
@@ -161,17 +150,35 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // mskID
+            // 
+            this.mskID.Location = new System.Drawing.Point(194, 283);
+            this.mskID.Mask = "00000";
+            this.mskID.Name = "mskID";
+            this.mskID.Size = new System.Drawing.Size(100, 20);
+            this.mskID.TabIndex = 10;
+            this.mskID.ValidatingType = typeof(int);
+            // 
+            // MSKSİFRE
+            // 
+            this.MSKSİFRE.Location = new System.Drawing.Point(194, 329);
+            this.MSKSİFRE.Mask = "00000";
+            this.MSKSİFRE.Name = "MSKSİFRE";
+            this.MSKSİFRE.Size = new System.Drawing.Size(100, 20);
+            this.MSKSİFRE.TabIndex = 11;
+            this.MSKSİFRE.ValidatingType = typeof(int);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(398, 488);
+            this.Controls.Add(this.MSKSİFRE);
+            this.Controls.Add(this.mskID);
             this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnGiris);
-            this.Controls.Add(this.txtSifre);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -195,13 +202,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.Button btnGiris;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button btnTemizle;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem iletişimToolStripMenuItem;
+        private System.Windows.Forms.MaskedTextBox mskID;
+        private System.Windows.Forms.MaskedTextBox MSKSİFRE;
     }
 }
