@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Otel_Rezervasyon_Sistemi.Controllers;
 
 namespace Otel_Rezervasyon_Sistemi
 {
@@ -20,8 +21,9 @@ namespace Otel_Rezervasyon_Sistemi
         private void btnGeri_Click(object sender, EventArgs e)
         {
             FormYonetici y = new FormYonetici();
+            this.Hide();
             y.Show();
-            this.Close();
+           
 
         }
 
@@ -35,9 +37,12 @@ namespace Otel_Rezervasyon_Sistemi
             }
             if (sonuc == DialogResult.Yes)
             {
+                MainController.GetController().SerializeAtEnd();
                 this.Close();
                 Application.Exit();
             }
         }
+
     }
 }
+

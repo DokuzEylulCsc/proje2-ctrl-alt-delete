@@ -31,6 +31,7 @@
             this.lblOtelEkle = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.mSOtelEkle = new System.Windows.Forms.MenuStrip();
+            this.yoneticiEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rezervasyonListeleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cıkısToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@
             this.cmbTİP = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblyonid = new System.Windows.Forms.Label();
-            this.yoneticiEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mSOtelEkle.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -103,6 +103,13 @@
             this.mSOtelEkle.Size = new System.Drawing.Size(760, 24);
             this.mSOtelEkle.TabIndex = 8;
             this.mSOtelEkle.Text = "menuStrip1";
+            // 
+            // yoneticiEkleToolStripMenuItem
+            // 
+            this.yoneticiEkleToolStripMenuItem.Name = "yoneticiEkleToolStripMenuItem";
+            this.yoneticiEkleToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.yoneticiEkleToolStripMenuItem.Text = "Yonetici Ekle";
+            this.yoneticiEkleToolStripMenuItem.Click += new System.EventHandler(this.yoneticiEkleToolStripMenuItem_Click);
             // 
             // rezervasyonListeleToolStripMenuItem
             // 
@@ -255,7 +262,7 @@
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(97, 34);
             this.btnEkle.TabIndex = 37;
-            this.btnEkle.Text = "Ekle";
+            this.btnEkle.Text = " Otel Ekle";
             this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
@@ -429,13 +436,6 @@
             this.lblyonid.Text = "label18";
             this.lblyonid.Visible = false;
             // 
-            // yoneticiEkleToolStripMenuItem
-            // 
-            this.yoneticiEkleToolStripMenuItem.Name = "yoneticiEkleToolStripMenuItem";
-            this.yoneticiEkleToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
-            this.yoneticiEkleToolStripMenuItem.Text = "Yonetici Ekle";
-            this.yoneticiEkleToolStripMenuItem.Click += new System.EventHandler(this.yoneticiEkleToolStripMenuItem_Click);
-            // 
             // FormYonetici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,9 +450,12 @@
             this.Controls.Add(this.mSOtelEkle);
             this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.mSOtelEkle;
             this.Name = "FormYonetici";
             this.Text = "Yonetici ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormYonetici_FormClosing);
+            this.Load += new System.EventHandler(this.FormYonetici_Load);
             this.mSOtelEkle.ResumeLayout(false);
             this.mSOtelEkle.PerformLayout();
             this.panel1.ResumeLayout(false);

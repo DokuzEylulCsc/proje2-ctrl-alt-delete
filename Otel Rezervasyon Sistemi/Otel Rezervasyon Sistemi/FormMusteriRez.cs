@@ -21,23 +21,24 @@ namespace Otel_Rezervasyon_Sistemi
         private void BtnRezAra_Click(object sender, EventArgs e)
         {
             MainController c = MainController.GetController();
-          //  c.reservation.
-          
+         
         }
 
         private void bilgileriGüncelleToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FormBilgiGüncelle f = new FormBilgiGüncelle();
+            this.Hide();
             f.Show();
-            this.Close();
+           
 
         }
 
         private void sifreDeğiştirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormSifreDegistir s = new FormSifreDegistir();
+            this.Hide();
             s.Show();
-            this.Close();
+           
 
         }
 
@@ -53,9 +54,15 @@ namespace Otel_Rezervasyon_Sistemi
             }
             if (sonuc == DialogResult.Yes)
             {
-                this.Close();
+                MainController.GetController().SerializeAtEnd();
                 Application.Exit();
             }
+        }
+
+        private void FormMusteriRez_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MainController.GetController().SerializeAtEnd();
+            Application.Exit();
         }
     }
 }

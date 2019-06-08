@@ -282,7 +282,7 @@
             this.panelKayitli.Controls.Add(this.label7);
             this.panelKayitli.Controls.Add(this.label3);
             this.panelKayitli.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panelKayitli.Location = new System.Drawing.Point(264, 48);
+            this.panelKayitli.Location = new System.Drawing.Point(267, 51);
             this.panelKayitli.Name = "panelKayitli";
             this.panelKayitli.Size = new System.Drawing.Size(355, 480);
             this.panelKayitli.TabIndex = 17;
@@ -467,6 +467,7 @@
             this.lblyon.Size = new System.Drawing.Size(41, 13);
             this.lblyon.TabIndex = 18;
             this.lblyon.Text = "label14";
+            this.lblyon.Visible = false;
             // 
             // button1
             // 
@@ -494,8 +495,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblodaozellik);
             this.Controls.Add(this.panelIslemde);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormOdaEkle";
             this.Text = "Oda Ekle";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormOdaEkle_FormClosing);
             this.Load += new System.EventHandler(this.FormOdaEkle_Load);
             this.panelIslemde.ResumeLayout(false);
             this.panelIslemde.PerformLayout();

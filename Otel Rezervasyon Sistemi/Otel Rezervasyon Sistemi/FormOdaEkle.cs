@@ -39,14 +39,7 @@ namespace Otel_Rezervasyon_Sistemi
         }
 
       
-        private void button2_Click(object sender, EventArgs e)
-        {
-            tbOdaEkleID.Clear();
-            tbFiyat.Clear();
-            tbOdaEkleAd.Clear();
-            txtOdano.Clear();
-            
-        }
+       
 
       
         private void btnCıkıs_Click(object sender, EventArgs e)
@@ -59,6 +52,7 @@ namespace Otel_Rezervasyon_Sistemi
             }
             if (sonuc == DialogResult.Yes)
             {
+                MainController.GetController().SerializeAtEnd();
                 this.Close();
                 Application.Exit();
             }
@@ -77,7 +71,11 @@ namespace Otel_Rezervasyon_Sistemi
             try
             {
                 MainController m = MainController.GetController();
-                m.room.AddRoomRequest(Convert.ToString(cmbislemdekit.SelectedIndex), lblyon.Text, lblotelid.Text, Convert.ToInt32(txtislemdekino.Text));
+              if(  m.room.AddRoomRequest(Convert.ToString(cmbislemdekit.SelectedIndex), lblyon.Text, lblotelid.Text, Convert.ToInt32(txtislemdekino.Text)))
+                {
+                    MessageBox.Show("Oda Kaydedildi", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                   
             }
             catch(Exception a)
             {
@@ -89,27 +87,17 @@ namespace Otel_Rezervasyon_Sistemi
             
         }
 
-        private void BtnCıkıs2_Click(object sender, EventArgs e)
-        {
-            DialogResult sonuc;
-            sonuc = MessageBox.Show("Çıkmak İstediğinizden Emin misiniz ?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (sonuc == DialogResult.No)
-            {
-                //MessageBox.Show("");// hiçbir işlem yaptırmıyorum
-            }
-            if (sonuc == DialogResult.Yes)
-            {
-                this.Close();
-                Application.Exit();
-            }
-        }
+       
 
         private void btnKayitliKaydet_Click(object sender, EventArgs e)
         {
             try
             {
                 MainController m = MainController.GetController();
-                m.room.AddRoomRequest(Convert.ToString(cmbOdatipi.SelectedIndex), lblyon.Text, tbOdaEkleID.Text, Convert.ToInt32(txtOdano.Text));
+               if( m.room.AddRoomRequest(Convert.ToString(cmbOdatipi.SelectedIndex), lblyon.Text, tbOdaEkleID.Text, Convert.ToInt32(txtOdano.Text)))
+                {
+                    MessageBox.Show("Oda Kaydedildi", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch(Exception a)
             {
@@ -121,8 +109,16 @@ namespace Otel_Rezervasyon_Sistemi
         private void button1_Click(object sender, EventArgs e)
         {
             FormYonetici f = new FormYonetici();
+            this.Hide();
             f.Show();
+          
+        }
+
+        private void FormOdaEkle_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MainController.GetController().SerializeAtEnd();
             this.Close();
+            Application.Exit();
         }
     }
 }

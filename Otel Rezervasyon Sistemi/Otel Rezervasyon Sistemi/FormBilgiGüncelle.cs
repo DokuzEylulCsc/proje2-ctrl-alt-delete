@@ -28,8 +28,9 @@ namespace Otel_Rezervasyon_Sistemi
         private void btnGeri_Click(object sender, EventArgs e)
         {
             FormMusteriRez m = new FormMusteriRez();
+            this.Hide();
             m.Show();
-            this.Close();
+           
 
         }
 
@@ -44,11 +45,17 @@ namespace Otel_Rezervasyon_Sistemi
             {
                 if (checkAd.Checked == true)
                 {
-                    c.user.ChangeInformationRequest(ID, SIFRE, checkAd.Text, GUNCEL);
+                   if( c.user.ChangeInformationRequest(ID, SIFRE, checkAd.Text, GUNCEL))
+                    {
+                        MessageBox.Show("Ad Bilginiz Güncellendi", "Tebrikler", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 if (checkSoyad.Checked == true)
                 {
-                    c.user.ChangeInformationRequest(ID, SIFRE, checkSoyad.Text, GUNCEL);
+                   if( c.user.ChangeInformationRequest(ID, SIFRE, checkSoyad.Text, GUNCEL))
+                    {
+                        MessageBox.Show("Soyad Bilginiz Güncellendi", "Tebrikler", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
 
             }
@@ -58,6 +65,12 @@ namespace Otel_Rezervasyon_Sistemi
             }
                
 
+        }
+
+        private void FormBilgiGüncelle_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MainController.GetController().SerializeAtEnd();
+            Application.Exit();
         }
     }
 }

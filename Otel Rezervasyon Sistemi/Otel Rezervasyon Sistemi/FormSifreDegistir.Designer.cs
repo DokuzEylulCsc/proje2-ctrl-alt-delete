@@ -39,9 +39,11 @@
             this.txtsdSoyad = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.mskID = new System.Windows.Forms.MaskedTextBox();
-            this.mskSifre = new System.Windows.Forms.MaskedTextBox();
+            this.mskYeniSifre = new System.Windows.Forms.MaskedTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.mskSifreTekrari = new System.Windows.Forms.MaskedTextBox();
+            this.mskEskiSifre = new System.Windows.Forms.MaskedTextBox();
+            this.mskID = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,15 +63,15 @@
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(17, 158);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 19);
+            this.label2.Size = new System.Drawing.Size(74, 19);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Sifre:";
+            this.label2.Text = "Eski Sifre:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(17, 207);
+            this.label3.Location = new System.Drawing.Point(18, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 19);
             this.label3.TabIndex = 2;
@@ -77,24 +79,28 @@
             // 
             // btnDegistir
             // 
+            this.btnDegistir.BackColor = System.Drawing.Color.Black;
             this.btnDegistir.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnDegistir.Location = new System.Drawing.Point(149, 273);
+            this.btnDegistir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDegistir.Location = new System.Drawing.Point(149, 293);
             this.btnDegistir.Name = "btnDegistir";
             this.btnDegistir.Size = new System.Drawing.Size(83, 31);
             this.btnDegistir.TabIndex = 6;
             this.btnDegistir.Text = "DEĞİSTİR";
-            this.btnDegistir.UseVisualStyleBackColor = true;
+            this.btnDegistir.UseVisualStyleBackColor = false;
             this.btnDegistir.Click += new System.EventHandler(this.btnDegistir_Click);
             // 
             // btnGERİ
             // 
+            this.btnGERİ.BackColor = System.Drawing.Color.Black;
             this.btnGERİ.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGERİ.Location = new System.Drawing.Point(21, 273);
+            this.btnGERİ.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnGERİ.Location = new System.Drawing.Point(21, 293);
             this.btnGERİ.Name = "btnGERİ";
             this.btnGERİ.Size = new System.Drawing.Size(81, 31);
             this.btnGERİ.TabIndex = 7;
             this.btnGERİ.Text = "GERİ";
-            this.btnGERİ.UseVisualStyleBackColor = true;
+            this.btnGERİ.UseVisualStyleBackColor = false;
             this.btnGERİ.Click += new System.EventHandler(this.btnGERİ_Click);
             // 
             // txtsdAd
@@ -134,8 +140,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.mskYeniSifre);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.mskSifreTekrari);
-            this.panel1.Controls.Add(this.mskSifre);
+            this.panel1.Controls.Add(this.mskEskiSifre);
             this.panel1.Controls.Add(this.mskID);
             this.panel1.Controls.Add(this.btnDegistir);
             this.panel1.Controls.Add(this.txtsdSoyad);
@@ -148,8 +156,48 @@
             this.panel1.Controls.Add(this.btnGERİ);
             this.panel1.Location = new System.Drawing.Point(47, 47);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(260, 326);
+            this.panel1.Size = new System.Drawing.Size(260, 345);
             this.panel1.TabIndex = 12;
+            // 
+            // mskYeniSifre
+            // 
+            this.mskYeniSifre.Location = new System.Drawing.Point(132, 200);
+            this.mskYeniSifre.Mask = "00000";
+            this.mskYeniSifre.Name = "mskYeniSifre";
+            this.mskYeniSifre.Size = new System.Drawing.Size(100, 20);
+            this.mskYeniSifre.TabIndex = 16;
+            this.mskYeniSifre.UseSystemPasswordChar = true;
+            this.mskYeniSifre.ValidatingType = typeof(int);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(17, 201);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 19);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Yeni Sifre:";
+            // 
+            // mskSifreTekrari
+            // 
+            this.mskSifreTekrari.Location = new System.Drawing.Point(132, 250);
+            this.mskSifreTekrari.Mask = "00000";
+            this.mskSifreTekrari.Name = "mskSifreTekrari";
+            this.mskSifreTekrari.Size = new System.Drawing.Size(100, 20);
+            this.mskSifreTekrari.TabIndex = 14;
+            this.mskSifreTekrari.UseSystemPasswordChar = true;
+            this.mskSifreTekrari.ValidatingType = typeof(int);
+            // 
+            // mskEskiSifre
+            // 
+            this.mskEskiSifre.Location = new System.Drawing.Point(131, 158);
+            this.mskEskiSifre.Mask = "00000";
+            this.mskEskiSifre.Name = "mskEskiSifre";
+            this.mskEskiSifre.Size = new System.Drawing.Size(101, 20);
+            this.mskEskiSifre.TabIndex = 13;
+            this.mskEskiSifre.UseSystemPasswordChar = true;
+            this.mskEskiSifre.ValidatingType = typeof(int);
             // 
             // mskID
             // 
@@ -160,24 +208,6 @@
             this.mskID.TabIndex = 12;
             this.mskID.ValidatingType = typeof(int);
             // 
-            // mskSifre
-            // 
-            this.mskSifre.Location = new System.Drawing.Point(131, 158);
-            this.mskSifre.Mask = "00000";
-            this.mskSifre.Name = "mskSifre";
-            this.mskSifre.Size = new System.Drawing.Size(101, 20);
-            this.mskSifre.TabIndex = 13;
-            this.mskSifre.ValidatingType = typeof(int);
-            // 
-            // mskSifreTekrari
-            // 
-            this.mskSifreTekrari.Location = new System.Drawing.Point(131, 206);
-            this.mskSifreTekrari.Mask = "00000";
-            this.mskSifreTekrari.Name = "mskSifreTekrari";
-            this.mskSifreTekrari.Size = new System.Drawing.Size(100, 20);
-            this.mskSifreTekrari.TabIndex = 14;
-            this.mskSifreTekrari.ValidatingType = typeof(int);
-            // 
             // FormSifreDegistir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -185,8 +215,11 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(354, 431);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormSifreDegistir";
             this.Text = "Sifre Değiştir";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSifreDegistir_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormSifreDegistir_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -207,7 +240,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MaskedTextBox mskSifreTekrari;
-        private System.Windows.Forms.MaskedTextBox mskSifre;
+        private System.Windows.Forms.MaskedTextBox mskEskiSifre;
         private System.Windows.Forms.MaskedTextBox mskID;
+        private System.Windows.Forms.MaskedTextBox mskYeniSifre;
+        private System.Windows.Forms.Label label6;
     }
 }
