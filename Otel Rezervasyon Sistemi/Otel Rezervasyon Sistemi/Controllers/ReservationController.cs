@@ -65,8 +65,18 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
             {
                 if (CheckReservationDateAvailabilty(otelId, odaNo, baslangic, bitis))
                 {
-                    /*add reservation core*/
-                    return true;
+                    try
+                    {
+                        core.AddReservation(otelId, userID, odaNo, baslangic, bitis);
+                        return true;
+                    }
+                    catch(Exception e)
+                    {
+                        throw new Exception(e.Message);
+                    }
+                    
+                    
+                    
                 }
                 else
                 {
@@ -96,7 +106,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
                         {
                             if (reservation.RezBaslangic == baslangic && reservation.RezBitis == bitis)
                             {
-                                /*core delete reservation*/
+                                /*delete reservation*/
                                 return true;
                             }
                         }
