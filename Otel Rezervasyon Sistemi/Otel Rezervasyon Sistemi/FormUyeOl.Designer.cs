@@ -208,10 +208,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "FormUyeOl";
             this.Text = "Uye OL";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormUyeOl_FormClosing);
+//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormUyeOl_FormClosing);
+      //     this.Load += new System.EventHandler(this.FormUyeOl_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

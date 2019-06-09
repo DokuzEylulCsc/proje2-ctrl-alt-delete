@@ -218,8 +218,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormSifreDegistir";
             this.Text = "Sifre Değiştir";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSifreDegistir_FormClosing);
+//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSifreDegistir_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormSifreDegistir_FormClosed);
+          //  this.Load += new System.EventHandler(this.FormSifreDegistir_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -329,7 +329,7 @@
             this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(50, 301);
+            this.label5.Location = new System.Drawing.Point(51, 304);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 21);
             this.label5.TabIndex = 27;
@@ -471,7 +471,7 @@
             // 
             this.chcklima.AutoSize = true;
             this.chcklima.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chcklima.Location = new System.Drawing.Point(168, 305);
+            this.chcklima.Location = new System.Drawing.Point(166, 303);
             this.chcklima.Name = "chcklima";
             this.chcklima.Size = new System.Drawing.Size(62, 22);
             this.chcklima.TabIndex = 31;
@@ -482,7 +482,7 @@
             // 
             this.chcwifi.AutoSize = true;
             this.chcwifi.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chcwifi.Location = new System.Drawing.Point(251, 305);
+            this.chcwifi.Location = new System.Drawing.Point(249, 303);
             this.chcwifi.Name = "chcwifi";
             this.chcwifi.Size = new System.Drawing.Size(53, 22);
             this.chcwifi.TabIndex = 32;
@@ -493,7 +493,7 @@
             // 
             this.chcminibar.AutoSize = true;
             this.chcminibar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chcminibar.Location = new System.Drawing.Point(168, 342);
+            this.chcminibar.Location = new System.Drawing.Point(166, 340);
             this.chcminibar.Name = "chcminibar";
             this.chcminibar.Size = new System.Drawing.Size(76, 22);
             this.chcminibar.TabIndex = 33;
@@ -504,7 +504,7 @@
             // 
             this.chcTv.AutoSize = true;
             this.chcTv.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chcTv.Location = new System.Drawing.Point(252, 342);
+            this.chcTv.Location = new System.Drawing.Point(250, 340);
             this.chcTv.Name = "chcTv";
             this.chcTv.Size = new System.Drawing.Size(43, 22);
             this.chcTv.TabIndex = 34;
@@ -560,7 +560,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(648, 560);
+            this.ClientSize = new System.Drawing.Size(678, 581);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCıkıs);
             this.Controls.Add(this.panelKayitli);
@@ -573,7 +573,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormOdaEkle";
             this.Text = "Oda Ekle";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormOdaEkle_FormClosing);
+//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormOdaEkle_FormClosing);
             this.Load += new System.EventHandler(this.FormOdaEkle_Load);
             this.panelIslemde.ResumeLayout(false);
             this.panelIslemde.PerformLayout();

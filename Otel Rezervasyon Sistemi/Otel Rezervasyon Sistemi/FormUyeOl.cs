@@ -44,11 +44,8 @@ namespace Otel_Rezervasyon_Sistemi
             }
         }
 
-        private void FormUyeOl_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            MainController.GetController().SerializeAtEnd();
-            this.Close();
-            Application.Exit();
-        }
+
+
+       
     }
 }

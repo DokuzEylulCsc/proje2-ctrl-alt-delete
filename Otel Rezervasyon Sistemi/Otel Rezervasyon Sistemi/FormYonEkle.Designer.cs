@@ -202,8 +202,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormYonEkle";
             this.Text = "Yonetici Ekle";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormYonEkle_FormClosing);
-            this.Load += new System.EventHandler(this.FormYonEkle_Load);
+//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormYonEkle_FormClosing);
+          //  this.Load += new System.EventHandler(this.FormYonEkle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

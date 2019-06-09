@@ -186,9 +186,9 @@
             this.checkSoyad.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkSoyad.Location = new System.Drawing.Point(136, 168);
             this.checkSoyad.Name = "checkSoyad";
-            this.checkSoyad.Size = new System.Drawing.Size(72, 23);
+            this.checkSoyad.Size = new System.Drawing.Size(66, 23);
             this.checkSoyad.TabIndex = 12;
-            this.checkSoyad.Text = "SOYAD";
+            this.checkSoyad.Text = "Soyad";
             this.checkSoyad.UseVisualStyleBackColor = true;
             // 
             // checkAd
@@ -197,9 +197,9 @@
             this.checkAd.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkAd.Location = new System.Drawing.Point(49, 168);
             this.checkAd.Name = "checkAd";
-            this.checkAd.Size = new System.Drawing.Size(47, 23);
+            this.checkAd.Size = new System.Drawing.Size(45, 23);
             this.checkAd.TabIndex = 11;
-            this.checkAd.Text = "AD";
+            this.checkAd.Text = "Ad";
             this.checkAd.UseVisualStyleBackColor = true;
             // 
             // FormBilgiGüncelle
@@ -215,7 +215,8 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormBilgiGüncelle";
             this.Text = "Bilgileri Güncelle";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormBilgiGüncelle_FormClosing);
+         //   this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormBilgiGüncelle_FormClosing);
+//            this.Load += new System.EventHandler(this.FormBilgiGüncelle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

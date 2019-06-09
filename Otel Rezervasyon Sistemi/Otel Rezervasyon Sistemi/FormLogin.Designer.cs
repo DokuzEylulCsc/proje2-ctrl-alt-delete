@@ -181,7 +181,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormLogin";
             this.Text = "Login Page";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogin_FormClosing);
+//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogin_FormClosing);
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

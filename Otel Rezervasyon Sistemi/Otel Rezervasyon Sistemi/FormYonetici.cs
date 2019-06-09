@@ -83,18 +83,7 @@ namespace Otel_Rezervasyon_Sistemi
 
         private void FormYonetici_Load(object sender, EventArgs e)
         {
-            this.Close();
-            Application.Exit();
 
         }
-
-        private void FormYonetici_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            MainController.GetController().SerializeAtEnd();
-            this.Close();
-            Application.Exit();
-        }
-
-       
     }
 }

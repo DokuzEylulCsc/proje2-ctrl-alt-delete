@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chcTv = new System.Windows.Forms.CheckBox();
+            this.chcminibar = new System.Windows.Forms.CheckBox();
+            this.chcwifi = new System.Windows.Forms.CheckBox();
+            this.chcklima = new System.Windows.Forms.CheckBox();
             this.mcbitis = new System.Windows.Forms.MonthCalendar();
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -60,10 +64,6 @@
             this.btnRezYap = new System.Windows.Forms.Button();
             this.btnRezListele = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.chcTv = new System.Windows.Forms.CheckBox();
-            this.chcminibar = new System.Windows.Forms.CheckBox();
-            this.chcwifi = new System.Windows.Forms.CheckBox();
-            this.chcklima = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -96,6 +96,50 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(831, 317);
             this.panel1.TabIndex = 0;
+            // 
+            // chcTv
+            // 
+            this.chcTv.AutoSize = true;
+            this.chcTv.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chcTv.Location = new System.Drawing.Point(202, 259);
+            this.chcTv.Name = "chcTv";
+            this.chcTv.Size = new System.Drawing.Size(43, 22);
+            this.chcTv.TabIndex = 38;
+            this.chcTv.Text = "TV";
+            this.chcTv.UseVisualStyleBackColor = true;
+            // 
+            // chcminibar
+            // 
+            this.chcminibar.AutoSize = true;
+            this.chcminibar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chcminibar.Location = new System.Drawing.Point(118, 259);
+            this.chcminibar.Name = "chcminibar";
+            this.chcminibar.Size = new System.Drawing.Size(76, 22);
+            this.chcminibar.TabIndex = 37;
+            this.chcminibar.Text = "Minibar";
+            this.chcminibar.UseVisualStyleBackColor = true;
+            // 
+            // chcwifi
+            // 
+            this.chcwifi.AutoSize = true;
+            this.chcwifi.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chcwifi.Location = new System.Drawing.Point(201, 222);
+            this.chcwifi.Name = "chcwifi";
+            this.chcwifi.Size = new System.Drawing.Size(53, 22);
+            this.chcwifi.TabIndex = 36;
+            this.chcwifi.Text = "Wifi";
+            this.chcwifi.UseVisualStyleBackColor = true;
+            // 
+            // chcklima
+            // 
+            this.chcklima.AutoSize = true;
+            this.chcklima.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chcklima.Location = new System.Drawing.Point(118, 222);
+            this.chcklima.Name = "chcklima";
+            this.chcklima.Size = new System.Drawing.Size(62, 22);
+            this.chcklima.TabIndex = 35;
+            this.chcklima.Text = "Klima";
+            this.chcklima.UseVisualStyleBackColor = true;
             // 
             // mcbitis
             // 
@@ -407,50 +451,6 @@
             this.button1.Text = "Önceki Rez. Listele";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // chcTv
-            // 
-            this.chcTv.AutoSize = true;
-            this.chcTv.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chcTv.Location = new System.Drawing.Point(202, 259);
-            this.chcTv.Name = "chcTv";
-            this.chcTv.Size = new System.Drawing.Size(43, 22);
-            this.chcTv.TabIndex = 38;
-            this.chcTv.Text = "TV";
-            this.chcTv.UseVisualStyleBackColor = true;
-            // 
-            // chcminibar
-            // 
-            this.chcminibar.AutoSize = true;
-            this.chcminibar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chcminibar.Location = new System.Drawing.Point(118, 259);
-            this.chcminibar.Name = "chcminibar";
-            this.chcminibar.Size = new System.Drawing.Size(76, 22);
-            this.chcminibar.TabIndex = 37;
-            this.chcminibar.Text = "Minibar";
-            this.chcminibar.UseVisualStyleBackColor = true;
-            // 
-            // chcwifi
-            // 
-            this.chcwifi.AutoSize = true;
-            this.chcwifi.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chcwifi.Location = new System.Drawing.Point(201, 222);
-            this.chcwifi.Name = "chcwifi";
-            this.chcwifi.Size = new System.Drawing.Size(53, 22);
-            this.chcwifi.TabIndex = 36;
-            this.chcwifi.Text = "Wifi";
-            this.chcwifi.UseVisualStyleBackColor = true;
-            // 
-            // chcklima
-            // 
-            this.chcklima.AutoSize = true;
-            this.chcklima.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chcklima.Location = new System.Drawing.Point(118, 222);
-            this.chcklima.Name = "chcklima";
-            this.chcklima.Size = new System.Drawing.Size(62, 22);
-            this.chcklima.TabIndex = 35;
-            this.chcklima.Text = "Klima";
-            this.chcklima.UseVisualStyleBackColor = true;
-            // 
             // FormMusteriRez
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -473,7 +473,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMusteriRez";
             this.Text = "FormMusteriRez";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMusteriRez_FormClosing);
+//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMusteriRez_FormClosing);
+     //       this.Load += new System.EventHandler(this.FormMusteriRez_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);

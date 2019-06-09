@@ -19,11 +19,6 @@ namespace Otel_Rezervasyon_Sistemi
         }
 
         
-      
-
-
-      
-
 
         private void btnGeri_Click(object sender, EventArgs e)
         {
@@ -67,10 +62,8 @@ namespace Otel_Rezervasyon_Sistemi
 
         }
 
-        private void FormBilgiGüncelle_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            MainController.GetController().SerializeAtEnd();
-            Application.Exit();
-        }
+    
+
+       
     }
 }

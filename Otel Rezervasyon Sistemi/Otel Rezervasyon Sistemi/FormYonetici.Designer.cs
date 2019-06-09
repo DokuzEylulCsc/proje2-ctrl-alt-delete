@@ -454,7 +454,6 @@
             this.MainMenuStrip = this.mSOtelEkle;
             this.Name = "FormYonetici";
             this.Text = "Yonetici ";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormYonetici_FormClosing);
             this.Load += new System.EventHandler(this.FormYonetici_Load);
             this.mSOtelEkle.ResumeLayout(false);
             this.mSOtelEkle.PerformLayout();

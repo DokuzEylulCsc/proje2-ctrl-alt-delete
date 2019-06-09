@@ -59,11 +59,9 @@ namespace Otel_Rezervasyon_Sistemi
             }
         }
 
-        private void FormMusteriRez_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            MainController.GetController().SerializeAtEnd();
-            Application.Exit();
-        }
+       
+
+       
     }
 }
 
