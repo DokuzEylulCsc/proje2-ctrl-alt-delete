@@ -364,28 +364,37 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             List<string> ReturnsItems = new List<string>();
             if (type == "Pansiyon")
             {
-                foreach (Pansiyon item in buf.Oteller)
+                foreach (Otel item in buf.Oteller)
                 {
-                    temp = item.ID + "-" + item.OtelAdi + "-" + item.OtelYildiz;
-                    ReturnsItems.Add(temp);
+                    if (item is Pansiyon)
+                    {
+                        temp = item.ID + "-" + item.OtelAdi + "-" + item.OtelYildiz;
+                        ReturnsItems.Add(temp);
+                    }                 
                 }
                 return ReturnsItems;
             }
             else if (type == "Butik Otel")
             {
-                foreach (ButikOtel item in buf.Oteller)
+                foreach (Otel item in buf.Oteller)
                 {
-                    temp = item.ID + " - " + item.OtelAdi + "-" + item.OtelYildiz;
-                    ReturnsItems.Add(temp);
+                    if (item is ButikOtel)
+                    {
+                        temp = item.ID + " - " + item.OtelAdi + "-" + item.OtelYildiz;
+                        ReturnsItems.Add(temp);
+                    }                 
                 }
                 return ReturnsItems;
             }
             else if (type == "Tatil Köyü")
             {
-                foreach (TatilKoyu item in buf.Oteller)
+                foreach (Otel item in buf.Oteller)
                 {
-                    temp = item.ID + " - " + item.OtelAdi + "-" + item.OtelYildiz;
-                    ReturnsItems.Add(temp);
+                    if (item is TatilKoyu)
+                    {
+                        temp = item.ID + " - " + item.OtelAdi + "-" + item.OtelYildiz;
+                        ReturnsItems.Add(temp);
+                    }                   
                 }
                 return ReturnsItems;
             }
