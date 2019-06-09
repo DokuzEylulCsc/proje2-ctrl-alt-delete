@@ -83,3 +83,6 @@ C:\Users\tayfu\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Reze
 C:\Users\tayfu\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.csproj.CoreCompileInputs.cache
 C:\Users\tayfu\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.exe
 C:\Users\tayfu\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\obj\Debug\Otel Rezervasyon Sistemi.pdb
+C:\Users\tayfu\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\bin\Debug\Otel Rezervasyon Sistemi.exe.config
+C:\Users\tayfu\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\bin\Debug\Otel Rezervasyon Sistemi.exe
+C:\Users\tayfu\Desktop\proje2-ctrl-alt-delete\Otel Rezervasyon Sistemi\Otel Rezervasyon Sistemi\bin\Debug\Otel Rezervasyon Sistemi.pdb
