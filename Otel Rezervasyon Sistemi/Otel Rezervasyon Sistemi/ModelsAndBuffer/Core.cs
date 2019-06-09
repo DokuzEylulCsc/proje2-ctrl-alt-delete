@@ -231,7 +231,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
                         item.Odalar.Add(new ManzaraliOda(fiyat, kisikapasite, odanumarasi, klima, wifi, minibar, televizyon));
                         return true;
                     }
-                    else if (type == "Kral")
+                    else if (type == "Kral Dairesi")
                     {
                         item.Odalar.Add(new KralDairesi(fiyat, kisikapasite, odanumarasi, klima, wifi, minibar, televizyon));
                         return true; 

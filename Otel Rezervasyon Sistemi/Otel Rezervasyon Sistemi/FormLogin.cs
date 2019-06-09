@@ -13,6 +13,7 @@ namespace Otel_Rezervasyon_Sistemi
 {
     public partial class FormLogin : Form
     {
+        public static string yoneticiID;
         public FormLogin()
         {
             InitializeComponent();
@@ -34,6 +35,7 @@ namespace Otel_Rezervasyon_Sistemi
                 if(a is Musteri)
                 {
                     FormMusteriRez F = new FormMusteriRez();
+                    
                     this.Hide();
                     F.Show();
                    
@@ -42,6 +44,7 @@ namespace Otel_Rezervasyon_Sistemi
                 else
                 {
                     FormYonetici y = new FormYonetici();
+                    yoneticiID = mskID.Text;
                     this.Hide();
                     y.Show();
                     

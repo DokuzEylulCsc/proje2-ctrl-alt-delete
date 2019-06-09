@@ -24,6 +24,20 @@
       <Televizyonlu>true</Televizyonlu>
       <Wifili>false</Wifili>
     </Odalar>
+    <Odalar xsi:type="KralDairesi">
+      <Rezervasyonlar />
+      <OdaNo>2345</OdaNo>
+      <KisiKapasitesi>0</KisiKapasitesi>
+      <OdaFiyati>250</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>true</Minibarli>
+      <Televizyonlu>true</Televizyonlu>
+      <Wifili>true</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <OyunKonsolu>true</OyunKonsolu>
+      <Jakuzi>true</Jakuzi>
+    </Odalar>
     <Temizlik>1</Temizlik>
     <Hizmet>1</Hizmet>
     <Konum>1</Konum>

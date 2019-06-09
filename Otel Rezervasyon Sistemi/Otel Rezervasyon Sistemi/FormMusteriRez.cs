@@ -25,7 +25,7 @@ namespace Otel_Rezervasyon_Sistemi
             // c.filter.HotelFilter(cmboteltip.SelectedItem.ToString(),cmbodatip.SelectedItem.ToString(),Convert.ToInt32( cmbyıldız.SelectedItem), Convert.ToInt32(txtminfiyat.Text), Convert.ToInt32(txtmaxfiyat.Text),chcwifi.Checked,chcminibar.Checked,chcklima.Checked,chcTv.Checked,mcbaslangic.SelectionRange.Start,mcbitis.SelectionRange.End);
             try
             {
-                listBoxUygunOteller.Items.Add(c.filter.HotelFilter(cmboteltip.SelectedItem.ToString(), cmbodatip.SelectedItem.ToString(), Convert.ToInt32(cmbyıldız.SelectedItem), Convert.ToInt32(txtminfiyat.Text), Convert.ToInt32(txtmaxfiyat.Text), chcwifi.Checked, chcminibar.Checked, chcklima.Checked, chcTv.Checked, mcbaslangic.SelectionRange.Start.Date, mcbitis.SelectionRange.Start.Date));
+                listBoxUygunOteller.Items.AddRange(c.filter.HotelFilter(cmboteltip.SelectedItem.ToString(), cmbodatip.SelectedItem.ToString(), Convert.ToInt32(cmbyıldız.SelectedItem), Convert.ToInt32(txtminfiyat.Text), Convert.ToInt32(txtmaxfiyat.Text), chcwifi.Checked, chcminibar.Checked, chcklima.Checked, chcTv.Checked, mcbaslangic.SelectionRange.Start.Date, mcbitis.SelectionRange.Start.Date).ToArray());
             }
             catch(Exception a)
             {

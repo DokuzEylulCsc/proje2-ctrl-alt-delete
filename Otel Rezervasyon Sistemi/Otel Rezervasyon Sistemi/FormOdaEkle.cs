@@ -96,7 +96,7 @@ namespace Otel_Rezervasyon_Sistemi
             {
                 MainController m = MainController.GetController();
                 if (m.room.AddRoomRequest(Convert.ToString(cmbOdatipi.SelectedItem), Convert.ToInt32(tbFiyat.Text),
-                    lblyon.Text, tbOdaEkleID.Text, Convert.ToInt32(txtOdano.Text), Convert.ToInt32(CmbKisi.SelectedItem),chcklima.Checked,chcTv.Checked,chcminibar.Checked,chcwifi.Checked)) 
+                    FormLogin.yoneticiID, tbOdaEkleID.Text, Convert.ToInt32(txtOdano.Text), Convert.ToInt32(CmbKisi.SelectedItem),chcklima.Checked,chcTv.Checked,chcminibar.Checked,chcwifi.Checked)) 
                 {
                     MessageBox.Show("Oda Kaydedildi", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
