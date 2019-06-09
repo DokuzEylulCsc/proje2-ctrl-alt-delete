@@ -31,13 +31,13 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <returns>"OtelID-OtelAdi-OdaNumarasi" formatinda elemanlari olan bir string listesi dondurur</returns>
         public List<string> HotelFilter(string hotelType, string roomType, int point, int minPrice, int maxPrice, bool wifi, bool minibar, bool klima, bool televizyon, DateTime start, DateTime end)
         {
-            /*!!!CORE!!!otel tipine gore otel idlerini ve isimlerini donduren method  orn.("OtelID-OtelADI-Yildizi")*/
-            List<string> hotelIDandNamesandStars = new List<string>();
+            
+            List<string> hotelIDandNamesandStars = core.ReturnOtelInformations(hotelType);
             List<string> hotelIDs = new List<string>();
             List<string> hotelNames = new List<string>();
             List<string> hotelStars = new List<string>();
             foreach (string s in hotelIDandNamesandStars)
-            {
+            {2
                 hotelIDs.Add(s.Split('-')[0]);
                 hotelNames.Add(s.Split('-')[1]);
                 hotelStars.Add(s.Split('-')[2]);

@@ -16,6 +16,7 @@ namespace Otel_Rezervasyon_Sistemi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Controllers.MainController.GetController().DeserializeAtStart();
             Application.Run(new FormLogin());
         }
     }
