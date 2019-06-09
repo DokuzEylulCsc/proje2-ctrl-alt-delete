@@ -11,7 +11,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
     [Serializable]
     public class TatilKoyu:Otel
     {
-        private TatilKoyu()
+        public TatilKoyu()
         {
             // Serialize islemi icin bos bir yapıcı metoda ihtiyac var bu nedenle kullanıldı.
         }

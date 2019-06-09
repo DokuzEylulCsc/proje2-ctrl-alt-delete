@@ -13,7 +13,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
     [Serializable]
     abstract public class Kullanici
     {
-        protected Kullanici()
+        public Kullanici()
         {
             // Xml islemleri icin gereken bos yapıcı metot.
         }

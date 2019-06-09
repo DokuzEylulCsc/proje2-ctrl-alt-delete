@@ -11,7 +11,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
     [Serializable]
     public class ManzaraliOda:Oda
     {
-        private ManzaraliOda()
+        public ManzaraliOda()
         {
             // Serilestirme islemi icin gereken bos bir yapıcı metot.
         }

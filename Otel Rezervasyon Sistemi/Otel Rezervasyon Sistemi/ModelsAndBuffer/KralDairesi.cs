@@ -11,7 +11,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
     [Serializable]
     public class KralDairesi:Oda
     {
-        private KralDairesi()
+        public KralDairesi()
         {
             // Serilestirme islemleri icin gerektiginden bos bir yapıcı metot tanımlandı.
         }

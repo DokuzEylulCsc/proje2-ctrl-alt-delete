@@ -9,7 +9,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
     [Serializable]
     public class Yonetici:Kullanici,IGoruntuleyebilir,IYonetebilir
     {
-        private Yonetici()
+        public Yonetici()
         {
             // Xml islemleri icin gerekli bos yapıcı metot.
         }

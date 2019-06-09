@@ -11,7 +11,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
     [Serializable]
     public class Musteri:Kullanici,IGoruntuleyebilir
     {
-        private Musteri()
+        public Musteri()
         {
             // Xml islemleri icin gereken bos yapıcı metot.
         }

@@ -11,7 +11,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
     [Serializable]
     public class Rezervasyon
     {
-        private Rezervasyon()
+        public Rezervasyon()
         {
             // Xml serilestirme islemi yapabilmek icin bir adet bos yapıcı metot gerekli.
         }
