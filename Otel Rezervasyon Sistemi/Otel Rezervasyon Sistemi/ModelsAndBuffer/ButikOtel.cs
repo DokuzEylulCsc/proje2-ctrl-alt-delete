@@ -11,7 +11,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
     [Serializable]
     public class ButikOtel:Otel
     {
-        private ButikOtel()
+        public ButikOtel()
         {
             // Serilestirme islemi icin bos bir yapıcı metot bulunması gerekiyor.
         }

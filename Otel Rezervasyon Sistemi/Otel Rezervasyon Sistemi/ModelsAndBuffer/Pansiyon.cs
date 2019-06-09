@@ -11,7 +11,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
     [Serializable]
     public class Pansiyon:Otel
     {
-        private Pansiyon()
+        public Pansiyon()
         {
             // Xml islemleri icin gerekli bos yapıcı metot.
         }

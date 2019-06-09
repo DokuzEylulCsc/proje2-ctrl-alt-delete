@@ -14,7 +14,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
     [Serializable]
     abstract public class Otel
     {
-        protected Otel()
+        public Otel()
         {
             // Parametresiz otel yaratılmasını istemiyoruz ancak serilestirme islemi icin gerekli bu nedenle de parametresiz yaratmanin onune gecmek icin
             // protected tanımlı bir bos yapıcı metodu var.

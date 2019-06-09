@@ -11,7 +11,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
     [Serializable]
     public class StandartOda:Oda
     {
-        private StandartOda()
+        public StandartOda()
         {
             // Serilestirme islemi icin gerektiginden bos yapıcı metot tanımlandı.
         }

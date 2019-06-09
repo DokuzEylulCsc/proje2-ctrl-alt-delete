@@ -14,7 +14,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
     [Serializable]
     abstract public class Oda
     {
-        protected Oda()
+        public Oda()
         {
             // Xml islemleri icin bir bos yapıcı metoda ihtiyac duyuluyor bu yuzden tanımlandı. Ancak kullanıcının parametresiz oda yaratmasını engelleyebilmek
             // icin protected olarak tanımladık.
