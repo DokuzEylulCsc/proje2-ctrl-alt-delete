@@ -39,14 +39,14 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
         // Nesneleri serilestirip xml dosyasina yazan metot.
         public void Serialization()
         {
-            Otel o = new TatilKoyu(1, 1, 1, "123456789", "BulutlardaTatil");
-            o.Odalar.Add(new ManzaraliOda(400, 2, 9789, true, false, true, false));
-            o.Odalar.Add(new StandartOda(100, 2, 789, true, false, false, true));
-            Oteller.Add(o);
-            Kullanici k = new Yonetici("Emdidka", "Emir", "Bulut", "sananee1");
-            Kullanici k2 = new Musteri("SimSim", "Simge", "Yavas", "sananee2");
-            Kullanicilar.Add(k);
-            Kullanicilar.Add(k2);
+            //Otel o = new TatilKoyu(1, 1, 1, "123456789", "BulutlardaTatil");
+            //o.Odalar.Add(new ManzaraliOda(400, 2, 9789, true, false, true, false));
+            //o.Odalar.Add(new StandartOda(100, 2, 789, true, false, false, true));
+            //Oteller.Add(o);
+            //Kullanici k = new Yonetici("11111", "Super", "Admin", "11111");
+            //Kullanici k2 = new Yonetici("22222", "Super", "Admin2", "22222");
+            //Kullanicilar.Add(k);
+            //Kullanicilar.Add(k2);
 
             using (StreamWriter sr = new StreamWriter(@"../Otel.xml"))
             {

@@ -32,7 +32,10 @@ namespace Otel_Rezervasyon_Sistemi
             MainController m = MainController.GetController();
             try
             {
-                m.user.CreateAccountRequest(mID.Text, mSIFRE.Text, mSIFRET.Text, TXTAD.Text, TXTSOYAD.Text);
+                if(m.user.CreateManagerAccountRequest(mID.Text, mSIFRE.Text, mSIFRET.Text, TXTAD.Text, TXTSOYAD.Text))
+                {
+                    MessageBox.Show("Yonetici Olusturuldu", "Tebrikler");
+                }
             }
             catch(Exception a)
             {

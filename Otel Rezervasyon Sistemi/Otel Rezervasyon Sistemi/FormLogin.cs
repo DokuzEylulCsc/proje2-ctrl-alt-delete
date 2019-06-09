@@ -81,8 +81,8 @@ namespace Otel_Rezervasyon_Sistemi
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            MainController.GetController().SerializeAtEnd();
-            MainController.GetController().DeserializeAtStart();
+            //MainController.GetController().SerializeAtEnd();
+           //MainController.GetController().DeserializeAtStart();
             
         }
 

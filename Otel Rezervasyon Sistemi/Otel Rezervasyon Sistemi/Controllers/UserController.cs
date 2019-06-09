@@ -89,6 +89,34 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
                 throw new Exception("Sifreler Uyusmuyor!");
             }
         }
+        public bool CreateManagerAccountRequest(string id, string password, string passwordverif, string ad, string soyad)
+        {
+            if (password == passwordverif)
+            {
+                List<string> IDs = core.ReturnAdminId();
+                IDs.AddRange(core.ReturnCustomerId());
+                if (IDs.Contains(id))
+                {
+                    throw new Exception("Boyle Bir ID zaten bulunmaktadir");
+                }
+                try
+                {
+                    core.AddAdmin(id, ad, soyad, password);
+                    return true;
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+
+
+            }
+            else
+            {
+                throw new Exception("Sifreler Uyusmuyor!");
+            }
+        }
+
         /// <summary>
         /// Kullanicinin sifre degistirme istegi
         /// </summary>

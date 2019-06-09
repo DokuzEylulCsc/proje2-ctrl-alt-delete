@@ -37,7 +37,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
             List<string> hotelNames = new List<string>();
             List<string> hotelStars = new List<string>();
             foreach (string s in hotelIDandNamesandStars)
-            {2
+            {
                 hotelIDs.Add(s.Split('-')[0]);
                 hotelNames.Add(s.Split('-')[1]);
                 hotelStars.Add(s.Split('-')[2]);

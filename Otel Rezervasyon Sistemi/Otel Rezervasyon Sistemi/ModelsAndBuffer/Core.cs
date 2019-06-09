@@ -154,12 +154,12 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
                 buf.Oteller.Add(new Pansiyon(temizlik, konum, hizmet, otelid, oteladi));
                 return true;
             }
-            else if (type == "Butik")
+            else if (type == "Butik Otel")
             {
                 buf.Oteller.Add(new ButikOtel(temizlik, konum, hizmet, otelid, oteladi));
                 return true;
             }
-            else if (type == "Tatil")
+            else if (type == "Tatil Köyü")
             {
                 buf.Oteller.Add(new TatilKoyu(temizlik, konum, hizmet, otelid, oteladi));
                 return true;
