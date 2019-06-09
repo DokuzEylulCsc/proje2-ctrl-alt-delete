@@ -35,18 +35,18 @@
             this.chcklima = new System.Windows.Forms.CheckBox();
             this.mcbitis = new System.Windows.Forms.MonthCalendar();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbyıldız = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmboteltip = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.mcbaslangic = new System.Windows.Forms.MonthCalendar();
             this.BtnRezAra = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtmaxfiyat = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtminfiyat = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbodatip = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.listBoxUygunOteller = new System.Windows.Forms.ListBox();
@@ -77,18 +77,18 @@
             this.panel1.Controls.Add(this.chcklima);
             this.panel1.Controls.Add(this.mcbitis);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.comboBox3);
+            this.panel1.Controls.Add(this.cmbyıldız);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.cmboteltip);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.mcbaslangic);
             this.panel1.Controls.Add(this.BtnRezAra);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtmaxfiyat);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtminfiyat);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cmbodatip);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -159,17 +159,19 @@
             this.label12.TabIndex = 19;
             this.label12.Text = "Bitiş Tarihi:";
             // 
-            // comboBox3
+            // cmbyıldız
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cmbyıldız.FormattingEnabled = true;
+            this.cmbyıldız.Items.AddRange(new object[] {
+            "1",
+            "2",
             "3",
             "4",
             "5"});
-            this.comboBox3.Location = new System.Drawing.Point(118, 115);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 28);
-            this.comboBox3.TabIndex = 17;
+            this.cmbyıldız.Location = new System.Drawing.Point(118, 115);
+            this.cmbyıldız.Name = "cmbyıldız";
+            this.cmbyıldız.Size = new System.Drawing.Size(121, 28);
+            this.cmbyıldız.TabIndex = 17;
             // 
             // label11
             // 
@@ -183,17 +185,17 @@
             this.label11.TabIndex = 16;
             this.label11.Text = "Yıldiz Sayısı:";
             // 
-            // comboBox2
+            // cmboteltip
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmboteltip.FormattingEnabled = true;
+            this.cmboteltip.Items.AddRange(new object[] {
             "Tatil Köyü",
             "Butik Otel",
             "Pansiyon"});
-            this.comboBox2.Location = new System.Drawing.Point(118, 18);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
-            this.comboBox2.TabIndex = 15;
+            this.cmboteltip.Location = new System.Drawing.Point(118, 18);
+            this.cmboteltip.Name = "cmboteltip";
+            this.cmboteltip.Size = new System.Drawing.Size(121, 28);
+            this.cmboteltip.TabIndex = 15;
             // 
             // label10
             // 
@@ -228,12 +230,12 @@
             this.BtnRezAra.UseVisualStyleBackColor = false;
             this.BtnRezAra.Click += new System.EventHandler(this.BtnRezAra_Click);
             // 
-            // textBox2
+            // txtmaxfiyat
             // 
-            this.textBox2.Location = new System.Drawing.Point(202, 167);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(47, 26);
-            this.textBox2.TabIndex = 6;
+            this.txtmaxfiyat.Location = new System.Drawing.Point(202, 167);
+            this.txtmaxfiyat.Name = "txtmaxfiyat";
+            this.txtmaxfiyat.Size = new System.Drawing.Size(47, 26);
+            this.txtmaxfiyat.TabIndex = 6;
             // 
             // label8
             // 
@@ -245,12 +247,12 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "---";
             // 
-            // textBox1
+            // txtminfiyat
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 167);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(48, 26);
-            this.textBox1.TabIndex = 4;
+            this.txtminfiyat.Location = new System.Drawing.Point(118, 167);
+            this.txtminfiyat.Name = "txtminfiyat";
+            this.txtminfiyat.Size = new System.Drawing.Size(48, 26);
+            this.txtminfiyat.TabIndex = 4;
             // 
             // label5
             // 
@@ -276,17 +278,17 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Baslangic Tarihi:";
             // 
-            // comboBox1
+            // cmbodatip
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbodatip.FormattingEnabled = true;
+            this.cmbodatip.Items.AddRange(new object[] {
             "Kral Dairesi",
             "Manzaralı",
             "Standart"});
-            this.comboBox1.Location = new System.Drawing.Point(118, 65);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 8;
+            this.cmbodatip.Location = new System.Drawing.Point(118, 65);
+            this.cmbodatip.Name = "cmbodatip";
+            this.cmbodatip.Size = new System.Drawing.Size(121, 28);
+            this.cmbodatip.TabIndex = 8;
             // 
             // label6
             // 
@@ -473,8 +475,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMusteriRez";
             this.Text = "FormMusteriRez";
-//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMusteriRez_FormClosing);
-     //       this.Load += new System.EventHandler(this.FormMusteriRez_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -495,10 +495,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox cmbodatip;
+        private System.Windows.Forms.TextBox txtmaxfiyat;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtminfiyat;
         private System.Windows.Forms.Button BtnRezAra;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem bilgileriGüncelleToolStripMenuItem;
@@ -509,9 +509,9 @@
         private System.Windows.Forms.ToolStripMenuItem bilgileriGüncelleToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem sifreDeğiştirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmboteltip;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbyıldız;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnRezYap;
         private System.Windows.Forms.Button btnRezListele;

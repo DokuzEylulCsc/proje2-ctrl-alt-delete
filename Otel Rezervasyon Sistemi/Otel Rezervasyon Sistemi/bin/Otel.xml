@@ -27108,4 +27108,508 @@
     <OglenYemegi>true</OglenYemegi>
     <AksamYemegi>true</AksamYemegi>
   </Otel>
+  <Otel xsi:type="TatilKoyu">
+    <Odalar xsi:type="ManzaraliOda">
+      <Rezervasyonlar />
+      <OdaNo>9789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>400</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>true</Minibarli>
+      <Televizyonlu>false</Televizyonlu>
+      <Wifili>false</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <Kuvet>true</Kuvet>
+    </Odalar>
+    <Odalar xsi:type="StandartOda">
+      <Rezervasyonlar />
+      <OdaNo>789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>100</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>false</Minibarli>
+      <Televizyonlu>true</Televizyonlu>
+      <Wifili>false</Wifili>
+    </Odalar>
+    <Temizlik>1</Temizlik>
+    <Hizmet>1</Hizmet>
+    <Konum>1</Konum>
+    <ID>123456789</ID>
+    <OtelAdi>BulutlardaTatil</OtelAdi>
+    <Disco>true</Disco>
+    <OtoPark>true</OtoPark>
+    <Vale>true</Vale>
+    <Kahvalti>true</Kahvalti>
+    <OglenYemegi>true</OglenYemegi>
+    <AksamYemegi>true</AksamYemegi>
+  </Otel>
+  <Otel xsi:type="TatilKoyu">
+    <Odalar xsi:type="ManzaraliOda">
+      <Rezervasyonlar />
+      <OdaNo>9789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>400</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>true</Minibarli>
+      <Televizyonlu>false</Televizyonlu>
+      <Wifili>false</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <Kuvet>true</Kuvet>
+    </Odalar>
+    <Odalar xsi:type="StandartOda">
+      <Rezervasyonlar />
+      <OdaNo>789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>100</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>false</Minibarli>
+      <Televizyonlu>true</Televizyonlu>
+      <Wifili>false</Wifili>
+    </Odalar>
+    <Temizlik>1</Temizlik>
+    <Hizmet>1</Hizmet>
+    <Konum>1</Konum>
+    <ID>123456789</ID>
+    <OtelAdi>BulutlardaTatil</OtelAdi>
+    <Disco>true</Disco>
+    <OtoPark>true</OtoPark>
+    <Vale>true</Vale>
+    <Kahvalti>true</Kahvalti>
+    <OglenYemegi>true</OglenYemegi>
+    <AksamYemegi>true</AksamYemegi>
+  </Otel>
+  <Otel xsi:type="TatilKoyu">
+    <Odalar xsi:type="ManzaraliOda">
+      <Rezervasyonlar />
+      <OdaNo>9789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>400</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>true</Minibarli>
+      <Televizyonlu>false</Televizyonlu>
+      <Wifili>false</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <Kuvet>true</Kuvet>
+    </Odalar>
+    <Odalar xsi:type="StandartOda">
+      <Rezervasyonlar />
+      <OdaNo>789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>100</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>false</Minibarli>
+      <Televizyonlu>true</Televizyonlu>
+      <Wifili>false</Wifili>
+    </Odalar>
+    <Temizlik>1</Temizlik>
+    <Hizmet>1</Hizmet>
+    <Konum>1</Konum>
+    <ID>123456789</ID>
+    <OtelAdi>BulutlardaTatil</OtelAdi>
+    <Disco>true</Disco>
+    <OtoPark>true</OtoPark>
+    <Vale>true</Vale>
+    <Kahvalti>true</Kahvalti>
+    <OglenYemegi>true</OglenYemegi>
+    <AksamYemegi>true</AksamYemegi>
+  </Otel>
+  <Otel xsi:type="TatilKoyu">
+    <Odalar xsi:type="ManzaraliOda">
+      <Rezervasyonlar />
+      <OdaNo>9789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>400</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>true</Minibarli>
+      <Televizyonlu>false</Televizyonlu>
+      <Wifili>false</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <Kuvet>true</Kuvet>
+    </Odalar>
+    <Odalar xsi:type="StandartOda">
+      <Rezervasyonlar />
+      <OdaNo>789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>100</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>false</Minibarli>
+      <Televizyonlu>true</Televizyonlu>
+      <Wifili>false</Wifili>
+    </Odalar>
+    <Temizlik>1</Temizlik>
+    <Hizmet>1</Hizmet>
+    <Konum>1</Konum>
+    <ID>123456789</ID>
+    <OtelAdi>BulutlardaTatil</OtelAdi>
+    <Disco>true</Disco>
+    <OtoPark>true</OtoPark>
+    <Vale>true</Vale>
+    <Kahvalti>true</Kahvalti>
+    <OglenYemegi>true</OglenYemegi>
+    <AksamYemegi>true</AksamYemegi>
+  </Otel>
+  <Otel xsi:type="TatilKoyu">
+    <Odalar xsi:type="ManzaraliOda">
+      <Rezervasyonlar />
+      <OdaNo>9789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>400</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>true</Minibarli>
+      <Televizyonlu>false</Televizyonlu>
+      <Wifili>false</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <Kuvet>true</Kuvet>
+    </Odalar>
+    <Odalar xsi:type="StandartOda">
+      <Rezervasyonlar />
+      <OdaNo>789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>100</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>false</Minibarli>
+      <Televizyonlu>true</Televizyonlu>
+      <Wifili>false</Wifili>
+    </Odalar>
+    <Temizlik>1</Temizlik>
+    <Hizmet>1</Hizmet>
+    <Konum>1</Konum>
+    <ID>123456789</ID>
+    <OtelAdi>BulutlardaTatil</OtelAdi>
+    <Disco>true</Disco>
+    <OtoPark>true</OtoPark>
+    <Vale>true</Vale>
+    <Kahvalti>true</Kahvalti>
+    <OglenYemegi>true</OglenYemegi>
+    <AksamYemegi>true</AksamYemegi>
+  </Otel>
+  <Otel xsi:type="TatilKoyu">
+    <Odalar xsi:type="ManzaraliOda">
+      <Rezervasyonlar />
+      <OdaNo>9789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>400</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>true</Minibarli>
+      <Televizyonlu>false</Televizyonlu>
+      <Wifili>false</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <Kuvet>true</Kuvet>
+    </Odalar>
+    <Odalar xsi:type="StandartOda">
+      <Rezervasyonlar />
+      <OdaNo>789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>100</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>false</Minibarli>
+      <Televizyonlu>true</Televizyonlu>
+      <Wifili>false</Wifili>
+    </Odalar>
+    <Temizlik>1</Temizlik>
+    <Hizmet>1</Hizmet>
+    <Konum>1</Konum>
+    <ID>123456789</ID>
+    <OtelAdi>BulutlardaTatil</OtelAdi>
+    <Disco>true</Disco>
+    <OtoPark>true</OtoPark>
+    <Vale>true</Vale>
+    <Kahvalti>true</Kahvalti>
+    <OglenYemegi>true</OglenYemegi>
+    <AksamYemegi>true</AksamYemegi>
+  </Otel>
+  <Otel xsi:type="TatilKoyu">
+    <Odalar xsi:type="ManzaraliOda">
+      <Rezervasyonlar />
+      <OdaNo>9789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>400</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>true</Minibarli>
+      <Televizyonlu>false</Televizyonlu>
+      <Wifili>false</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <Kuvet>true</Kuvet>
+    </Odalar>
+    <Odalar xsi:type="StandartOda">
+      <Rezervasyonlar />
+      <OdaNo>789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>100</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>false</Minibarli>
+      <Televizyonlu>true</Televizyonlu>
+      <Wifili>false</Wifili>
+    </Odalar>
+    <Temizlik>1</Temizlik>
+    <Hizmet>1</Hizmet>
+    <Konum>1</Konum>
+    <ID>123456789</ID>
+    <OtelAdi>BulutlardaTatil</OtelAdi>
+    <Disco>true</Disco>
+    <OtoPark>true</OtoPark>
+    <Vale>true</Vale>
+    <Kahvalti>true</Kahvalti>
+    <OglenYemegi>true</OglenYemegi>
+    <AksamYemegi>true</AksamYemegi>
+  </Otel>
+  <Otel xsi:type="TatilKoyu">
+    <Odalar xsi:type="ManzaraliOda">
+      <Rezervasyonlar />
+      <OdaNo>9789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>400</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>true</Minibarli>
+      <Televizyonlu>false</Televizyonlu>
+      <Wifili>false</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <Kuvet>true</Kuvet>
+    </Odalar>
+    <Odalar xsi:type="StandartOda">
+      <Rezervasyonlar />
+      <OdaNo>789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>100</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>false</Minibarli>
+      <Televizyonlu>true</Televizyonlu>
+      <Wifili>false</Wifili>
+    </Odalar>
+    <Temizlik>1</Temizlik>
+    <Hizmet>1</Hizmet>
+    <Konum>1</Konum>
+    <ID>123456789</ID>
+    <OtelAdi>BulutlardaTatil</OtelAdi>
+    <Disco>true</Disco>
+    <OtoPark>true</OtoPark>
+    <Vale>true</Vale>
+    <Kahvalti>true</Kahvalti>
+    <OglenYemegi>true</OglenYemegi>
+    <AksamYemegi>true</AksamYemegi>
+  </Otel>
+  <Otel xsi:type="TatilKoyu">
+    <Odalar xsi:type="ManzaraliOda">
+      <Rezervasyonlar />
+      <OdaNo>9789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>400</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>true</Minibarli>
+      <Televizyonlu>false</Televizyonlu>
+      <Wifili>false</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <Kuvet>true</Kuvet>
+    </Odalar>
+    <Odalar xsi:type="StandartOda">
+      <Rezervasyonlar />
+      <OdaNo>789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>100</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>false</Minibarli>
+      <Televizyonlu>true</Televizyonlu>
+      <Wifili>false</Wifili>
+    </Odalar>
+    <Temizlik>1</Temizlik>
+    <Hizmet>1</Hizmet>
+    <Konum>1</Konum>
+    <ID>123456789</ID>
+    <OtelAdi>BulutlardaTatil</OtelAdi>
+    <Disco>true</Disco>
+    <OtoPark>true</OtoPark>
+    <Vale>true</Vale>
+    <Kahvalti>true</Kahvalti>
+    <OglenYemegi>true</OglenYemegi>
+    <AksamYemegi>true</AksamYemegi>
+  </Otel>
+  <Otel xsi:type="TatilKoyu">
+    <Odalar xsi:type="ManzaraliOda">
+      <Rezervasyonlar />
+      <OdaNo>9789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>400</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>true</Minibarli>
+      <Televizyonlu>false</Televizyonlu>
+      <Wifili>false</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <Kuvet>true</Kuvet>
+    </Odalar>
+    <Odalar xsi:type="StandartOda">
+      <Rezervasyonlar />
+      <OdaNo>789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>100</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>false</Minibarli>
+      <Televizyonlu>true</Televizyonlu>
+      <Wifili>false</Wifili>
+    </Odalar>
+    <Temizlik>1</Temizlik>
+    <Hizmet>1</Hizmet>
+    <Konum>1</Konum>
+    <ID>123456789</ID>
+    <OtelAdi>BulutlardaTatil</OtelAdi>
+    <Disco>true</Disco>
+    <OtoPark>true</OtoPark>
+    <Vale>true</Vale>
+    <Kahvalti>true</Kahvalti>
+    <OglenYemegi>true</OglenYemegi>
+    <AksamYemegi>true</AksamYemegi>
+  </Otel>
+  <Otel xsi:type="TatilKoyu">
+    <Odalar xsi:type="ManzaraliOda">
+      <Rezervasyonlar />
+      <OdaNo>9789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>400</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>true</Minibarli>
+      <Televizyonlu>false</Televizyonlu>
+      <Wifili>false</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <Kuvet>true</Kuvet>
+    </Odalar>
+    <Odalar xsi:type="StandartOda">
+      <Rezervasyonlar />
+      <OdaNo>789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>100</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>false</Minibarli>
+      <Televizyonlu>true</Televizyonlu>
+      <Wifili>false</Wifili>
+    </Odalar>
+    <Temizlik>1</Temizlik>
+    <Hizmet>1</Hizmet>
+    <Konum>1</Konum>
+    <ID>123456789</ID>
+    <OtelAdi>BulutlardaTatil</OtelAdi>
+    <Disco>true</Disco>
+    <OtoPark>true</OtoPark>
+    <Vale>true</Vale>
+    <Kahvalti>true</Kahvalti>
+    <OglenYemegi>true</OglenYemegi>
+    <AksamYemegi>true</AksamYemegi>
+  </Otel>
+  <Otel xsi:type="TatilKoyu">
+    <Odalar xsi:type="ManzaraliOda">
+      <Rezervasyonlar />
+      <OdaNo>9789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>400</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>true</Minibarli>
+      <Televizyonlu>false</Televizyonlu>
+      <Wifili>false</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <Kuvet>true</Kuvet>
+    </Odalar>
+    <Odalar xsi:type="StandartOda">
+      <Rezervasyonlar />
+      <OdaNo>789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>100</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>false</Minibarli>
+      <Televizyonlu>true</Televizyonlu>
+      <Wifili>false</Wifili>
+    </Odalar>
+    <Temizlik>1</Temizlik>
+    <Hizmet>1</Hizmet>
+    <Konum>1</Konum>
+    <ID>123456789</ID>
+    <OtelAdi>BulutlardaTatil</OtelAdi>
+    <Disco>true</Disco>
+    <OtoPark>true</OtoPark>
+    <Vale>true</Vale>
+    <Kahvalti>true</Kahvalti>
+    <OglenYemegi>true</OglenYemegi>
+    <AksamYemegi>true</AksamYemegi>
+  </Otel>
+  <Otel xsi:type="TatilKoyu">
+    <Odalar xsi:type="ManzaraliOda">
+      <Rezervasyonlar />
+      <OdaNo>9789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>400</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>true</Minibarli>
+      <Televizyonlu>false</Televizyonlu>
+      <Wifili>false</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <Kuvet>true</Kuvet>
+    </Odalar>
+    <Odalar xsi:type="StandartOda">
+      <Rezervasyonlar />
+      <OdaNo>789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>100</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>false</Minibarli>
+      <Televizyonlu>true</Televizyonlu>
+      <Wifili>false</Wifili>
+    </Odalar>
+    <Temizlik>1</Temizlik>
+    <Hizmet>1</Hizmet>
+    <Konum>1</Konum>
+    <ID>123456789</ID>
+    <OtelAdi>BulutlardaTatil</OtelAdi>
+    <Disco>true</Disco>
+    <OtoPark>true</OtoPark>
+    <Vale>true</Vale>
+    <Kahvalti>true</Kahvalti>
+    <OglenYemegi>true</OglenYemegi>
+    <AksamYemegi>true</AksamYemegi>
+  </Otel>
+  <Otel xsi:type="TatilKoyu">
+    <Odalar xsi:type="ManzaraliOda">
+      <Rezervasyonlar />
+      <OdaNo>9789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>400</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>true</Minibarli>
+      <Televizyonlu>false</Televizyonlu>
+      <Wifili>false</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <Kuvet>true</Kuvet>
+    </Odalar>
+    <Odalar xsi:type="StandartOda">
+      <Rezervasyonlar />
+      <OdaNo>789</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>100</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>false</Minibarli>
+      <Televizyonlu>true</Televizyonlu>
+      <Wifili>false</Wifili>
+    </Odalar>
+    <Temizlik>1</Temizlik>
+    <Hizmet>1</Hizmet>
+    <Konum>1</Konum>
+    <ID>123456789</ID>
+    <OtelAdi>BulutlardaTatil</OtelAdi>
+    <Disco>true</Disco>
+    <OtoPark>true</OtoPark>
+    <Vale>true</Vale>
+    <Kahvalti>true</Kahvalti>
+    <OglenYemegi>true</OglenYemegi>
+    <AksamYemegi>true</AksamYemegi>
+  </Otel>
 </ArrayOfOtel>
