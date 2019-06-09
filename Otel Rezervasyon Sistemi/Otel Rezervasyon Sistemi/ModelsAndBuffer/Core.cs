@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -139,6 +140,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
         public List<string> ReturnHotelID()
         {
             List<string> HotelID = new List<string>();
+            Debug.WriteLine(buf.Oteller.Count.ToString());
             foreach (Otel item in buf.Oteller)
             {
                 HotelID.Add(item.ID);

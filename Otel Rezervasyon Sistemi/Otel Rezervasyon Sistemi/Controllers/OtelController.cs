@@ -67,6 +67,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         public bool DeleteHotel(string hotelId)
         {
             List<string> IDs = core.ReturnHotelID();
+            
             if (IDs.Contains(hotelId))
             {
                 core.DeleteOtel(hotelId);

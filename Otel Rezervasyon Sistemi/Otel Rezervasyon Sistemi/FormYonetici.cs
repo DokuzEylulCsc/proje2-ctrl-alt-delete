@@ -61,9 +61,9 @@ namespace Otel_Rezervasyon_Sistemi
             {
                 m.otel.DeleteHotel(txtSilID.Text);
             }
-            catch
+            catch(Exception a)
             {
-                MessageBox.Show("ID Gecersiz!!", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(a.Message, "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
