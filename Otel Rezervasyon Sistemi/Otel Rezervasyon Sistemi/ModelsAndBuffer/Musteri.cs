@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
 {
     [Serializable]
-    public class Musteri:Kullanici,IGoruntuleyebilir
+    public class Musteri:Kullanici
     {
         public Musteri()
         {
@@ -29,10 +29,6 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             // Bilgiler base classtan alınacagı ıcın ımplementasyona gerek yok.
         }
 
-        public void Goruntule()
-        {
-            // icerik konusmasi yapilip kesin kararlar verildikten sonra buranin implementasyonu belirlenicektir
-            //Yoneticiye uygun ımplementasyonlar controller tarafından yapılacak.
-        }
+ 
     }
 }

@@ -31,7 +31,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <returns>"OtelID-OtelAdi-OdaNumarasi" formatinda elemanlari olan bir string listesi dondurur</returns>
         public List<string> HotelFilter(string hotelType, string roomType, int point, int minPrice, int maxPrice, bool wifi, bool minibar, bool klima, bool televizyon, DateTime start, DateTime end)
         {
-            
+           
             List<string> hotelIDandNamesandStars = core.ReturnOtelInformations(hotelType);
             List<string> hotelIDs = new List<string>();
             List<string> hotelNames = new List<string>();

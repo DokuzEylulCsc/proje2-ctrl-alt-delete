@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
 {
     [Serializable]
-    public class Yonetici:Kullanici,IGoruntuleyebilir,IYonetebilir
+    public class Yonetici:Kullanici
     {
         public Yonetici()
         {
@@ -19,31 +19,6 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             // Implementasyona ihtiyac yok ana classtan alınacak veriler.
         }
 
-        public void Goruntule()
-        {
-
-            // icerik konusmasi yapilip kesin kararlar verildikten sonra buranin implementasyonu belirlenicektir
-            //Yoneticiye uygun ımplementasyonlar controller tarafından yapılacak.
-        }
-
-        public void YoneticiOdaSilme()
-        {
-            //Yoneticiye uygun ımplementasyonlar controller tarafından yapılacak.
-        }
-
-        public void YoneticiOdaEkleme()
-        {
-            //Yoneticiye uygun ımplementasyonlar controller tarafından yapılacak.
-        }
-
-        public void YoneticiOtelEkleme()
-        {
-            //Yoneticiye uygun ımplementasyonlar controller tarafından yapılacak.
-        }
-
-        public void YoneticiOtelSil()
-        {
-            //Yoneticiye uygun ımplementasyonlar controller tarafından yapılacak.
-        }
+        
     }
 }

@@ -15,6 +15,19 @@
       <OyunKonsolu>true</OyunKonsolu>
       <Jakuzi>true</Jakuzi>
     </Odalar>
+    <Odalar xsi:type="ManzaraliOda">
+      <Rezervasyonlar />
+      <OdaNo>975</OdaNo>
+      <KisiKapasitesi>2</KisiKapasitesi>
+      <OdaFiyati>500</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>false</Minibarli>
+      <Televizyonlu>true</Televizyonlu>
+      <Wifili>true</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <Kuvet>true</Kuvet>
+    </Odalar>
     <Temizlik>5</Temizlik>
     <Hizmet>5</Hizmet>
     <Konum>5</Konum>
