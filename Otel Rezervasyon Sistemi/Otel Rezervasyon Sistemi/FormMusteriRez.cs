@@ -22,8 +22,7 @@ namespace Otel_Rezervasyon_Sistemi
         {
             MainController c = MainController.GetController();
 
-            // c.filter.HotelFilter(cmboteltip.SelectedItem.ToString(),cmbodatip.SelectedItem.ToString(),Convert.ToInt32( cmbyıldız.SelectedItem), Convert.ToInt32(txtminfiyat.Text), Convert.ToInt32(txtmaxfiyat.Text),chcwifi.Checked,chcminibar.Checked,chcklima.Checked,chcTv.Checked,mcbaslangic.SelectionRange.Start,mcbitis.SelectionRange.End);
-            try
+             try
             {
                 listBoxUygunOteller.Items.AddRange(c.filter.HotelFilter(cmboteltip.SelectedItem.ToString(), cmbodatip.SelectedItem.ToString(), Convert.ToInt32(cmbyıldız.SelectedItem), Convert.ToInt32(txtminfiyat.Text), Convert.ToInt32(txtmaxfiyat.Text), chcwifi.Checked, chcminibar.Checked, chcklima.Checked, chcTv.Checked, mcbaslangic.SelectionRange.Start.Date, mcbitis.SelectionRange.Start.Date).ToArray());
             }
@@ -31,7 +30,8 @@ namespace Otel_Rezervasyon_Sistemi
             {
                 MessageBox.Show(a.Message, "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-           
+
+            listBoxUygunOteller.Items.Clear();
         }
 
         private void bilgileriGüncelleToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -69,7 +69,48 @@ namespace Otel_Rezervasyon_Sistemi
             }
         }
 
-        
+        private void btnRezSil_Click(object sender, EventArgs e)
+        {
+            MainController m = MainController.GetController();
+            m.user.DeleteActiveReservation(lbluserid.Text, listBox1.SelectedItem.ToString());
+         }
+        private void FormMusteriRez_Load(object sender, EventArgs e)
+        {
+
+            lbluserid.Text = FormLogin.kullaniciID;
+        }
+
+        private void btnRezYap_Click(object sender, EventArgs e)
+        {
+            MainController m = MainController.GetController();
+            int reservationID = Convert.ToInt32(((listBoxUygunOteller.SelectedItem.ToString().Split('-'))[0].Split(':'))[1]);
+            string otelID = (((listBoxUygunOteller.SelectedItem.ToString() .Split('-'))[1]).Split(':'))[1];
+            int odaNo = Convert.ToInt32((((listBoxUygunOteller.SelectedItem.ToString().Split('-'))[2]).Split(':'))[1]);
+            try
+            {
+                if (m.ReservationController.CheckReservationDateAvailabilty(otelID, odaNo, mcbaslangic.SelectionRange.Start.Date, mcbitis.SelectionRange.End.Date))
+                {
+                    m.ReservationController.ReserveRoom(lbluserid.Text, otelID, odaNo, mcbaslangic.SelectionRange.Start.Date, mcbitis.SelectionRange.End.Date);
+                }
+            }
+            catch(Exception a)
+            {
+                MessageBox.Show(a.Message, "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+           
+        }
+
+        private void btnRezListele_Click(object sender, EventArgs e)
+        {
+            MainController m = MainController.GetController();
+            m.user.ShowActiveReservationsOfCustomer(lbluserid.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainController m = MainController.GetController();
+            m.user.ShowOldReservationsOfCustomer(lbluserid.Text);
+        }
     }
 }
 

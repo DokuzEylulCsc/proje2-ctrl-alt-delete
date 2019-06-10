@@ -17,6 +17,7 @@ namespace Otel_Rezervasyon_Sistemi
         {
             InitializeComponent();
         }
+        public static string OtelID;
 
         private void rezervasyonListeleToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -48,6 +49,7 @@ namespace Otel_Rezervasyon_Sistemi
         private void button2_Click(object sender, EventArgs e)
         {
             FormOdaEkle f = new FormOdaEkle();
+            OtelID = tbID.Text;
             this.Hide();
             f.Show();
             
@@ -70,7 +72,15 @@ namespace Otel_Rezervasyon_Sistemi
         private void btnEkle_Click(object sender, EventArgs e)
         {
             MainController m = MainController.GetController();
-            m.otel.AddHotel(tbID.Text, tbAd.Text, cmbTİP.SelectedItem.ToString(),Convert.ToInt32( txtTemizlik.Text),Convert.ToInt32( TxtKonum.Text),Convert.ToInt32( TxtHizmet.Text));
+            try
+            {
+                m.otel.AddHotel(tbID.Text, tbAd.Text, cmbTİP.SelectedItem.ToString(), Convert.ToInt32(txtTemizlik.Text), Convert.ToInt32(TxtKonum.Text), Convert.ToInt32(TxtHizmet.Text));
+            }
+            catch(Exception a)
+            {
+                MessageBox.Show(a.Message, "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+          
         }
 
         private void yoneticiEkleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -82,6 +92,11 @@ namespace Otel_Rezervasyon_Sistemi
         }
 
         private void FormYonetici_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mSOtelEkle_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

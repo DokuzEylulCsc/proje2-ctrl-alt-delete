@@ -32,7 +32,7 @@ namespace Otel_Rezervasyon_Sistemi
            
             try
             {
-                if( controller.user.ChangePasswordRequest(mskID.Text,mskEskiSifre.Text,mskYeniSifre.Text,mskSifreTekrari.Text))
+                if( controller.user.ChangePasswordRequest(txtID .Text,mskEskiSifre.Text,mskYeniSifre.Text,mskSifreTekrari.Text))
                 {
                     MessageBox.Show("Sifreniz Güncellendi", "TEBRİKLER", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -46,10 +46,7 @@ namespace Otel_Rezervasyon_Sistemi
 
       
 
-        private void FormSifreDegistir_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
-        }
+        
 
        
 

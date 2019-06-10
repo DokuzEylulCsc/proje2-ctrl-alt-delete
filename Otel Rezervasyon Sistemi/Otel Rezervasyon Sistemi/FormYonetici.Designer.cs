@@ -60,7 +60,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.cmbTİP = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblyonid = new System.Windows.Forms.Label();
             this.mSOtelEkle.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -103,6 +102,7 @@
             this.mSOtelEkle.Size = new System.Drawing.Size(760, 24);
             this.mSOtelEkle.TabIndex = 8;
             this.mSOtelEkle.Text = "menuStrip1";
+            this.mSOtelEkle.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mSOtelEkle_ItemClicked);
             // 
             // yoneticiEkleToolStripMenuItem
             // 
@@ -201,6 +201,15 @@
             // cbkonum
             // 
             this.cbkonum.FormattingEnabled = true;
+            this.cbkonum.Items.AddRange(new object[] {
+            "Çeşme",
+            "Bodrum",
+            "Fethiye",
+            "Didim",
+            "Karaburun",
+            "Urla",
+            "Kaş",
+            "Marmaris "});
             this.cbkonum.Location = new System.Drawing.Point(155, 154);
             this.cbkonum.Name = "cbkonum";
             this.cbkonum.Size = new System.Drawing.Size(121, 24);
@@ -258,7 +267,7 @@
             this.btnEkle.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnEkle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnEkle.ForeColor = System.Drawing.Color.White;
-            this.btnEkle.Location = new System.Drawing.Point(340, 262);
+            this.btnEkle.Location = new System.Drawing.Point(321, 251);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(97, 34);
             this.btnEkle.TabIndex = 37;
@@ -271,7 +280,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(455, 262);
+            this.button2.Location = new System.Drawing.Point(436, 251);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(96, 34);
             this.button2.TabIndex = 36;
@@ -426,16 +435,6 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Otel Tipi:";
             // 
-            // lblyonid
-            // 
-            this.lblyonid.AutoSize = true;
-            this.lblyonid.Location = new System.Drawing.Point(21, 45);
-            this.lblyonid.Name = "lblyonid";
-            this.lblyonid.Size = new System.Drawing.Size(43, 13);
-            this.lblyonid.TabIndex = 9;
-            this.lblyonid.Text = "label18";
-            this.lblyonid.Visible = false;
-            // 
             // FormYonetici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,7 +442,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(760, 640);
-            this.Controls.Add(this.lblyonid);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblOtelEkle);
             this.Controls.Add(this.panel1);
@@ -498,7 +496,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtSilID;
-        public System.Windows.Forms.Label lblyonid;
         public System.Windows.Forms.TextBox tbID;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.ToolStripMenuItem yoneticiEkleToolStripMenuItem;

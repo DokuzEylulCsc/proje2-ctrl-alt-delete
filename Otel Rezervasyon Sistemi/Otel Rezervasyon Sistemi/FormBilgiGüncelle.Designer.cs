@@ -38,9 +38,9 @@
             this.btnDeğiştir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.mskSIFRE = new System.Windows.Forms.MaskedTextBox();
-            this.mskID = new System.Windows.Forms.MaskedTextBox();
             this.checkSoyad = new System.Windows.Forms.CheckBox();
             this.checkAd = new System.Windows.Forms.CheckBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -143,8 +143,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.txtID);
             this.panel1.Controls.Add(this.mskSIFRE);
-            this.panel1.Controls.Add(this.mskID);
             this.panel1.Controls.Add(this.btnDeğiştir);
             this.panel1.Controls.Add(this.checkSoyad);
             this.panel1.Controls.Add(this.btnGeri);
@@ -171,15 +171,6 @@
             this.mskSIFRE.UseSystemPasswordChar = true;
             this.mskSIFRE.ValidatingType = typeof(int);
             // 
-            // mskID
-            // 
-            this.mskID.Location = new System.Drawing.Point(136, 23);
-            this.mskID.Mask = "00000";
-            this.mskID.Name = "mskID";
-            this.mskID.Size = new System.Drawing.Size(120, 26);
-            this.mskID.TabIndex = 14;
-            this.mskID.ValidatingType = typeof(int);
-            // 
             // checkSoyad
             // 
             this.checkSoyad.AutoSize = true;
@@ -190,6 +181,7 @@
             this.checkSoyad.TabIndex = 12;
             this.checkSoyad.Text = "Soyad";
             this.checkSoyad.UseVisualStyleBackColor = true;
+            this.checkSoyad.CheckedChanged += new System.EventHandler(this.checkSoyad_CheckedChanged);
             // 
             // checkAd
             // 
@@ -201,6 +193,14 @@
             this.checkAd.TabIndex = 11;
             this.checkAd.Text = "Ad";
             this.checkAd.UseVisualStyleBackColor = true;
+            this.checkAd.CheckedChanged += new System.EventHandler(this.checkAd_CheckedChanged);
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(136, 23);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(120, 26);
+            this.txtID.TabIndex = 16;
             // 
             // FormBilgiGüncelle
             // 
@@ -215,8 +215,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormBilgiGüncelle";
             this.Text = "Bilgileri Güncelle";
-         //   this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormBilgiGüncelle_FormClosing);
-//            this.Load += new System.EventHandler(this.FormBilgiGüncelle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -234,8 +232,8 @@
         private System.Windows.Forms.Button btnDeğiştir;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MaskedTextBox mskSIFRE;
-        private System.Windows.Forms.MaskedTextBox mskID;
         private System.Windows.Forms.CheckBox checkSoyad;
         private System.Windows.Forms.CheckBox checkAd;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

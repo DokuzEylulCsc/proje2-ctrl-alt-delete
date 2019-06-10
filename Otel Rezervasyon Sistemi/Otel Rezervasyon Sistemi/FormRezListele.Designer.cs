@@ -55,6 +55,7 @@
             this.BtnListele.TabIndex = 5;
             this.BtnListele.Text = "Listele";
             this.BtnListele.UseVisualStyleBackColor = true;
+            this.BtnListele.Click += new System.EventHandler(this.BtnListele_Click);
             // 
             // btnGeri
             // 
@@ -116,7 +117,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormRezOzet";
             this.Text = "Rezervasyon Özet";
-//            this.Load += new System.EventHandler(this.FormRezOzet_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -25,4 +25,11 @@
     <Sifre>55555</Sifre>
     <ReservationofCostumer />
   </Kullanici>
+  <Kullanici xsi:type="Musteri">
+    <ID>12121</ID>
+    <Ad>Simgesu</Ad>
+    <Soyad>güzellik</Soyad>
+    <Sifre>33333</Sifre>
+    <ReservationofCostumer />
+  </Kullanici>
 </ArrayOfKullanici>

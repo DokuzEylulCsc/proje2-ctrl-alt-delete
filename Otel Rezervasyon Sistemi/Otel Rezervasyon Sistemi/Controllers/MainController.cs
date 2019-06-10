@@ -22,6 +22,8 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         public RoomController room { get { return roomController; } }
         private UserController userController = null;
         public UserController user { get { return userController; } }
+        private ReservationController reservationController = null;
+        public ReservationController ReservationController { get { return reservationController; } }
 
 
         private MainController()
@@ -30,6 +32,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
             otelController = new OtelController();
             roomController = new RoomController();
             userController = new UserController();
+            reservationController = new ReservationController();
         }
 
         /// <summary>

@@ -43,7 +43,10 @@ namespace Otel_Rezervasyon_Sistemi
             }
         }
 
-        
+        private void BtnListele_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

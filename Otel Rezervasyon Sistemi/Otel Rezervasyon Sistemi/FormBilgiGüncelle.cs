@@ -32,7 +32,7 @@ namespace Otel_Rezervasyon_Sistemi
         private void btnDeğiştir_Click(object sender, EventArgs e)
         {
             
-            string ID = mskID .Text;
+            string ID = txtID .Text;
             string SIFRE = mskSIFRE.Text;
             string GUNCEL = txtgüncel.Text;
             MainController c = MainController.GetController();
@@ -54,16 +54,22 @@ namespace Otel_Rezervasyon_Sistemi
                 }
 
             }
-            catch
+            catch(Exception a)
             {
-                MessageBox.Show("Girilen Bilgiler Uygun Değil TEKRAR DENEYİNİZ!", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(a.Message, "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
                
 
         }
 
-    
+        private void checkSoyad_CheckedChanged(object sender, EventArgs e)
+        {
+            checkAd.Checked = false;
+        }
 
-       
+        private void checkAd_CheckedChanged(object sender, EventArgs e)
+        {
+            checkSoyad.Checked = false;
+        }
     }
 }

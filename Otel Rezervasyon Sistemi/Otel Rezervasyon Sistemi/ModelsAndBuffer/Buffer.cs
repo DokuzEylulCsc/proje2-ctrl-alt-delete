@@ -64,7 +64,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             using (StreamReader sr = new StreamReader(@"../Otel.xml"))
             {
                 Oteller = (List<Otel>)xs.Deserialize(sr);
-                Debug.WriteLine("Bu yarak calismiyor"+Oteller.Count());
+                Debug.WriteLine(".....r"+Oteller.Count());
             }
             using (StreamReader sr2 = new StreamReader(@"../Kullanici.xml"))
             {

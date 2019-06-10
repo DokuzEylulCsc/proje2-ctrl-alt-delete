@@ -1,2 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ArrayOfOtel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+<ArrayOfOtel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Otel xsi:type="ButikOtel">
+    <Odalar xsi:type="KralDairesi">
+      <Rezervasyonlar />
+      <OdaNo>111</OdaNo>
+      <KisiKapasitesi>0</KisiKapasitesi>
+      <OdaFiyati>900</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>true</Minibarli>
+      <Televizyonlu>true</Televizyonlu>
+      <Wifili>true</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <OyunKonsolu>true</OyunKonsolu>
+      <Jakuzi>true</Jakuzi>
+    </Odalar>
+    <Temizlik>5</Temizlik>
+    <Hizmet>5</Hizmet>
+    <Konum>5</Konum>
+    <ID>121212</ID>
+    <OtelAdi>121212</OtelAdi>
+    <Kahvalti>true</Kahvalti>
+    <OglenYemegi>true</OglenYemegi>
+    <AksamYemegi>true</AksamYemegi>
+  </Otel>
+  <Otel xsi:type="TatilKoyu">
+    <Odalar xsi:type="ManzaraliOda">
+      <Rezervasyonlar />
+      <OdaNo>123421</OdaNo>
+      <KisiKapasitesi>0</KisiKapasitesi>
+      <OdaFiyati>188</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>false</Minibarli>
+      <Televizyonlu>false</Televizyonlu>
+      <Wifili>true</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <Kuvet>true</Kuvet>
+    </Odalar>
+    <Temizlik>5</Temizlik>
+    <Hizmet>5</Hizmet>
+    <Konum>5</Konum>
+    <ID>112233</ID>
+    <OtelAdi>112233</OtelAdi>
+    <Disco>true</Disco>
+    <OtoPark>true</OtoPark>
+    <Vale>true</Vale>
+    <Kahvalti>true</Kahvalti>
+    <OglenYemegi>true</OglenYemegi>
+    <AksamYemegi>true</AksamYemegi>
+  </Otel>
+  <Otel xsi:type="Pansiyon">
+    <Temizlik>5</Temizlik>
+    <Hizmet>5</Hizmet>
+    <Konum>5</Konum>
+    <ID>44444</ID>
+    <OtelAdi>44444</OtelAdi>
+    <Kahvalti>true</Kahvalti>
+    <AksamYemegi>true</AksamYemegi>
+  </Otel>
+  <Otel xsi:type="TatilKoyu">
+    <Odalar xsi:type="KralDairesi">
+      <Rezervasyonlar />
+      <OdaNo>1122</OdaNo>
+      <KisiKapasitesi>3</KisiKapasitesi>
+      <OdaFiyati>230</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>false</Minibarli>
+      <Televizyonlu>false</Televizyonlu>
+      <Wifili>true</Wifili>
+      <Manzara>true</Manzara>
+      <OdaServisi>true</OdaServisi>
+      <OyunKonsolu>true</OyunKonsolu>
+      <Jakuzi>true</Jakuzi>
+    </Odalar>
+    <Odalar xsi:type="StandartOda">
+      <Rezervasyonlar />
+      <OdaNo>1123</OdaNo>
+      <KisiKapasitesi>3</KisiKapasitesi>
+      <OdaFiyati>230</OdaFiyati>
+      <Klimali>true</Klimali>
+      <Minibarli>false</Minibarli>
+      <Televizyonlu>false</Televizyonlu>
+      <Wifili>true</Wifili>
+    </Odalar>
+    <Temizlik>5</Temizlik>
+    <Hizmet>5</Hizmet>
+    <Konum>5</Konum>
+    <ID>2222</ID>
+    <OtelAdi>2222</OtelAdi>
+    <Disco>true</Disco>
+    <OtoPark>true</OtoPark>
+    <Vale>true</Vale>
+    <Kahvalti>true</Kahvalti>
+    <OglenYemegi>true</OglenYemegi>
+    <AksamYemegi>true</AksamYemegi>
+  </Otel>
+</ArrayOfOtel>

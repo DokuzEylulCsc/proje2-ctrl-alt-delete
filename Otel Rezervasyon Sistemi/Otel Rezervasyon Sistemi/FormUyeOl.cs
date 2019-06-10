@@ -32,7 +32,7 @@ namespace Otel_Rezervasyon_Sistemi
             {
 
                 
-               if(controller.user.CreateAccountRequest(mID.Text, mSIFRE.Text, mSIFRET.Text, TXTAD.Text, TXTSOYAD.Text))
+               if(controller.user.CreateAccountRequest(txtID.Text, mSIFRE.Text, mSIFRET.Text, TXTAD.Text, TXTSOYAD.Text))
                 {
                     MessageBox.Show("Kayit Tamamlandi", "Tebrikler", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

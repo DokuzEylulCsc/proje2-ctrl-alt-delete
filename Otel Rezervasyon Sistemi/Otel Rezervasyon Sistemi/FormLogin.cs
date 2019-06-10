@@ -14,6 +14,7 @@ namespace Otel_Rezervasyon_Sistemi
     public partial class FormLogin : Form
     {
         public static string yoneticiID;
+        public static string kullaniciID;
         public FormLogin()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace Otel_Rezervasyon_Sistemi
 
         private void btnTemizle_Click(object sender, EventArgs e)
         {
-            mskID.Clear();
+            txtID.Clear();
             MSKSİFRE.Clear();
         }
 
@@ -31,11 +32,11 @@ namespace Otel_Rezervasyon_Sistemi
             try
             {
                 MainController controller = MainController.GetController();
-                Kullanici a = controller.user.AccountVerification(mskID.Text,MSKSİFRE.Text);
+                Kullanici a = controller.user.AccountVerification(txtID.Text,MSKSİFRE.Text);
                 if(a is Musteri)
                 {
                     FormMusteriRez F = new FormMusteriRez();
-                    
+                    kullaniciID = txtID.Text;
                     this.Hide();
                     F.Show();
                    
@@ -44,7 +45,7 @@ namespace Otel_Rezervasyon_Sistemi
                 else
                 {
                     FormYonetici y = new FormYonetici();
-                    yoneticiID = mskID.Text;
+                    yoneticiID = txtID.Text;
                     this.Hide();
                     y.Show();
                     
@@ -89,8 +90,9 @@ namespace Otel_Rezervasyon_Sistemi
             
         }
 
-      
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
 
-        
+        }
     }
 }

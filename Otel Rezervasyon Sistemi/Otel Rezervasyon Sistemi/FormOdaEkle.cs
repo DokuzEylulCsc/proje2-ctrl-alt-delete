@@ -18,18 +18,8 @@ namespace Otel_Rezervasyon_Sistemi
             InitializeComponent();
         }
 
-        private void checkIslemde_CheckedChanged(object sender, EventArgs e)
-        {
-            panelIslemde.Visible = true;
-            panelKayitli.Visible = false;
-        }
-
-        private void checkKayitli_CheckedChanged(object sender, EventArgs e)
-        {
-            panelIslemde.Visible = false;
-            panelKayitli.Visible = true;
-
-        }
+       
+       
 
         private void otelEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -58,35 +48,9 @@ namespace Otel_Rezervasyon_Sistemi
             }
         }
 
-        private void FormOdaEkle_Load(object sender, EventArgs e)
-        {
-            FormYonetici y = new FormYonetici();
-            lblyon.Text = y.lblyonid.Text;
-            lblotelid.Text = y.tbID.Text;
-       
-        }
+        
 
-        private void BtnİslemdekiKaydet_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                MainController m = MainController.GetController();
-              if(  m.room.AddRoomRequest(Convert.ToString(cmbislemdekit.SelectedIndex),Convert.ToInt32( txtislemdekifiyat.Text) ,lblyon.Text, lblotelid.Text, Convert.ToInt32(txtislemdekino.Text),
-                Convert.ToInt32(cmbkisikapaislemdeki.SelectedItem),chcİklima.Checked,chcİtv.Checked,chcİminibar.Checked,chcİwifi.Checked))
-                {
-                    MessageBox.Show("Oda Kaydedildi", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                   
-            }
-            catch(Exception a)
-            {
-                MessageBox.Show(a.Message, "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            
-
-
-            
-        }
+      
 
        
 

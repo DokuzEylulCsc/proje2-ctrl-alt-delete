@@ -64,6 +64,8 @@
             this.btnRezYap = new System.Windows.Forms.Button();
             this.btnRezListele = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnRezSil = new System.Windows.Forms.Button();
+            this.lbluserid = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -326,7 +328,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(19, 388);
+            this.label1.Location = new System.Drawing.Point(20, 388);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 16);
             this.label1.TabIndex = 1;
@@ -414,7 +416,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(445, 407);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(354, 108);
+            this.listBox1.Size = new System.Drawing.Size(398, 108);
             this.listBox1.TabIndex = 5;
             // 
             // btnRezYap
@@ -428,6 +430,7 @@
             this.btnRezYap.TabIndex = 7;
             this.btnRezYap.Text = "Rez Yap";
             this.btnRezYap.UseVisualStyleBackColor = false;
+            this.btnRezYap.Click += new System.EventHandler(this.btnRezYap_Click);
             // 
             // btnRezListele
             // 
@@ -440,6 +443,7 @@
             this.btnRezListele.TabIndex = 8;
             this.btnRezListele.Text = "Güncel Rez Listele";
             this.btnRezListele.UseVisualStyleBackColor = false;
+            this.btnRezListele.Click += new System.EventHandler(this.btnRezListele_Click);
             // 
             // button1
             // 
@@ -452,6 +456,30 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "Önceki Rez. Listele";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnRezSil
+            // 
+            this.btnRezSil.BackColor = System.Drawing.Color.Black;
+            this.btnRezSil.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnRezSil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRezSil.Location = new System.Drawing.Point(710, 525);
+            this.btnRezSil.Name = "btnRezSil";
+            this.btnRezSil.Size = new System.Drawing.Size(102, 31);
+            this.btnRezSil.TabIndex = 10;
+            this.btnRezSil.Text = "Rez Sil";
+            this.btnRezSil.UseVisualStyleBackColor = false;
+            this.btnRezSil.Click += new System.EventHandler(this.btnRezSil_Click);
+            // 
+            // lbluserid
+            // 
+            this.lbluserid.AutoSize = true;
+            this.lbluserid.Location = new System.Drawing.Point(173, 38);
+            this.lbluserid.Name = "lbluserid";
+            this.lbluserid.Size = new System.Drawing.Size(41, 13);
+            this.lbluserid.TabIndex = 11;
+            this.lbluserid.Text = "label13";
+            this.lbluserid.Visible = false;
             // 
             // FormMusteriRez
             // 
@@ -459,6 +487,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(857, 568);
+            this.Controls.Add(this.lbluserid);
+            this.Controls.Add(this.btnRezSil);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRezListele);
             this.Controls.Add(this.btnRezYap);
@@ -475,6 +505,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMusteriRez";
             this.Text = "FormMusteriRez";
+            this.Load += new System.EventHandler(this.FormMusteriRez_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -522,5 +553,7 @@
         private System.Windows.Forms.CheckBox chcminibar;
         private System.Windows.Forms.CheckBox chcwifi;
         private System.Windows.Forms.CheckBox chcklima;
+        private System.Windows.Forms.Button btnRezSil;
+        private System.Windows.Forms.Label lbluserid;
     }
 }

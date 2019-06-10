@@ -228,7 +228,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
                         item.Odalar.Add(new StandartOda(fiyat, kisikapasite, odanumarasi, klima, wifi, minibar, televizyon));
                         return true;
                     }
-                    else if (type == "Manzarali")
+                    else if (type == "Manzaralı")
                     {
                         item.Odalar.Add(new ManzaraliOda(fiyat, kisikapasite, odanumarasi, klima, wifi, minibar, televizyon));
                         return true;

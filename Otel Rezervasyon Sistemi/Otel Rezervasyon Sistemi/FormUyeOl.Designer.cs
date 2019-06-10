@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.mSIFRET = new System.Windows.Forms.MaskedTextBox();
             this.mSIFRE = new System.Windows.Forms.MaskedTextBox();
-            this.mID = new System.Windows.Forms.MaskedTextBox();
             this.btnGeri = new System.Windows.Forms.Button();
             this.TXTSOYAD = new System.Windows.Forms.TextBox();
             this.btnKayit = new System.Windows.Forms.Button();
@@ -42,15 +41,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.txtID);
             this.panel1.Controls.Add(this.mSIFRET);
             this.panel1.Controls.Add(this.mSIFRE);
-            this.panel1.Controls.Add(this.mID);
             this.panel1.Controls.Add(this.btnGeri);
             this.panel1.Controls.Add(this.TXTSOYAD);
             this.panel1.Controls.Add(this.btnKayit);
@@ -84,15 +84,6 @@
             this.mSIFRE.TabIndex = 15;
             this.mSIFRE.UseSystemPasswordChar = true;
             this.mSIFRE.ValidatingType = typeof(int);
-            // 
-            // mID
-            // 
-            this.mID.Location = new System.Drawing.Point(120, 39);
-            this.mID.Mask = "00000";
-            this.mID.Name = "mID";
-            this.mID.Size = new System.Drawing.Size(100, 20);
-            this.mID.TabIndex = 14;
-            this.mID.ValidatingType = typeof(int);
             // 
             // btnGeri
             // 
@@ -199,6 +190,13 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Uye OL";
             // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(120, 40);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.TabIndex = 17;
+            // 
             // FormUyeOl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,8 +208,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormUyeOl";
             this.Text = "Uye OL";
-//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormUyeOl_FormClosing);
-      //     this.Load += new System.EventHandler(this.FormUyeOl_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -234,6 +230,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MaskedTextBox mSIFRET;
         private System.Windows.Forms.MaskedTextBox mSIFRE;
-        private System.Windows.Forms.MaskedTextBox mID;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

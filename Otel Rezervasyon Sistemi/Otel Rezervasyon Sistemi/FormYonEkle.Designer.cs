@@ -30,7 +30,6 @@
         {
             this.mSIFRET = new System.Windows.Forms.MaskedTextBox();
             this.mSIFRE = new System.Windows.Forms.MaskedTextBox();
-            this.mID = new System.Windows.Forms.MaskedTextBox();
             this.btnGeri = new System.Windows.Forms.Button();
             this.TXTSOYAD = new System.Windows.Forms.TextBox();
             this.btnKayit = new System.Windows.Forms.Button();
@@ -41,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtyonID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,15 +63,6 @@
             this.mSIFRE.TabIndex = 27;
             this.mSIFRE.UseSystemPasswordChar = true;
             this.mSIFRE.ValidatingType = typeof(int);
-            // 
-            // mID
-            // 
-            this.mID.Location = new System.Drawing.Point(168, 31);
-            this.mID.Mask = "00000";
-            this.mID.Name = "mID";
-            this.mID.Size = new System.Drawing.Size(100, 20);
-            this.mID.TabIndex = 26;
-            this.mID.ValidatingType = typeof(int);
             // 
             // btnGeri
             // 
@@ -176,11 +167,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.txtyonID);
             this.panel1.Controls.Add(this.mSIFRET);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.mSIFRE);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.mID);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btnGeri);
             this.panel1.Controls.Add(this.label5);
@@ -193,6 +184,13 @@
             this.panel1.Size = new System.Drawing.Size(317, 350);
             this.panel1.TabIndex = 29;
             // 
+            // txtyonID
+            // 
+            this.txtyonID.Location = new System.Drawing.Point(168, 30);
+            this.txtyonID.Name = "txtyonID";
+            this.txtyonID.Size = new System.Drawing.Size(100, 20);
+            this.txtyonID.TabIndex = 29;
+            // 
             // FormYonEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,8 +200,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormYonEkle";
             this.Text = "Yonetici Ekle";
-//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormYonEkle_FormClosing);
-          //  this.Load += new System.EventHandler(this.FormYonEkle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -214,7 +210,6 @@
 
         private System.Windows.Forms.MaskedTextBox mSIFRET;
         private System.Windows.Forms.MaskedTextBox mSIFRE;
-        private System.Windows.Forms.MaskedTextBox mID;
         private System.Windows.Forms.Button btnGeri;
         private System.Windows.Forms.TextBox TXTSOYAD;
         private System.Windows.Forms.Button btnKayit;
@@ -225,5 +220,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtyonID;
     }
 }

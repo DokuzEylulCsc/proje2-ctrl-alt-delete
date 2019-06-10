@@ -71,7 +71,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
                                 }
                             }
                         }
-                        else if (roomType == "Manzaralı" && o is ManzaraliOda)
+                        else if (roomType == "Manzarali" && o is ManzaraliOda)
                         {
                             if (o.Klimali == klima && o.Televizyonlu == televizyon && o.Minibarli == minibar && o.Wifili == wifi && o.OdaFiyati > minPrice && o.OdaFiyati < maxPrice)
                             {
