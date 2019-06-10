@@ -106,8 +106,6 @@
     <Compile Include="FormYonetici.Designer.cs">
       <DependentUpon>FormYonetici.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\IGoruntuleyebilir.cs" />
-    <Compile Include="Interfaces\IYonetebilir.cs" />
     <Compile Include="ModelsAndBuffer\Buffer.cs" />
     <Compile Include="ModelsAndBuffer\ButikOtel.cs" />
     <Compile Include="ModelsAndBuffer\Core.cs" />
