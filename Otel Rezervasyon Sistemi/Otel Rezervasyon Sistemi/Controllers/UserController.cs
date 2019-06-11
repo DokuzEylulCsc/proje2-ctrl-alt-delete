@@ -225,7 +225,14 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
                             );
                     }
                 }
-                return UserReservation;
+                if(UserReservation.Count > 0)
+                {
+                    return UserReservation;
+                }
+                else
+                {
+                    throw new Exception("Bu kullanicinin hic guncel rezervasyonu yok ");
+                }
             }
             else
             {
@@ -257,7 +264,14 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
                             );
                     }
                 }
-                return UserReservation;
+                if (UserReservation.Count > 0)
+                {
+                    return UserReservation;
+                }
+                else
+                {
+                    throw new Exception("Bu kullanicinin hic guncel rezervasyonu yok ");
+                }
             }
             else
             {
