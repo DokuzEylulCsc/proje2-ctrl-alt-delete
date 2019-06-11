@@ -16,7 +16,7 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
             // Xml serilestirme islemi yapabilmek icin bir adet bos yapıcı metot gerekli.
         }
 
-        public static int IDGenerator = 0;
+        
 
         [XmlElement("RezervasyonID")]
         private int rezID;
@@ -28,10 +28,10 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
 
         public Rezervasyon(DateTime rezbaslangic,DateTime rezbitis,string whichotelid,int whichroomnumber)
         {
+            Random r = new Random();
             this.rezbaslangic = rezbaslangic;
             this.rezbitis = rezbitis;
-            Rezervasyon.IDGenerator++;
-            this.RezID = Rezervasyon.IDGenerator;
+            this.RezID = r.Next(0, 10) + r.Next(0, 10)*10 + r.Next(0, 10)*100 + r.Next(0, 10)*1000 + r.Next(0,10)*10000;
             this.rezotelid= whichotelid;
             this.rezodanumarasi = whichroomnumber;
         }

@@ -23,7 +23,15 @@
     <Ad>5555</Ad>
     <Soyad>555</Soyad>
     <Sifre>55555</Sifre>
-    <ReservationofCostumer />
+    <ReservationofCostumer>
+      <Rezervasyon>
+        <RezID>70219</RezID>
+        <RezOtelID>121212</RezOtelID>
+        <RezOdaNumarasi>111</RezOdaNumarasi>
+        <RezBaslangic>2019-06-11T19:18:44</RezBaslangic>
+        <RezBitis>2019-06-13T00:00:00</RezBitis>
+      </Rezervasyon>
+    </ReservationofCostumer>
   </Kullanici>
   <Kullanici xsi:type="Musteri">
     <ID>12121</ID>

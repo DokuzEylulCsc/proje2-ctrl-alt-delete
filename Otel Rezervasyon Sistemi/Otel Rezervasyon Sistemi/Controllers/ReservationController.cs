@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +32,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
                     List<ModelsAndBuffer.Rezervasyon> reservations = core.ReservationofRoom(otelId, odaNo);
                     foreach (Rezervasyon r in reservations)
                     {
-                        if ((r.RezBaslangic < baslangic && r.RezBitis > baslangic) || (r.RezBaslangic < bitis && r.RezBitis > bitis))
+                        if ((r.RezBaslangic <= baslangic && r.RezBitis >= baslangic) || (r.RezBaslangic <= bitis && r.RezBitis >= bitis))
                         {
                             return false;
                         }
@@ -59,8 +60,15 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="baslangic">rezervasyonun baslicagi tarih</param>
         /// <param name="bitis">rezervasyonun bitecegi tarih</param>
         /// <returns></returns>
-        public bool ReserveRoom(string userID, string otelId, int odaNo, DateTime baslangic, DateTime bitis)
+        public bool ReserveRoom(string userID, string Desteroy, DateTime baslangic, DateTime bitis)
         {
+
+            Desteroy = Desteroy.Replace(" - ", "-");
+            //Desteroy = Desteroy.Replace("--", "-");
+            Debug.WriteLine(Desteroy);
+            string otelId = Desteroy.Split('-')[0];
+            int odaNo = Convert.ToInt32(Desteroy.Split('-')[2]);
+           
             try
             {
                 if (CheckReservationDateAvailabilty(otelId, odaNo, baslangic, bitis))

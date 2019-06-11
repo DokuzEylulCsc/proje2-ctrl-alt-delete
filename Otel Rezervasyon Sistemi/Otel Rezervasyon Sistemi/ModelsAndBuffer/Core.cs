@@ -294,12 +294,12 @@ namespace Otel_Rezervasyon_Sistemi.ModelsAndBuffer
                     {
                         if (roomnumber == item2.OdaNo)
                         {
-                            foreach (Musteri item3 in buf.Kullanicilar)
+                            foreach (Kullanici item3 in buf.Kullanicilar)
                             {
                                 if (costumerid == item3.ID)
                                 {
                                     item2.Rezervasyonlar.Add(new Rezervasyon(baslangic, bitis,otelid,roomnumber));
-                                    item3.ReservationofCostumer.Add(new Rezervasyon(baslangic, bitis, otelid, roomnumber));
+                                    ((Musteri)item3).ReservationofCostumer.Add(new Rezervasyon(baslangic, bitis, otelid, roomnumber));
                                     return true;
                                 }
                             }

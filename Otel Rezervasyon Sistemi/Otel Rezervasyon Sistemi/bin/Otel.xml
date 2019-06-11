@@ -2,7 +2,50 @@
 <ArrayOfOtel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Otel xsi:type="ButikOtel">
     <Odalar xsi:type="KralDairesi">
-      <Rezervasyonlar />
+      <Rezervasyonlar>
+        <Rezervasyon>
+          <RezID>1</RezID>
+          <RezOtelID>121212</RezOtelID>
+          <RezOdaNumarasi>111</RezOdaNumarasi>
+          <RezBaslangic>2019-06-16T00:00:00</RezBaslangic>
+          <RezBitis>2019-06-21T00:00:00</RezBitis>
+        </Rezervasyon>
+        <Rezervasyon>
+          <RezID>1</RezID>
+          <RezOtelID>121212</RezOtelID>
+          <RezOdaNumarasi>111</RezOdaNumarasi>
+          <RezBaslangic>2019-06-16T00:00:00</RezBaslangic>
+          <RezBitis>2019-06-23T00:00:00</RezBitis>
+        </Rezervasyon>
+        <Rezervasyon>
+          <RezID>3</RezID>
+          <RezOtelID>121212</RezOtelID>
+          <RezOdaNumarasi>111</RezOdaNumarasi>
+          <RezBaslangic>2019-06-16T00:00:00</RezBaslangic>
+          <RezBitis>2019-06-23T00:00:00</RezBitis>
+        </Rezervasyon>
+        <Rezervasyon>
+          <RezID>5</RezID>
+          <RezOtelID>121212</RezOtelID>
+          <RezOdaNumarasi>111</RezOdaNumarasi>
+          <RezBaslangic>2019-06-16T00:00:00</RezBaslangic>
+          <RezBitis>2019-06-23T00:00:00</RezBitis>
+        </Rezervasyon>
+        <Rezervasyon>
+          <RezID>7</RezID>
+          <RezOtelID>121212</RezOtelID>
+          <RezOdaNumarasi>111</RezOdaNumarasi>
+          <RezBaslangic>2019-06-16T00:00:00</RezBaslangic>
+          <RezBitis>2019-06-23T00:00:00</RezBitis>
+        </Rezervasyon>
+        <Rezervasyon>
+          <RezID>70219</RezID>
+          <RezOtelID>121212</RezOtelID>
+          <RezOdaNumarasi>111</RezOdaNumarasi>
+          <RezBaslangic>2019-06-11T19:18:44</RezBaslangic>
+          <RezBitis>2019-06-13T00:00:00</RezBitis>
+        </Rezervasyon>
+      </Rezervasyonlar>
       <OdaNo>111</OdaNo>
       <KisiKapasitesi>0</KisiKapasitesi>
       <OdaFiyati>900</OdaFiyati>

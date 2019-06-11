@@ -60,7 +60,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
                             {
                                 foreach (Rezervasyon r in o.Rezervasyonlar)
                                 {
-                                    if ((r.RezBaslangic < start && r.RezBitis > start) || (r.RezBaslangic < end && r.RezBitis > end))
+                                    if ((r.RezBaslangic <= start && r.RezBitis >= start) || (r.RezBaslangic <= end && r.RezBitis >= end))
                                     {
                                         available = false;
                                     }
@@ -84,7 +84,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
                                 }
                                 if (available)
                                 {
-                                    roomie.Add(hotelIDs[i] + "-" + hotelNames[i] + "-" + o.OdaNo.ToString());
+                                    roomie.Add(hotelIDs[i]+"-"+hotelNames[i]+"-"+o.OdaNo.ToString());
                                 }
                             }
                         }

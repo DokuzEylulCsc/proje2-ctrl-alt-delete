@@ -256,11 +256,11 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
                     if (reservation.RezBaslangic < DateTime.Now)
                     {
                         UserReservation.Add(
-                            "Rezervasyon ID:" + reservation.RezID +
-                            "-Otel ID :" + reservation.RezOtelID +
-                            "-Oda NO:" + reservation.RezOdaNumarasi.ToString() +
-                            "-Baslangic Tarihi:" + reservation.RezBaslangic.ToString() +
-                            "-Bitis Tarihi" + reservation.RezBitis.ToString()
+                             reservation.RezID +
+                            "-" + reservation.RezOtelID +
+                            "-" + reservation.RezOdaNumarasi.ToString() +
+                            "-" + reservation.RezBaslangic.ToString() +
+                            "-" + reservation.RezBitis.ToString()
                             );
                     }
                 }

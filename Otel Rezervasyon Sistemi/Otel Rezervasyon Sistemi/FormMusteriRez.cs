@@ -73,7 +73,17 @@ namespace Otel_Rezervasyon_Sistemi
         private void btnRezSil_Click(object sender, EventArgs e)
         {
             MainController m = MainController.GetController();
-            m.user.DeleteActiveReservation(lbluserid.Text, listBox1.SelectedItem.ToString());
+            try
+            {
+                if(m.user.DeleteActiveReservation(lbluserid.Text, listBox1.SelectedItem.ToString()))
+                {
+                    MessageBox.Show("Rezervasyon Basari ile silindi");
+                }
+            }catch(Exception a)
+            {
+                MessageBox.Show(a.Message);
+            }
+            
          }
         private void FormMusteriRez_Load(object sender, EventArgs e)
         {
@@ -84,14 +94,11 @@ namespace Otel_Rezervasyon_Sistemi
         private void btnRezYap_Click(object sender, EventArgs e)
         {
             MainController m = MainController.GetController();
-            int reservationID = Convert.ToInt32(((listBoxUygunOteller.SelectedItem.ToString().Split('-'))[0].Split(':'))[1]);
-            string otelID = (((listBoxUygunOteller.SelectedItem.ToString() .Split('-'))[1]).Split(':'))[1];
-            int odaNo = Convert.ToInt32((((listBoxUygunOteller.SelectedItem.ToString().Split('-'))[2]).Split(':'))[1]);
             try
             {
-                if (m.ReservationController.CheckReservationDateAvailabilty(otelID, odaNo, mcbaslangic.SelectionRange.Start.Date, mcbitis.SelectionRange.End.Date))
+                if (m.ReservationController.ReserveRoom(FormLogin.kullaniciID,listBoxUygunOteller.SelectedItem.ToString() ,mcbaslangic.SelectionStart, mcbitis.SelectionStart))
                 {
-                    m.ReservationController.ReserveRoom(lbluserid.Text, otelID, odaNo, mcbaslangic.SelectionRange.Start.Date, mcbitis.SelectionRange.End.Date);
+                    MessageBox.Show("Rezervasyon Basarili", "Tebrikler");
                 }
             }
             catch(Exception a)
@@ -103,8 +110,17 @@ namespace Otel_Rezervasyon_Sistemi
 
         private void btnRezListele_Click(object sender, EventArgs e)
         {
+
+            listBox1.Items.Clear();
             MainController m = MainController.GetController();
-            m.user.ShowActiveReservationsOfCustomer(lbluserid.Text);
+            try
+            {
+                listBox1.Items.AddRange(m.user.ShowActiveReservationsOfCustomer(lbluserid.Text).ToArray());
+            }
+            catch(Exception a)
+            {
+                MessageBox.Show(a.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
