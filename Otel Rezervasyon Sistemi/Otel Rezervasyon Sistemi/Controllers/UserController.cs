@@ -214,7 +214,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
                 List<ModelsAndBuffer.Rezervasyon> reservationsOfUser = ((Musteri)core.ReturnInformations(userID)).ReservationofCostumer;
                 foreach (ModelsAndBuffer.Rezervasyon reservation in reservationsOfUser)
                 {
-                    if (reservation.RezBaslangic > DateTime.Now)
+                    if (reservation.RezBaslangic >= DateTime.Now)
                     {
                         UserReservation.Add(
                             "Rezervasyon ID:" + reservation.RezID +

@@ -4,45 +4,10 @@
     <Odalar xsi:type="KralDairesi">
       <Rezervasyonlar>
         <Rezervasyon>
-          <RezID>1</RezID>
+          <RezID>73510</RezID>
           <RezOtelID>121212</RezOtelID>
           <RezOdaNumarasi>111</RezOdaNumarasi>
-          <RezBaslangic>2019-06-16T00:00:00</RezBaslangic>
-          <RezBitis>2019-06-21T00:00:00</RezBitis>
-        </Rezervasyon>
-        <Rezervasyon>
-          <RezID>1</RezID>
-          <RezOtelID>121212</RezOtelID>
-          <RezOdaNumarasi>111</RezOdaNumarasi>
-          <RezBaslangic>2019-06-16T00:00:00</RezBaslangic>
-          <RezBitis>2019-06-23T00:00:00</RezBitis>
-        </Rezervasyon>
-        <Rezervasyon>
-          <RezID>3</RezID>
-          <RezOtelID>121212</RezOtelID>
-          <RezOdaNumarasi>111</RezOdaNumarasi>
-          <RezBaslangic>2019-06-16T00:00:00</RezBaslangic>
-          <RezBitis>2019-06-23T00:00:00</RezBitis>
-        </Rezervasyon>
-        <Rezervasyon>
-          <RezID>5</RezID>
-          <RezOtelID>121212</RezOtelID>
-          <RezOdaNumarasi>111</RezOdaNumarasi>
-          <RezBaslangic>2019-06-16T00:00:00</RezBaslangic>
-          <RezBitis>2019-06-23T00:00:00</RezBitis>
-        </Rezervasyon>
-        <Rezervasyon>
-          <RezID>7</RezID>
-          <RezOtelID>121212</RezOtelID>
-          <RezOdaNumarasi>111</RezOdaNumarasi>
-          <RezBaslangic>2019-06-16T00:00:00</RezBaslangic>
-          <RezBitis>2019-06-23T00:00:00</RezBitis>
-        </Rezervasyon>
-        <Rezervasyon>
-          <RezID>70219</RezID>
-          <RezOtelID>121212</RezOtelID>
-          <RezOdaNumarasi>111</RezOdaNumarasi>
-          <RezBaslangic>2019-06-11T19:18:44</RezBaslangic>
+          <RezBaslangic>2019-06-11T19:29:52</RezBaslangic>
           <RezBitis>2019-06-13T00:00:00</RezBitis>
         </Rezervasyon>
       </Rezervasyonlar>

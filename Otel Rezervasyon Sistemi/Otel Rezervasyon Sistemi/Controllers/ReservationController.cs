@@ -68,7 +68,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
             Debug.WriteLine(Desteroy);
             string otelId = Desteroy.Split('-')[0];
             int odaNo = Convert.ToInt32(Desteroy.Split('-')[2]);
-           
+
             try
             {
                 if (CheckReservationDateAvailabilty(otelId, odaNo, baslangic, bitis))
@@ -78,13 +78,13 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
                         core.AddReservation(otelId, userID, odaNo, baslangic, bitis);
                         return true;
                     }
-                    catch(Exception e)
+                    catch (Exception e)
                     {
                         throw new Exception(e.Message);
                     }
-                    
-                    
-                    
+
+
+
                 }
                 else
                 {
@@ -98,8 +98,11 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
 
 
         }
-        public bool DeleteReservation(string userID, string otelID, int odaNo, DateTime baslangic, DateTime bitis)
+        public bool DeleteReservation(string userID, string desteroy)
         {
+            int rezID = Convert.ToInt32((desteroy.Split('-')[0]).Split(':')[1]);
+            int odaNo = Convert.ToInt32((desteroy.Split('-')[2]).Split(':')[1]);
+            string otelID = (desteroy.Split('-')[1]).Split(':')[1];
             List<string> userIDs = core.ReturnCustomerId();
             if (userIDs.Contains(userID))
             {
@@ -109,14 +112,26 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
                     List<int> roomIDs = core.ReturnRoomIds(otelID);
                     if (roomIDs.Contains(odaNo))
                     {
-                        List<ModelsAndBuffer.Rezervasyon> reservationsOfRoom = core.ReservationofRoom(otelID,odaNo);
-                        foreach(ModelsAndBuffer.Rezervasyon reservation in reservationsOfRoom)
+                        List<ModelsAndBuffer.Rezervasyon> reservationsOfRoom = core.ReservationofRoom(otelID, odaNo);
+                        foreach (ModelsAndBuffer.Rezervasyon reservation in reservationsOfRoom)
                         {
-                            if (reservation.RezBaslangic == baslangic && reservation.RezBitis == bitis)
+                            if(reservation.RezID == rezID)
                             {
-                                /*delete reservation*/
-                                return true;
+                                try
+                                {
+                                    if (core.DeleteReservation(otelID, odaNo, userID, rezID))
+                                    {
+                                        return true;
+                                    }
+
+                                }
+                                catch (Exception a)
+                                {
+                                    throw a;
+                                }
                             }
+                            
+
                         }
                         throw new Exception("Boyle bir rezervasyon yok");
                     }
@@ -135,7 +150,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
             {
                 throw new Exception("Boyle bir kullanici yok");
             }
-            
+
         }
 
 

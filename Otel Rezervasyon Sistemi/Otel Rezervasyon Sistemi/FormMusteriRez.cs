@@ -75,7 +75,7 @@ namespace Otel_Rezervasyon_Sistemi
             MainController m = MainController.GetController();
             try
             {
-                if(m.user.DeleteActiveReservation(lbluserid.Text, listBox1.SelectedItem.ToString()))
+                if(m.ReservationController.DeleteReservation(FormLogin.kullaniciID, listBox1.SelectedItem.ToString()))
                 {
                     MessageBox.Show("Rezervasyon Basari ile silindi");
                 }
