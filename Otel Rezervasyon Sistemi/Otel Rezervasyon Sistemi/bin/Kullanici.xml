@@ -32,4 +32,11 @@
     <Sifre>33333</Sifre>
     <ReservationofCostumer />
   </Kullanici>
+  <Kullanici xsi:type="Musteri">
+    <ID>Emir9789</ID>
+    <Ad>Emir</Ad>
+    <Soyad>Bulut</Soyad>
+    <Sifre>13579</Sifre>
+    <ReservationofCostumer />
+  </Kullanici>
 </ArrayOfKullanici>
