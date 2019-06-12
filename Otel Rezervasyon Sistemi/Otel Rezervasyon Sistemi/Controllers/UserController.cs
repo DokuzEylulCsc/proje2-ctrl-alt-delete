@@ -22,35 +22,51 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="password">kullanicinin girdigi sifre </param>
         public Kullanici AccountVerification(string id, string password)
         {
-            List<string> customerIDs = core.ReturnCustomerId();
-            List<string> managerIDs = core.ReturnAdminId();
-            if (customerIDs.Contains(id))
+            try
             {
-                if (core.PasswordCheck(id, password))
+
+                List<string> customerIDs = core.ReturnCustomerId();
+                List<string> managerIDs = core.ReturnAdminId();
+                if (customerIDs.Contains(id))
                 {
-                    Kullanici k = core.ReturnInformations(id);
-                    return new Musteri(k.ID, k.Ad, k.Soyad, "**");
+                    if (core.PasswordCheck(id, password))
+                    {
+                        Kullanici k = core.ReturnInformations(id);
+                        return new Musteri(k.ID, k.Ad, k.Soyad, "**");
+                    }
+                    else
+                    {
+                        throw new MessageException("Sifreniz hatali");
+                    }
+                }
+                else if (managerIDs.Contains(id))
+                {
+                    if (core.PasswordCheck(id, password))
+                    {
+                        Kullanici k = core.ReturnInformations(id);
+                        return new Yonetici(k.ID, k.Ad, k.Soyad, "**");
+                    }
+                    else
+                    {
+                        throw new MessageException("Sifreniz hatali");
+                    }
                 }
                 else
                 {
-                    throw new Exception("Sifreniz hatali");
+                    throw new MessageException("Boyle bir ID bulunmamaktadir");
                 }
             }
-            else if (managerIDs.Contains(id))
+            catch (MessageException m)
             {
-                if (core.PasswordCheck(id, password))
-                {
-                    Kullanici k = core.ReturnInformations(id);
-                    return new Yonetici(k.ID, k.Ad, k.Soyad, "**");
-                }
-                else
-                {
-                    throw new Exception("Sifreniz hatali");
-                }
+                throw m;
             }
-            else
+            catch (ExceptionHandler e)
             {
-                throw new Exception("Boyle bir ID bulunmamaktadir");
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionHandler("Account Dogrulama hatasi", "AccountVerification()", "UserController", e.Message);
             }
         }
         /// <summary>
@@ -64,56 +80,96 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <returns></returns>
         public bool CreateAccountRequest(string id, string password, string passwordverif, string ad, string soyad)
         {
-            if (password == passwordverif)
+            try
             {
-                List<string> IDs = core.ReturnAdminId();
-                IDs.AddRange(core.ReturnCustomerId());
-                if (IDs.Contains(id))
+
+                if (password == passwordverif)
                 {
-                    throw new Exception("Boyle Bir ID zaten bulunmaktadir");
+                    List<string> IDs = core.ReturnAdminId();
+                    IDs.AddRange(core.ReturnCustomerId());
+                    if (IDs.Contains(id))
+                    {
+                        throw new MessageException("Boyle Bir ID zaten bulunmaktadir");
+                    }
+                    try
+                    {
+                        core.AddCostumer(id, ad, soyad, password);
+                        return true;
+                    }
+                    catch (MessageException e)
+                    {
+                        throw e;
+                    }
+                    catch (Exception e)
+                    {
+                        throw e;
+                    }
+
                 }
-                try
+                else
                 {
-                    core.AddCostumer(id, ad, soyad, password);
-                    return true;
-                }
-                catch (Exception e)
-                {
-                    throw e;
+                    throw new MessageException("Sifreler Uyusmuyor!");
                 }
 
-
             }
-            else
+            catch (MessageException m)
             {
-                throw new Exception("Sifreler Uyusmuyor!");
+                throw m;
             }
+            catch (ExceptionHandler e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionHandler("Hesap Olusturma hatasi", "CreateAccountRequest()", "UserController", e.Message);
+            }
+
         }
         public bool CreateManagerAccountRequest(string id, string password, string passwordverif, string ad, string soyad)
         {
-            if (password == passwordverif)
+            try
             {
-                List<string> IDs = core.ReturnAdminId();
-                IDs.AddRange(core.ReturnCustomerId());
-                if (IDs.Contains(id))
-                {
-                    throw new Exception("Boyle Bir ID zaten bulunmaktadir");
-                }
-                try
-                {
-                    core.AddAdmin(id, ad, soyad, password);
-                    return true;
-                }
-                catch (Exception e)
-                {
-                    throw e;
-                }
 
+                if (password == passwordverif)
+                {
+                    List<string> IDs = core.ReturnAdminId();
+                    IDs.AddRange(core.ReturnCustomerId());
+                    if (IDs.Contains(id))
+                    {
+                        throw new MessageException("Boyle Bir ID zaten bulunmaktadir");
+                    }
+                    try
+                    {
+                        core.AddAdmin(id, ad, soyad, password);
+                        return true;
+                    }
+                    catch (MessageException e)
+                    {
+                        throw e;
+                    }
+                    catch (Exception e)
+                    {
+                        throw e;
+                    }
 
+                }
+                else
+                {
+                    throw new MessageException("Sifreler Uyusmuyor!");
+                }
             }
-            else
+            catch (MessageException m)
             {
-                throw new Exception("Sifreler Uyusmuyor!");
+                throw m;
+            }
+            catch (ExceptionHandler e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionHandler("Rezervasyon getirme hatasi", "GetMethods()", "OtelController", e.Message);
             }
         }
 
@@ -171,32 +227,48 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <returns>islem uygulanir ise true , hata olusur ise hata dondurucekti</returns>
         public bool ChangeInformationRequest(string ID, string Password, string whichInfo, string newInfo)
         {
-            List<string> IDs = core.ReturnAdminId();
-            IDs.AddRange(core.ReturnCustomerId());
-            if (IDs.Contains(ID))
+            try
             {
 
-                if (core.PasswordCheck(ID, Password))
+                List<string> IDs = core.ReturnAdminId();
+                IDs.AddRange(core.ReturnCustomerId());
+                if (IDs.Contains(ID))
                 {
-                    if (whichInfo == "Ad")
+
+                    if (core.PasswordCheck(ID, Password))
                     {
-                        core.InformationChange(whichInfo, ID, newInfo);
-                        return true;
+                        if (whichInfo == "Ad")
+                        {
+                            core.InformationChange(whichInfo, ID, newInfo);
+                            return true;
+                        }
+                        else
+                        {
+                            core.InformationChange(whichInfo, ID, newInfo);
+                            return true;
+                        }
                     }
                     else
                     {
-                        core.InformationChange(whichInfo, ID, newInfo);
-                        return true;
+                        throw new MessageException("ID ile sifreniz uyusmamaktadir");
                     }
                 }
                 else
                 {
-                    throw new Exception("ID ile sifreniz uyusmamaktadir");
+                    throw new MessageException("Boyle bir ID yoktur");
                 }
             }
-            else
+            catch (MessageException m)
             {
-                throw new Exception("Boyle bir ID yoktur");
+                throw m;
+            }
+            catch (ExceptionHandler e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionHandler("Bilgi Degistirme hatasi", "ChangeInformationRequest()", "UserController", e.Message);
             }
 
         }
@@ -207,36 +279,52 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <returns></returns>
         public List<string> ShowActiveReservationsOfCustomer(string userID)
         {
-            List<string> UserReservation = new List<string>();
-            List<string> IDs = core.ReturnCustomerId();
-            if (IDs.Contains(userID))
+            try
             {
-                List<ModelsAndBuffer.Rezervasyon> reservationsOfUser = ((Musteri)core.ReturnInformations(userID)).ReservationofCostumer;
-                foreach (ModelsAndBuffer.Rezervasyon reservation in reservationsOfUser)
+
+                List<string> UserReservation = new List<string>();
+                List<string> IDs = core.ReturnCustomerId();
+                if (IDs.Contains(userID))
                 {
-                    if (reservation.RezBaslangic >= DateTime.Now)
+                    List<ModelsAndBuffer.Rezervasyon> reservationsOfUser = ((Musteri)core.ReturnInformations(userID)).ReservationofCostumer;
+                    foreach (ModelsAndBuffer.Rezervasyon reservation in reservationsOfUser)
                     {
-                        UserReservation.Add(
-                            "Rezervasyon ID:" + reservation.RezID +
-                            "-Otel ID :" + reservation.RezOtelID +
-                            "-Oda NO:" + reservation.RezOdaNumarasi.ToString() +
-                            "-Baslangic Tarihi:" + reservation.RezBaslangic.ToString() +
-                            "-Bitis Tarihi" + reservation.RezBitis.ToString()
-                            );
+                        if (reservation.RezBaslangic >= DateTime.Now)
+                        {
+                            UserReservation.Add(
+                                "Rezervasyon ID:" + reservation.RezID +
+                                "-Otel ID :" + reservation.RezOtelID +
+                                "-Oda NO:" + reservation.RezOdaNumarasi.ToString() +
+                                "-Baslangic Tarihi:" + reservation.RezBaslangic.ToString() +
+                                "-Bitis Tarihi" + reservation.RezBitis.ToString()
+                                );
+                        }
                     }
-                }
-                if(UserReservation.Count > 0)
-                {
-                    return UserReservation;
+                    if (UserReservation.Count > 0)
+                    {
+                        return UserReservation;
+                    }
+                    else
+                    {
+                        throw new MessageException("Bu kullanicinin hic guncel rezervasyonu yok ");
+                    }
                 }
                 else
                 {
-                    throw new Exception("Bu kullanicinin hic guncel rezervasyonu yok ");
+                    throw new MessageException("Boyle bir kullanici yok");
                 }
             }
-            else
+            catch (MessageException m)
             {
-                throw new Exception("Boyle bir kullanici yok");
+                throw m;
+            }
+            catch (ExceptionHandler e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionHandler("Kullanici Rezervasyonlarini getirme hatasi", "ShowActiveReservationsOfCustomer()", "UserController", e.Message);
             }
         }
         /// <summary>
@@ -246,40 +334,56 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <returns></returns>
         public List<string> ShowOldReservationsOfCustomer(string userID)
         {
-            List<string> UserReservation = new List<string>();
-            List<string> IDs = core.ReturnCustomerId();
-            if (IDs.Contains(userID))
+            try
             {
-                List<ModelsAndBuffer.Rezervasyon> reservationsOfUser = ((Musteri)core.ReturnInformations(userID)).ReservationofCostumer;
-                foreach (ModelsAndBuffer.Rezervasyon reservation in reservationsOfUser)
+
+                List<string> UserReservation = new List<string>();
+                List<string> IDs = core.ReturnCustomerId();
+                if (IDs.Contains(userID))
                 {
-                    if (reservation.RezBaslangic < DateTime.Now)
+                    List<ModelsAndBuffer.Rezervasyon> reservationsOfUser = ((Musteri)core.ReturnInformations(userID)).ReservationofCostumer;
+                    foreach (ModelsAndBuffer.Rezervasyon reservation in reservationsOfUser)
                     {
-                        UserReservation.Add(
-                             reservation.RezID +
-                            "-" + reservation.RezOtelID +
-                            "-" + reservation.RezOdaNumarasi.ToString() +
-                            "-" + reservation.RezBaslangic.ToString() +
-                            "-" + reservation.RezBitis.ToString()
-                            );
+                        if (reservation.RezBaslangic < DateTime.Now)
+                        {
+                            UserReservation.Add(
+                                 reservation.RezID +
+                                "-" + reservation.RezOtelID +
+                                "-" + reservation.RezOdaNumarasi.ToString() +
+                                "-" + reservation.RezBaslangic.ToString() +
+                                "-" + reservation.RezBitis.ToString()
+                                );
+                        }
                     }
-                }
-                if (UserReservation.Count > 0)
-                {
-                    return UserReservation;
+                    if (UserReservation.Count > 0)
+                    {
+                        return UserReservation;
+                    }
+                    else
+                    {
+                        throw new MessageException("Bu kullanicinin hic guncel rezervasyonu yok ");
+                    }
                 }
                 else
                 {
-                    throw new Exception("Bu kullanicinin hic guncel rezervasyonu yok ");
+                    throw new MessageException("Boyle bir kullanici yok");
                 }
             }
-            else
+            catch (MessageException m)
             {
-                throw new Exception("Boyle bir kullanici yok");
+                throw m;
+            }
+            catch (ExceptionHandler e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionHandler("Kullanicinin eski rezervasyonlarini getirme hatasi", "ShowOldReservationOfCustomer()", "UserController", e.Message);
             }
         }
-        
-        public bool DeleteActiveReservation(string userID,string reservationDetails)
+
+        public bool DeleteActiveReservation(string userID, string reservationDetails)
         {
             int reservationID = Convert.ToInt32(((reservationDetails.Split('-'))[0].Split(':'))[1]);
             string otelID = (((reservationDetails.Split('-'))[1]).Split(':'))[1];
@@ -289,7 +393,7 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
             {
                 try
                 {
-                core.DeleteReservation(otelID, odaNo, userID, reservationID);
+                    core.DeleteReservation(otelID, odaNo, userID, reservationID);
                     return true;
                 }
                 catch (Exception e)

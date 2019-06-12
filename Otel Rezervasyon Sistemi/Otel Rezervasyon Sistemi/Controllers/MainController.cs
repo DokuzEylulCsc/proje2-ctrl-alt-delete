@@ -44,27 +44,52 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// </returns>
         public static MainController GetController()
         {
-            if (instance == null)
+            try
             {
-                instance = new MainController();
+                if (instance == null)
+                {
+                    instance = new MainController();
+                }
+                return instance;
             }
-            return instance;
+            catch(Exception e)
+            {
+                throw new ExceptionHandler("Singleton Constructor hatasi !", "GetController()", "Main Controller", e.Message);
+            }
         }
         /// <summary>
         /// Objeleri XMLe Cekmek icin bitiste cagirilir
         /// </summary>
         public void SerializeAtEnd()
         {
-            Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer b = Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer.BUF;
-            b.Serialization();
+            try
+            {
+                Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer b = Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer.BUF;
+                b.Serialization();
+            }
+            catch(Exception e)
+            {
+                throw new ExceptionHandler("Serialization Hatasi !", " SerializeAtEnd()", "Main Controller", e.Message);
+            }
         }
         /// <summary>
         /// XML elementleri objelestirmek icin baslangicta calisir
         /// </summary>
         public void DeserializeAtStart()
         {
-            Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer b = Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer.BUF;
-            b.Deserialization();
+            try
+            {
+                Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer b = Otel_Rezervasyon_Sistemi.ModelsAndBuffer.Buffer.BUF;
+                b.Deserialization();
+            }
+            catch(ExceptionHandler a)
+            {
+                throw a;
+            }
+            catch(Exception e)
+            {
+                throw new ExceptionHandler("Deserialize Hatasi ! ", " DeserializeAtStart()", "MainController", e.Message);
+            }
         }
     }
 }

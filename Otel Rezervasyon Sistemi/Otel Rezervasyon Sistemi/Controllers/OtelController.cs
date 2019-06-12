@@ -20,21 +20,38 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="otelid">Rezervasyonu sorgulanmak istenen otelin idsi</param>
         public List<ModelsAndBuffer.Rezervasyon> GetReservations(string otelid)
         {
-            List<string> IDs = core.ReturnHotelID();
-            if (IDs.Contains(otelid))
+            try
             {
-                List<ModelsAndBuffer.Oda> rooms = core.ReturnRoomObjects(otelid);
-                List<ModelsAndBuffer.Rezervasyon> rezervasyons = new List<ModelsAndBuffer.Rezervasyon>();
-                foreach(ModelsAndBuffer.Oda room in rooms)
+                List<string> IDs = core.ReturnHotelID();
+                if (IDs.Contains(otelid))
                 {
-                    rezervasyons.AddRange(room.Rezervasyonlar);
+
+                    List<ModelsAndBuffer.Oda> rooms = core.ReturnRoomObjects(otelid);
+                    List<ModelsAndBuffer.Rezervasyon> rezervasyons = new List<ModelsAndBuffer.Rezervasyon>();
+                    foreach (ModelsAndBuffer.Oda room in rooms)
+                    {
+                        rezervasyons.AddRange(room.Rezervasyonlar);
+                    }
+                    return rezervasyons;
+
+
                 }
-                return rezervasyons;
-               
+                else
+                {
+                    throw new MessageException("Boyle Bir Otel IDsi yok");
+                }
             }
-            else
+            catch (MessageException m)
             {
-                throw new Exception("Boyle Bir Otel IDsi yok");
+                throw m;
+            }
+            catch (ExceptionHandler e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionHandler("Rezervasyon getirme hatasi", "GetMethods()", "OtelController", e.Message);
             }
         }
         /// <summary>
@@ -48,15 +65,31 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="hizmet">hizmet puani</param>
         public bool AddHotel(string otelid, string otelname, string oteltype, int temizlik, int konum, int hizmet)
         {
-            List<string> IDs = core.ReturnHotelID();
-            if (!IDs.Contains(otelid))
+            try
             {
-                core.AddOtel(temizlik, konum, hizmet, otelid, otelid, oteltype);
-                return true;
+
+                List<string> IDs = core.ReturnHotelID();
+                if (!IDs.Contains(otelid))
+                {
+                    core.AddOtel(temizlik, konum, hizmet, otelid, otelid, oteltype);
+                    return true;
+                }
+                else
+                {
+                    throw new MessageException("Boyle bir otel ID zaten bulunmaktadir");
+                }
             }
-            else
+            catch (MessageException m)
             {
-                throw new Exception("Boyle bir otel ID zaten bulunmaktadir");
+                throw m;
+            }
+            catch (ExceptionHandler e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionHandler("Otel Ekleme Hatasi", "AddHotel()", "OtelController", e.Message);
             }
 
         }
@@ -66,16 +99,32 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <param name="hotelId">silinmek istenen otelIdsi </param>
         public bool DeleteHotel(string hotelId)
         {
-            List<string> IDs = core.ReturnHotelID();
-            
-            if (IDs.Contains(hotelId))
+            try
             {
-                core.DeleteOtel(hotelId);
-                return true;
+
+                List<string> IDs = core.ReturnHotelID();
+
+                if (IDs.Contains(hotelId))
+                {
+                    core.DeleteOtel(hotelId);
+                    return true;
+                }
+                else
+                {
+                    throw new MessageException("Boyle bir otel ID bulunamadi");
+                }
             }
-            else
+            catch (MessageException m)
             {
-                throw new Exception("Boyle bir otel ID bulunamadi");
+                throw m;
+            }
+            catch (ExceptionHandler e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionHandler("Otel Silme Hatasi", "DeleteHotel()", "OtelController", e.Message);
             }
 
 

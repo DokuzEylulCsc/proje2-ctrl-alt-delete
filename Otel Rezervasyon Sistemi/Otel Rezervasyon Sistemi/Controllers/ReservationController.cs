@@ -23,31 +23,47 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <returns>onay durumun True , onay alamama durumunda false </returns>
         public bool CheckReservationDateAvailabilty(string otelId, int odaNo, DateTime baslangic, DateTime bitis)
         {
-            List<string> IDs = core.ReturnHotelID();
-            if (IDs.Contains(otelId))
+            try
             {
-                List<int> roomIDs = core.ReturnRoomIds(otelId);
-                if (roomIDs.Contains(odaNo))
+
+                List<string> IDs = core.ReturnHotelID();
+                if (IDs.Contains(otelId))
                 {
-                    List<ModelsAndBuffer.Rezervasyon> reservations = core.ReservationofRoom(otelId, odaNo);
-                    foreach (Rezervasyon r in reservations)
+                    List<int> roomIDs = core.ReturnRoomIds(otelId);
+                    if (roomIDs.Contains(odaNo))
                     {
-                        if ((r.RezBaslangic <= baslangic && r.RezBitis >= baslangic) || (r.RezBaslangic <= bitis && r.RezBitis >= bitis))
+                        List<ModelsAndBuffer.Rezervasyon> reservations = core.ReservationofRoom(otelId, odaNo);
+                        foreach (Rezervasyon r in reservations)
                         {
-                            return false;
+                            if ((r.RezBaslangic <= baslangic && r.RezBitis >= baslangic) || (r.RezBaslangic <= bitis && r.RezBitis >= bitis))
+                            {
+                                return false;
+                            }
                         }
+                        return true;
                     }
-                    return true;
+                    else
+                    {
+                        throw new MessageException("Bu otele ait boyle bir oda YOK");
+                    }
+
                 }
                 else
                 {
-                    throw new Exception("Bu otele ait boyle bir oda YOK");
+                    throw new MessageException("Bu ID ye sahip bir otel YOK");
                 }
-
             }
-            else
+            catch (MessageException m)
             {
-                throw new Exception("Bu ID ye sahip bir otel YOK");
+                throw m;
+            }
+            catch (ExceptionHandler e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionHandler("Oda Musaitlik durumu", "CheckReservationDateAvailabilty()", "OtelController", e.Message);
             }
 
         }
@@ -62,95 +78,126 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <returns></returns>
         public bool ReserveRoom(string userID, string Desteroy, DateTime baslangic, DateTime bitis)
         {
-
-            Desteroy = Desteroy.Replace(" - ", "-");
-            //Desteroy = Desteroy.Replace("--", "-");
-            Debug.WriteLine(Desteroy);
-            string otelId = Desteroy.Split('-')[0];
-            int odaNo = Convert.ToInt32(Desteroy.Split('-')[2]);
-
             try
             {
-                if (CheckReservationDateAvailabilty(otelId, odaNo, baslangic, bitis))
+
+                Desteroy = Desteroy.Replace(" - ", "-");
+                //Desteroy = Desteroy.Replace("--", "-");
+                Debug.WriteLine(Desteroy);
+                string otelId = Desteroy.Split('-')[0];
+                int odaNo = Convert.ToInt32(Desteroy.Split('-')[2]);
+
+                try
                 {
-                    try
+                    if (CheckReservationDateAvailabilty(otelId, odaNo, baslangic, bitis))
                     {
-                        core.AddReservation(otelId, userID, odaNo, baslangic, bitis);
-                        return true;
+                        try
+                        {
+                            core.AddReservation(otelId, userID, odaNo, baslangic, bitis);
+                            return true;
+                        }
+                        catch (MessageException e)
+                        {
+                            throw new MessageException(e.Message);
+                        }
+
+
+
                     }
-                    catch (Exception e)
+                    else
                     {
-                        throw new Exception(e.Message);
+                        throw new MessageException("Bu tarihler arasinda bu oda uygun degil");
                     }
-
-
-
                 }
-                else
+                catch (MessageException e)
                 {
-                    throw new Exception("Bu tarihler arasinda bu oda uygun degil");
+                    throw new MessageException(e.Message);
                 }
+            }
+            catch (MessageException m)
+            {
+                throw m;
+            }
+            catch (ExceptionHandler e)
+            {
+                throw e;
             }
             catch (Exception e)
             {
-                throw new Exception(e.Message);
+                throw new ExceptionHandler("Rezervasyon hatasi", "ReserveRoom()", "OtelController", e.Message);
             }
 
 
         }
         public bool DeleteReservation(string userID, string desteroy)
         {
-            int rezID = Convert.ToInt32((desteroy.Split('-')[0]).Split(':')[1]);
-            int odaNo = Convert.ToInt32((desteroy.Split('-')[2]).Split(':')[1]);
-            string otelID = (desteroy.Split('-')[1]).Split(':')[1];
-            List<string> userIDs = core.ReturnCustomerId();
-            if (userIDs.Contains(userID))
+            try
             {
-                List<string> hotelIDs = core.ReturnHotelID();
-                if (hotelIDs.Contains(otelID))
+
+                int rezID = Convert.ToInt32((desteroy.Split('-')[0]).Split(':')[1]);
+                int odaNo = Convert.ToInt32((desteroy.Split('-')[2]).Split(':')[1]);
+                string otelID = (desteroy.Split('-')[1]).Split(':')[1];
+                List<string> userIDs = core.ReturnCustomerId();
+                if (userIDs.Contains(userID))
                 {
-                    List<int> roomIDs = core.ReturnRoomIds(otelID);
-                    if (roomIDs.Contains(odaNo))
+                    List<string> hotelIDs = core.ReturnHotelID();
+                    if (hotelIDs.Contains(otelID))
                     {
-                        List<ModelsAndBuffer.Rezervasyon> reservationsOfRoom = core.ReservationofRoom(otelID, odaNo);
-                        foreach (ModelsAndBuffer.Rezervasyon reservation in reservationsOfRoom)
+                        List<int> roomIDs = core.ReturnRoomIds(otelID);
+                        if (roomIDs.Contains(odaNo))
                         {
-                            if(reservation.RezID == rezID)
+                            List<ModelsAndBuffer.Rezervasyon> reservationsOfRoom = core.ReservationofRoom(otelID, odaNo);
+                            foreach (ModelsAndBuffer.Rezervasyon reservation in reservationsOfRoom)
                             {
-                                try
+                                if (reservation.RezID == rezID)
                                 {
-                                    if (core.DeleteReservation(otelID, odaNo, userID, rezID))
+                                    try
                                     {
-                                        return true;
+                                        if (core.DeleteReservation(otelID, odaNo, userID, rezID))
+                                        {
+                                            return true;
+                                        }
+
                                     }
+                                    catch (MessageException a)
+                                    {
+                                        throw a;
+                                    }
+                                }
 
-                                }
-                                catch (Exception a)
-                                {
-                                    throw a;
-                                }
+
                             }
-                            
-
+                            throw new MessageException("Boyle bir rezervasyon yok");
                         }
-                        throw new Exception("Boyle bir rezervasyon yok");
+                        else
+                        {
+                            throw new MessageException("Boyle bir oda yok");
+                        }
                     }
                     else
                     {
-                        throw new Exception("Boyle bir oda yok");
+                        throw new MessageException("Boyle bir otel yok");
                     }
+
                 }
                 else
                 {
-                    throw new Exception("Boyle bir otel yok");
+                    throw new MessageException("Boyle bir kullanici yok");
                 }
 
             }
-            else
+            catch (MessageException m)
             {
-                throw new Exception("Boyle bir kullanici yok");
+                throw m;
             }
-
+            catch (ExceptionHandler e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionHandler("Rezervasyon getirme hatasi", "GetMethods()", "OtelController", e.Message);
+            }
         }
 
 

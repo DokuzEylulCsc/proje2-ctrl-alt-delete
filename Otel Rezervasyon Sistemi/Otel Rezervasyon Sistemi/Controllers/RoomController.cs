@@ -24,31 +24,47 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <returns></returns>
         public bool AddRoomRequest(string roomType, int fiyat, string yoneticiID, string otelID, int odaNo, int kisiKapasitesi, bool klima, bool televizyon, bool minibar, bool wifi)
         {
-            List<string> managerIDs = core.ReturnAdminId();
-            List<string> hotelIDS = core.ReturnHotelID();
-            if (managerIDs.Contains(yoneticiID))
+            try
             {
-                if (hotelIDS.Contains(otelID))
+
+                List<string> managerIDs = core.ReturnAdminId();
+                List<string> hotelIDS = core.ReturnHotelID();
+                if (managerIDs.Contains(yoneticiID))
                 {
-                    List<int> roomNOs = core.ReturnRoomIds(otelID);
-                    if (!roomNOs.Contains(odaNo))
+                    if (hotelIDS.Contains(otelID))
                     {
-                        core.AddRoom(otelID, roomType, fiyat, kisiKapasitesi, odaNo, klima, klima, minibar, televizyon);
-                        return true;
+                        List<int> roomNOs = core.ReturnRoomIds(otelID);
+                        if (!roomNOs.Contains(odaNo))
+                        {
+                            core.AddRoom(otelID, roomType, fiyat, kisiKapasitesi, odaNo, klima, klima, minibar, televizyon);
+                            return true;
+                        }
+                        else
+                        {
+                            throw new MessageException("Bu oda numarasina ait baska bir oda bulunmakta");
+                        }
                     }
                     else
                     {
-                        throw new Exception("Bu oda numarasina ait baska bir oda bulunmakta");
+                        throw new MessageException("Boyle bir otel IDsi bulunamadi ");
                     }
                 }
                 else
                 {
-                    throw new Exception("Boyle bir otel IDsi bulunamadi ");
+                    throw new MessageException("Boyle Bir Yonetici bulunmamaktadir");
                 }
             }
-            else
+            catch (MessageException m)
             {
-                throw new Exception("Boyle Bir Yonetici bulunmamaktadir");
+                throw m;
+            }
+            catch (ExceptionHandler e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionHandler("Oda ekleme hatasi", "AddRoomRequest()", "RoomController", e.Message);
             }
         }
         /// <summary>
@@ -60,32 +76,48 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <returns></returns>
         public bool DeleteRoomRequest(string yoneticiID, string otelID, int odaNo)
         {
-            List<string> managerIDs = core.ReturnAdminId();
-            List<string> hotelIDS = core.ReturnHotelID();
-
-            if (managerIDs.Contains(yoneticiID))
+            try
             {
-                if (hotelIDS.Contains(otelID))
+
+                List<string> managerIDs = core.ReturnAdminId();
+                List<string> hotelIDS = core.ReturnHotelID();
+
+                if (managerIDs.Contains(yoneticiID))
                 {
-                    List<int> roomNOs = core.ReturnRoomIds(otelID);
-                    if (roomNOs.Contains(odaNo))
+                    if (hotelIDS.Contains(otelID))
                     {
-                        core.DeleteRoom(otelID, odaNo);
-                        return true;
+                        List<int> roomNOs = core.ReturnRoomIds(otelID);
+                        if (roomNOs.Contains(odaNo))
+                        {
+                            core.DeleteRoom(otelID, odaNo);
+                            return true;
+                        }
+                        else
+                        {
+                            throw new MessageException("Bu oda numarasina ait baska bir oda bulunmakta");
+                        }
                     }
                     else
                     {
-                        throw new Exception("Bu oda numarasina ait baska bir oda bulunmakta");
+                        throw new MessageException("Boyle bir otel IDsi bulunamadi ");
                     }
                 }
                 else
                 {
-                    throw new Exception("Boyle bir otel IDsi bulunamadi ");
+                    throw new MessageException("Boyle Bir Yonetici bulunmamaktadir");
                 }
             }
-            else
+            catch (MessageException m)
             {
-                throw new Exception("Boyle Bir Yonetici bulunmamaktadir");
+                throw m;
+            }
+            catch (ExceptionHandler e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionHandler("Oda Silme Hatasi", "DeleteRoomRequest()", "RoomController", e.Message);
             }
 
         }
@@ -98,30 +130,46 @@ namespace Otel_Rezervasyon_Sistemi.Controllers
         /// <returns>"idsi ** olan otelin ** nolu odasi ** kisi tarafindan ** TL ye tutulmustur"</returns>
         public List<string> GetReservations(DateTime start, DateTime end)
         {
-            List<string> reservedRoomHotel = new List<string>();
-            List<string> hotelIDs = core.ReturnHotelID();
-            foreach (string ID in hotelIDs)
+            try
             {
-                List<Oda> rooms = core.ReturnRoomObjects(ID);
-                foreach (Oda room in rooms)
+
+                List<string> reservedRoomHotel = new List<string>();
+                List<string> hotelIDs = core.ReturnHotelID();
+                foreach (string ID in hotelIDs)
                 {
-                    foreach (ModelsAndBuffer.Rezervasyon rez in room.Rezervasyonlar)
+                    List<Oda> rooms = core.ReturnRoomObjects(ID);
+                    foreach (Oda room in rooms)
                     {
-                        if ((rez.RezBaslangic < start && rez.RezBitis > start) || (rez.RezBaslangic < end && rez.RezBitis > end))
+                        foreach (ModelsAndBuffer.Rezervasyon rez in room.Rezervasyonlar)
                         {
-                            reservedRoomHotel.Add(
-                                "Girilen tarihler arasinda ID si " +
-                                ID + " olan otelin " +
-                                room.OdaNo + " nolu odasi " +
-                                room.KisiKapasitesi.ToString() + " kisi icin " +
-                                room.OdaFiyati.ToString() + "TL ye tutulmustur"
-                                );
-                            break;
+                            if ((rez.RezBaslangic < start && rez.RezBitis > start) || (rez.RezBaslangic < end && rez.RezBitis > end))
+                            {
+                                reservedRoomHotel.Add(
+                                    "Girilen tarihler arasinda ID si " +
+                                    ID + " olan otelin " +
+                                    room.OdaNo + " nolu odasi " +
+                                    room.KisiKapasitesi.ToString() + " kisi icin " +
+                                    room.OdaFiyati.ToString() + "TL ye tutulmustur"
+                                    );
+                                break;
+                            }
                         }
                     }
                 }
+                return reservedRoomHotel;
             }
-            return reservedRoomHotel;
+            catch (MessageException m)
+            {
+                throw m;
+            }
+            catch (ExceptionHandler e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionHandler("Rezervasyon getirme hatasi", "GetReservations()", "RoomController", e.Message);
+            }
         }
     }
 }

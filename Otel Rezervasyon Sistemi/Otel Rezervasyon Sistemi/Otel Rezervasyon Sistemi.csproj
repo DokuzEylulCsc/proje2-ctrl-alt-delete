@@ -52,6 +52,7 @@
     <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="ExceptionHandler.cs" />
     <Compile Include="FormBilgiGüncelle.cs">
       <SubType>Form</SubType>
     </Compile>
